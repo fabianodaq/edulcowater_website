@@ -121,7 +121,7 @@ const productImageNames = {
     'Modular Pump 500 ml': 'modular-pump500.jpg',
     'Smart Plug pH ORP': 'smart-plug-ph-orp.jpg',
     'Smart Plug EC Temp': 'smart-plug-ec-temp.jpg',
-    'Smart Pump 60': 'smart-pump-60.mp4',
+    'Smart Pump 60': 'smart-pump-180.jpg',
     'Smart Pump 180': 'smart-pump-180.jpg',
     'Smart Pump 500': 'smart-pump-500.jpg',
     'Smart Sens pH ORP': 'smart-sens-ph-orp.jpg',
@@ -164,7 +164,7 @@ document.querySelectorAll('.industrial-gallery img').forEach((galleryImage) => {
 
 const productModal = document.createElement('div');
 productModal.className = 'product-modal';
-productModal.innerHTML = '<div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title"><button class="product-modal-close" type="button" aria-label="Close product details">×</button><h2 id="product-modal-title"></h2><p class="product-modal-description"></p><div class="industrial-modal-content"><div class="industrial-modal-layout"><dl class="industrial-modal-spec-table"><div><dt>Power supply</dt><dd>⚡ 230 V AC</dd></div><div><dt>Outputs</dt><dd>4 relay outputs</dd></div><div><dt>pH / ORP</dt><dd>Supported</dd></div><div><dt>EC</dt><dd>Supported</dd></div><div><dt>TDS</dt><dd>Supported</dd></div><div><dt>Salinity</dt><dd>Supported</dd></div><div><dt>Temperature 1</dt><dd>DS18</dd></div><div><dt>Temperature 2</dt><dd>NTC</dd></div><div><dt>Control type</dt><dd>Smart dosing</dd></div><div><dt>Smart functions</dt><dd>Web server</dd></div><div><dt>Mounting</dt><dd>Wall / panel</dd></div><div><dt>Dimensions</dt><dd>To be confirmed</dd></div></dl><div class="industrial-modal-gallery"><img src="../assets/products/industrial-detail-1.png" alt="Industrial system detail 1"><img src="../assets/products/industrial-detail-2.png" alt="Industrial system detail 2"></div></div></div></div>';
+productModal.innerHTML = '<div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title"><button class="product-modal-close" type="button" aria-label="Close product details">×</button><h2 id="product-modal-title"></h2><p class="product-modal-description"></p><div class="product-media-preview"></div><div class="industrial-modal-content"><div class="industrial-modal-layout"><dl class="industrial-modal-spec-table"><div><dt>Power supply</dt><dd>⚡ 230 V AC</dd></div><div><dt>Outputs</dt><dd>4 relay outputs</dd></div><div><dt>pH / ORP</dt><dd>Supported</dd></div><div><dt>EC</dt><dd>Supported</dd></div><div><dt>TDS</dt><dd>Supported</dd></div><div><dt>Salinity</dt><dd>Supported</dd></div><div><dt>Temperature 1</dt><dd>DS18</dd></div><div><dt>Temperature 2</dt><dd>NTC</dd></div><div><dt>Control type</dt><dd>Smart dosing</dd></div><div><dt>Smart functions</dt><dd>Web server</dd></div><div><dt>Mounting</dt><dd>Wall / panel</dd></div><div><dt>Dimensions</dt><dd>To be confirmed</dd></div></dl><div class="industrial-modal-gallery"><img src="../assets/products/industrial-detail-1.png" alt="Industrial system detail 1"><img src="../assets/products/industrial-detail-2.png" alt="Industrial system detail 2"></div></div></div></div>';
 document.body.append(productModal);
 
 const combinedPhOrpRow = [...productModal.querySelectorAll('.industrial-modal-spec-table dt')]
@@ -266,6 +266,33 @@ updateManualLink();
 
 const closeProductModal = () => {
     productModal.classList.remove('is-open');
+    productModal.classList.remove('media-modal');
+    productModal.querySelector('.product-media-preview')?.replaceChildren();
+};
+
+const openProductMedia = (productCard) => {
+    const productName = productCard.querySelector('.add-to-cart').dataset.product;
+    const sourceMedia = productCard.querySelector('.product-visual img, .product-visual video');
+    const mediaPreview = productModal.querySelector('.product-media-preview');
+    const modalDialog = productModal.querySelector('.product-modal-dialog');
+    const imageName = productImageNames[productName];
+    if (!mediaPreview || (!sourceMedia && !imageName)) return;
+
+    mediaPreview.replaceChildren();
+    const media = sourceMedia?.cloneNode(true) || document.createElement(imageName.endsWith('.mp4') ? 'video' : 'img');
+    if (!sourceMedia) media.src = `../assets/products/${imageName}`;
+    media.removeAttribute('aria-hidden');
+    if (media.tagName === 'VIDEO') {
+        media.controls = true;
+        media.autoplay = true;
+        media.muted = false;
+        media.playsInline = true;
+    }
+    mediaPreview.append(media);
+    productModal.querySelector('#product-modal-title').textContent = productName;
+    productModal.querySelector('.product-modal-description').textContent = '';
+    modalDialog.classList.remove('industrial-modal');
+    productModal.classList.add('media-modal', 'is-open');
 };
 
 document.querySelectorAll('.discover-link').forEach((discoverLink) => {
