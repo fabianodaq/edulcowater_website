@@ -79,10 +79,10 @@ document.querySelectorAll('.quantity-control').forEach((quantityControl) => {
     });
 });
 
-const pricingPath = window.location.pathname.includes('/products/') ? '../data/pricing.json' : 'data/pricing.json';
+const pricingPath = new URL(window.location.pathname.includes('/products/') ? '../data/pricing.json' : 'data/pricing.json', document.baseURI).href;
 
 const fallbackPricing = [
-    ['Industrial System', 2490], ['Premium System', 1490], ['Modular Controller', 399], ['Modular Plug', 129],
+    ['Industrial', 2490], ['Premium System', 1490], ['Modular Controller', 399], ['Modular Plug', 129],
     ['Modular Pump 60 ml', 89], ['Modular Pump 180 ml', 119], ['Modular Pump 500 ml', 159],
     ['Smart Plug pH ORP', 149], ['Smart Plug EC Temp', 179], ['Smart Pump 60', 129],
     ['Smart Pump 180', 169], ['Smart Pump 550', 219], ['Smart Sens pH ORP', 199],
@@ -113,7 +113,10 @@ const applyPricing = (products, currency = 'EUR') => {
 applyPricing(fallbackPricing.map(([name, price]) => ({ name, price })));
 
 fetch(pricingPath)
-    .then((response) => response.json())
+    .then((response) => {
+        if (!response.ok) throw new Error(`Pricing request failed: ${response.status}`);
+        return response.json();
+    })
     .then((pricingData) => applyPricing(pricingData.products, pricingData.currency))
     .catch(() => {});
 
