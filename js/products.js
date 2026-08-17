@@ -1,27 +1,7 @@
-// Create and add the product details popup to the page.
-const productModal = document.createElement('div');
-productModal.className = 'product-modal';
-productModal.innerHTML = `
-    <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
-        <button class="product-modal-close" type="button" aria-label="Close product details">×</button>
-        <h2 id="product-modal-title"></h2>
-        <p class="product-modal-description"></p>
-        <div class="product-modal-content">
-            <div class="product-modal-layout">
-                <dl class="product-modal-spec-table"></dl>
-                <div class="product-modal-gallery">
-                    <img src="" alt="" hidden>
-                    <img src="" alt="" hidden>
-                </div>
-            </div>
-        </div>
-    </div>
-`;
-document.body.append(productModal);
-
 // Technical specifications displayed in the products popup
 const products = {
     'Industrial': {
+        shortDescription: 'Heavy-duty water quality control for demanding environments.',
         description: 'Din Rail mounted multifunction Wi-Fi controller designed for water treatment, hydroponics, aquariums, ' +
                      'swimming pools, solar thermal systems, HVAC applications, and general process automation.',
         cardImage: 'industrial.png',
@@ -50,6 +30,7 @@ const products = {
     },
 
     'Premium System': {
+        shortDescription: 'Refined monitoring and dosing for high-performance water care.',
         description: 'Wall Mounting multifunction Wi-Fi controller designed for water treatment, hydroponics, aquariums, ' +
                      'swimming pools, solar thermal systems, HVAC applications, and general process automation, ' +
                      'provided with 2 built in dosing pumps and a USB-A output for additional dosing or control.',
@@ -79,6 +60,7 @@ const products = {
     },
 
     'Modular Controller': {
+        shortDescription: 'The central intelligence for a flexible water system.',
         description: 'The central controller for building a flexible system around your water quality and dosing needs.',
         cardImage: 'modular-controller.png',
         detailImages: [ '../assets/products/modular-controller-detail-1.png', '../assets/products/modular-controller-detail-2.png'],
@@ -106,6 +88,7 @@ const products = {
     },
 
     'Modular Plug': {
+        shortDescription: 'Connect and expand your dosing setup with ease.',
         description: 'A compact expansion module that connects additional control and dosing functions to a modular setup.',
         cardImage: 'modular-plug.png',
         detailImages: [ '../assets/products/modular-plug-detail-1.jpg', '../assets/products/modular-plug-detail-2.jpg'],
@@ -121,6 +104,7 @@ const products = {
     },
 
     'Modular Pump 60 ml': {
+        shortDescription: 'Compact dosing for precise modular systems.',
         description: 'A compact 60 ml dosing pump for precise, efficient control in smaller modular systems.',
         cardImage: 'modular-pump60.png',
         detailImages: [ '../assets/products/modular-pump60-detail-1.jpg', '../assets/products/modular-pump60-detail-2.jpg'],
@@ -136,6 +120,7 @@ const products = {
     },
 
     'Modular Pump 180 ml': {
+        shortDescription: 'Balanced dosing capacity for everyday systems.',
         description: 'A balanced 180 ml dosing pump for everyday modular water treatment applications.',
         cardImage: 'modular-pump180.jpg',
         detailImages: [ '../assets/products/modular-pump180-detail-1.jpg', '../assets/products/modular-pump180-detail-2.jpg'],
@@ -151,6 +136,7 @@ const products = {
     },
 
     'Modular Pump 500 ml': {
+        shortDescription: 'Higher capacity dosing for larger systems.',
         description: 'A higher-capacity 500 ml dosing pump for larger modular water systems.',
         cardImage: 'modular-pump500.jpg',
         detailImages: [ '../assets/products/modular-pump500-detail-1.jpg', '../assets/products/modular-pump500-detail-2.jpg'],
@@ -166,6 +152,7 @@ const products = {
     },
 
     'Smart Plug pH ORP': {
+        shortDescription: 'Smart connection for pH and ORP monitoring.',
         description: 'A connected plug for monitoring pH and ORP values and keeping water chemistry under control.',
         cardImage: 'smart-plug-ph-orp.jpg',
         detailImages: [ '../assets/products/smart-plug-ph-orp-detail-1.jpg', '../assets/products/smart-plug-ph-orp-detail-2.jpg'],
@@ -174,6 +161,7 @@ const products = {
     },
 
     'Smart Plug EC Temp': {
+        shortDescription: 'Connected control for conductivity and temperature.',
         description: 'A connected plug for reading conductivity and temperature in one compact monitoring solution.',
         cardImage: 'smart-plug-ec-temp.jpg',
         detailImages: [ '../assets/products/smart-plug-ec-temp-detail-1.jpg', '../assets/products/smart-plug-ec-temp-detail-2.jpg'],
@@ -182,6 +170,7 @@ const products = {
     },
 
     'Smart Pump 60': {
+        shortDescription: 'Compact dosing version for precise water care.',
         description: 'The compact 60 ml smart dosing pump for precise control in smaller installations.',
         cardImage: 'smart-pump-60.jpg',
         detailImages: [ '../assets/products/smart-pump-60-detail-1.jpg', '../assets/products/smart-pump-60-detail-2.jpg'],
@@ -197,6 +186,7 @@ const products = {
     },
 
     'Smart Pump 180': {
+        shortDescription: 'Higher capacity dosing for larger water systems.',
         description: 'The 180 ml smart dosing pump for reliable, balanced dosing in everyday systems.',
         cardImage: 'smart-pump-180.jpg',
         detailImages: [ '../assets/products/smart-pump-180-detail-1.jpg', '../assets/products/smart-pump-180-detail-2.jpg'],
@@ -212,6 +202,7 @@ const products = {
     },
 
     'Smart Pump 500': {
+        shortDescription: 'Higher capacity dosing for demanding water systems.',
         description: 'The 500 ml smart dosing pump for higher-capacity water treatment applications.',
         cardImage: 'smart-pump-500.jpg',
         detailImages: [ '../assets/products/smart-pump-500-detail-1.jpg', '../assets/products/smart-pump-500-detail-2.jpg'],
@@ -227,6 +218,7 @@ const products = {
     },
 
     'Smart Sens pH ORP': {
+        shortDescription: 'Live pH and ORP insight for balanced water.',
         description: 'A smart sensor solution for live pH and ORP insight, helping maintain the right water balance.',
         cardImage: 'smart-sens-ph-orp.jpg',
         detailImages: [ '../assets/products/smart-sens-ph-orp-detail-1.jpg', '../assets/products/smart-sens-ph-orp-detail-2.jpg'],
@@ -235,6 +227,7 @@ const products = {
     },
 
     'Smart Sens EC Temp': {
+        shortDescription: 'Live conductivity and temperature monitoring.',
         description: 'A smart sensor solution for live conductivity and temperature monitoring.',
         cardImage: 'smart-sens-ec-temp.jpg',
         detailImages: [ '../assets/products/smart-sens-ec-temp-detail-1.jpg', '../assets/products/smart-sens-ec-temp-detail-2.jpg'],
@@ -243,6 +236,7 @@ const products = {
     },
 
     'pH Probe': {
+        shortDescription: 'Reliable pH measurement for accurate water balance.',
         description: 'A reliable pH probe for accurate measurement and precise water balance control.',
         cardImage: 'probe-ph.jpg',
         detailImages: [ '../assets/products/probe-ph-detail-1.jpg', '../assets/products/probe-ph-detail-2.jpg'],
@@ -251,6 +245,7 @@ const products = {
     },
 
     'ORP Probe': {
+        shortDescription: 'Oxidation-reduction potential sensing for water quality.',
         description: 'An ORP probe for monitoring oxidation-reduction potential in water treatment systems.',
         cardImage: 'probe-orp.jpg',
         detailImages: [ '../assets/products/probe-orp-detail-1.jpg', '../assets/products/probe-orp-detail-2.jpg'],
@@ -259,6 +254,7 @@ const products = {
     },
 
     'EC Probe': {
+        shortDescription: 'Conductivity sensing for precise dosing control.',
         description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
         cardImage: 'probe-ec.jpg',
         detailImages: [ '../assets/products/probe-ec-detail-1.jpg', '../assets/products/probe-ec-detail-2.jpg'],
@@ -267,6 +263,7 @@ const products = {
     },
 
     'NTC Temperature Probe': {
+        shortDescription: 'Stable temperature measurement for system control.',
         description: 'A stable NTC probe for accurate temperature measurement and system control.',
         cardImage: 'probe-ntc.jpg',
         detailImages: [ '../assets/products/probe-ntc-detail-1.jpg', '../assets/products/probe-ntc-detail-2.jpg'],
@@ -275,6 +272,7 @@ const products = {
     },
 
     'DS18 Temperature Probe': {
+        shortDescription: 'Digital temperature sensing for connected systems.',
         description: 'A digital DS18 temperature probe for connected water quality systems.',
         cardImage: 'probe-ds18.png',
         detailImages: [ '../assets/products/probe-ds18-detail-1.png', '../assets/products/probe-ds18-detail-2.png'],
@@ -283,6 +281,7 @@ const products = {
     },
 
     'Silicone NTC Temperature Probe': {
+        shortDescription: 'Flexible, protected temperature sensing for installation.',
         description: 'A flexible silicone NTC temperature probe designed for protected installations.',
         cardImage: 'probe-ntc-ht.jpg',
         detailImages: [ '../assets/products/probe-ntc-ht-detail-1.jpg', '../assets/products/probe-ntc-ht-detail-2.jpg'],
@@ -290,6 +289,43 @@ const products = {
         specs: {}
     }
 };
+
+// Loads product names and short descriptions into the product cards
+function loadProductCards() {
+    document.querySelectorAll('.product-card').forEach((productCard) => {
+        const productName = productCard.querySelector('.add-to-cart')?.dataset.product;
+        const product = products[productName];
+
+        if (!product) return;
+
+        productCard.querySelector('.product-name').textContent = productName;
+        productCard.querySelector('.product-short-description').textContent = product.shortDescription;
+    });
+}
+
+loadProductCards();
+
+// Create and add the product details popup to the page.
+const productModal = document.createElement('div');
+productModal.className = 'product-modal';
+productModal.innerHTML = `
+    <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+        <button class="product-modal-close" type="button" aria-label="Close product details">×</button>
+        <h2 id="product-modal-title"></h2>
+        <p class="product-modal-description"></p>
+        <div class="product-modal-content">
+            <div class="product-modal-layout">
+                <dl class="product-modal-spec-table"></dl>
+                <div class="product-modal-gallery">
+                    <img src="" alt="" hidden>
+                    <img src="" alt="" hidden>
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+document.body.append(productModal);
+
 
 document.querySelectorAll('.product-card').forEach((productCard) => {
     const productName = productCard.querySelector('.add-to-cart')?.dataset.product;
@@ -419,3 +455,7 @@ fetch(pricingPath)
     })
     .then((pricingData) => applyPricing(pricingData.products, pricingData.currency))
     .catch(() => {});
+
+
+
+
