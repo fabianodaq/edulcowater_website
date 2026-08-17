@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edulco Water | About</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 48px; color: #123; }
-        nav { display: flex; gap: 12px; margin: 28px 0 48px; }
-        .button { background: #123; border-radius: 6px; color: white; display: inline-block; padding: 12px 22px; text-decoration: none; }
-        .button:hover { background: #2d6a63; }
-        main { line-height: 1.6; max-width: 680px; }
-    </style>
+    <link rel="icon" type="image/svg+xml" href="../assets/logoedulcowater.svg">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Edulco Water</h1>
-    <nav aria-label="Main navigation">
-        <a class="button" href="/">Home</a>
-        <a class="button" href="/products/">Products</a>
-        <a class="button" href="/about/">About</a>
-    </nav>
-    <main>
-        <h2>About Edulco Water</h2>
-        <p>Edulco Water is focused on making everyday hydration simpler, more thoughtful and more sustainable.</p>
-        <p>We believe good design should be useful, durable and easy to bring into daily life. Our products are made to be used again and again.</p>
+    <header class="main-header">
+        <div class="container"><nav class="main-nav">
+            <div class="brand" aria-label="Edulco Water"><img src="../assets/logoedulcowater.svg" alt=""><span>EdulcoWater</span></div>
+            <div class="header-actions"><div class="language-switcher"><button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu" aria-label="Select language">EN <span aria-hidden="true">⌄</span></button><div class="language-menu" id="language-menu"><button class="language-option" type="button" data-language="IT">IT</button><button class="language-option active" type="button" data-language="EN">EN</button><button class="language-option" type="button" data-language="ESP">ESP</button><button class="language-option" type="button" data-language="DE">DE</button><button class="language-option" type="button" data-language="FR">FR</button></div></div><button class="icon-button" type="button" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 5 5"></path></svg></button><button class="icon-button" type="button" aria-label="Account" title="Account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.8-3.2 3.1-5 7-5s6.2 1.8 7 5"></path></svg></button><a class="icon-button cart-button" href="../products/" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2 11h10l2-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span class="cart-count">0</span></a></div>
+        </nav></div>
+        <nav class="menu-panel" id="site-menu" aria-label="Main navigation"><div class="container"><a href="../index.html"><span class="nav-icon nav-house" aria-hidden="true">🏠</span>Home</a><a href="../products/"><span class="nav-icon" aria-hidden="true">📦</span>Products</a><a href="../solutions/"><span class="nav-icon" aria-hidden="true">🛠️</span>Solutions</a><a href="../support/"><span class="nav-icon" aria-hidden="true">🤖</span>Support</a><a href="index.html"><span class="nav-icon" aria-hidden="true">ℹ️</span>About</a></div></nav>
+    </header>
+    <main class="control-page container">
+        <div class="control-page-heading">
+            <div>
+                <p class="section-label">EDULCO WATER · CONTROL CENTER</p>
+                <h1 class="solutions-title">Water,<br><span>under control.</span></h1>
+            </div>
+            <p class="default-intro">A single place to monitor, configure and manage every part of your Edulco Water system.</p>
+        </div>
+
+        <section class="control-status" aria-label="Control 3 status">
+            <div><span class="status-dot"></span><span>Control 3 · Online</span></div>
+            <strong>⚡ EC / 🌡️ Temp</strong>
+            <span class="status-detail">Live system readings</span>
+        </section>
+
+        <section class="control-grid" aria-label="Edulco Water control modules">
+            <a class="control-card" href="http://192.168.178.176/"><span class="control-card-icon">📊</span><strong>Monitor</strong><span>System overview</span></a>
+            <a class="control-card" href="http://192.168.178.176/calibration"><span class="control-card-icon">🧪</span><strong>Sensors</strong><span>Calibration tools</span></a>
+            <a class="control-card" href="http://192.168.178.176/settings"><span class="control-card-icon">⚙️</span><strong>Controls</strong><span>System settings</span></a>
+            <a class="control-card" href="http://192.168.178.176/pumptimers"><span class="control-card-icon">🕒</span><strong>Timer</strong><span>Pump schedules</span></a>
+            <a class="control-card" href="http://192.168.178.176/remoterelays"><span class="control-card-icon">🔌</span><strong>Relays</strong><span>Remote switching</span></a>
+            <a class="control-card" href="http://192.168.178.176/wificonfig"><span class="control-card-icon">📡</span><strong>WiFiConfig</strong><span>Network connection</span></a>
+            <a class="control-card" href="http://192.168.178.176/manual"><span class="control-card-icon">🖐️</span><strong>Manual</strong><span>Direct operation</span></a>
+            <a class="control-card" href="http://192.168.178.176/wifisentinel"><span class="control-card-icon">🛡️</span><strong>Sentinel</strong><span>Safety monitoring</span></a>
+            <a class="control-card" href="http://192.168.178.176/reporter"><span class="control-card-icon">📈</span><strong>Reporter</strong><span>System reports</span></a>
+            <a class="control-card" href="http://192.168.178.176/copilot"><span class="control-card-icon">🤖</span><strong>NetSky</strong><span>Intelligent assistant</span></a>
+        </section>
     </main>
+    <script src="../js/main.js"></script>
 </body>
 </html>
