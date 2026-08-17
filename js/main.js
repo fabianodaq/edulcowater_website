@@ -10,6 +10,7 @@ const loadSharedMenuPanel = async () => {
         ? {
             home: 'index.html',
             products: 'products/index.html',
+            applications: 'solutions/',
             solutions: 'solutions/',
             support: 'support/',
             about: 'about/'
@@ -17,6 +18,7 @@ const loadSharedMenuPanel = async () => {
         : {
             home: '../index.html',
             products: '../products/index.html',
+            applications: '../solutions/',
             solutions: '../solutions/',
             support: '../support/',
             about: '../about/'
@@ -27,7 +29,7 @@ const loadSharedMenuPanel = async () => {
         if (!response.ok) throw new Error(`Menu fetch failed: ${response.status}`);
         menuContainer.innerHTML = await response.text();
     } catch (error) {
-        menuContainer.innerHTML = '<a data-route="home">Home</a><a data-route="products">Products</a><a data-route="solutions">Solutions</a><a data-route="support">Support</a><a data-route="about">About</a>';
+        menuContainer.innerHTML = '<a data-route="home">Home</a><a data-route="products">Products</a><a data-route="applications">Applications</a><a data-route="support">Support</a><a data-route="about">About</a>';
     }
 
     menuContainer.querySelectorAll('a[data-route]').forEach((link) => {
