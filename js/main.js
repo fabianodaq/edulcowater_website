@@ -1,3 +1,47 @@
+const loadSharedMenuPanel = async () => {
+    const menuContainer = document.querySelector('[data-menu-panel]');
+    if (!menuContainer) return;
+
+    const basePath = document.body.dataset.basePath || '.';
+    const currentPage = document.body.dataset.page || '';
+    const menuUrl = `${basePath}/html/menu-panel.html`;
+
+    const routeMap = basePath === '.'
+        ? {
+            home: 'index.html',
+            products: 'products/index.html',
+            solutions: 'solutions/',
+            support: 'support/',
+            about: 'about/'
+        }
+        : {
+            home: '../index.html',
+            products: '../products/index.html',
+            solutions: '../solutions/',
+            support: '../support/',
+            about: '../about/'
+        };
+
+    try {
+        const response = await fetch(menuUrl);
+        if (!response.ok) throw new Error(`Menu fetch failed: ${response.status}`);
+        menuContainer.innerHTML = await response.text();
+    } catch (error) {
+        menuContainer.innerHTML = '<a data-route="home">Home</a><a data-route="products">Products</a><a data-route="solutions">Solutions</a><a data-route="support">Support</a><a data-route="about">About</a>';
+    }
+
+    menuContainer.querySelectorAll('a[data-route]').forEach((link) => {
+        const route = link.dataset.route;
+        if (!route || !routeMap[route]) return;
+        link.setAttribute('href', routeMap[route]);
+        if (route === currentPage) {
+            link.setAttribute('aria-current', 'page');
+        }
+    });
+};
+
+loadSharedMenuPanel();
+
 document.querySelectorAll('.language-button').forEach((languageButton) => {
     languageButton.addEventListener('click', () => {
         const languageMenu = document.getElementById(languageButton.getAttribute('aria-controls'));

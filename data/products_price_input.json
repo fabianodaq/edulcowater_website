@@ -2,7 +2,7 @@
 //    Prices must be kept aligned with the 'price' field in the const products structure in products.js. 
 //    This synchronization may be performed automatically by a Copilot/automation system.",
 //
-    {
+{
     "Industrial": 85,
     "Premium": 109,
     "Modular Controller": 78,
