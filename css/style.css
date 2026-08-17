@@ -268,8 +268,8 @@ button, a { font: inherit; }
 .industrial-modal-spec-table dd { color: #0b2d45; font-size: 12px; font-weight: 700; margin: 0; }
 .industrial-modal-spec-table dd a { color: #0878b9; text-decoration: none; }
 .industrial-modal-spec-table dd a:hover { color: #0b2d45; text-decoration: underline; }
-.industrial-modal-gallery { display: grid; gap: 10px; grid-template-rows: repeat(2, 1fr); }
-.industrial-modal-gallery img { background: #ffffff; display: block; height: 180px; object-fit: cover; width: 100%; }
+.product-modal-gallery { display: grid; gap: 10px; grid-template-rows: repeat(2, 1fr); }
+.product-modal-gallery img { background: #ffffff; display: block; height: 180px; object-fit: cover; width: 100%; }
 
 
 /* MOBILE */
@@ -307,8 +307,8 @@ button, a { font: inherit; }
   .product-actions { align-items: flex-start; flex-direction: column; }
   .product-modal-dialog { padding: 28px 24px; }
   .industrial-modal-layout { grid-template-columns: 1fr; }
-  .industrial-modal-gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; }
-  .industrial-modal-gallery img { height: 120px; }
+  .product-modal-gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; }
+  .product-modal-gallery img { height: 120px; }
 
 }
 
