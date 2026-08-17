@@ -97,10 +97,10 @@
       "ebayUrl": null
     },
     {
-      "id": "smart-pump-550",
+      "id": "smart-pump-500",
       "family": "Smart Pump",
-      "name": "Smart Pump 550",
-      "volumeMl": 550,
+      "name": "Smart Pump 500",
+      "volumeMl": 500,
       "price": 219,
       "ebayItemId": null,
       "ebayUrl": null

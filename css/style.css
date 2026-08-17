@@ -217,16 +217,24 @@ button, a { font: inherit; }
 .product-grid { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); }
 .product-grid-single { grid-template-columns: minmax(220px, 280px); }
 .product-card { background: #ffffff; border: 1px solid #dcebf0; display: flex; flex-direction: column; min-width: 0; transition: box-shadow .2s ease, transform .2s ease; }
+.industrial-product-card { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); grid-column: 1 / -1; }
+.industrial-specs { display: flex; flex-direction: column; padding: 26px; }
+.industrial-heading h3 { color: #12263a; font-size: 28px; letter-spacing: -1px; margin: 0 0 7px; }
+.industrial-heading p { color: #526979; font-size: 14px; margin: 0 0 25px; }
+.industrial-spec-columns { display: grid; gap: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.industrial-spec-columns dl { margin: 0; }
+.industrial-spec-columns dl div { border-top: 1px solid #e8eef2; padding: 13px 0; }
+.industrial-spec-columns dt { color: #69818e; font-size: 11px; margin-bottom: 5px; }
+.industrial-spec-columns dd { color: #0b2d45; font-size: 14px; font-weight: 700; margin: 0; }
+.industrial-specs .product-actions { margin-top: auto; }
+.industrial-gallery { display: grid; gap: 8px; grid-template-rows: repeat(2, 1fr); min-height: 100%; }
+.industrial-gallery img { background: #ffffff; display: block; height: 100%; min-height: 180px; object-fit: cover; width: 100%; }
+.industrial-gallery img[src$="industrial-detail.jpg"] { border-left: 1px solid #dcebf0; }
 .product-card:hover { box-shadow: 0 14px 28px rgba(18, 38, 58, .12); transform: translateY(-4px); }
-.product-visual { align-items: center; background: #e9f7fb; color: #0878b9; display: flex; font-size: 58px; height: 170px; justify-content: center; }
-.product-visual-industrial { background: #dcecf1; }
-.product-visual-premium { background: #e7e3f5; }
-.product-visual-modular { background: #dff0d9; }
-.product-visual-smart-plug { background: #f8e5ba; }
-.product-visual-smart-pump { background: #d5eafa; }
-.product-visual-smart-sens { background: #d9f1ed; }
-.product-visual-probes { background: #e8eafa; }
-.product-visual-accessories { background: #f3e3d1; }
+.product-visual { align-items: center; background: #ffffff; color: #0878b9; display: flex; font-size: 58px; height: 170px; justify-content: center; }
+.product-visual img { height: 100%; object-fit: cover; width: 100%; }
+.product-visual video { height: 100%; object-fit: cover; width: 100%; }
+.product-visual-industrial, .product-visual-premium, .product-visual-modular, .product-visual-smart-plug, .product-visual-smart-pump, .product-visual-smart-sens, .product-visual-probes, .product-visual-accessories { background: #ffffff; }
 .product-card-body { display: flex; flex: 1; flex-direction: column; padding: 18px; }
 .product-category { color: #0878b9; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; margin: 0 0 10px; }
 .product-card h2, .product-card h3 { color: #12263a; font-size: 22px; letter-spacing: -.5px; margin: 0 0 8px; }
@@ -242,6 +250,26 @@ button, a { font: inherit; }
 .quantity-value { align-items: center; background: #ffffff; border-bottom: 1px solid #c8e3ed; border-top: 1px solid #c8e3ed; color: #0b2d45; display: inline-flex; font-size: 12px; font-weight: 700; height: 32px; justify-content: center; min-width: 30px; }
 .discover-link { color: #0b2d45; font-size: 11px; font-weight: 700; text-decoration: none; }
 .discover-link:hover { color: #0878b9; }
+.product-modal { align-items: center; background: rgba(11, 45, 69, .58); display: none; inset: 0; justify-content: center; padding: 20px; position: fixed; z-index: 30; }
+.product-modal.is-open { display: flex; }
+.product-modal-dialog { background: #ffffff; box-shadow: 0 24px 60px rgba(18, 38, 58, .22); max-height: calc(100vh - 40px); max-width: 900px; overflow-y: auto; padding: 42px; position: relative; width: 100%; }
+.product-modal-close { background: transparent; border: 0; color: #0b2d45; cursor: pointer; font-size: 28px; line-height: 1; padding: 4px 8px; position: absolute; right: 12px; top: 10px; }
+.product-modal-close:hover { color: #0878b9; }
+.product-modal-category { color: #0878b9; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; margin: 0 0 12px; }
+.product-modal-dialog h2 { color: #12263a; font-size: 30px; letter-spacing: -1px; margin: 0 36px 14px 0; }
+.product-modal-description { color: #526979; font-size: 16px; line-height: 1.6; margin: 0; }
+.industrial-modal-content { display: none; }
+.industrial-modal .industrial-modal-content { display: block; }
+.industrial-modal .product-modal-description { margin-bottom: 22px; }
+.industrial-modal-layout { display: grid; gap: 24px; grid-template-columns: minmax(0, 1.1fr) minmax(180px, .9fr); }
+.industrial-modal-spec-table { margin: 0; }
+.industrial-modal-spec-table div { border-top: 1px solid #e8eef2; display: grid; gap: 14px; grid-template-columns: 1fr 1fr; padding: 10px 0; }
+.industrial-modal-spec-table dt { color: #69818e; font-size: 11px; }
+.industrial-modal-spec-table dd { color: #0b2d45; font-size: 12px; font-weight: 700; margin: 0; }
+.industrial-modal-spec-table dd a { color: #0878b9; text-decoration: none; }
+.industrial-modal-spec-table dd a:hover { color: #0b2d45; text-decoration: underline; }
+.industrial-modal-gallery { display: grid; gap: 10px; grid-template-rows: repeat(2, 1fr); }
+.industrial-modal-gallery img { background: #ffffff; display: block; height: 180px; object-fit: cover; width: 100%; }
 
 
 /* MOBILE */
@@ -271,9 +299,16 @@ button, a { font: inherit; }
   .products-heading .default-intro { margin-top: 24px; }
   .product-family { margin-top: 34px; }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .industrial-product-card { grid-template-columns: 1fr; }
+  .industrial-gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; }
+  .industrial-gallery img { min-height: 150px; }
   .product-visual { height: 140px; }
   .product-card-body { padding: 14px; }
   .product-actions { align-items: flex-start; flex-direction: column; }
+  .product-modal-dialog { padding: 28px 24px; }
+  .industrial-modal-layout { grid-template-columns: 1fr; }
+  .industrial-modal-gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; }
+  .industrial-modal-gallery img { height: 120px; }
 
 }
 
