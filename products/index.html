@@ -6,6 +6,23 @@
     <title>Edulco Water | Products</title>
     <link rel="icon" type="image/svg+xml" href="../assets/logoedulcowater.svg">
     <link rel="stylesheet" href="../css/style.css?v=20260817">
+    <style>
+        .products-page .product-grid { display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .products-page .product-grid-single { grid-template-columns: minmax(220px, 280px); }
+        .products-page .product-card { display: flex; flex-direction: column; min-width: 0; }
+        .products-page .product-visual { display: flex; height: 170px; overflow: hidden; width: 100%; }
+        .products-page .product-visual img,
+        .products-page .product-visual video { display: block; height: 100%; object-fit: cover; width: 100%; }
+        @media (max-width: 800px) {
+            .products-page .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .products-page .product-visual { height: 140px; }
+        }
+        @media (max-width: 520px) {
+            .products-page .product-grid,
+            .products-page .product-grid-single { grid-template-columns: 1fr; }
+            .products-page .product-visual { height: 180px; }
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
