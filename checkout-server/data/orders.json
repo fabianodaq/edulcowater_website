@@ -1,0 +1,94 @@
+[
+  {
+    "id": "cs_test_b1uUQp5DbbvAo0OBSMufGV2QsopvhfRpJrXEHMcbR8LLLyCnEXG422vm8T",
+    "status": "paid",
+    "paymentStatus": "paid",
+    "fulfillmentStatus": "pending",
+    "currency": "eur",
+    "amountTotal": 261.9,
+    "amountTotalCents": 26190,
+    "customerEmail": "fabianodaq@hotmail.com",
+    "customerName": "fabiano daquilio",
+    "billingAddress": {
+      "city": "München - Ludwigsvorstadt-Isarvorstadt",
+      "country": "DE",
+      "line1": "grasserstrasse 14",
+      "line2": null,
+      "postal_code": "80339",
+      "state": null
+    },
+    "shippingAddress": {
+      "city": "München - Ludwigsvorstadt-Isarvorstadt",
+      "country": "DE",
+      "line1": "grasserstrasse 14",
+      "line2": null,
+      "postal_code": "80339",
+      "state": null
+    },
+    "shippingName": "fabiano daquilio",
+    "shippingPhone": null,
+    "shippingAmount": 6.9,
+    "shippingAmountCents": 690,
+    "items": [
+      {
+        "name": "Industrial",
+        "quantity": 3,
+        "amountTotal": 255,
+        "amountTotalCents": 25500
+      }
+    ],
+    "purchasedAt": "2026-08-17T23:54:22.673Z",
+    "createdAt": "2026-08-17T23:54:22.673Z",
+    "updatedAt": "2026-08-17T23:58:06.348Z",
+    "metadata": {
+      "shippingCountry": "DE"
+    }
+  },
+  {
+    "id": "cs_test_b1P775TxJSTu6AFOfrtamu7r5IDk4wn4YmRmrBinpObWUhipcx4N5QdJsS",
+    "status": "paid",
+    "paymentStatus": "paid",
+    "fulfillmentStatus": "pending",
+    "currency": "eur",
+    "amountTotal": 534.9,
+    "amountTotalCents": 53490,
+    "customerEmail": "fabianodaq@hotmail.com",
+    "customerName": "fabiano daquilio",
+    "billingAddress": {
+      "city": "München - Ludwigsvorstadt-Isarvorstadt",
+      "country": "DE",
+      "line1": "grasserstrasse 14",
+      "line2": null,
+      "postal_code": "80339",
+      "state": null
+    },
+    "shippingAddress": {
+      "city": "München - Ludwigsvorstadt-Isarvorstadt",
+      "country": "DE",
+      "line1": "grasserstrasse 14",
+      "line2": null,
+      "postal_code": "80339",
+      "state": null
+    },
+    "shippingName": "fabiano daquilio",
+    "shippingPhone": null,
+    "shippingAmount": 24.9,
+    "shippingAmountCents": 2490,
+    "items": [
+      {
+        "name": "Industrial",
+        "quantity": 6,
+        "amountTotal": 510,
+        "amountTotalCents": 51000
+      }
+    ],
+    "purchasedAt": "2026-08-18T00:10:58.190Z",
+    "createdAt": "2026-08-18T00:10:58.190Z",
+    "updatedAt": "2026-08-18T00:10:59.832Z",
+    "webhookEventId": "evt_1U5acHGXfqwhM04TkdZ0hRO5",
+    "notificationStatus": "sent",
+    "metadata": {
+      "shippingCountry": "CY"
+    }
+  }
+]

@@ -1,4 +1,34 @@
 const CART_STORAGE_KEY = 'edulco_cart_v1';
+const CHECKOUT_API_BASE = window.EDULCO_CHECKOUT_API_BASE || 'http://localhost:4242';
+const SHIPPING_RATES = {
+    DE: 6.90,
+    AT: 9.90,
+    BE: 12.90,
+    BG: 19.90,
+    HR: 19.90,
+    CY: 24.90,
+    CZ: 12.90,
+    DK: 14.90,
+    EE: 19.90,
+    ES: 19.90,
+    FI: 19.90,
+    FR: 12.90,
+    GR: 24.90,
+    HU: 14.90,
+    IE: 19.90,
+    IT: 14.90,
+    LT: 19.90,
+    LU: 12.90,
+    LV: 19.90,
+    MT: 24.90,
+    NL: 12.90,
+    PL: 14.90,
+    PT: 19.90,
+    RO: 19.90,
+    SE: 19.90,
+    SI: 14.90,
+    SK: 14.90
+};
 
 const formatCurrency = (value) => new Intl.NumberFormat('it-IT', {
     style: 'currency',
@@ -167,12 +197,18 @@ const renderCartPage = () => {
     const itemsNode = cartRoot.querySelector('[data-cart-items-count]');
     const checkoutNode = cartRoot.querySelector('[data-cart-checkout-count]');
     const allCheckbox = cartRoot.querySelector('[data-cart-select-all]');
+    const checkoutButton = cartRoot.querySelector('.cart-checkout-button');
+    const shippingCountryNode = cartRoot.querySelector('[data-shipping-country]');
+    const subtotalNode = cartRoot.querySelector('[data-cart-subtotal]');
+    const shippingNode = cartRoot.querySelector('[data-cart-shipping]');
 
     const items = readCart();
     const hasItems = items.length > 0;
     const selectedTotal = getSelectedTotal(items);
     const selectedUnits = getSelectedUnits(items);
     const selectedCount = items.filter((item) => item.selected).length;
+    const shippingCountry = shippingCountryNode ? shippingCountryNode.value : 'DE';
+    const shippingTotal = SHIPPING_RATES[shippingCountry] || 0;
 
     itemsWrap.innerHTML = items.map((item) => `
         <article class="cart-item" data-cart-id="${item.id}">
@@ -196,11 +232,14 @@ const renderCartPage = () => {
     `).join('');
 
     emptyState.hidden = hasItems;
-    totalNode.textContent = formatCurrency(selectedTotal);
+    if (subtotalNode) subtotalNode.textContent = formatCurrency(selectedTotal);
+    if (shippingNode) shippingNode.textContent = formatCurrency(hasItems ? shippingTotal : 0);
+    totalNode.textContent = formatCurrency(selectedTotal + (hasItems ? shippingTotal : 0));
     itemsNode.textContent = String(selectedUnits);
     checkoutNode.textContent = String(selectedUnits);
     allCheckbox.checked = hasItems && selectedCount === items.length;
     allCheckbox.indeterminate = selectedCount > 0 && selectedCount < items.length;
+    if (checkoutButton) checkoutButton.disabled = selectedUnits === 0;
 };
 
 const bindCartPageEvents = () => {
@@ -209,6 +248,11 @@ const bindCartPageEvents = () => {
 
     const allCheckbox = cartRoot.querySelector('[data-cart-select-all]');
     const itemsWrap = cartRoot.querySelector('[data-cart-items]');
+    const shippingCountryNode = cartRoot.querySelector('[data-shipping-country]');
+
+    shippingCountryNode.addEventListener('change', () => {
+        renderCartPage();
+    });
 
     allCheckbox.addEventListener('change', () => {
         const items = readCart().map((item) => ({ ...item, selected: allCheckbox.checked }));
@@ -262,11 +306,58 @@ const bindCartPageEvents = () => {
     });
 };
 
+const bindCheckoutButton = () => {
+    const checkoutButton = document.querySelector('.cart-checkout-button');
+    const cartRoot = document.querySelector('[data-cart-page]');
+    if (!checkoutButton || !cartRoot) return;
+    const shippingCountryNode = cartRoot.querySelector('[data-shipping-country]');
+
+    checkoutButton.addEventListener('click', async () => {
+        const items = readCart().filter((item) => item.selected && item.qty > 0).map((item) => ({
+            id: item.id,
+            qty: item.qty
+        }));
+
+        if (items.length === 0) return;
+
+        checkoutButton.disabled = true;
+        const originalText = checkoutButton.textContent;
+        checkoutButton.textContent = 'Opening checkout...';
+
+        try {
+            const response = await fetch(`${CHECKOUT_API_BASE}/api/create-checkout-session`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    items,
+                    shippingCountry: shippingCountryNode.value
+                })
+            });
+
+            const payload = await response.json().catch(() => ({}));
+            if (!response.ok || !payload.url) {
+                throw new Error(payload.error || 'Checkout session failed');
+            }
+
+            window.location.href = payload.url;
+        } catch (error) {
+            const isNetworkError = error instanceof TypeError;
+            const message = isNetworkError
+                ? 'Checkout server is not running. Start checkout-server on port 4242 and try again.'
+                : error.message;
+            alert(message || 'Checkout is not available right now. Please try again.');
+            checkoutButton.disabled = false;
+            checkoutButton.textContent = originalText;
+        }
+    });
+};
+
 const initCart = () => {
     const items = readCart();
     updateHeaderBadges(items);
     initSharedCartControls();
     bindCartPageEvents();
+    bindCheckoutButton();
     renderCartPage();
 };
 

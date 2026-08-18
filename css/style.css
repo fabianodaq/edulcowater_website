@@ -426,6 +426,22 @@ button, a { font: inherit; }
   margin: 0 0 14px;
 }
 
+.cart-shipping-field {
+  color: #526979;
+  display: grid;
+  font-size: 13px;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.cart-shipping-field select {
+  background: #ffffff;
+  border: 1px solid #b9d1db;
+  color: #12263a;
+  font: inherit;
+  padding: 10px;
+}
+
 .cart-summary-row {
   align-items: center;
   color: #526979;
@@ -438,6 +454,17 @@ button, a { font: inherit; }
 .cart-summary-row strong {
   color: #12263a;
   font-size: 20px;
+}
+
+.cart-summary-total {
+  border-top: 1px solid #dcebf0;
+  color: #12263a;
+  margin-top: 8px;
+  padding-top: 14px;
+}
+
+.cart-summary-total strong {
+  font-size: 22px;
 }
 
 .cart-checkout-button {
@@ -453,6 +480,11 @@ button, a { font: inherit; }
 
 .cart-checkout-button:hover {
   background: #0b2d45;
+}
+
+.cart-checkout-button:disabled {
+  background: #9cb7c5;
+  cursor: not-allowed;
 }
 
 
