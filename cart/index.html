@@ -35,12 +35,47 @@
 
             <aside class="cart-summary">
                 <h2>Summary</h2>
-                <p class="cart-summary-row"><span>Subtotal</span><strong data-cart-total>EUR 0.00</strong></p>
+                <label class="cart-shipping-field" for="shipping-country">
+                    <span>Shipping country</span>
+                    <select id="shipping-country" data-shipping-country>
+                        <option value="DE">Germany</option>
+                        <option value="AT">Austria</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czechia</option>
+                        <option value="DK">Denmark</option>
+                        <option value="EE">Estonia</option>
+                        <option value="FR">France</option>
+                        <option value="FI">Finland</option>
+                        <option value="GR">Greece</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IE">Ireland</option>
+                        <option value="IT">Italy</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="LV">Latvia</option>
+                        <option value="MT">Malta</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="RO">Romania</option>
+                        <option value="ES">Spain</option>
+                        <option value="SE">Sweden</option>
+                        <option value="SI">Slovenia</option>
+                        <option value="SK">Slovakia</option>
+                    </select>
+                </label>
+                <p class="cart-summary-row"><span>Subtotal</span><strong data-cart-subtotal>EUR 0.00</strong></p>
+                <p class="cart-summary-row"><span>Shipping</span><strong data-cart-shipping>EUR 0.00</strong></p>
+                <p class="cart-summary-row cart-summary-total"><span>Total</span><strong data-cart-total>EUR 0.00</strong></p>
                 <button type="button" class="cart-checkout-button">Checkout (<span data-cart-checkout-count>0</span>)</button>
             </aside>
         </div>
     </main>
 
+    <script>window.EDULCO_CHECKOUT_API_BASE = 'http://localhost:4242';</script>
     <script src="../js/common.js"></script>
     <script src="../js/cart.js"></script>
 </body>

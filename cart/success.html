@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edulco Water | Payment Success</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logoedulcowater.svg">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-base-path=".." data-page="cart">
+    <header class="main-header">
+        <div class="container"><nav class="main-nav">
+            <div class="brand" aria-label="Edulco Water"><img src="../assets/logoedulcowater.svg" alt=""><span>EdulcoWater</span></div>
+            <div class="header-actions"><a class="icon-button cart-button" href="index.html" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2 11h10l2-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span class="cart-count">0</span></a></div>
+        </nav></div>
+        <nav class="menu-panel" id="site-menu" aria-label="Main navigation"><div class="container" data-menu-panel></div></nav>
+    </header>
+
+    <main class="default-page container">
+        <p class="section-label">PAYMENT</p>
+        <h1 class="solutions-title">Payment completed<br><span>thank you.</span></h1>
+        <p class="default-intro">Your Stripe checkout was successful. You can continue shopping or return to products.</p>
+        <p><a class="discover-link" href="../products/index.html">Back to products ↗</a></p>
+    </main>
+
+    <script>
+        localStorage.removeItem('edulco_cart_v1');
+    </script>
+    <script src="../js/common.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

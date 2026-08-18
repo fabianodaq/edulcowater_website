@@ -1,4 +1,4 @@
-// Home-only behaviors
+// Audio toggle button for the intro video on the home page
 const initHomeAudioToggle = () => {
     document.querySelectorAll('.audio-toggle').forEach((audioToggle) => {
         const introVideo = audioToggle.closest('.intro-video');
