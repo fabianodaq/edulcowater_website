@@ -5,10 +5,12 @@ import cors from 'cors';
 import Stripe from 'stripe';
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
+import { fileURLToPath } from 'node:url';
 
 dotenv.config();
 
 const app = express();
+const serverDirectory = path.dirname(fileURLToPath(import.meta.url));
 const port = Number.parseInt(process.env.PORT || '4242', 10);
 const siteBaseUrl = process.env.SITE_BASE_URL || 'http://127.0.0.1:5500';
 const stripeSecret = process.env.STRIPE_SECRET_KEY || '';
@@ -59,7 +61,7 @@ const shippingRates = {
 };
 
 const readPriceCatalog = () => {
-    const dataFilePath = path.resolve(process.cwd(), '..', 'data', 'products_price_input.json');
+    const dataFilePath = path.resolve(serverDirectory, '..', 'data', 'products_price_input.json');
     const raw = fs.readFileSync(dataFilePath, 'utf8');
 
     // Supports the current file format that includes comments before the JSON object.
@@ -190,7 +192,7 @@ const sendOrderNotification = async (order) => {
     await transporter.sendMail({
         from: smtpUser,
         to: notificationEmail,
-        subject: 'ORDER-WEB-SITE',
+        subject: 'order_website',
         text: [
             'A new order has been paid.',
             '',
@@ -203,6 +205,50 @@ const sendOrderNotification = async (order) => {
             itemLines || '- No items listed',
             '',
             `Shipping address: ${shippingAddress}`
+        ].join('\n')
+    });
+};
+
+const sendCustomerConfirmation = async (order) => {
+    if (!order.customerEmail || !smtpHost || !smtpUser || !smtpPassword) {
+        throw new Error('Customer confirmation email is not configured.');
+    }
+
+    const transporter = nodemailer.createTransport({
+        host: smtpHost,
+        port: smtpPort,
+        secure: smtpPort === 465,
+        auth: {
+            user: smtpUser,
+            pass: smtpPassword
+        }
+    });
+
+    const itemLines = (order.items || [])
+        .map((item) => `- ${item.name} x${item.quantity}: ${item.amountTotal.toFixed(2)} EUR`)
+        .join('\n');
+    const shippingAddress = order.shippingAddress
+        ? `${order.shippingAddress.line1}, ${order.shippingAddress.postal_code} ${order.shippingAddress.city}, ${order.shippingAddress.country}`
+        : 'Not provided';
+
+    await transporter.sendMail({
+        from: smtpUser,
+        to: order.customerEmail,
+        subject: 'Thank you for your order - Edulco Water',
+        text: [
+            `Thank you for your order, ${order.customerName || 'customer'}!`,
+            '',
+            'We have received your payment and are preparing your order.',
+            '',
+            `Order: ${order.id}`,
+            `Total: ${order.amountTotal.toFixed(2)} ${order.currency.toUpperCase()}`,
+            '',
+            'Items:',
+            itemLines || '- No items listed',
+            '',
+            `Shipping address: ${shippingAddress}`,
+            '',
+            'Thank you for choosing Edulco Water.'
         ].join('\n')
     });
 };
@@ -223,7 +269,7 @@ const handleCheckoutCompleted = async (session, eventId) => {
     }
 
     const existingOrder = existing.find((order) => order?.id === session.id);
-    if (existingOrder?.notificationStatus === 'sent') {
+    if (existingOrder?.notificationStatus === 'sent' && existingOrder?.customerNotificationStatus === 'sent') {
         return;
     }
 
@@ -237,10 +283,22 @@ const handleCheckoutCompleted = async (session, eventId) => {
     }
 
     try {
-        await sendOrderNotification(order);
-        updateOrderRecord(order.id, { notificationStatus: 'sent' });
+        if (order.notificationStatus !== 'sent') {
+            await sendOrderNotification(order);
+            updateOrderRecord(order.id, { notificationStatus: 'sent' });
+        }
     } catch (error) {
         updateOrderRecord(order.id, { notificationStatus: 'failed' });
+        throw error;
+    }
+
+    try {
+        if (order.customerNotificationStatus !== 'sent') {
+            await sendCustomerConfirmation(order);
+            updateOrderRecord(order.id, { customerNotificationStatus: 'sent' });
+        }
+    } catch (error) {
+        updateOrderRecord(order.id, { customerNotificationStatus: 'failed' });
         throw error;
     }
 };
@@ -284,7 +342,7 @@ app.post('/api/stripe-webhook', express.raw({ type: 'application/json' }), async
 app.use(express.json());
 
 app.get('/health', (_req, res) => {
-    res.json({ ok: true, ordersFilePath });
+    res.json({ ok: true });
 });
 
 app.get('/api/orders', (_req, res) => {
@@ -307,6 +365,12 @@ app.post('/api/create-checkout-session', async (req, res) => {
     try {
         const bodyItems = Array.isArray(req.body?.items) ? req.body.items : [];
         const shippingCountry = String(req.body?.shippingCountry || '').toUpperCase();
+        const customer = req.body?.customer || {};
+        const requiredCustomerFields = ['firstName', 'lastName', 'email', 'address', 'houseNumber', 'city', 'postalCode', 'country'];
+        const hasMissingCustomerField = requiredCustomerFields.some((field) => !String(customer[field] || '').trim());
+        if (hasMissingCustomerField || String(customer.country).toUpperCase() !== shippingCountry) {
+            return res.status(400).json({ error: 'Complete the shipping address.' });
+        }
         if (bodyItems.length === 0) {
             return res.status(400).json({ error: 'No items selected for checkout.' });
         }
@@ -353,9 +417,33 @@ app.post('/api/create-checkout-session', async (req, res) => {
             }
         });
 
+        const customerName = `${String(customer.firstName).trim()} ${String(customer.lastName).trim()}`;
+        const customerAddress = {
+            line1: `${String(customer.address).trim()} ${String(customer.houseNumber).trim()}`,
+            city: String(customer.city).trim(),
+            postal_code: String(customer.postalCode).trim(),
+            country: String(customer.country).toUpperCase()
+        };
+        const stripeCustomerData = {
+            name: customerName,
+            email: String(customer.email).trim(),
+            address: customerAddress,
+            shipping: {
+                name: customerName,
+                address: customerAddress
+            }
+        };
+        const customerPhone = String(customer.phone || '').trim();
+        if (customerPhone) {
+            stripeCustomerData.phone = customerPhone;
+            stripeCustomerData.shipping.phone = customerPhone;
+        }
+        const stripeCustomer = await stripe.customers.create(stripeCustomerData);
+
         const session = await stripe.checkout.sessions.create({
             mode: 'payment',
             line_items: lineItems,
+            customer: stripeCustomer.id,
             billing_address_collection: 'required',
             shipping_address_collection: {
                 allowed_countries: [
@@ -365,7 +453,15 @@ app.post('/api/create-checkout-session', async (req, res) => {
                 ]
             },
             metadata: {
-                shippingCountry
+                shippingCountry,
+                firstName: String(customer.firstName).trim(),
+                lastName: String(customer.lastName).trim(),
+                email: String(customer.email).trim(),
+                phone: String(customer.phone).trim(),
+                address: String(customer.address).trim(),
+                city: String(customer.city).trim(),
+                postalCode: String(customer.postalCode).trim(),
+                country: String(customer.country).toUpperCase()
             },
             success_url: `${siteBaseUrl}/cart/success.html?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `${siteBaseUrl}/cart/cancel.html`

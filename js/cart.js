@@ -1,5 +1,38 @@
 const CART_STORAGE_KEY = 'edulco_cart_v1';
 const CHECKOUT_API_BASE = window.EDULCO_CHECKOUT_API_BASE || 'http://localhost:4242';
+let healthRequested = false;
+let healthPromise = null;
+
+const wait = (milliseconds) => new Promise((resolve) => {
+    window.setTimeout(resolve, milliseconds);
+});
+
+const ensureCheckoutServerReady = () => {
+    if (healthPromise) return healthPromise;
+
+    healthPromise = (async () => {
+        let lastError;
+        for (let attempt = 0; attempt < 6; attempt += 1) {
+            try {
+                const response = await fetch(`${CHECKOUT_API_BASE}/health`, { method: 'GET' });
+                const payload = await response.json().catch(() => ({}));
+                if (response.ok && payload.ok === true) return;
+                lastError = new Error('Payment system is not ready yet.');
+            } catch (error) {
+                lastError = error;
+            }
+
+            if (attempt < 5) await wait(2000);
+        }
+
+        throw lastError || new Error('Payment system is not ready yet.');
+    })().catch((error) => {
+        healthPromise = null;
+        throw error;
+    });
+
+    return healthPromise;
+};
 const SHIPPING_RATES = {
     DE: 6.90,
     AT: 9.90,
@@ -249,6 +282,18 @@ const bindCartPageEvents = () => {
     const allCheckbox = cartRoot.querySelector('[data-cart-select-all]');
     const itemsWrap = cartRoot.querySelector('[data-cart-items]');
     const shippingCountryNode = cartRoot.querySelector('[data-shipping-country]');
+    const customerFormFields = cartRoot.querySelectorAll('.cart-customer input, .cart-customer select');
+
+    const wakeCheckoutServer = () => {
+        if (healthRequested) return;
+        healthRequested = true;
+        ensureCheckoutServerReady().catch(() => {});
+    };
+
+    customerFormFields.forEach((field) => {
+        field.addEventListener('focus', wakeCheckoutServer, { once: true });
+        field.addEventListener('click', wakeCheckoutServer, { once: true });
+    });
 
     shippingCountryNode.addEventListener('change', () => {
         renderCartPage();
@@ -311,6 +356,8 @@ const bindCheckoutButton = () => {
     const cartRoot = document.querySelector('[data-cart-page]');
     if (!checkoutButton || !cartRoot) return;
     const shippingCountryNode = cartRoot.querySelector('[data-shipping-country]');
+    const customerFields = ['firstName', 'lastName', 'email', 'address', 'houseNumber', 'city', 'postalCode', 'country'];
+    const optionalCustomerFields = ['phone'];
 
     checkoutButton.addEventListener('click', async () => {
         const items = readCart().filter((item) => item.selected && item.qty > 0).map((item) => ({
@@ -320,17 +367,30 @@ const bindCheckoutButton = () => {
 
         if (items.length === 0) return;
 
+        const customer = Object.fromEntries([...customerFields, ...optionalCustomerFields].map((fieldName) => {
+            const field = cartRoot.querySelector(`[name="${fieldName}"]`);
+            return [fieldName, field ? field.value.trim() : ''];
+        }));
+        const hasMissingField = customerFields.some((fieldName) => !customer[fieldName]);
+        if (hasMissingField || customer.country !== shippingCountryNode.value) {
+            alert('Please complete the shipping address before continuing.');
+            return;
+        }
+
         checkoutButton.disabled = true;
         const originalText = checkoutButton.textContent;
-        checkoutButton.textContent = 'Opening checkout...';
+        checkoutButton.textContent = 'Payment system initializing...';
 
         try {
+            await ensureCheckoutServerReady();
+            checkoutButton.textContent = 'Opening checkout...';
             const response = await fetch(`${CHECKOUT_API_BASE}/api/create-checkout-session`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     items,
-                    shippingCountry: shippingCountryNode.value
+                    shippingCountry: shippingCountryNode.value,
+                    customer
                 })
             });
 
@@ -341,11 +401,7 @@ const bindCheckoutButton = () => {
 
             window.location.href = payload.url;
         } catch (error) {
-            const isNetworkError = error instanceof TypeError;
-            const message = isNetworkError
-                ? 'Checkout server is not running. Start checkout-server on port 4242 and try again.'
-                : error.message;
-            alert(message || 'Checkout is not available right now. Please try again.');
+            alert('Payment system is taking longer than expected. Please try again.');
             checkoutButton.disabled = false;
             checkoutButton.textContent = originalText;
         }

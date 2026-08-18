@@ -4,7 +4,6 @@ const products = {
         shortDescription: '💧 pH · ⚗️ ORP · ⚡ EC · 🌡️ 2× Temperature · 🔌 3× Relay Outputs · 📡 Wi-Fi',
         description: 'DIN Rail mounted multifunction Wi-Fi controller designed for 💧 water treatment, 🌱 hydroponics, 🐠 aquariums, 🏊 swimming pools, ☀️ solar thermal systems, 🌡️ HVAC applications and ⚙️ general process automation.',
         cardImage: 'industrial.png',
-        price: 89,
         detailImages: [ '../assets/products/industrial-detail-1.png', '../assets/products/industrial-detail-2.png'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_INDUSTRIAL.pdf',
         specs: {
@@ -35,7 +34,6 @@ const products = {
                      'swimming pools, solar thermal systems, HVAC applications, and general process automation, ' +
                      'provided with 2 built in dosing pumps and a USB-A output for additional dosing or control.',
         cardImage: 'premium.jpg',
-        price: 109,
         detailImages: [ '../assets/products/premium-detail-1.jpg', '../assets/products/premium-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_PREMIUM.pdf',
         specs: {
@@ -64,7 +62,6 @@ const products = {
         shortDescription: '💧 pH · ⚗️ ORP · ⚡ EC · 🌡️ 2× Temperature · 🔌 3× USB-A Outputs · 📡 Wi-Fi',
         description: 'The central controller for building a flexible system around your water quality and dosing needs.',
         cardImage: 'modular-controller.png',
-        price: 78,
         detailImages: [ '../assets/products/modular-controller-detail-1.png', '../assets/products/modular-controller-detail-2.png'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -93,7 +90,6 @@ const products = {
         shortDescription: '🔌 Schuko Plug Extension · 🎛️ USB-A Controlled · 🧩 Modular System Expansion',
         description: 'A compact expansion module that connects additional control and dosing functions to a modular setup.',
         cardImage: 'modular-plug.png',
-        price: 45,
         detailImages: [ '../assets/products/modular-plug-detail-1.jpg', '../assets/products/modular-plug-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -110,7 +106,6 @@ const products = {
         shortDescription: '🌊 60 ml/min Dosing Pump · 🎛️ USB-A Controlled · 🧩 Modular System Expansion',
         description: 'A compact 60 ml dosing pump for precise, efficient control in smaller modular systems.',
         cardImage: 'modular-pump60.png',
-        price: 55,
         detailImages: [ '../assets/products/modular-pump60-detail-1.jpg', '../assets/products/modular-pump60-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -127,7 +122,6 @@ const products = {
         shortDescription: '🌊 180 ml/min Dosing Pump · 🎛️ USB-A Controlled · 🧩 Modular System Expansion',
         description: 'A balanced 180 ml dosing pump for everyday modular water treatment applications.',
         cardImage: 'modular-pump180.jpg',
-        price: 60,
         detailImages: [ '../assets/products/modular-pump180-detail-1.jpg', '../assets/products/modular-pump180-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -144,7 +138,6 @@ const products = {
         shortDescription: '🌊 500 ml/min Dosing Pump · 🎛️ USB-A Controlled · 🧩 Modular System Expansion',
         description: 'A higher-capacity 500 ml dosing pump for larger modular water systems.',
         cardImage: 'modular-pump500.jpg',
-        price: 70,
         detailImages: [ '../assets/products/modular-pump500-detail-1.jpg', '../assets/products/modular-pump500-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -161,7 +154,6 @@ const products = {
         shortDescription: '💧 pH / ⚗️ ORP  · 🔌 Relay Output · 📡 Wi-Fi',
         description: 'A connected plug for monitoring pH and ORP values and keeping water chemistry under control.',
         cardImage: 'smart-plug-ph-orp.jpg',
-        price: 55,
         detailImages: [ '../assets/products/smart-plug-ph-orp-detail-1.jpg', '../assets/products/smart-plug-ph-orp-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -178,7 +170,6 @@ const products = {
         shortDescription: '⚡ EC · 💎 TDS · 🧂 Salinity · 🌡️ Temperature · 📡 Wi-Fi',
         description: 'A connected plug for reading conductivity and temperature in one compact monitoring solution.',
         cardImage: 'smart-plug-ec-temp.jpg',
-        price: 55,
         detailImages: [ '../assets/products/smart-plug-ec-temp-detail-1.jpg', '../assets/products/smart-plug-ec-temp-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -195,7 +186,6 @@ const products = {
         shortDescription: '💧 pH / ⚗️ ORP  · 🌊 60 ml/min Dosing Pump  · 📡 Wi-Fi',
         description: 'The compact 60 ml smart dosing pump for precise control in smaller installations.',
         cardImage: 'smart-pump-60.jpg',
-        price: 60,
         detailImages: [ '../assets/products/smart-pump-60-detail-1.jpg', '../assets/products/smart-pump-60-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -212,7 +202,6 @@ const products = {
         shortDescription: '💧 pH / ⚗️ ORP  · 🌊 180 ml/min Dosing Pump  · 📡 Wi-Fi',
         description: 'The 180 ml smart dosing pump for reliable, balanced dosing in everyday systems.',
         cardImage: 'smart-pump-180.jpg',
-        price: 60,
         detailImages: [ '../assets/products/smart-pump-180-detail-1.jpg', '../assets/products/smart-pump-180-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -229,7 +218,6 @@ const products = {
         shortDescription: '💧 pH / ⚗️ ORP  · 🌊 500 ml/min Dosing Pump  · 📡 Wi-Fi',
         description: 'The 500 ml smart dosing pump for higher-capacity water treatment applications.',
         cardImage: 'smart-pump-500.jpg',
-        price: 80,
         detailImages: [ '../assets/products/smart-pump-500-detail-1.jpg', '../assets/products/smart-pump-500-detail-2.jpg'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
@@ -246,7 +234,6 @@ const products = {
         shortDescription: '2c 💧 pH/⚗️ ORP ·  ♾️ Arduino Access · 📡 Wi-Fi',
         description: 'A smart sensor solution for live pH and ORP insight, helping maintain the right water balance.',
         cardImage: 'smart-sens-ph-orp.jpg',
-        price: 45,
         detailImages: [ '../assets/products/smart-sens-ph-orp-detail-1.jpg', '../assets/products/smart-sens-ph-orp-detail-2.jpg'],
         manual: null,
         specs: {
@@ -263,7 +250,6 @@ const products = {
         shortDescription: '1x⚡EC/ 💎 TDS/🧂 Salinity 2x🌡️ Temperature ·  ♾️ Arduino Access · 📡 Wi-Fi',
         description: 'A smart sensor solution for live conductivity and temperature monitoring.',
         cardImage: 'smart-sens-ec-temp.jpg',
-        price: 45,
         detailImages: [ '../assets/products/smart-sens-ec-temp-detail-1.jpg', '../assets/products/smart-sens-ec-temp-detail-2.jpg'],
         manual: null,
         specs: {
@@ -281,7 +267,6 @@ const products = {
         shortDescription: '💧 pH probe.',
         description: 'A reliable pH probe for accurate measurement and precise water balance control.',
         cardImage: 'probe-ph.jpg',
-        price: 15,
         detailImages: [ '../assets/products/probe-ph-detail-1.jpg', '../assets/products/probe-ph-detail-2.jpg'],
         manual: null,
         specs: {
@@ -295,7 +280,6 @@ const products = {
         shortDescription: '⚗️ ORP probe',
         description: 'An ORP probe for monitoring oxidation-reduction potential in water treatment systems.',
         cardImage: 'probe-orp.jpg',
-        price: 25,
         detailImages: [ '../assets/products/probe-orp-detail-1.jpg', '../assets/products/probe-orp-detail-2.jpg'],
         manual: null,
         specs: {
@@ -309,7 +293,6 @@ const products = {
         shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
         description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
         cardImage: 'probe-ec.jpg',
-        price: 20,
         detailImages: [ '../assets/products/probe-ec-detail-1.jpg', '../assets/products/probe-ec-detail-2.jpg'],
         manual: null,
         specs: {
@@ -323,7 +306,6 @@ const products = {
         shortDescription: '🌡️ Analog Temperature probe',
         description: 'A stable NTC probe for accurate temperature measurement and system control.',
         cardImage: 'probe-ntc.jpg',
-        price: 10,
         detailImages: [ '../assets/products/probe-ntc-detail-1.jpg', '../assets/products/probe-ntc-detail-2.jpg'],
         manual: null,
         specs: {
@@ -337,7 +319,6 @@ const products = {
         shortDescription: '🌡️ Digital Temperature probe',
         description: 'A digital DS18 temperature probe for connected water quality systems.',
         cardImage: 'probe-ds18.png',
-        price: 10,
         detailImages: [ '../assets/products/probe-ds18-detail-1.png', '../assets/products/probe-ds18-detail-2.png'],
         manual: null,
         specs: {
@@ -351,7 +332,6 @@ const products = {
         shortDescription: '🌡️ Analog High Temperature probe',
         description: 'A flexible silicone NTC temperature probe designed for protected installations.',
         cardImage: 'probe-ntc-ht.jpg',
-        price: 15,
         detailImages: [ '../assets/products/probe-ntc-ht-detail-1.jpg', '../assets/products/probe-ntc-ht-detail-2.jpg'],
         manual: null,
         specs: {
@@ -362,8 +342,25 @@ const products = {
     }
 };
 
-// Loads product data into the product cards
-function loadProductCards() {
+const loadPriceCatalog = async () => {
+    const response = await fetch('../data/products_price_input.json');
+    if (!response.ok) throw new Error('Failed to load product prices.');
+
+    const raw = await response.text();
+    const start = raw.indexOf('{');
+    const end = raw.lastIndexOf('}');
+    if (start === -1 || end <= start) throw new Error('Invalid product price catalog.');
+    return JSON.parse(raw.slice(start, end + 1));
+};
+
+const applyPriceCatalog = (priceCatalog) => {
+    Object.entries(priceCatalog).forEach(([productName, price]) => {
+        if (products[productName]) products[productName].price = Number(price);
+    });
+};
+
+// Loads product data into the product cards after prices are available.
+const loadProductCards = () => {
     document.querySelectorAll('.product-card').forEach((productCard) => {
         const productName = productCard.querySelector('.add-to-cart').dataset.product;
         const product = products[productName];
@@ -381,9 +378,7 @@ function loadProductCards() {
 
         productCard.querySelector('.product-visual').append(image);
     });
-}
-
-loadProductCards();
+};
 
 // Create and add the product details popup to the page.
 const productModal = document.createElement('div');
@@ -478,3 +473,19 @@ productModal.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeProductModal();
 });
+
+document.querySelectorAll('.add-to-cart').forEach((button) => {
+    button.disabled = true;
+});
+
+loadPriceCatalog()
+    .then((priceCatalog) => {
+        applyPriceCatalog(priceCatalog);
+        loadProductCards();
+        document.querySelectorAll('.add-to-cart').forEach((button) => {
+            button.disabled = false;
+        });
+    })
+    .catch((error) => {
+        console.error(error);
+    });

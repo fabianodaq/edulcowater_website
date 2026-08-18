@@ -2,7 +2,7 @@
 
 ## 1) Configure environment
 
-Copy `.env.example` to `.env` and set your Stripe key:
+Create a local `.env` file in `checkout-server` and set the required values:
 
 - `STRIPE_SECRET_KEY=sk_test_...`
 - `STRIPE_WEBHOOK_SECRET=whsec_...`
@@ -27,6 +27,7 @@ Server endpoint:
 
 - `POST /api/create-checkout-session`
 - `POST /api/stripe-webhook`
+- `GET /health`
 - `GET /api/orders`
 
 ## Notes
@@ -36,8 +37,9 @@ Server endpoint:
 - Cancel URL: `/cart/cancel.html`
 - Confirmed Stripe checkouts are stored in `checkout-server/data/orders.json`.
 - Each stored order includes products, quantities, totals, shipping cost, billing address, shipping address, customer details, and Stripe metadata.
+- Customer details are collected in the frontend checkout form and passed to the backend before Stripe Checkout opens. Stripe collects the card details on its hosted payment page.
 - The webhook handles both `checkout.session.completed` and delayed successful payments.
-- A paid-order email is sent to `edulcowater.mailer@gmail.com` by default with subject `ORDER-WEB-SITE`; the record stores `notificationStatus` as `sent` or `failed`.
+- A paid-order email is sent to `edulcowater.mailer@gmail.com` by default with subject `order_website`; the record stores `notificationStatus` as `sent` or `failed`.
 
 ## Email notifications with Gmail
 
@@ -46,7 +48,6 @@ Use a Gmail App Password for `SMTP_PASS`, not the normal Gmail password. The Gma
 Configure these values in `.env`:
 
 ```env
-ORDER_NOTIFICATION_EMAIL=edulcowater.mailer@gmail.com
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=465
 SMTP_USER=edulcowater.mailer@gmail.com
