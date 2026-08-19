@@ -340,6 +340,9 @@ app.post('/api/create-checkout-session', async (req, res) => {
             mode: 'payment',
             line_items: lineItems,
             customer: stripeCustomer.id,
+            payment_intent_data: {
+                receipt_email: String(customer.email).trim()
+            },
             billing_address_collection: 'required',
             shipping_address_collection: {
                 allowed_countries: [
