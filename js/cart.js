@@ -1,5 +1,5 @@
 const CART_STORAGE_KEY = 'edulco_cart_v1';
-const CHECKOUT_API_BASE = window.EDULCO_CHECKOUT_API_BASE || 'http://localhost:4242';
+const CHECKOUT_API_BASE = window.EDULCO_CHECKOUT_API_BASE || 'https://edulco-checkout.onrender.com';
 let healthRequested = false;
 let healthPromise = null;
 
