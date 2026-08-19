@@ -20,6 +20,7 @@ const smtpPort = Number.parseInt(process.env.SMTP_PORT || '465', 10);
 const smtpUser = process.env.SMTP_USER || '';
 const smtpPassword = process.env.SMTP_PASS || '';
 const notificationEmail = 'edulcowater.mailer@gmail.com';
+const activeNotificationJobs = new Set();
 
 if (!stripeSecret) {
     console.error('Missing STRIPE_SECRET_KEY in environment.');
@@ -254,6 +255,13 @@ const sendCustomerConfirmation = async (order) => {
 };
 
 const handleCheckoutCompleted = async (session, eventId) => {
+    if (activeNotificationJobs.has(session.id)) {
+        return;
+    }
+
+    activeNotificationJobs.add(session.id);
+
+    try {
     const existingRaw = fs.existsSync(ordersFilePath)
         ? fs.readFileSync(ordersFilePath, 'utf8')
         : '[]';
@@ -301,6 +309,9 @@ const handleCheckoutCompleted = async (session, eventId) => {
         updateOrderRecord(order.id, { customerNotificationStatus: 'failed' });
         throw error;
     }
+    } finally {
+        activeNotificationJobs.delete(session.id);
+    }
 };
 
 ensureOrdersStorage();
@@ -329,7 +340,9 @@ app.post('/api/stripe-webhook', express.raw({ type: 'application/json' }), async
     try {
         if (event.type === 'checkout.session.completed' || event.type === 'checkout.session.async_payment_succeeded') {
             const session = event.data.object;
-            await handleCheckoutCompleted(session, event.id);
+            void handleCheckoutCompleted(session, event.id).catch((error) => {
+                console.error('Background webhook handling error:', error);
+            });
         }
 
         return res.json({ received: true });
