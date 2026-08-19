@@ -1,0 +1,62 @@
+To-do
+1. Endpoint per la lavorazione ordini su Render
+Aggiungere nel backend Render endpoint protetti per:
+
+
+Funzioni:
+
+leggere gli ordini salvati in orders.json;
+restituire solo quelli con:
+
+non esporre gli ordini al frontend pubblico;
+richiedere un token di autenticazione per Clair.
+Aggiungere:
+
+
+Funzioni:
+
+ricevere l’ID dell’ordine;
+verificare il token di Clair;
+aggiornare solo quell’ordine;
+cambiare:
+
+conservare lo storico dell’ordine;
+impedire modifiche senza autorizzazione.
+Aggiungere su Render una variabile segreta:
+
+
+Verificare:
+
+risposta corretta degli endpoint;
+token mancante o errato rifiutato;
+ordine pending visibile;
+ordine marcato correttamente come sent.
+2. Clair: polling e gestione ordine
+Configurare Clair sul PC per:
+
+controllare Render a intervalli regolari;
+chiamare:
+
+leggere gli ordini pending;
+verificare i dati dell’ordine;
+collegare, se necessario, l’ordine alla ricevuta Stripe presente nella casella Gmail;
+preparare e inviare la mail di conferma tramite Gmail locale;
+attendere la conferma positiva dell’invio;
+chiamare:
+
+segnare localmente i messaggi già elaborati;
+evitare duplicati;
+ritentare gli ordini se l’invio fallisce;
+lasciare pending l’ordine se Gmail o Render non sono disponibili.
+Flusso finale
+
+Vincoli
+Non modificare Stripe Checkout.
+Non modificare il frontend.
+Non usare SMTP su Render.
+Non salvare credenziali su GitHub.
+Non cancellare fisicamente gli ordini.
+Non lasciare pubblico /api/orders.
+Non segnare un ordine come sent se l’email non è stata inviata correttamente.
+Mantenere orders.json come archivio degli ordini pending e processati.
+Usare un token condiviso solo tra Render e Clair.
