@@ -39,7 +39,7 @@ Server endpoint:
 - Each stored order includes products, quantities, totals, shipping cost, billing address, shipping address, customer details, and Stripe metadata.
 - Customer details are collected in the frontend checkout form and passed to the backend before Stripe Checkout opens. Stripe collects the card details on its hosted payment page.
 - The webhook handles both `checkout.session.completed` and delayed successful payments.
-- A paid-order email is sent to `edulcowater.mailer@gmail.com` by default with subject `order_website`; the record stores `notificationStatus` as `sent` or `failed`.
+- A single paid-order confirmation email is sent to the customer's checkout email with subject `Thank you for your order - Edulco Water`; the record stores `customerNotificationStatus` as `sent` or `failed`.
 
 ## Email notifications with Gmail
 
