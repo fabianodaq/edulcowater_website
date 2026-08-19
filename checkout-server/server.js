@@ -4,7 +4,6 @@ import express from 'express';
 import cors from 'cors';
 import Stripe from 'stripe';
 import dotenv from 'dotenv';
-import nodemailer from 'nodemailer';
 import { fileURLToPath } from 'node:url';
 
 dotenv.config();
@@ -15,10 +14,6 @@ const port = Number.parseInt(process.env.PORT || '4242', 10);
 const siteBaseUrl = process.env.SITE_BASE_URL || 'http://127.0.0.1:5500';
 const stripeSecret = process.env.STRIPE_SECRET_KEY || '';
 const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET || '';
-const smtpHost = process.env.SMTP_HOST || '';
-const smtpPort = Number.parseInt(process.env.SMTP_PORT || '465', 10);
-const smtpUser = process.env.SMTP_USER || '';
-const smtpPassword = process.env.SMTP_PASS || '';
 const activeNotificationJobs = new Set();
 
 if (!stripeSecret) {
@@ -167,50 +162,6 @@ const createOrderRecordFromSession = (session, webhookEventId) => {
     };
 };
 
-const sendCustomerConfirmation = async (order) => {
-    if (!order.customerEmail || !smtpHost || !smtpUser || !smtpPassword) {
-        throw new Error('Customer confirmation email is not configured.');
-    }
-
-    const transporter = nodemailer.createTransport({
-        host: smtpHost,
-        port: smtpPort,
-        secure: smtpPort === 465,
-        auth: {
-            user: smtpUser,
-            pass: smtpPassword
-        }
-    });
-
-    const itemLines = (order.items || [])
-        .map((item) => `- ${item.name} x${item.quantity}: ${item.amountTotal.toFixed(2)} EUR`)
-        .join('\n');
-    const shippingAddress = order.shippingAddress
-        ? `${order.shippingAddress.line1}, ${order.shippingAddress.postal_code} ${order.shippingAddress.city}, ${order.shippingAddress.country}`
-        : 'Not provided';
-
-    await transporter.sendMail({
-        from: smtpUser,
-        to: order.customerEmail,
-        subject: 'Thank you for your order - Edulco Water',
-        text: [
-            `Thank you for your order, ${order.customerName || 'customer'}!`,
-            '',
-            'We have received your payment and are preparing your order.',
-            '',
-            `Order: ${order.id}`,
-            `Total: ${order.amountTotal.toFixed(2)} ${order.currency.toUpperCase()}`,
-            '',
-            'Items:',
-            itemLines || '- No items listed',
-            '',
-            `Shipping address: ${shippingAddress}`,
-            '',
-            'Thank you for choosing Edulco Water.'
-        ].join('\n')
-    });
-};
-
 const handleCheckoutCompleted = async (session, eventId) => {
     if (activeNotificationJobs.has(session.id)) {
         return;
@@ -219,43 +170,28 @@ const handleCheckoutCompleted = async (session, eventId) => {
     activeNotificationJobs.add(session.id);
 
     try {
-    const existingRaw = fs.existsSync(ordersFilePath)
-        ? fs.readFileSync(ordersFilePath, 'utf8')
-        : '[]';
+        const existingRaw = fs.existsSync(ordersFilePath)
+            ? fs.readFileSync(ordersFilePath, 'utf8')
+            : '[]';
 
-    let existing = [];
-    try {
-        existing = JSON.parse(existingRaw);
-        if (!Array.isArray(existing)) {
+        let existing = [];
+        try {
+            existing = JSON.parse(existingRaw);
+            if (!Array.isArray(existing)) {
+                existing = [];
+            }
+        } catch {
             existing = [];
         }
-    } catch {
-        existing = [];
-    }
 
-    const existingOrder = existing.find((order) => order?.id === session.id);
-    if (existingOrder?.customerNotificationStatus === 'sent') {
-        return;
-    }
+        const existingOrder = existing.find((order) => order?.id === session.id);
+        if (existingOrder) return;
 
-    let order = existingOrder;
-    if (!order) {
         const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
             expand: ['line_items.data.price.product']
         });
-        order = createOrderRecordFromSession(fullSession, eventId);
+        const order = createOrderRecordFromSession(fullSession, eventId);
         appendOrderRecord(order);
-    }
-
-    try {
-        if (order.customerNotificationStatus !== 'sent') {
-            await sendCustomerConfirmation(order);
-            updateOrderRecord(order.id, { customerNotificationStatus: 'sent' });
-        }
-    } catch (error) {
-        updateOrderRecord(order.id, { customerNotificationStatus: 'failed' });
-        throw error;
-    }
     } finally {
         activeNotificationJobs.delete(session.id);
     }

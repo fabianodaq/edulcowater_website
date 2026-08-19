@@ -39,22 +39,11 @@ Server endpoint:
 - Each stored order includes products, quantities, totals, shipping cost, billing address, shipping address, customer details, and Stripe metadata.
 - Customer details are collected in the frontend checkout form and passed to the backend before Stripe Checkout opens. Stripe collects the card details on its hosted payment page.
 - The webhook handles both `checkout.session.completed` and delayed successful payments.
-- A single paid-order confirmation email is sent to the customer's checkout email with subject `Thank you for your order - Edulco Water`; the record stores `customerNotificationStatus` as `sent` or `failed`.
+- Render only stores paid orders with `customerNotificationStatus` set to `pending`. Email delivery will be handled later by a protected local order agent.
 
-## Email notifications with Gmail
+## Email notifications
 
-Use a Gmail App Password for `SMTP_PASS`, not the normal Gmail password. The Gmail account must have two-step authentication enabled.
-
-Configure these values in `.env`:
-
-```env
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=465
-SMTP_USER=edulcowater.mailer@gmail.com
-SMTP_PASS=your_16_character_app_password
-```
-
-After changing `.env`, restart the Node server. A successful payment will then create the order record and send the notification email.
+Render does not send email. A future protected local order agent will read pending orders from Render, send the confirmation through the local Gmail SMTP configuration, and mark each order as processed.
 
 ## Webhook local testing (Stripe CLI)
 
