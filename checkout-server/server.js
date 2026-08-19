@@ -19,7 +19,6 @@ const smtpHost = process.env.SMTP_HOST || '';
 const smtpPort = Number.parseInt(process.env.SMTP_PORT || '465', 10);
 const smtpUser = process.env.SMTP_USER || '';
 const smtpPassword = process.env.SMTP_PASS || '';
-const notificationEmail = 'edulcowater.mailer@gmail.com';
 const activeNotificationJobs = new Set();
 
 if (!stripeSecret) {
@@ -163,51 +162,9 @@ const createOrderRecordFromSession = (session, webhookEventId) => {
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
         webhookEventId,
-        notificationStatus: 'pending',
+        customerNotificationStatus: 'pending',
         metadata: session.metadata || {}
     };
-};
-
-const sendOrderNotification = async (order) => {
-    if (!notificationEmail || !smtpHost || !smtpUser || !smtpPassword) {
-        throw new Error('Email notification is not configured.');
-    }
-
-    const transporter = nodemailer.createTransport({
-        host: smtpHost,
-        port: smtpPort,
-        secure: smtpPort === 465,
-        auth: {
-            user: smtpUser,
-            pass: smtpPassword
-        }
-    });
-
-    const itemLines = (order.items || [])
-        .map((item) => `- ${item.name} x${item.quantity}: ${item.amountTotal.toFixed(2)} EUR`)
-        .join('\n');
-    const shippingAddress = order.shippingAddress
-        ? `${order.shippingAddress.line1}, ${order.shippingAddress.postal_code} ${order.shippingAddress.city}, ${order.shippingAddress.country}`
-        : 'Not provided';
-
-    await transporter.sendMail({
-        from: smtpUser,
-        to: notificationEmail,
-        subject: 'order_website',
-        text: [
-            'A new order has been paid.',
-            '',
-            `Order: ${order.id}`,
-            `Customer: ${order.customerName || 'Not provided'}`,
-            `Email: ${order.customerEmail || 'Not provided'}`,
-            `Total: ${order.amountTotal.toFixed(2)} ${order.currency.toUpperCase()}`,
-            '',
-            'Items:',
-            itemLines || '- No items listed',
-            '',
-            `Shipping address: ${shippingAddress}`
-        ].join('\n')
-    });
 };
 
 const sendCustomerConfirmation = async (order) => {
@@ -277,7 +234,7 @@ const handleCheckoutCompleted = async (session, eventId) => {
     }
 
     const existingOrder = existing.find((order) => order?.id === session.id);
-    if (existingOrder?.notificationStatus === 'sent' && existingOrder?.customerNotificationStatus === 'sent') {
+    if (existingOrder?.customerNotificationStatus === 'sent') {
         return;
     }
 
@@ -288,16 +245,6 @@ const handleCheckoutCompleted = async (session, eventId) => {
         });
         order = createOrderRecordFromSession(fullSession, eventId);
         appendOrderRecord(order);
-    }
-
-    try {
-        if (order.notificationStatus !== 'sent') {
-            await sendOrderNotification(order);
-            updateOrderRecord(order.id, { notificationStatus: 'sent' });
-        }
-    } catch (error) {
-        updateOrderRecord(order.id, { notificationStatus: 'failed' });
-        throw error;
     }
 
     try {
