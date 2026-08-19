@@ -341,7 +341,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
             line_items: lineItems,
             customer: stripeCustomer.id,
             payment_intent_data: {
-                receipt_email: String(customer.email).trim()
+                receipt_email: 'edulcowater.mailer@gmail.com'
             },
             billing_address_collection: 'required',
             shipping_address_collection: {
