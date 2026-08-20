@@ -234,7 +234,7 @@ button, a { font: inherit; }
 .industrial-gallery img[src$="industrial-detail.jpg"] { border-left: 1px solid #dcebf0; }
 .product-card:hover { box-shadow: 0 14px 28px rgba(18, 38, 58, .12); transform: translateY(-4px); }
 .product-visual { align-items: center; background: #ffffff; color: #0878b9; display: flex; font-size: 58px; height: 170px; justify-content: center; }
-.product-visual img { cursor: default; height: 100%; object-fit: cover; width: 100%; }
+.product-visual img { cursor: default; height: 100%; object-fit: contain; width: 100%; }
 .product-visual video { cursor: default; height: 100%; object-fit: cover; width: 100%; }
 .product-visual-industrial, .product-visual-premium, .product-visual-modular, .product-visual-smart-plug, .product-visual-smart-pump, .product-visual-smart-sens, .product-visual-probes, .product-visual-accessories { background: #ffffff; }
 .product-card-body { display: flex; flex: 1; flex-direction: column; padding: 18px; }
@@ -271,7 +271,7 @@ button, a { font: inherit; }
 .product-modal-spec-table dd a { color: #0878b9; text-decoration: none; }
 .product-modal-spec-table dd a:hover { color: #0b2d45; text-decoration: underline; }
 .product-modal-gallery { display: grid; gap: 10px; grid-template-rows: repeat(2, 1fr); }
-.product-modal-gallery img { background: #ffffff; display: block; height: 180px; object-fit: cover; width: 100%; }
+.product-modal-gallery img { background: #ffffff; display: block; height: 180px; object-fit: contain; width: 100%; }
 
 
 /* CART PAGE */
@@ -602,7 +602,7 @@ button, a { font: inherit; }
 .products-page .product-grid-single { grid-template-columns: minmax(220px, 280px); }
 .products-page .product-card { display: flex; flex-direction: column; min-width: 0; }
 .products-page .product-visual { display: flex; height: 170px; overflow: hidden; width: 100%; }
-.products-page .product-visual img, .products-page .product-visual video { display: block; height: 100%; object-fit: cover; width: 100%; }
+.products-page .product-visual img, .products-page .product-visual video { display: block; height: 100%; object-fit: contain; width: 100%; }
 @media (max-width: 800px) {
     .products-page .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .products-page .product-visual { height: 140px; }
