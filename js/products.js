@@ -422,13 +422,13 @@ const loadProductCards = () => {
         productCard.querySelector('.product-name').textContent = productName;
         productCard.querySelector('.product-short-description').textContent = product.shortDescription;
 
-        productCard.querySelector('.product-price').textContent = `€ ${product.price}`;
+        productCard.querySelector('.product-price').textContent = product.price === undefined ? '' : `€ ${product.price}`;
 
         const image = document.createElement('img');
         image.src = `../assets/products/${product.cardImage}`;
         image.alt = productName;
 
-        productCard.querySelector('.product-visual').append(image);
+        productCard.querySelector('.product-visual').replaceChildren(image);
     });
 };
 
@@ -526,18 +526,13 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeProductModal();
 });
 
-document.querySelectorAll('.add-to-cart').forEach((button) => {
-    button.disabled = true;
-});
-
+// Render cards immediately so local file previews work even when fetch is blocked by the browser.
+loadProductCards();
 loadPriceCatalog()
     .then((priceCatalog) => {
         applyPriceCatalog(priceCatalog);
         loadProductCards();
-        document.querySelectorAll('.add-to-cart').forEach((button) => {
-            button.disabled = false;
-        });
     })
     .catch((error) => {
-        console.error(error);
+        console.warn('Price catalog unavailable; showing products without prices.', error);
     });
