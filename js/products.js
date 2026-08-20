@@ -262,136 +262,147 @@ const products = {
         }
     },
 
-
     'pH Probe': {
-        shortDescription: '💧 pH probe.',
-        description: 'A reliable pH probe for accurate measurement and precise water balance control.',
-        cardImage: 'probe-ph.jpg',
-        detailImages: [ '../assets/products/probe-ph-detail-1.jpg', '../assets/products/probe-ph-detail-2.jpg'],
+        shortDescription: '💧 pH probe electrode with BNC connector.',
+        description: 'pH Electrode Probe BNC Connector for Laboratory Aquarium Hydroponic Water Analyzer',
+        cardImage: 'probe-ph.png',
+        detailImages: [ '../assets/products/probe-ph-detail-1.png', '../assets/products/probe-ph-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['COnnection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+            'Connector': ['Connector 🔌', 'BNC'],
+            'Range': ['Range 🌡️', '0-14.00 pH'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', '5-75 ℃'],
         }
     },
 
     'ORP Probe': { 
-        shortDescription: '⚗️ ORP probe',
-        description: 'An ORP probe for monitoring oxidation-reduction potential in water treatment systems.',
-        cardImage: 'probe-orp.jpg',
-        detailImages: [ '../assets/products/probe-orp-detail-1.jpg', '../assets/products/probe-orp-detail-2.jpg'],
+        shortDescription: '⚗️ ORP probe electrode with BNC connector.',
+        description: 'ORP Electrode Probe BNC Connector for Laboratory Aquarium Hydroponic Water Analyzer',
+        cardImage: 'probe-orp.png',
+        detailImages: [ '../assets/products/probe-orp-detail-1.png', '../assets/products/probe-orp-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['COnnection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+            'Connector': ['Connector 🔌', 'BNC'],
+            'Range': ['Range 🌡️', '-2000 ~ 2000 mv'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', '5-75 ℃'],
         }
     },
 
     'EC Probe DCJack': {
-        shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
-        description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
-        cardImage: 'probe-ec-DC.jpg',
-        detailImages: [ '../assets/products/probe-ec-DC-detail-1.jpg', '../assets/products/probe-ec-DC-detail-2.jpg'],
+        shortDescription: '⚡EC probe with DC Jack',
+        description: 'EC TDS Salinity probe with DC Jack', 
+        cardImage: 'probe-ec-DC.png',
+        detailImages: [ '../assets/products/probe-ec-DC-detail-1.png', '../assets/products/probe-ec-DC-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['Connection 🔌', 'DC Jack'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+            'Connector': ['Connector 🔌', 'DC Jack 3.6 mm'],
+            'Range': ['Range 🌡️', '10-20000uS/cm'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', 'Temperature 0-50°C, 10K B =3950 1% precision, pressure 0-0.5MPA costant K =0.05'],
         }
     },
 
     'EC Probe TB': {
-        shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
-        description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
-        cardImage: 'probe-ec-TB.jpg',
-        detailImages: [ '../assets/products/probe-ec-TB-detail-1.jpg', '../assets/products/probe-ec-TB-detail-2.jpg'],
+        shortDescription: '⚡EC probe with Terminal Block', 
+        description: 'EC TDS Salinity probe with Terminal Block',
+        cardImage: 'probe-ec-TB.png',
+        detailImages: [ '../assets/products/probe-ec-TB-detail-1.png', '../assets/products/probe-ec-TB-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['Connection 🔌', 'Terminal Block'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+            'Connector': ['Connector 🔌', 'Terminal Block'],
+            'Range': ['Range 🌡️', '10-20000uS/cm'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', '10K B =3950 1% precision'],
         }
     },
 
     'NTC DCJack': {
-        shortDescription: '🌡️ Analog Temperature probe',
-        description: 'A stable NTC probe for accurate temperature measurement and system control.',
-        cardImage: 'probe-ntc-DC.jpg',
-        detailImages: [ '../assets/products/probe-ntc-DC-detail-1.jpg', '../assets/products/probe-ntc-DC-detail-2.jpg'],
+        shortDescription: '🌡️ Analog Temperature probe with DC Jack connector',
+        description: '🌡️ Analog Temperature, waterproof probe with DC Jack connector',
+        cardImage: 'probe-ntc-DC.png',
+        detailImages: [ '../assets/products/probe-ntc-DC-detail-1.png', '../assets/products/probe-ntc-DC-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['Connection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+            'Connector': ['Connector 🔌', 'DC Jack 3.6 mm'],
+            'Range': ['Range 🌡️', '-55 ~ +85'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', '10K B =3950 1% precision'],
         }
     },
 
     'NTC TB': {
-        shortDescription: '🌡️ Analog Temperature probe',
-        description: 'A stable NTC probe for accurate temperature measurement and system control.',
-        cardImage: 'probe-ntc-TB.jpg',
-        detailImages: [ '../assets/products/probe-ntc-TB-detail-1.jpg', '../assets/products/probe-ntc-TB-detail-2.jpg'],
+        shortDescription: '🌡️ Analog Temperature probe with Terminal Block connector',
+        description: '🌡️ Analog Temperature, waterproof probe with Terminal Block connector',
+        cardImage: 'probe-ntc-TB.png',
+        detailImages: [ '../assets/products/probe-ntc-TB-detail-1.png', '../assets/products/probe-ntc-TB-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['Connection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
-        }
-    },
-
-    'Temp DS18 DCJack': {
-        shortDescription: '🌡️ Digital Temperature probe',
-        description: 'A digital DS18 temperature probe for connected water quality systems.',
-        cardImage: 'probe-ds18-DC.png',
-        detailImages: [ '../assets/products/probe-ds18-DC-detail-1.png', '../assets/products/probe-ds18-DC-detail-2.png'],
-        manual: null,
-        specs: {
-            'Connection': ['Connection 🔌', 'DC Jack'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
-        }
-    },
-
-    'Temp DS18 TB': {
-        shortDescription: '🌡️ Digital Temperature probe',
-        description: 'A digital DS18 temperature probe for connected water quality systems.',
-        cardImage: 'probe-ds18-TB.png',
-        detailImages: [ '../assets/products/probe-ds18-TB-detail-1.png', '../assets/products/probe-ds18-TB-detail-2.png'],
-        manual: null,
-        specs: {
-            'Connection': ['Connection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+            'Connector': ['Connector 🔌', 'Terminal Block'],
+            'Range': ['Range 🌡️', '-55 ~ +85'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', '10K B =3950 1% precision'],
         }
     },
 
     'NTC HT TB': {
-        shortDescription: '🌡️ Analog High Temperature probe',
-        description: 'A flexible silicone NTC temperature probe designed for protected installations.',
-        cardImage: 'probe-ntc-ht-TB.jpg',
-        detailImages: [ '../assets/products/probe-ntc-ht-TB-detail-1.jpg', '../assets/products/probe-ntc-ht-TB-detail-2.jpg'],
+        shortDescription: '🌡️ Analog High Temperature probe with Terminal Block connector',
+        description: '🌡️ Analog Temperature, waterproof probe with Terminal Block connector for extended measurement range',
+        cardImage: 'probe-ntc-ht-TB.png',
+        detailImages: [ '../assets/products/probe-ntc-ht-TB-detail-1.png', '../assets/products/probe-ntc-ht-TB-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['Connection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+            'Connector': ['Connector 🔌', 'Terminal Block'],
+            'Range': ['Range 🌡️', '-55 to 180 ℃'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', '10K B =3950 1% precision'],
         }
     },
 
     'NTC HT DCJack': {
-        shortDescription: '🌡️ Analog High Temperature probe',
-        description: 'A flexible silicone NTC temperature probe designed for protected installations.',
-        cardImage: 'probe-ntc-ht-DC.jpg',
-        detailImages: [ '../assets/products/probe-ntc-ht-DC-detail-1.jpg', '../assets/products/probe-ntc-ht-DC-detail-2.jpg'],
+        shortDescription: '🌡️ Analog High Temperature probe with DC Jack connector',
+        description: '🌡️ Analog Temperature, waterproof probe with DC Jack connector for extended measurement range',
+        cardImage: 'probe-ntc-ht-DC.png',
+        detailImages: [ '../assets/products/probe-ntc-ht-DC-detail-1.png', '../assets/products/probe-ntc-ht-DC-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['Connection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+            'Connector': ['Connector 🔌', 'DC Jack 3.6mm'],
+            'Range': ['Range 🌡️', '-55 to 180 ℃'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', '10K B =3950 1% precision'],
+        }
+    },
+
+    'Temp DS18 DCJack': {
+        shortDescription: '🌡️ Digital Temperature probe with DC Jack connector',
+        description: 'Digital Temperature, waterproof probe with DC Jack connector',
+        cardImage: 'probe-ds18-DC.png',
+        detailImages: [ '../assets/products/probe-ds18-DC-detail-1.png', '../assets/products/probe-ds18-DC-detail-2.png'],
+        manual: null,
+        specs: {
+            'Connector': ['Connector 🔌', 'DC Jack 3.6 mm'],
+            'Range': ['Range 🌡️', '-55 ~ +85'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', 'DS18B20 1-Wire Digital Temperature Sensor'],
+        }
+    },
+
+    'Temp DS18 TB': {
+        shortDescription: '🌡️ Digital Temperature probe with Terminal Block connector',
+        description: 'Digital Temperature, waterproof probe with Terminal Block connector',
+        cardImage: 'probe-ds18-TB.png',
+        detailImages: [ '../assets/products/probe-ds18-TB-detail-1.png', '../assets/products/probe-ds18-TB-detail-2.png'],
+        manual: null,
+        specs: {
+            'Connector': ['Connector 🔌', 'Terminal Block'],
+            'Range': ['Range 🌡️', '-55 ~ +85'],
+            'CableLength': ['Cable Length 📏', '1 m'],
+            'Rating': ['Electrical Rating ⚡', 'DS18B20 1-Wire Digital Temperature Sensor'],
         }
     }
+
+
 };
 
 const loadPriceCatalog = async () => {
