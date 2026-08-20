@@ -290,32 +290,6 @@ const products = {
     },
 
     'EC Probe DCJack': {
-    'EC Probe TB': {
-        shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
-        description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
-        cardImage: 'probe-ec.jpg',
-        detailImages: [ '../assets/products/probe-ec-detail-1.jpg', '../assets/products/probe-ec-detail-2.jpg'],
-        manual: null,
-        specs: {
-            'Connection': ['COnnection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
-        }
-    },
-        shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
-        description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
-        cardImage: 'probe-ec.jpg',
-        detailImages: [ '../assets/products/probe-ec-detail-1.jpg', '../assets/products/probe-ec-detail-2.jpg'],
-        manual: null,
-        specs: {
-            'Connection': ['COnnection 🔌', 'BNC'],
-            'Mounting': ['Mounting 🛠️', 'Power Plug'],
-            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
-        }
-    },
-
-
-    'EC Probe DCJack': {
         shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
         description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
         cardImage: 'probe-ec-DC.jpg',
