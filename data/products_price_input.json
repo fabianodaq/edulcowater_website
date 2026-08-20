@@ -5,7 +5,7 @@
 {
     "Industrial": 85,
     "Premium": 109,
-    "Modular Controller": 78,
+    "Modular": 78,
     "Modular Plug": 45,
     "Modular Pump 60": 55,
     "Modular Pump 180": 60,
@@ -19,8 +19,12 @@
     "Smart Sens EC/Temp": 45,
     "pH Probe": 15,
     "ORP Probe": 25,
-    "EC Probe": 20,
-    "NTC Temperature Probe": 10,
-    "DS18 Temperature Probe": 10,
-    "Silicone NTC Temperature Probe": 10
+    "EC Probe DCJack": 20,
+    "EC Probe TB": 20,
+    "NTC TB": 10,
+    "NTC DCJack": 10,
+    "Temp DS18 TB": 10,
+    "Temp DS18 DCJack": 10,
+    "NTC HT TB": 10,
+    "NTC HT DCJack": 10
 }
