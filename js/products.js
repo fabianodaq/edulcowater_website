@@ -58,7 +58,7 @@ const products = {
         }
     },
 
-    'Modular Controller': {
+    'Modular': {
         shortDescription: '💧 pH · ⚗️ ORP · ⚡ EC · 🌡️ 2× Temperature · 🔌 3× USB-A Outputs · 📡 Wi-Fi',
         description: 'The central controller for building a flexible system around your water quality and dosing needs.',
         cardImage: 'modular-controller.png',
@@ -289,7 +289,19 @@ const products = {
         }
     },
 
-    'EC Probe': {
+    'EC Probe DCJack': {
+    'EC Probe TB': {
+        shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
+        description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
+        cardImage: 'probe-ec.jpg',
+        detailImages: [ '../assets/products/probe-ec-detail-1.jpg', '../assets/products/probe-ec-detail-2.jpg'],
+        manual: null,
+        specs: {
+            'Connection': ['COnnection 🔌', 'BNC'],
+            'Mounting': ['Mounting 🛠️', 'Power Plug'],
+            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+        }
+    },
         shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
         description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
         cardImage: 'probe-ec.jpg',
@@ -302,40 +314,106 @@ const products = {
         }
     },
 
-    'NTC Temperature Probe': {
+
+    'EC Probe DCJack': {
+        shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
+        description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
+        cardImage: 'probe-ec-DC.jpg',
+        detailImages: [ '../assets/products/probe-ec-DC-detail-1.jpg', '../assets/products/probe-ec-DC-detail-2.jpg'],
+        manual: null,
+        specs: {
+            'Connection': ['Connection 🔌', 'DC Jack'],
+            'Mounting': ['Mounting 🛠️', 'Power Plug'],
+            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+        }
+    },
+
+    'EC Probe TB': {
+        shortDescription: '⚡EC/ 💎 TDS/🧂 Salinity probe', 
+        description: 'An EC probe for dependable conductivity measurement and dosing feedback.',
+        cardImage: 'probe-ec-TB.jpg',
+        detailImages: [ '../assets/products/probe-ec-TB-detail-1.jpg', '../assets/products/probe-ec-TB-detail-2.jpg'],
+        manual: null,
+        specs: {
+            'Connection': ['Connection 🔌', 'Terminal Block'],
+            'Mounting': ['Mounting 🛠️', 'Power Plug'],
+            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+        }
+    },
+
+    'NTC DCJack': {
         shortDescription: '🌡️ Analog Temperature probe',
         description: 'A stable NTC probe for accurate temperature measurement and system control.',
-        cardImage: 'probe-ntc.jpg',
-        detailImages: [ '../assets/products/probe-ntc-detail-1.jpg', '../assets/products/probe-ntc-detail-2.jpg'],
+        cardImage: 'probe-ntc-DC.jpg',
+        detailImages: [ '../assets/products/probe-ntc-DC-detail-1.jpg', '../assets/products/probe-ntc-DC-detail-2.jpg'],
         manual: null,
         specs: {
-            'Connection': ['COnnection 🔌', 'BNC'],
+            'Connection': ['Connection 🔌', 'BNC'],
             'Mounting': ['Mounting 🛠️', 'Power Plug'],
             'Dimensions': ['Dimensions 📐', 'To be confirmed'],
         }
     },
 
-    'DS18 Temperature Probe': {
+    'NTC TB': {
+        shortDescription: '🌡️ Analog Temperature probe',
+        description: 'A stable NTC probe for accurate temperature measurement and system control.',
+        cardImage: 'probe-ntc-TB.jpg',
+        detailImages: [ '../assets/products/probe-ntc-TB-detail-1.jpg', '../assets/products/probe-ntc-TB-detail-2.jpg'],
+        manual: null,
+        specs: {
+            'Connection': ['Connection 🔌', 'BNC'],
+            'Mounting': ['Mounting 🛠️', 'Power Plug'],
+            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+        }
+    },
+
+    'Temp DS18 DCJack': {
         shortDescription: '🌡️ Digital Temperature probe',
         description: 'A digital DS18 temperature probe for connected water quality systems.',
-        cardImage: 'probe-ds18.png',
-        detailImages: [ '../assets/products/probe-ds18-detail-1.png', '../assets/products/probe-ds18-detail-2.png'],
+        cardImage: 'probe-ds18-DC.png',
+        detailImages: [ '../assets/products/probe-ds18-DC-detail-1.png', '../assets/products/probe-ds18-DC-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['COnnection 🔌', 'BNC'],
+            'Connection': ['Connection 🔌', 'DC Jack'],
             'Mounting': ['Mounting 🛠️', 'Power Plug'],
             'Dimensions': ['Dimensions 📐', 'To be confirmed'],
         }
     },
 
-    'Silicone NTC Temperature Probe': {
-        shortDescription: '🌡️ Analog High Temperature probe',
-        description: 'A flexible silicone NTC temperature probe designed for protected installations.',
-        cardImage: 'probe-ntc-ht.jpg',
-        detailImages: [ '../assets/products/probe-ntc-ht-detail-1.jpg', '../assets/products/probe-ntc-ht-detail-2.jpg'],
+    'Temp DS18 TB': {
+        shortDescription: '🌡️ Digital Temperature probe',
+        description: 'A digital DS18 temperature probe for connected water quality systems.',
+        cardImage: 'probe-ds18-TB.png',
+        detailImages: [ '../assets/products/probe-ds18-TB-detail-1.png', '../assets/products/probe-ds18-TB-detail-2.png'],
         manual: null,
         specs: {
-            'Connection': ['COnnection 🔌', 'BNC'],
+            'Connection': ['Connection 🔌', 'BNC'],
+            'Mounting': ['Mounting 🛠️', 'Power Plug'],
+            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+        }
+    },
+
+    'NTC HT TB': {
+        shortDescription: '🌡️ Analog High Temperature probe',
+        description: 'A flexible silicone NTC temperature probe designed for protected installations.',
+        cardImage: 'probe-ntc-ht-TB.jpg',
+        detailImages: [ '../assets/products/probe-ntc-ht-TB-detail-1.jpg', '../assets/products/probe-ntc-ht-TB-detail-2.jpg'],
+        manual: null,
+        specs: {
+            'Connection': ['Connection 🔌', 'BNC'],
+            'Mounting': ['Mounting 🛠️', 'Power Plug'],
+            'Dimensions': ['Dimensions 📐', 'To be confirmed'],
+        }
+    },
+
+    'NTC HT DCJack': {
+        shortDescription: '🌡️ Analog High Temperature probe',
+        description: 'A flexible silicone NTC temperature probe designed for protected installations.',
+        cardImage: 'probe-ntc-ht-DC.jpg',
+        detailImages: [ '../assets/products/probe-ntc-ht-DC-detail-1.jpg', '../assets/products/probe-ntc-ht-DC-detail-2.jpg'],
+        manual: null,
+        specs: {
+            'Connection': ['Connection 🔌', 'BNC'],
             'Mounting': ['Mounting 🛠️', 'Power Plug'],
             'Dimensions': ['Dimensions 📐', 'To be confirmed'],
         }
