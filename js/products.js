@@ -235,7 +235,7 @@ const products = {
         description: 'A smart sensor solution for live pH and ORP insight, helping maintain the right water balance.',
         cardImage: 'smart-sens-ph-orp.jpg',
         detailImages: [ '../assets/products/smart-sens-ph-orp-detail-1.jpg', '../assets/products/smart-sens-ph-orp-detail-2.jpg'],
-        manual: null,
+        manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_SMART_SENS.pdf',
         specs: {
             'Power supply': ['Power supply ⚡', '230V AC'],
             'Inputs': ['Inputs 🔌', 'Power Plug 250Vac 3A // Drive 5V DC USB-A'],
@@ -251,7 +251,7 @@ const products = {
         description: 'A smart sensor solution for live conductivity and temperature monitoring.',
         cardImage: 'smart-sens-ec-temp.jpg',
         detailImages: [ '../assets/products/smart-sens-ec-temp-detail-1.jpg', '../assets/products/smart-sens-ec-temp-detail-2.jpg'],
-        manual: null,
+        manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_SMART_SENS.pdf',
         specs: {
             'Power supply': ['Power supply ⚡', '230V AC'],
             'Inputs': ['Inputs 🔌', 'Power Plug 250Vac 3A // Drive 5V DC USB-A'],
@@ -468,7 +468,8 @@ document.body.append(productModal);
 const renderProductSpecs = (product) => {
     const specTable = productModal.querySelector('.product-modal-spec-table');
     specTable.innerHTML = '';
-    Object.values(product.specs).forEach(([label, value]) => {
+    Object.entries(product.specs).forEach(([specKey, [label, value]]) => {
+        if (product.manual && specKey.toLowerCase() === 'manual') return;
         const row = document.createElement('div');
         row.innerHTML = `
             <dt>${label}</dt>
