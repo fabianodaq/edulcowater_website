@@ -10,6 +10,7 @@ dotenv.config();
 
 const app = express();
 const serverDirectory = path.dirname(fileURLToPath(import.meta.url));
+const siteRootDirectory = path.resolve(serverDirectory, '..');
 const port = Number.parseInt(process.env.PORT || '4242', 10);
 const siteBaseUrl = process.env.SITE_BASE_URL || 'http://127.0.0.1:5500';
 const stripeSecret = process.env.STRIPE_SECRET_KEY || '';
@@ -200,6 +201,11 @@ const handleCheckoutCompleted = async (session, eventId) => {
 ensureOrdersStorage();
 
 app.use(cors({ origin: true }));
+app.use(express.static(siteRootDirectory));
+
+app.get('/', (_req, res) => {
+    res.sendFile(path.join(siteRootDirectory, 'index.html'));
+});
 
 app.post('/api/stripe-webhook', express.raw({ type: 'application/json' }), async (req, res) => {
     if (!stripeWebhookSecret) {
