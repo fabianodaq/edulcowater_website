@@ -51,7 +51,8 @@ const renderSharedMenuFromConstant = () => {
     if (!menuContainer) return;
 
     const menuPanel = menuContainer.closest('.menu-panel');
-    if (menuPanel && !menuPanel.querySelector('.menu-toggle')) {
+    const mainNav = document.querySelector('.main-nav');
+    if (menuPanel && mainNav && !mainNav.querySelector('.menu-toggle')) {
         const menuToggle = document.createElement('button');
         menuToggle.className = 'menu-toggle';
         menuToggle.type = 'button';
@@ -60,10 +61,11 @@ const renderSharedMenuFromConstant = () => {
         menuToggle.setAttribute('aria-label', 'Open navigation menu');
         menuToggle.innerHTML = '<span></span><span></span><span></span>';
         menuContainer.id = 'site-menu-links';
-        menuPanel.insertBefore(menuToggle, menuContainer);
+        mainNav.insertBefore(menuToggle, mainNav.querySelector('.brand'));
 
         menuToggle.addEventListener('click', () => {
             const isOpen = menuPanel.classList.toggle('menu-open');
+            menuToggle.classList.toggle('is-open', isOpen);
             menuToggle.setAttribute('aria-expanded', String(isOpen));
             menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
         });
@@ -71,6 +73,7 @@ const renderSharedMenuFromConstant = () => {
         menuContainer.addEventListener('click', (event) => {
             if (!event.target.closest('a')) return;
             menuPanel.classList.remove('menu-open');
+            menuToggle.classList.remove('is-open');
             menuToggle.setAttribute('aria-expanded', 'false');
             menuToggle.setAttribute('aria-label', 'Open navigation menu');
         });
