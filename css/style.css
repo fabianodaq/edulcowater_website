@@ -70,7 +70,7 @@ button, a { font: inherit; }
 .menu-panel a:hover { color: #0878b9; }
 .menu-panel a.active, .menu-panel a[aria-current="page"] { color: #0878b9; }
 .menu-panel a:last-child { margin-left: auto; }
-.nav-icon { color: #0878b9; display: inline-block; font-size: 18px; line-height: 0; margin-right: 7px; transform: translateY(1px); }
+.nav-icon { display: inline-block; font-size: 17px; line-height: 1; margin-right: 7px; transform: translateY(2px); }
 .nav-house svg { fill: none; height: 17px; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; vertical-align: -3px; width: 17px; }
 
 .brand {
@@ -255,6 +255,11 @@ button, a { font: inherit; }
   max-width: 1200px;
   min-height: 600px;
   display: block;
+}
+
+.bypool-svg-full object img {
+  display: block;
+  width: 100%;
 }
 
 .bypool-bottom-section {
