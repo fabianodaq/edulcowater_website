@@ -6,7 +6,7 @@ const MENU_TEMPLATE = `
 <a href="{PRODUCTS_HREF}" class="{PRODUCTS_ACTIVE}" {PRODUCTS_CURRENT}>Products</a>
 <a href="{BYPOOL_HREF}" class="{BYPOOL_ACTIVE}" {BYPOOL_CURRENT}>BYPool</a>
 <a href="{AQUARIUM_HREF}" class="{AQUARIUM_ACTIVE}" {AQUARIUM_CURRENT}>BYAquarium</a>
-<a href="{HYDROPONICS_HREF}" class="{HYDROPONICS_ACTIVE}" {HYDROPONICS_CURRENT}>BYHydroponics</a>
+<a href="{HYDRO_HREF}" class="{HYDRO_ACTIVE}" {HYDRO_CURRENT}>BYHydro</a>
 <a href="{SOLAR_HREF}" class="{SOLAR_ACTIVE}" {SOLAR_CURRENT}>BYSolar</a>
 <a href="{ABOUT_HREF}" class="{ABOUT_ACTIVE}" {ABOUT_CURRENT}>About</a>
 `;
@@ -22,7 +22,7 @@ const generateMenuPanel = (activePage, basePath) => {
     menuHtml = menuHtml.replace('{PRODUCTS_HREF}', href('products/index.html', '../products/index.html'));
     menuHtml = menuHtml.replace('{BYPOOL_HREF}', href('bypool/', '../bypool/'));
     menuHtml = menuHtml.replace('{AQUARIUM_HREF}', href('byaquarium/', '../byaquarium/'));
-    menuHtml = menuHtml.replace('{HYDROPONICS_HREF}', href('byhydroponics/', '../byhydroponics/'));
+    menuHtml = menuHtml.replace('{HYDRO_HREF}', href('byhydro/', '../byhydro/'));
     menuHtml = menuHtml.replace('{SOLAR_HREF}', href('bysolar/', '../bysolar/'));
     menuHtml = menuHtml.replace('{ABOUT_HREF}', href('about/', '../about/'));
 
@@ -30,7 +30,7 @@ const generateMenuPanel = (activePage, basePath) => {
     menuHtml = menuHtml.replace('{PRODUCTS_ACTIVE}', isActive('products') ? 'active' : '');
     menuHtml = menuHtml.replace('{BYPOOL_ACTIVE}', isActive('bypool') ? 'active' : '');
     menuHtml = menuHtml.replace('{AQUARIUM_ACTIVE}', isActive('byaquarium') ? 'active' : '');
-    menuHtml = menuHtml.replace('{HYDROPONICS_ACTIVE}', isActive('byhydroponics') ? 'active' : '');
+    menuHtml = menuHtml.replace('{HYDRO_ACTIVE}', isActive('byhydro') ? 'active' : '');
     menuHtml = menuHtml.replace('{SOLAR_ACTIVE}', isActive('bysolar') ? 'active' : '');
     menuHtml = menuHtml.replace('{ABOUT_ACTIVE}', isActive('about') ? 'active' : '');
 
@@ -38,7 +38,7 @@ const generateMenuPanel = (activePage, basePath) => {
     menuHtml = menuHtml.replace('{PRODUCTS_CURRENT}', isActive('products') ? 'aria-current="page"' : '');
     menuHtml = menuHtml.replace('{BYPOOL_CURRENT}', isActive('bypool') ? 'aria-current="page"' : '');
     menuHtml = menuHtml.replace('{AQUARIUM_CURRENT}', isActive('byaquarium') ? 'aria-current="page"' : '');
-    menuHtml = menuHtml.replace('{HYDROPONICS_CURRENT}', isActive('byhydroponics') ? 'aria-current="page"' : '');
+    menuHtml = menuHtml.replace('{HYDRO_CURRENT}', isActive('byhydro') ? 'aria-current="page"' : '');
     menuHtml = menuHtml.replace('{SOLAR_CURRENT}', isActive('bysolar') ? 'aria-current="page"' : '');
     menuHtml = menuHtml.replace('{ABOUT_CURRENT}', isActive('about') ? 'aria-current="page"' : '');
 
