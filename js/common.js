@@ -2,13 +2,13 @@
 // 
 // Template used to generate the navigation menu
 const MENU_TEMPLATE = `
-<a href="{HOME_HREF}" class="{HOME_ACTIVE}" {HOME_CURRENT}>Home</a>
-<a href="{PRODUCTS_HREF}" class="{PRODUCTS_ACTIVE}" {PRODUCTS_CURRENT}>Products</a>
-<a href="{BYPOOL_HREF}" class="{BYPOOL_ACTIVE}" {BYPOOL_CURRENT}>BYPool</a>
-<a href="{AQUARIUM_HREF}" class="{AQUARIUM_ACTIVE}" {AQUARIUM_CURRENT}>BYAquarium</a>
-<a href="{HYDRO_HREF}" class="{HYDRO_ACTIVE}" {HYDRO_CURRENT}>BYHydro</a>
-<a href="{SOLAR_HREF}" class="{SOLAR_ACTIVE}" {SOLAR_CURRENT}>BYSolar</a>
-<a href="{ABOUT_HREF}" class="{ABOUT_ACTIVE}" {ABOUT_CURRENT}>About</a>
+<a href="{HOME_HREF}" class="{HOME_ACTIVE}" {HOME_CURRENT}><span class="nav-icon" aria-hidden="true">🏠</span>Home</a>
+<a href="{PRODUCTS_HREF}" class="{PRODUCTS_ACTIVE}" {PRODUCTS_CURRENT}><span class="nav-icon" aria-hidden="true">📦</span>Products</a>
+<a href="{BYPOOL_HREF}" class="{BYPOOL_ACTIVE}" {BYPOOL_CURRENT}><span class="nav-icon" aria-hidden="true">🏊</span>BYPool</a>
+<a href="{AQUARIUM_HREF}" class="{AQUARIUM_ACTIVE}" {AQUARIUM_CURRENT}><span class="nav-icon" aria-hidden="true">🐠</span>BYAquarium</a>
+<a href="{HYDRO_HREF}" class="{HYDRO_ACTIVE}" {HYDRO_CURRENT}><span class="nav-icon" aria-hidden="true">🌱</span>BYHydro</a>
+<a href="{SOLAR_HREF}" class="{SOLAR_ACTIVE}" {SOLAR_CURRENT}><span class="nav-icon" aria-hidden="true">☀️</span>BYSolar</a>
+<a href="{ABOUT_HREF}" class="{ABOUT_ACTIVE}" {ABOUT_CURRENT}><span class="nav-icon" aria-hidden="true">ℹ️</span>About</a>
 `;
 
 // Generates the navigation menu according to the current page and folder level
