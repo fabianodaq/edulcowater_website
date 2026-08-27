@@ -50,6 +50,32 @@ const renderSharedMenuFromConstant = () => {
     const menuContainer = document.querySelector('[data-menu-panel]');
     if (!menuContainer) return;
 
+    const menuPanel = menuContainer.closest('.menu-panel');
+    if (menuPanel && !menuPanel.querySelector('.menu-toggle')) {
+        const menuToggle = document.createElement('button');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.type = 'button';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-controls', 'site-menu-links');
+        menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        menuToggle.innerHTML = '<span></span><span></span><span></span>';
+        menuContainer.id = 'site-menu-links';
+        menuPanel.insertBefore(menuToggle, menuContainer);
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuPanel.classList.toggle('menu-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        });
+
+        menuContainer.addEventListener('click', (event) => {
+            if (!event.target.closest('a')) return;
+            menuPanel.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        });
+    }
+
     const basePath = document.body.dataset.basePath || '.';
     const currentPage = document.body.dataset.page || '';
     menuContainer.innerHTML = generateMenuPanel(currentPage, basePath);

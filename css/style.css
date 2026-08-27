@@ -56,8 +56,16 @@ button, a { font: inherit; }
 .icon-button svg { fill: none; height: 22px; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; width: 22px; }
 .icon-button:hover { color: #0878b9; }
 .cart-count { align-items: center; background: #0878b9; border-radius: 50%; color: white; display: flex; font-size: 9px; height: 16px; justify-content: center; position: absolute; right: 1px; top: 1px; width: 16px; }
-.menu-panel { background: #ffffff; border-top: 1px solid #e8eef2; padding: 14px 0 16px; }
+.menu-panel { background: #ffffff; border-top: 1px solid #e8eef2; padding: 0; position: relative; }
+.menu-toggle { align-items: center; background: #ffffff; border: 0; color: #12263a; cursor: pointer; display: flex; flex-direction: column; gap: 4px; height: 48px; justify-content: center; margin-left: max(4%, calc((100% - 1200px) / 2)); width: 48px; }
+.menu-toggle span { background: currentColor; display: block; height: 2px; transition: transform .2s ease, opacity .2s ease; width: 24px; }
+.menu-panel.menu-open .menu-toggle span:first-child { transform: translateY(6px) rotate(45deg); }
+.menu-panel.menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+.menu-panel.menu-open .menu-toggle span:last-child { transform: translateY(-6px) rotate(-45deg); }
 .menu-panel .container { align-items: center; display: flex; flex-direction: row; gap: 34px; justify-content: flex-start; }
+.menu-panel .container { display: none; }
+.menu-panel.menu-open .container { align-items: flex-start; background: #ffffff; box-shadow: 0 14px 28px rgba(18, 38, 58, .16); display: flex; flex-direction: column; gap: 16px; left: max(4%, calc((100% - 1200px) / 2)); padding: 18px 22px; position: absolute; top: 48px; width: 240px; z-index: 20; }
+.menu-panel.menu-open a:last-child { margin-left: 0; }
 .menu-panel a { color: #12263a; font-size: 15px; font-weight: 600; text-decoration: none; }
 .menu-panel a:hover { color: #0878b9; }
 .menu-panel a.active, .menu-panel a[aria-current="page"] { color: #0878b9; }
@@ -651,8 +659,10 @@ button, a { font: inherit; }
   .solution-icon { margin: 28px 0 20px; }
   .bypool-bottom-section { margin-bottom: 20px; }
   .bypool-actions { gap: 12px; }
-  .menu-panel .container { gap: 16px; justify-content: flex-start; }
+  .menu-toggle { margin-left: 4%; margin-right: 0; }
+  .menu-panel.menu-open .container { gap: 16px; justify-content: flex-start; left: 4%; width: min(240px, 92%); }
   .menu-panel a { font-size: 13px; }
+  .menu-panel a:last-child { margin-left: 0; }
   .control-page-heading { align-items: start; display: block; }
   .control-page-heading .default-intro { margin-top: 28px; }
   .control-status { grid-template-columns: 1fr; gap: 10px; }
