@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edulco Water | BYAquarium</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/logoedulcowater.svg">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-base-path=".." data-page="byaquarium">
+    <header class="main-header">
+        <div class="container"><nav class="main-nav">
+            <div class="brand" aria-label="Edulco Water"><img src="../assets/logoedulcowater.svg" alt=""><span>EdulcoWater</span></div>
+            <div class="header-actions"><a class="icon-button cart-button" href="../cart/index.html" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2 11h10l2-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span class="cart-count">0</span></a></div>
+        </nav></div>
+        <nav class="menu-panel" id="site-menu" aria-label="Main navigation"><div class="container" data-menu-panel></div></nav>
+    </header>
+    <main class="default-page container">
+        <p class="section-label">BUILD YOUR AQUARIUM WITH EDULCOWATER</p>
+        <p class="bypool-subtitle">Build your aquarium plant centralized, distributed or smart</p>
+
+        <section class="bypool-section" aria-label="Centralized Aquarium System">
+            <h2 class="bypool-title">Centralized System</h2>
+            <div class="bypool-svg-full">
+                <object data="../assets/byaquarium/byaquarium_centralized.svg" type="image/svg+xml" class="bypool-svg"></object>
+            </div>
+            <div class="bypool-bottom-section">
+                <div class="bypool-text-panel">
+                    <!-- Empty text panel for now -->
+                </div>
+            </div>
+            <div class="bypool-actions">
+                <div class="price-display-full">
+                    <span class="price-amount">€3.500</span>
+                </div>
+                <button class="add-button-full" data-product="byaquarium-centralized">Add</button>
+            </div>
+        </section>
+
+        <section class="bypool-section" aria-label="Distributed Aquarium System">
+            <h2 class="bypool-title">Distributed System</h2>
+            <div class="bypool-svg-full">
+                <object data="../assets/byaquarium/byaquarium_distributed.svg" type="image/svg+xml" class="bypool-svg"></object>
+            </div>
+            <div class="bypool-bottom-section">
+                <div class="bypool-text-panel">
+                    <!-- Empty text panel for now -->
+                </div>
+            </div>
+            <div class="bypool-actions">
+                <div class="price-display-full">
+                    <span class="price-amount">€6.500</span>
+                </div>
+                <button class="add-button-full" data-product="byaquarium-distributed">Add</button>
+            </div>
+        </section>
+
+        <section class="bypool-section" aria-label="Smart Aquarium System">
+            <h2 class="bypool-title">Smart System</h2>
+            <div class="bypool-svg-full">
+                <object data="../assets/byaquarium/byaquarium_smart.svg" type="image/svg+xml" class="bypool-svg"></object>
+            </div>
+            <div class="bypool-bottom-section">
+                <div class="bypool-text-panel">
+                    <!-- Empty text panel for now -->
+                </div>
+            </div>
+            <div class="bypool-actions">
+                <div class="price-display-full">
+                    <span class="price-amount">€9.500</span>
+                </div>
+                <button class="add-button-full" data-product="byaquarium-smart">Add</button>
+            </div>
+        </section>
+    </main>
+    <script src="../js/common.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        // Add to cart button
+        document.querySelectorAll('.add-button-full').forEach(button => {
+            button.addEventListener('click', function() {
+                const product = this.getAttribute('data-product');
+                const price = this.previousElementSibling.querySelector('.price-amount').textContent;
+                
+                const cartItem = {
+                    id: product,
+                    name: product.replace('-', ' ').toUpperCase(),
+                    price: parseInt(price.replace('€', '').replace('.', '')),
+                    quantity: 1
+                };
+                
+                let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+                const existingItem = cart.find(item => item.id === cartItem.id);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push(cartItem);
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                
+                const cartCount = document.querySelector('.cart-count');
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.textContent = totalItems;
+                
+                alert('Added to cart! Price: ' + price);
+            });
+        });
+    </script>
+</body>
+</html>

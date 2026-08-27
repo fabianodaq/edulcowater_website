@@ -4,7 +4,10 @@
 const MENU_TEMPLATE = `
 <a href="{HOME_HREF}" class="{HOME_ACTIVE}" {HOME_CURRENT}>Home</a>
 <a href="{PRODUCTS_HREF}" class="{PRODUCTS_ACTIVE}" {PRODUCTS_CURRENT}>Products</a>
-<a href="{APPLICATIONS_HREF}" class="{APPLICATIONS_ACTIVE}" {APPLICATIONS_CURRENT}>Applications</a>
+<a href="{BYPOOL_HREF}" class="{BYPOOL_ACTIVE}" {BYPOOL_CURRENT}>BYPool</a>
+<a href="{AQUARIUM_HREF}" class="{AQUARIUM_ACTIVE}" {AQUARIUM_CURRENT}>BYAquarium</a>
+<a href="{HYDROPONICS_HREF}" class="{HYDROPONICS_ACTIVE}" {HYDROPONICS_CURRENT}>BYHydroponics</a>
+<a href="{SOLAR_HREF}" class="{SOLAR_ACTIVE}" {SOLAR_CURRENT}>BYSolar</a>
 <a href="{ABOUT_HREF}" class="{ABOUT_ACTIVE}" {ABOUT_CURRENT}>About</a>
 `;
 
@@ -17,17 +20,26 @@ const generateMenuPanel = (activePage, basePath) => {
     let menuHtml = MENU_TEMPLATE; // Sets the correct URL for each menu item
     menuHtml = menuHtml.replace('{HOME_HREF}', href('index.html', '../index.html'));
     menuHtml = menuHtml.replace('{PRODUCTS_HREF}', href('products/index.html', '../products/index.html'));
-    menuHtml = menuHtml.replace('{APPLICATIONS_HREF}', href('applications/', '../applications/'));
+    menuHtml = menuHtml.replace('{BYPOOL_HREF}', href('bypool/', '../bypool/'));
+    menuHtml = menuHtml.replace('{AQUARIUM_HREF}', href('byaquarium/', '../byaquarium/'));
+    menuHtml = menuHtml.replace('{HYDROPONICS_HREF}', href('byhydroponics/', '../byhydroponics/'));
+    menuHtml = menuHtml.replace('{SOLAR_HREF}', href('bysolar/', '../bysolar/'));
     menuHtml = menuHtml.replace('{ABOUT_HREF}', href('about/', '../about/'));
 
     menuHtml = menuHtml.replace('{HOME_ACTIVE}', isActive('home') ? 'active' : '');
     menuHtml = menuHtml.replace('{PRODUCTS_ACTIVE}', isActive('products') ? 'active' : '');
-    menuHtml = menuHtml.replace('{APPLICATIONS_ACTIVE}', isActive('applications') ? 'active' : '');
+    menuHtml = menuHtml.replace('{BYPOOL_ACTIVE}', isActive('bypool') ? 'active' : '');
+    menuHtml = menuHtml.replace('{AQUARIUM_ACTIVE}', isActive('byaquarium') ? 'active' : '');
+    menuHtml = menuHtml.replace('{HYDROPONICS_ACTIVE}', isActive('byhydroponics') ? 'active' : '');
+    menuHtml = menuHtml.replace('{SOLAR_ACTIVE}', isActive('bysolar') ? 'active' : '');
     menuHtml = menuHtml.replace('{ABOUT_ACTIVE}', isActive('about') ? 'active' : '');
 
     menuHtml = menuHtml.replace('{HOME_CURRENT}', isActive('home') ? 'aria-current="page"' : '');
     menuHtml = menuHtml.replace('{PRODUCTS_CURRENT}', isActive('products') ? 'aria-current="page"' : '');
-    menuHtml = menuHtml.replace('{APPLICATIONS_CURRENT}', isActive('applications') ? 'aria-current="page"' : '');
+    menuHtml = menuHtml.replace('{BYPOOL_CURRENT}', isActive('bypool') ? 'aria-current="page"' : '');
+    menuHtml = menuHtml.replace('{AQUARIUM_CURRENT}', isActive('byaquarium') ? 'aria-current="page"' : '');
+    menuHtml = menuHtml.replace('{HYDROPONICS_CURRENT}', isActive('byhydroponics') ? 'aria-current="page"' : '');
+    menuHtml = menuHtml.replace('{SOLAR_CURRENT}', isActive('bysolar') ? 'aria-current="page"' : '');
     menuHtml = menuHtml.replace('{ABOUT_CURRENT}', isActive('about') ? 'aria-current="page"' : '');
 
     return menuHtml;

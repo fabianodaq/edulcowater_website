@@ -238,10 +238,13 @@ button, a { font: inherit; }
 .bypool-svg-full {
   width: 100%;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .bypool-svg-full object {
   width: 100%;
+  max-width: 1200px;
   min-height: 600px;
   display: block;
 }
