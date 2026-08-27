@@ -20,11 +20,11 @@ const generateMenuPanel = (activePage, basePath) => {
     let menuHtml = MENU_TEMPLATE; // Sets the correct URL for each menu item
     menuHtml = menuHtml.replace('{HOME_HREF}', href('index.html', '../index.html'));
     menuHtml = menuHtml.replace('{PRODUCTS_HREF}', href('products/index.html', '../products/index.html'));
-    menuHtml = menuHtml.replace('{BYPOOL_HREF}', href('bypool/', '../bypool/'));
-    menuHtml = menuHtml.replace('{AQUARIUM_HREF}', href('byaquarium/', '../byaquarium/'));
-    menuHtml = menuHtml.replace('{HYDRO_HREF}', href('byhydro/', '../byhydro/'));
-    menuHtml = menuHtml.replace('{SOLAR_HREF}', href('bysolar/', '../bysolar/'));
-    menuHtml = menuHtml.replace('{ABOUT_HREF}', href('about/', '../about/'));
+    menuHtml = menuHtml.replace('{BYPOOL_HREF}', href('bypool/index.html', '../bypool/index.html'));
+    menuHtml = menuHtml.replace('{AQUARIUM_HREF}', href('byaquarium/index.html', '../byaquarium/index.html'));
+    menuHtml = menuHtml.replace('{HYDRO_HREF}', href('byhydro/index.html', '../byhydro/index.html'));
+    menuHtml = menuHtml.replace('{SOLAR_HREF}', href('bysolar/index.html', '../bysolar/index.html'));
+    menuHtml = menuHtml.replace('{ABOUT_HREF}', href('about/index.html', '../about/index.html'));
 
     menuHtml = menuHtml.replace('{HOME_ACTIVE}', isActive('home') ? 'active' : '');
     menuHtml = menuHtml.replace('{PRODUCTS_ACTIVE}', isActive('products') ? 'active' : '');
