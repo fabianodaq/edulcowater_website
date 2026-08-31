@@ -5,7 +5,7 @@
    aria-labelledby="title desc"
    version="1.1"
    id="svg51"
-   sodipodi:docname="bypool_smart.svg"
+   sodipodi:docname="bypool_premium.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    width="1200"
    height="900"
@@ -77,7 +77,7 @@
          sodipodi:role="line"
          id="tspan53"
          x="600"
-         y="42">Pool Control System Smart</tspan><tspan
+         y="42">Pool Control System Premium</tspan><tspan
          sodipodi:role="line"
          id="tspan54"
          x="600"
@@ -348,11 +348,11 @@
        d="m 300,470 v -85 h 70"
        id="path25" />
   </g>
-  <!-- VASCA -->
+   <!-- VASCA -->
   <g
      id="pool"
      class="component"
-     data-component="Vasca piscina"
+   data-component="Vasca piscina"
      transform="translate(40.677966,183.86441)">
     <rect
        class="hit"
@@ -362,43 +362,14 @@
        height="210"
        rx="8"
        id="rect25" />
-    <path
-       d="M 380,345 H 980 V 500 H 380 Z"
-       fill="#fbfdff"
-       stroke="#556b7b"
-       stroke-width="3"
-       id="path26" />
-    <path
-       d="m 390,385 c 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 20,-8 35,-2 50,3 V 500 H 390 Z"
-       fill="#bfe9f6"
-       opacity="0.85"
-       id="path27" />
-    <rect
-       x="630"
-       y="330"
-       width="12"
-       height="95"
-       fill="#8b9aa5"
-       id="rect27" />
-    <rect
-       x="655"
-       y="330"
-       width="12"
-       height="95"
-       fill="#8b9aa5"
-       id="rect28" />
-    <path
-       d="m 630,350 h 37 m -37,20 h 37 m -37,20 h 37"
-       stroke="#8b9aa5"
-       stroke-width="4"
-       id="path28" />
-    <text
-       x="680"
-       y="455"
-       text-anchor="middle"
-       class="label"
-       id="text28"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:16px;line-height:normal;font-family:Arial, sans-serif">VASCA</text>
+   <path d="M 380,345 H 980 V 500 H 380 Z" fill="#fbfdff" stroke="#556b7b" stroke-width="3" id="path26" />
+   <path d="m 390,385 c 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 20,-8 35,-2 50,3 V 500 H 390 Z" fill="#bfe9f6" opacity="0.85" id="path27" />
+   <rect x="630" y="330" width="12" height="95" fill="#8b9aa5" id="rect27" />
+   <rect x="655" y="330" width="12" height="95" fill="#8b9aa5" id="rect28" />
+   <path d="m 630,350 h 37 m -37,20 h 37 m -37,20 h 37" stroke="#8b9aa5" stroke-width="4" id="path28" />
+   <circle cx="590" cy="407" r="13" fill="#243443" id="swimmer-head" />
+   <path d="M 578,417 542,394 H 470 M 542,394 591,440 646,424 M 591,440 621,464 M 591,440 550,469" fill="none" stroke="#243443" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" id="swimmer" />
+   <path d="m 505,475 c 20,-11 40,11 60,0 20,-11 40,11 60,0 20,-11 40,11 60,0" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" id="swimmer-wake" />
   </g>
   <!-- SONDE -->
   <g
@@ -1017,18 +988,10 @@
      id="circle43-2-13-3"
      sodipodi:insensitive="true"
      transform="rotate(-90)" />
-  <ellipse
-     cx="-691.65894"
-     cy="-958.59772"
-     fill="#526778"
-     id="circle43-2-13-2"
-     sodipodi:insensitive="true"
-     transform="matrix(-0.78017691,0.62555894,-0.73609625,-0.67687688,0,0)"
-     inkscape:transform-center-x="5.3521642"
-     inkscape:transform-center-y="11.488865"
-     rx="21.570759"
-     ry="21.348824"
-     style="stroke-width:6.1313" />
+   <g id="world" data-component="World" transform="matrix(-0.78017691,0.62555894,-0.73609625,-0.67687688,0,0)">
+      <circle cx="-691.65894" cy="-958.59772" r="21.5" fill="#eef7ff" stroke="#526778" stroke-width="3" />
+      <path d="M -713.15894,-958.59772 H -670.15894 M -691.65894,-980.09772 V -937.09772 M -707.65894,-972.59772 C -696.65894,-963.59772 -696.65894,-953.59772 -707.65894,-944.59772 M -675.65894,-972.59772 C -686.65894,-963.59772 -686.65894,-953.59772 -675.65894,-944.59772" fill="none" stroke="#526778" stroke-width="2" stroke-linecap="round" />
+   </g>
 </g>
 <!-- linee logiche di connettività; volutamente separate dall'impianto idraulico -->
 <path
