@@ -17,12 +17,11 @@
     </header>
     <main class="default-page container">
         <p class="section-label">BUILD YOUR HYDRO WITH EDULCOWATER</p>
-        <p class="bypool-subtitle">Build your hydroponics plant centralized, distributed or smart</p>
+        <p class="bypool-subtitle">Build your hydroponics plant industrial, premium, modular or smart</p>
 
-        <section class="bypool-section" aria-label="Centralized Hydroponics System">
-            <h2 class="bypool-title">Centralized System</h2>
+        <section class="bypool-section" aria-label="Industrial Hydroponics System">
             <div class="bypool-svg-full">
-                    <object data="../assets/byhydro/byhydro_centralized.svg" type="image/svg+xml" class="bypool-svg"></object>
+            <object data="../assets/byhydro/byhydro_industrial.svg" type="image/svg+xml" class="bypool-svg"></object>
             </div>
             <div class="bypool-bottom-section">
                 <div class="bypool-text-panel">
@@ -31,16 +30,15 @@
             </div>
             <div class="bypool-actions">
                 <div class="price-display-full">
-                    <span class="price-amount">€4.500</span>
+                    <span class="price-amount">€10.000</span>
                 </div>
-                    <button class="add-button-full" data-product="byhydro-centralized">Add</button>
+                <button class="add-button-full" data-product="byhydro-industrial" data-name="Industrial Hydroponics System" data-price="10000">Add</button>
             </div>
         </section>
 
-        <section class="bypool-section" aria-label="Distributed Hydroponics System">
-            <h2 class="bypool-title">Distributed System</h2>
+        <section class="bypool-section" aria-label="Premium Hydroponics System">
             <div class="bypool-svg-full">
-                    <object data="../assets/byhydro/byhydro_distributed.svg" type="image/svg+xml" class="bypool-svg"></object>
+                <object data="../assets/byhydro/byhydro_premium.svg" type="image/svg+xml" class="bypool-svg"></object>
             </div>
             <div class="bypool-bottom-section">
                 <div class="bypool-text-panel">
@@ -49,16 +47,32 @@
             </div>
             <div class="bypool-actions">
                 <div class="price-display-full">
-                    <span class="price-amount">€7.500</span>
+                    <span class="price-amount">€10.000</span>
                 </div>
-                    <button class="add-button-full" data-product="byhydro-distributed">Add</button>
+                <button class="add-button-full" data-product="byhydro-premium" data-name="Premium Hydroponics System" data-price="10000">Add</button>
+            </div>
+        </section>
+
+        <section class="bypool-section" aria-label="Modular Hydroponics System">
+            <div class="bypool-svg-full">
+                <object data="../assets/byhydro/byhydro_modular.svg" type="image/svg+xml" class="bypool-svg"></object>
+            </div>
+            <div class="bypool-bottom-section">
+                <div class="bypool-text-panel">
+                    <!-- Empty text panel for now -->
+                </div>
+            </div>
+            <div class="bypool-actions">
+                <div class="price-display-full">
+                    <span class="price-amount">€10.000</span>
+                </div>
+                <button class="add-button-full" data-product="byhydro-modular" data-name="Modular Hydroponics System" data-price="10000">Add</button>
             </div>
         </section>
 
         <section class="bypool-section" aria-label="Smart Hydroponics System">
-            <h2 class="bypool-title">Smart System</h2>
             <div class="bypool-svg-full">
-                    <object data="../assets/byhydro/byhydro_smart.svg" type="image/svg+xml" class="bypool-svg"></object>
+                <object data="../assets/byhydro/byhydro_smart.svg" type="image/svg+xml" class="bypool-svg"></object>
             </div>
             <div class="bypool-bottom-section">
                 <div class="bypool-text-panel">
@@ -67,30 +81,26 @@
             </div>
             <div class="bypool-actions">
                 <div class="price-display-full">
-                    <span class="price-amount">€12.000</span>
+                    <span class="price-amount">€10.000</span>
                 </div>
-                    <button class="add-button-full" data-product="byhydro-smart">Add</button>
+                <button class="add-button-full" data-product="byhydro-smart" data-name="Smart Hydroponics System" data-price="10000">Add</button>
             </div>
         </section>
     </main>
     <script src="../js/common.js"></script>
     <script src="../js/cart.js"></script>
     <script>
-        // Add to cart button
-        document.querySelectorAll('.add-button-full').forEach(button => {
-            button.addEventListener('click', function() {
-                const product = this.getAttribute('data-product');
-                const price = this.previousElementSibling.querySelector('.price-amount').textContent;
-                
+        document.querySelectorAll('.add-button-full').forEach((addButton) => {
+            addButton.addEventListener('click', function() {
                 const cartItem = {
-                    id: product,
-                    name: product.replace('-', ' ').toUpperCase(),
-                    price: parseInt(price.replace('€', '').replace('.', '')),
+                    id: this.dataset.product,
+                    name: this.dataset.name,
+                    price: Number(this.dataset.price),
                     quantity: 1
                 };
                 
                 let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-                const existingItem = cart.find(item => item.id === cartItem.id);
+                const existingItem = cart.find((item) => item.id === cartItem.id);
                 if (existingItem) {
                     existingItem.quantity += 1;
                 } else {
@@ -103,7 +113,7 @@
                 const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
                 cartCount.textContent = totalItems;
                 
-                alert('Added to cart! Price: ' + price);
+                alert(`Added to cart! Price: EUR ${cartItem.price.toLocaleString('it-IT')}`);
             });
         });
     </script>

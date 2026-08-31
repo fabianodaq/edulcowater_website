@@ -17,12 +17,11 @@
     </header>
     <main class="default-page container">
         <p class="section-label">BUILD YOUR SOLAR WITH EDULCOWATER</p>
-        <p class="bypool-subtitle">Build your solar plant centralized, distributed or smart</p>
+        <p class="bypool-subtitle">Build your solar plant industrial, modular or smart</p>
 
-        <section class="bypool-section" aria-label="Centralized Solar System">
-            <h2 class="bypool-title">Centralized System</h2>
+        <section class="bypool-section" aria-label="Industrial Solar System">
             <div class="bypool-svg-full">
-                <object data="../assets/bysolar/bysolar_centralized.svg" type="image/svg+xml" class="bypool-svg"><img src="../assets/bysolar/bysolar_centralized.svg" alt="Centralized Solar System"></object>
+            <object data="../assets/bysolar/bysolar_industrial.svg" type="image/svg+xml" class="bypool-svg"></object>
             </div>
             <div class="bypool-bottom-section">
                 <div class="bypool-text-panel">
@@ -31,16 +30,15 @@
             </div>
             <div class="bypool-actions">
                 <div class="price-display-full">
-                    <span class="price-amount">€5.500</span>
+                    <span class="price-amount">€10.000</span>
                 </div>
-                <button class="add-button-full" data-product="bysolar-centralized">Add</button>
+                <button class="add-button-full" data-product="bysolar-industrial" data-name="Industrial Solar System" data-price="10000">Add</button>
             </div>
         </section>
 
-        <section class="bypool-section" aria-label="Distributed Solar System">
-            <h2 class="bypool-title">Distributed System</h2>
+        <section class="bypool-section" aria-label="Modular Solar System">
             <div class="bypool-svg-full">
-                <object data="../assets/bysolar/bysolar_distributed.svg" type="image/svg+xml" class="bypool-svg"><img src="../assets/bysolar/bysolar_distributed.svg" alt="Distributed Solar System"></object>
+                <object data="../assets/bysolar/bysolar_modular.svg" type="image/svg+xml" class="bypool-svg"></object>
             </div>
             <div class="bypool-bottom-section">
                 <div class="bypool-text-panel">
@@ -49,16 +47,15 @@
             </div>
             <div class="bypool-actions">
                 <div class="price-display-full">
-                    <span class="price-amount">€8.500</span>
+                    <span class="price-amount">€10.000</span>
                 </div>
-                <button class="add-button-full" data-product="bysolar-distributed">Add</button>
+                <button class="add-button-full" data-product="bysolar-modular" data-name="Modular Solar System" data-price="10000">Add</button>
             </div>
         </section>
 
         <section class="bypool-section" aria-label="Smart Solar System">
-            <h2 class="bypool-title">Smart System</h2>
             <div class="bypool-svg-full">
-                <object data="../assets/bysolar/bysolar_smart.svg" type="image/svg+xml" class="bypool-svg"><img src="../assets/bysolar/bysolar_smart.svg" alt="Smart Solar System"></object>
+                <object data="../assets/bysolar/bysolar_smart.svg" type="image/svg+xml" class="bypool-svg"></object>
             </div>
             <div class="bypool-bottom-section">
                 <div class="bypool-text-panel">
@@ -67,30 +64,26 @@
             </div>
             <div class="bypool-actions">
                 <div class="price-display-full">
-                    <span class="price-amount">€14.000</span>
+                    <span class="price-amount">€10.000</span>
                 </div>
-                <button class="add-button-full" data-product="bysolar-smart">Add</button>
+                <button class="add-button-full" data-product="bysolar-smart" data-name="Smart Solar System" data-price="10000">Add</button>
             </div>
         </section>
     </main>
     <script src="../js/common.js"></script>
     <script src="../js/cart.js"></script>
     <script>
-        // Add to cart button
-        document.querySelectorAll('.add-button-full').forEach(button => {
-            button.addEventListener('click', function() {
-                const product = this.getAttribute('data-product');
-                const price = this.previousElementSibling.querySelector('.price-amount').textContent;
-                
+        document.querySelectorAll('.add-button-full').forEach((addButton) => {
+            addButton.addEventListener('click', function() {
                 const cartItem = {
-                    id: product,
-                    name: product.replace('-', ' ').toUpperCase(),
-                    price: parseInt(price.replace('€', '').replace('.', '')),
+                    id: this.dataset.product,
+                    name: this.dataset.name,
+                    price: Number(this.dataset.price),
                     quantity: 1
                 };
                 
                 let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-                const existingItem = cart.find(item => item.id === cartItem.id);
+                const existingItem = cart.find((item) => item.id === cartItem.id);
                 if (existingItem) {
                     existingItem.quantity += 1;
                 } else {
@@ -103,7 +96,7 @@
                 const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
                 cartCount.textContent = totalItems;
                 
-                alert('Added to cart! Price: ' + price);
+                alert(`Added to cart! Price: EUR ${cartItem.price.toLocaleString('it-IT')}`);
             });
         });
     </script>

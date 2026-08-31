@@ -1,8 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
-  <title id="title">Impianto piscina configurabile</title>
-  <desc id="desc">Schema SVG modulare con centralina pH/ORP/temperatura, dosaggio, vasca, sonde, pompa, filtro e riscaldatore.</desc>
-
-  <style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 900"
+   role="img"
+   aria-labelledby="title desc"
+   version="1.1"
+   id="svg51"
+   sodipodi:docname="bypool_smart.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   width="1200"
+   height="900"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs51" />
+  <sodipodi:namedview
+     id="namedview51"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.4583333"
+     inkscape:cx="154.37288"
+     inkscape:cy="232.47458"
+     inkscape:window-width="1920"
+     inkscape:window-height="1129"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg51" />
+  <title
+     id="title">Impianto piscina configurabile</title>
+  <desc
+     id="desc">Schema SVG modulare con centralina pH/ORP/temperatura, dosaggio, vasca, sonde, pompa, filtro e riscaldatore.</desc>
+  <style
+     id="style1">
 .label{font:600 16px Arial,sans-serif;fill:#243443}
     .small{font:13px Arial,sans-serif;fill:#6c7b88}
     .tiny{font:11px Arial,sans-serif;fill:#6c7b88}
@@ -15,207 +54,1014 @@
     .soft{fill:#f5f7f9;stroke:#9aabb7;stroke-width:2}
     .hidden-option{display:none}
   </style>
-
   <!-- BACKGROUND / TITLE -->
-  <g id="background">
-    <rect width="1200" height="720" fill="#ffffff"/>
-    <text x="600" y="42" text-anchor="middle" class="label" style="font-size:24px">CONTROLLO QUALITÀ ACQUA PISCINA</text>
-    <text x="600" y="65" text-anchor="middle" class="small">pH • ORP (Redox) • Temperatura</text>
+  <g
+     id="background"
+     transform="matrix(1,0,0,1.25,32.135593,23.593221)">
+    <rect
+       width="1200"
+       height="720"
+       fill="#ffffff"
+       id="rect1"
+       x="0"
+       y="0"
+       inkscape:label="background" />
+    <text
+       x="600"
+       y="42"
+       text-anchor="middle"
+       class="label"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:16px;line-height:normal;font-family:Arial, sans-serif"
+       id="text1"
+       inkscape:label="title"><tspan
+         sodipodi:role="line"
+         id="tspan53"
+         x="600"
+         y="42">Pool Control System Smart</tspan><tspan
+         sodipodi:role="line"
+         id="tspan54"
+         x="600"
+         y="62" /></text>
   </g>
-
   <!-- CENTRALINA -->
-  <g id="control_unit" class="component" data-component="Centralina di controllo">
-    <rect class="hit" x="425" y="82" width="350" height="150" rx="10"/>
-    <rect class="soft" x="450" y="100" width="300" height="115" rx="8"/>
-    <rect x="535" y="123" width="125" height="52" rx="4" fill="#1d252b"/>
-    <text x="598" y="157" text-anchor="middle" fill="#eaf7ff" style="font:700 28px monospace">7.40</text>
-    <rect x="474" y="125" width="34" height="18" rx="3" class="device"/>
-    <rect x="474" y="154" width="34" height="18" rx="3" class="device"/>
-    <rect x="690" y="125" width="34" height="18" rx="3" class="device"/>
-    <rect x="690" y="154" width="34" height="18" rx="3" class="device"/>
-    <text x="600" y="195" text-anchor="middle" class="small">Controller</text>
+  <g
+     id="control_unit"
+     class="component"
+     data-component="Centralina di controllo"
+     transform="translate(40.677966,183.86441)">
+    <rect
+       class="hit"
+       x="425"
+       y="82"
+       width="350"
+       height="150"
+       rx="10"
+       id="rect2" />
+    <rect
+       class="soft"
+       x="450"
+       y="100"
+       width="300"
+       height="115"
+       rx="8"
+       id="rect3" />
+    <rect
+       x="535"
+       y="123"
+       width="125"
+       height="52"
+       rx="4"
+       fill="#1d252b"
+       id="rect4" />
+    <text
+       x="598"
+       y="157"
+       text-anchor="middle"
+       fill="#eaf7ff"
+       style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:28px;line-height:normal;font-family:monospace"
+       id="text4">7.40</text>
+    <rect
+       x="474"
+       y="125"
+       width="34"
+       height="18"
+       rx="3"
+       class="device"
+       id="rect5" />
+    <rect
+       x="474"
+       y="154"
+       width="34"
+       height="18"
+       rx="3"
+       class="device"
+       id="rect6" />
+    <rect
+       x="690"
+       y="125"
+       width="34"
+       height="18"
+       rx="3"
+       class="device"
+       id="rect7" />
+    <rect
+       x="690"
+       y="154"
+       width="34"
+       height="18"
+       rx="3"
+       class="device"
+       id="rect8" />
+    <text
+       x="600"
+       y="195"
+       text-anchor="middle"
+       class="small"
+       id="text8"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">Controller</text>
   </g>
-
   <!-- LINEE SEGNALE -->
-  <g id="signal_lines">
-    <path class="signal" d="M485 215 V280 H115 V345"/>
-    <path class="signal" d="M535 215 V260 H240 V345"/>
-    <path class="signal" d="M620 215 V300 H790 V345"/>
-    <path class="signal" d="M670 215 V285 H855 V345"/>
-    <path class="signal" d="M715 215 V270 H925 V345"/>
+  <g
+     id="signal_lines"
+     transform="translate(40.677966,183.86441)">
+    <path
+       class="signal"
+       d="m 485,215 v 65 H 115 v 65"
+       id="path8" />
+    <path
+       class="signal"
+       d="m 535,215 v 45 H 240 v 85"
+       id="path9" />
+    <path
+       class="signal"
+       d="m 620,215 v 85 h 170 v 45"
+       id="path10" />
+    <path
+       class="signal"
+       d="m 670,215 v 70 h 185 v 60"
+       id="path11" />
+    <path
+       class="signal"
+       d="m 715,215 v 55 h 210 v 75"
+       id="path12" />
   </g>
-
   <!-- DOSAGGIO pH -->
-  <g id="dosing_ph" class="component" data-component="Dosaggio pH">
-    <rect class="hit" x="45" y="265" width="145" height="340" rx="10"/>
-    <text x="110" y="286" text-anchor="middle" class="small">Pompa dosatrice pH</text>
-    <rect x="82" y="305" width="56" height="58" rx="8" fill="#1477d4" stroke="#24516f" stroke-width="2"/>
-    <circle cx="110" cy="334" r="13" fill="#fff"/>
-    <path d="M110 363 V438" stroke="#1477d4" stroke-width="4"/>
-    <path d="M74 455 h72 l-8 132 H82z" fill="#eef7ff" stroke="#7aa3bf" stroke-width="2"/>
-    <text x="110" y="515" text-anchor="middle" class="small">pH−</text>
-    <text x="110" y="536" text-anchor="middle" class="tiny">correttore</text>
+  <g
+     id="dosing_ph"
+     class="component"
+     data-component="Dosaggio pH"
+     transform="translate(40.677966,183.86441)">
+    <rect
+       class="hit"
+       x="45"
+       y="265"
+       width="145"
+       height="340"
+       rx="10"
+       id="rect12" />
+    <text
+       x="110"
+       y="286"
+       text-anchor="middle"
+       class="small"
+       id="text12"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">Pompa dosatrice pH</text>
+    <rect
+       x="82"
+       y="305"
+       width="56"
+       height="58"
+       rx="8"
+       fill="#1477d4"
+       stroke="#24516f"
+       stroke-width="2"
+       id="rect13" />
+    <circle
+       cx="110"
+       cy="334"
+       r="13"
+       fill="#ffffff"
+       id="circle13" />
+    <path
+       d="m 110,363 v 75"
+       stroke="#1477d4"
+       stroke-width="4"
+       id="path13" />
+    <path
+       d="m 74,455 h 72 l -8,132 H 82 Z"
+       fill="#eef7ff"
+       stroke="#7aa3bf"
+       stroke-width="2"
+       id="path14" />
+    <text
+       x="110"
+       y="515"
+       text-anchor="middle"
+       class="small"
+       id="text14"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">pH−</text>
+    <text
+       x="110"
+       y="536"
+       text-anchor="middle"
+       class="tiny"
+       id="text15"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial, sans-serif">correttore</text>
   </g>
-
   <!-- DOSAGGIO REDOX -->
-  <g id="dosing_orp" class="component" data-component="Dosaggio Redox / Cloro">
-    <rect class="hit" x="175" y="265" width="150" height="340" rx="10"/>
-    <text x="250" y="286" text-anchor="middle" class="small">Pompa dosatrice Redox</text>
-    <rect x="222" y="305" width="56" height="58" rx="8" fill="#e94b4b" stroke="#7b3333" stroke-width="2"/>
-    <circle cx="250" cy="334" r="13" fill="#fff"/>
-    <path d="M250 363 V438" stroke="#e94b4b" stroke-width="4"/>
-    <path d="M214 455 h72 l-8 132 H222z" fill="#fff0f0" stroke="#c78484" stroke-width="2"/>
-    <text x="250" y="515" text-anchor="middle" class="small">Cloro</text>
-    <text x="250" y="536" text-anchor="middle" class="tiny">ossidante</text>
+  <g
+     id="dosing_orp"
+     class="component"
+     data-component="Dosaggio Redox / Cloro"
+     transform="translate(40.677966,183.86441)">
+    <rect
+       class="hit"
+       x="175"
+       y="265"
+       width="150"
+       height="340"
+       rx="10"
+       id="rect15" />
+    <text
+       x="250"
+       y="286"
+       text-anchor="middle"
+       class="small"
+       id="text16"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">Pompa dosatrice Redox</text>
+    <rect
+       x="222"
+       y="305"
+       width="56"
+       height="58"
+       rx="8"
+       fill="#e94b4b"
+       stroke="#7b3333"
+       stroke-width="2"
+       id="rect16" />
+    <circle
+       cx="250"
+       cy="334"
+       r="13"
+       fill="#ffffff"
+       id="circle16" />
+    <path
+       d="m 250,363 v 75"
+       stroke="#e94b4b"
+       stroke-width="4"
+       id="path16" />
+    <path
+       d="m 214,455 h 72 l -8,132 h -56 z"
+       fill="#fff0f0"
+       stroke="#c78484"
+       stroke-width="2"
+       id="path17" />
+    <text
+       x="250"
+       y="515"
+       text-anchor="middle"
+       class="small"
+       id="text17"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">Cloro</text>
+    <text
+       x="250"
+       y="536"
+       text-anchor="middle"
+       class="tiny"
+       id="text18"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial, sans-serif">ossidante</text>
   </g>
-
   <!-- TUBAZIONE PRINCIPALE -->
-  <g id="pipes">
-    <path class="pipe" d="M300 470 H365"/>
-    <path class="pipe" d="M365 470 V575 H640"/>
-    <path class="pipe" d="M695 575 H770"/>
-    <path class="pipe" d="M840 575 H920"/>
-    <path class="pipe" d="M1010 575 H1095 V430"/>
-    <path class="pipe" d="M1095 430 V355 H1020"/>
-    <path class="pipe" d="M1020 355 H980"/>
-    <path class="pipe" d="M300 470 V385 H370"/>
+  <g
+     id="pipes"
+     transform="translate(40.677966,183.86441)">
+    <path
+       class="pipe"
+       d="m 300,470 h 65"
+       id="path18" />
+    <path
+       class="pipe"
+       d="M 365,470 V 575 H 640"
+       id="path19" />
+    <path
+       class="pipe"
+       d="m 695,575 h 75"
+       id="path20" />
+    <path
+       class="pipe"
+       d="m 840,575 h 80"
+       id="path21" />
+    <path
+       class="pipe"
+       d="m 1010,575 h 85 V 430"
+       id="path22" />
+    <path
+       class="pipe"
+       d="m 1095,430 v -75 h -75"
+       id="path23" />
+    <path
+       class="pipe"
+       d="M 1020,355 H 980"
+       id="path24" />
+    <path
+       class="pipe"
+       d="m 300,470 v -85 h 70"
+       id="path25" />
   </g>
-
   <!-- VASCA -->
-  <g id="pool" class="component" data-component="Vasca piscina">
-    <rect class="hit" x="350" y="320" width="650" height="210" rx="8"/>
-    <path d="M380 345 H980 V500 H380z" fill="#fbfdff" stroke="#556b7b" stroke-width="3"/>
-    <path d="M390 385
-             C420 370 450 400 480 385
-             C510 370 540 400 570 385
-             C600 370 630 400 660 385
-             C690 370 720 400 750 385
-             C780 370 810 400 840 385
-             C870 370 900 400 930 385
-             C950 377 965 383 980 388
-             V500 H390 Z" fill="#bfe9f6" opacity=".85"/>
-    <rect x="630" y="330" width="12" height="95" fill="#8b9aa5"/>
-    <rect x="655" y="330" width="12" height="95" fill="#8b9aa5"/>
-    <path d="M630 350 H667 M630 370 H667 M630 390 H667" stroke="#8b9aa5" stroke-width="4"/>
-    <text x="680" y="455" text-anchor="middle" class="label">VASCA</text>
+  <g
+     id="pool"
+     class="component"
+     data-component="Vasca piscina"
+     transform="translate(40.677966,183.86441)">
+    <rect
+       class="hit"
+       x="350"
+       y="320"
+       width="650"
+       height="210"
+       rx="8"
+       id="rect25" />
+    <path
+       d="M 380,345 H 980 V 500 H 380 Z"
+       fill="#fbfdff"
+       stroke="#556b7b"
+       stroke-width="3"
+       id="path26" />
+    <path
+       d="m 390,385 c 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 30,-15 60,15 90,0 20,-8 35,-2 50,3 V 500 H 390 Z"
+       fill="#bfe9f6"
+       opacity="0.85"
+       id="path27" />
+    <rect
+       x="630"
+       y="330"
+       width="12"
+       height="95"
+       fill="#8b9aa5"
+       id="rect27" />
+    <rect
+       x="655"
+       y="330"
+       width="12"
+       height="95"
+       fill="#8b9aa5"
+       id="rect28" />
+    <path
+       d="m 630,350 h 37 m -37,20 h 37 m -37,20 h 37"
+       stroke="#8b9aa5"
+       stroke-width="4"
+       id="path28" />
+    <text
+       x="680"
+       y="455"
+       text-anchor="middle"
+       class="label"
+       id="text28"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:16px;line-height:normal;font-family:Arial, sans-serif">VASCA</text>
   </g>
-
   <!-- SONDE -->
-  <g id="probes">
-    <g id="probe_ph" class="component" data-component="Sonda pH">
-      <rect class="hit" x="770" y="285" width="60" height="180"/>
-      <circle cx="800" cy="308" r="18" fill="#1477d4"/>
-      <text x="800" y="313" text-anchor="middle" fill="#fff" style="font:700 12px Arial">pH</text>
-      <rect x="794" y="326" width="12" height="100" rx="5" fill="#e9eef2" stroke="#556b7b" stroke-width="2"/>
+  <g
+     id="probes"
+     transform="translate(40.677966,183.86441)">
+    <g
+       id="probe_ph"
+       class="component"
+       data-component="Sonda pH">
+      <rect
+         class="hit"
+         x="770"
+         y="285"
+         width="60"
+         height="180"
+         id="rect29" />
+      <circle
+         cx="800"
+         cy="308"
+         r="18"
+         fill="#1477d4"
+         id="circle29" />
+      <text
+         x="800"
+         y="313"
+         text-anchor="middle"
+         fill="#ffffff"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial"
+         id="text29">pH</text>
+      <rect
+         x="794"
+         y="326"
+         width="12"
+         height="100"
+         rx="5"
+         fill="#e9eef2"
+         stroke="#556b7b"
+         stroke-width="2"
+         id="rect30" />
     </g>
-    <g id="probe_orp" class="component" data-component="Sonda ORP / Redox">
-      <rect class="hit" x="835" y="285" width="60" height="180"/>
-      <circle cx="865" cy="308" r="18" fill="#e94b4b"/>
-      <text x="865" y="313" text-anchor="middle" fill="#fff" style="font:700 11px Arial">ORP</text>
-      <rect x="859" y="326" width="12" height="100" rx="5" fill="#e9eef2" stroke="#556b7b" stroke-width="2"/>
+    <g
+       id="probe_orp"
+       class="component"
+       data-component="Sonda ORP / Redox">
+      <rect
+         class="hit"
+         x="835"
+         y="285"
+         width="60"
+         height="180"
+         id="rect31" />
+      <circle
+         cx="865"
+         cy="308"
+         r="18"
+         fill="#e94b4b"
+         id="circle31" />
+      <text
+         x="865"
+         y="313"
+         text-anchor="middle"
+         fill="#ffffff"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial"
+         id="text31">ORP</text>
+      <rect
+         x="859"
+         y="326"
+         width="12"
+         height="100"
+         rx="5"
+         fill="#e9eef2"
+         stroke="#556b7b"
+         stroke-width="2"
+         id="rect32" />
     </g>
-    <g id="probe_temp" class="component" data-component="Sonda temperatura">
-      <rect class="hit" x="900" y="285" width="60" height="180"/>
-      <circle cx="930" cy="308" r="18" fill="#7a4aa8"/>
-      <text x="930" y="313" text-anchor="middle" fill="#fff" style="font:700 12px Arial">T°</text>
-      <rect x="924" y="326" width="12" height="100" rx="5" fill="#e9eef2" stroke="#556b7b" stroke-width="2"/>
+    <g
+       id="probe_temp"
+       class="component"
+       data-component="Sonda temperatura">
+      <rect
+         class="hit"
+         x="900"
+         y="285"
+         width="60"
+         height="180"
+         id="rect33" />
+      <circle
+         cx="930"
+         cy="308"
+         r="18"
+         fill="#7a4aa8"
+         id="circle33" />
+      <text
+         x="930"
+         y="313"
+         text-anchor="middle"
+         fill="#ffffff"
+         style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial"
+         id="text33">T°</text>
+      <rect
+         x="924"
+         y="326"
+         width="12"
+         height="100"
+         rx="5"
+         fill="#e9eef2"
+         stroke="#556b7b"
+         stroke-width="2"
+         id="rect34" />
     </g>
   </g>
-
   <!-- POMPA -->
-  <g id="circulation_pump" class="component" data-component="Pompa di ricircolo">
-    <rect class="hit" x="630" y="535" width="100" height="90"/>
-    <circle cx="675" cy="575" r="27" fill="#fff" stroke="#526778" stroke-width="3"/>
-    <path d="M662 558 L693 575 L662 592 Z" fill="#526778"/>
-    <text x="675" y="620" text-anchor="middle" class="small">Pompa</text>
+  <g
+     id="circulation_pump"
+     class="component"
+     data-component="Pompa di ricircolo"
+     transform="translate(40.677966,183.86441)">
+    <rect
+       class="hit"
+       x="630"
+       y="535"
+       width="100"
+       height="90"
+       id="rect35" />
+    <circle
+       cx="675"
+       cy="575"
+       r="27"
+       fill="#ffffff"
+       stroke="#526778"
+       stroke-width="3"
+       id="circle35" />
+    <path
+       d="m 662,558 31,17 -31,17 z"
+       fill="#526778"
+       id="path35" />
+    <text
+       x="675"
+       y="620"
+       text-anchor="middle"
+       class="small"
+       id="text35"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">Pompa</text>
   </g>
-
   <!-- FILTRO -->
-  <g id="filter" class="component" data-component="Filtro">
-    <rect class="hit" x="755" y="525" width="100" height="115"/>
-    <ellipse cx="805" cy="545" rx="32" ry="10" fill="#fff" stroke="#526778" stroke-width="3"/>
-    <rect x="773" y="545" width="64" height="58" fill="#fff" stroke="#526778" stroke-width="3"/>
-    <ellipse cx="805" cy="603" rx="32" ry="10" fill="#fff" stroke="#526778" stroke-width="3"/>
-    <text x="805" y="632" text-anchor="middle" class="small">Filtro</text>
+  <g
+     id="filter"
+     class="component"
+     data-component="Filtro"
+     transform="translate(40.677966,183.86441)">
+    <rect
+       class="hit"
+       x="755"
+       y="525"
+       width="100"
+       height="115"
+       id="rect36" />
+    <ellipse
+       cx="805"
+       cy="545"
+       rx="32"
+       ry="10"
+       fill="#ffffff"
+       stroke="#526778"
+       stroke-width="3"
+       id="ellipse36" />
+    <rect
+       x="773"
+       y="545"
+       width="64"
+       height="58"
+       fill="#ffffff"
+       stroke="#526778"
+       stroke-width="3"
+       id="rect37" />
+    <ellipse
+       cx="805"
+       cy="603"
+       rx="32"
+       ry="10"
+       fill="#ffffff"
+       stroke="#526778"
+       stroke-width="3"
+       id="ellipse37" />
+    <text
+       x="805"
+       y="632"
+       text-anchor="middle"
+       class="small"
+       id="text37"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">Filtro</text>
   </g>
-
   <!-- RISCALDATORE OPTIONAL -->
-  <g id="heater" class="component" data-component="Riscaldatore" data-optional="true">
-    <rect class="hit" x="900" y="515" width="145" height="135"/>
-    <rect x="930" y="535" width="80" height="75" rx="6" fill="#fff" stroke="#526778" stroke-width="3"/>
-    <path d="M945 550 H995 M945 565 H995 M945 580 H995 M945 595 H995" stroke="#d36b3c" stroke-width="4"/>
-    <text x="970" y="632" text-anchor="middle" class="small">Riscaldatore</text>
+  <g
+     id="heater"
+     class="component"
+     data-component="Riscaldatore"
+     data-optional="true"
+     transform="translate(40.677966,183.86441)">
+    <rect
+       class="hit"
+       x="900"
+       y="515"
+       width="145"
+       height="135"
+       id="rect38" />
+    <rect
+       x="930"
+       y="535"
+       width="80"
+       height="75"
+       rx="6"
+       fill="#ffffff"
+       stroke="#526778"
+       stroke-width="3"
+       id="rect39" />
+    <path
+       d="m 945,550 h 50 m -50,15 h 50 m -50,15 h 50 m -50,15 h 50"
+       stroke="#d36b3c"
+       stroke-width="4"
+       id="path39" />
+    <text
+       x="970"
+       y="632"
+       text-anchor="middle"
+       class="small"
+       id="text39"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">Riscaldatore</text>
   </g>
-
   <!-- PUNTI DI INIEZIONE -->
-  <g id="injection_points">
-    <circle cx="335" cy="385" r="7" fill="#1477d4"/>
-    <circle cx="355" cy="385" r="7" fill="#e94b4b"/>
-    <text x="344" y="365" text-anchor="middle" class="tiny">Iniezione</text>
+  <g
+     id="injection_points"
+     transform="translate(40.677966,183.86441)">
+    <circle
+       cx="335"
+       cy="385"
+       r="7"
+       fill="#1477d4"
+       id="circle39" />
+    <circle
+       cx="355"
+       cy="385"
+       r="7"
+       fill="#e94b4b"
+       id="circle40" />
+    <text
+       x="344"
+       y="365"
+       text-anchor="middle"
+       class="tiny"
+       id="text40"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial, sans-serif">Iniezione</text>
   </g>
-
-
   <!-- CONNETTIVITÀ OPTIONAL: gruppo indipendente, facilmente spostabile/nascondibile in Inkscape -->
-  <g id="connectivity" data-component="Connettività">
-    <text x="930" y="92" text-anchor="middle" class="label">Connettività</text>
-
-    <!-- collegamento diretto locale -->
-    <g id="connectivity_direct" class="component" data-component="Connessione diretta">
-      <rect class="hit" x="805" y="105" width="115" height="120" rx="10"/>
-      <rect x="830" y="120" width="65" height="42" rx="7" fill="#ffffff" stroke="#526778" stroke-width="2"/>
-      <circle cx="862.5" cy="148" r="3.5" fill="#526778"/>
-      <path d="M842 181 Q862 164 883 181" fill="none" stroke="#526778" stroke-width="3" stroke-linecap="round"/>
-      <path d="M849 190 Q862 179 876 190" fill="none" stroke="#526778" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="862.5" cy="197" r="3.5" fill="#526778"/>
-      <text x="862" y="216" text-anchor="middle" class="tiny">Diretta</text>
-    </g>
-
-    <!-- router / internet -->
-    <g id="connectivity_router" class="component" data-component="Router / Internet">
-      <rect class="hit" x="920" y="105" width="120" height="120" rx="10"/>
-      <rect x="945" y="154" width="70" height="35" rx="6" fill="#ffffff" stroke="#526778" stroke-width="2"/>
-      <line x1="958" y1="154" x2="952" y2="128" stroke="#526778" stroke-width="3" stroke-linecap="round"/>
-      <line x1="1002" y1="154" x2="1008" y2="128" stroke="#526778" stroke-width="3" stroke-linecap="round"/>
-      <path d="M960 141 Q980 124 1000 141" fill="none" stroke="#526778" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="980" cy="177" r="3" fill="#157bb8"/>
-      <text x="980" y="216" text-anchor="middle" class="tiny">Router</text>
-    </g>
-
-    <!-- telefono vicino -->
-    <g id="phone_local" class="component" data-component="Telefono vicino">
-      <rect class="hit" x="1040" y="105" width="70" height="120" rx="10"/>
-      <rect x="1055" y="122" width="40" height="72" rx="7" fill="#ffffff" stroke="#526778" stroke-width="2"/>
-      <rect x="1060" y="130" width="30" height="51" rx="2" fill="#eef4f8"/>
-      <circle cx="1075" cy="187" r="2.5" fill="#526778"/>
-      <text x="1075" y="216" text-anchor="middle" class="tiny">Vicino</text>
-    </g>
-
-    <!-- telefono remoto -->
-    <g id="phone_remote" class="component" data-component="Telefono remoto">
-      <rect class="hit" x="1110" y="105" width="75" height="120" rx="10"/>
-      <rect x="1127" y="122" width="40" height="72" rx="7" fill="#ffffff" stroke="#526778" stroke-width="2"/>
-      <rect x="1132" y="130" width="30" height="51" rx="2" fill="#eef4f8"/>
-      <circle cx="1147" cy="187" r="2.5" fill="#526778"/>
-      <path d="M1121 143 C1107 137 1107 119 1121 114" fill="none" stroke="#59798f" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M1173 143 C1187 137 1187 119 1173 114" fill="none" stroke="#59798f" stroke-width="2.5" stroke-linecap="round"/>
-      <text x="1147" y="216" text-anchor="middle" class="tiny">Remoto</text>
-    </g>
-
-    <!-- linee logiche di connettività; volutamente separate dall'impianto idraulico -->
-    <path id="link_direct" d="M750 158 H830" fill="none" stroke="#9aa7b2" stroke-width="2" stroke-dasharray="6 5"/>
-    <path id="link_router" d="M750 175 H945" fill="none" stroke="#9aa7b2" stroke-width="2" stroke-dasharray="6 5"/>
-    <path id="link_router_local_phone" d="M1015 171 H1055" fill="none" stroke="#9aa7b2" stroke-width="2" stroke-dasharray="6 5"/>
-    <path id="link_router_remote_phone" d="M1015 180 C1060 235 1115 235 1147 194" fill="none" stroke="#9aa7b2" stroke-width="2" stroke-dasharray="6 5"/>
-  </g>
-
-
+  <g
+     id="connectivity"
+     data-component="Connettività"
+     transform="translate(-1657.1065,-473.95986)"><!-- collegamento diretto locale -->
+<g
+   id="connectivity_direct"
+   class="component"
+   data-component="Connessione diretta"
+   transform="translate(882.22367,583.27173)"
+   inkscape:label="conn_sta">
+  <rect
+     class="hit"
+     x="820.24475"
+     y="112.76619"
+     width="122.19093"
+     height="69.048882"
+     rx="10.625298"
+     id="rect41"
+     style="stroke-width:6.25563;stroke-dasharray:none" />
+  <rect
+     x="830"
+     y="120"
+     width="65"
+     height="42"
+     rx="7"
+     fill="#ffffff"
+     stroke="#526778"
+     stroke-width="2"
+     id="rect42" />
+  <circle
+     cx="862.5"
+     cy="148"
+     r="3.5"
+     fill="#526778"
+     id="circle42" />
+  <path
+     d="m 911.25042,171.15833 q -17,-20 0,-41"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path42" />
+  <path
+     d="m 920.25042,164.15833 q -11,-13 0,-27"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path43" />
+  <circle
+     cx="-150.65833"
+     cy="927.25037"
+     r="3.5"
+     fill="#526778"
+     id="circle43"
+     transform="rotate(-90)" />
+  <text
+     x="880.98401"
+     y="174.7672"
+     text-anchor="middle"
+     class="tiny"
+     id="text43"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial, sans-serif"><tspan
+       sodipodi:role="line"
+       id="tspan56"
+       x="880.98401"
+       y="174.7672">Station</tspan></text>
+</g>
+<!-- router / internet -->
+<g
+   id="connectivity_router"
+   class="component"
+   data-component="Router / Internet"
+   transform="translate(912.11566,529.33804)"
+   inkscape:label="conn_router">
+  <rect
+     class="hit"
+     x="930.43671"
+     y="118.22633"
+     width="134.70479"
+     height="95.186447"
+     rx="11.225399"
+     id="rect43"
+     style="stroke-width:6.15844;stroke-dasharray:none" />
+  <rect
+     x="945"
+     y="154"
+     width="70"
+     height="35"
+     rx="6"
+     fill="#ffffff"
+     stroke="#526778"
+     stroke-width="2"
+     id="rect44" />
+  <line
+     x1="958"
+     y1="154"
+     x2="952"
+     y2="128"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="line44" />
+  <line
+     x1="1002"
+     y1="154"
+     x2="1008"
+     y2="128"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="line45" />
+  <circle
+     cx="980"
+     cy="177"
+     r="3"
+     fill="#157bb8"
+     id="circle45" />
+  <text
+     x="999.93219"
+     y="204.20338"
+     text-anchor="middle"
+     class="tiny"
+     id="text45"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial, sans-serif">Router</text>
+  <path
+     d="m 1033.4931,198.2605 q -17,-20 0,-41"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path54-9" />
+  <path
+     d="m 1042.4931,191.2605 q -11,-13 0,-27"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path55-3" />
+  <circle
+     cx="-177.76051"
+     cy="1049.493"
+     r="3.5"
+     fill="#526778"
+     id="circle43-2-1"
+     sodipodi:insensitive="true"
+     transform="rotate(-90)" />
+</g>
+<g
+   id="connectivity_router-8"
+   class="component"
+   data-component="Router / Internet"
+   transform="translate(1065.263,446.05557)"
+   inkscape:label="conn_sps">
+  <rect
+     class="hit"
+     x="930.43671"
+     y="137.54837"
+     width="134.70479"
+     height="75.86441"
+     rx="11.225399"
+     id="rect43-6"
+     style="stroke-width:5.49797;stroke-dasharray:none" />
+  <rect
+     x="984.45764"
+     y="150.74576"
+     width="70"
+     height="35"
+     rx="6"
+     fill="#ffffff"
+     stroke="#526778"
+     stroke-width="2"
+     id="rect44-5" />
+  <circle
+     cx="1019.4576"
+     cy="173.74576"
+     r="3"
+     fill="#157bb8"
+     id="circle45-8" />
+  <text
+     x="1016.2034"
+     y="199.32202"
+     text-anchor="middle"
+     class="tiny"
+     id="text45-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial, sans-serif;fill:#6c7b88">SPS</text>
+  <path
+     d="m 958.64565,197.04016 q -17,-20 0,-41"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path54-9-0" />
+  <path
+     d="m 967.64565,190.04016 q -11,-13 0,-27"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path55-3-2" />
+  <circle
+     cx="-176.54016"
+     cy="974.64557"
+     r="3.5"
+     fill="#526778"
+     id="circle43-2-1-4"
+     sodipodi:insensitive="true"
+     transform="rotate(-90)" />
+</g>
+<!-- telefono vicino -->
+<!-- telefono remoto -->
+<g
+   id="phone_remote-1"
+   class="component"
+   data-component="Telefono remoto"
+   transform="translate(631.93788,664.34164)"
+   inkscape:label="conn_ap">
+  <rect
+     class="hit"
+     x="1133.8176"
+     y="118.02611"
+     width="109.45838"
+     height="96.414268"
+     rx="14.594452"
+     id="rect48-2"
+     style="stroke-width:6.2031;stroke-dasharray:none"
+     transform="matrix(1,0,0.01246291,0.99992233,0,0)" />
+  <rect
+     x="1152.8187"
+     y="130.73393"
+     width="29.854168"
+     height="59.413486"
+     rx="5.2244792"
+     fill="#ffffff"
+     stroke="#526778"
+     stroke-width="1.56957"
+     id="rect49-3" />
+  <circle
+     cx="1166.5254"
+     cy="182.93221"
+     r="2.5"
+     fill="#526778"
+     id="circle50-4" />
+  <text
+     x="1186.8644"
+     y="202.98305"
+     text-anchor="middle"
+     class="tiny"
+     id="text51-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial, sans-serif;fill:#6c7b88">Access Point</text>
+  <path
+     d="m 1203.8927,180.56987 q -17,-20 0,-41"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path54" />
+  <path
+     d="m 1212.8927,173.56987 q -11,-13 0,-27"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path55" />
+  <circle
+     cx="-160.06987"
+     cy="1219.8927"
+     r="3.5"
+     fill="#526778"
+     id="circle43-2"
+     sodipodi:insensitive="true"
+     transform="rotate(-90)" />
+</g>
+<g
+   id="phone_remote-1-6"
+   class="component"
+   data-component="Telefono remoto"
+   transform="translate(576.36597,423.63784)"
+   inkscape:label="conn_remote">
+  <rect
+     class="hit"
+     x="1132.656"
+     y="118.04324"
+     width="185.38205"
+     height="96.428261"
+     rx="24.717606"
+     id="rect48-2-5"
+     style="stroke-width:8.07328;stroke-dasharray:none"
+     transform="matrix(1,0,0.02110451,0.99977728,0,0)" />
+  <rect
+     x="1152.8187"
+     y="130.73393"
+     width="29.854168"
+     height="59.413486"
+     rx="5.2244792"
+     fill="#ffffff"
+     stroke="#526778"
+     stroke-width="1.56957"
+     id="rect49-3-0" />
+  <circle
+     cx="1166.5254"
+     cy="182.93221"
+     r="2.5"
+     fill="#526778"
+     id="circle50-4-9" />
+  <text
+     x="1186.8644"
+     y="202.98305"
+     text-anchor="middle"
+     class="tiny"
+     id="text51-3-0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Arial, sans-serif;fill:#6c7b88"><tspan
+       sodipodi:role="line"
+       id="tspan57"
+       x="1186.8644"
+       y="202.98305">Remote</tspan><tspan
+       sodipodi:role="line"
+       id="tspan58"
+       x="1186.8644"
+       y="216.73305" /></text>
+  <path
+     d="m 1297.452,182.19699 q -17,-20 0,-41"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path54-0" />
+  <path
+     d="m 1306.452,175.19699 q -11,-13 0,-27"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path55-6" />
+  <circle
+     cx="-161.69698"
+     cy="1313.452"
+     r="3.5"
+     fill="#526778"
+     id="circle43-2-13"
+     sodipodi:insensitive="true"
+     transform="rotate(-90)" />
+  <path
+     d="m 1204.1812,183.2627 q -17,-20 0,-41"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path54-0-9" />
+  <path
+     d="m 1213.1812,176.2627 q -11,-13 0,-27"
+     fill="none"
+     stroke="#526778"
+     stroke-width="3"
+     stroke-linecap="round"
+     id="path55-6-6" />
+  <circle
+     cx="-162.7627"
+     cy="1220.1812"
+     r="3.5"
+     fill="#526778"
+     id="circle43-2-13-3"
+     sodipodi:insensitive="true"
+     transform="rotate(-90)" />
+  <ellipse
+     cx="-691.65894"
+     cy="-958.59772"
+     fill="#526778"
+     id="circle43-2-13-2"
+     sodipodi:insensitive="true"
+     transform="matrix(-0.78017691,0.62555894,-0.73609625,-0.67687688,0,0)"
+     inkscape:transform-center-x="5.3521642"
+     inkscape:transform-center-y="11.488865"
+     rx="21.570759"
+     ry="21.348824"
+     style="stroke-width:6.1313" />
+</g>
+<!-- linee logiche di connettività; volutamente separate dall'impianto idraulico -->
+<path
+   id="link_router"
+   d="m 1875.9719,518.82273 h 59.1356"
+   fill="none"
+   stroke="#9aa7b2"
+   stroke-width="1.10138"
+   stroke-dasharray="6, 5" />
+</g>
   <!-- PANNELLO INFO INTERNO -->
-  <g id="info_panel">
-    <rect x="360" y="642" width="480" height="48" rx="8" fill="#f5f7f9" stroke="#c8d2da"/>
-    <text id="info_text" x="600" y="672" text-anchor="middle" class="small">Clicca un componente per selezionarlo</text>
+  <g
+     id="info_panel"
+     transform="translate(40.677966,183.86441)">
+    <rect
+       x="360"
+       y="642"
+       width="480"
+       height="48"
+       rx="8"
+       fill="#f5f7f9"
+       stroke="#c8d2da"
+       id="rect51" />
+    <text
+       id="info_text"
+       x="600"
+       y="672"
+       text-anchor="middle"
+       class="small"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13px;line-height:normal;font-family:Arial, sans-serif">Clicca un componente per selezionarlo</text>
   </g>
-
-  <script><![CDATA[
+  <script
+     id="script51"><![CDATA[
     (function(){
       const svg = document.documentElement;
       const info = svg.getElementById('info_text');
@@ -240,4 +1086,65 @@
       });
     })();
   ]]></script>
+  <script
+     id="script52"><![CDATA[
+    (function(){
+      const svg = document.documentElement;
+      const info = svg.getElementById('info_text');
+      svg.querySelectorAll('.component').forEach(function(el){
+        el.addEventListener('click', function(evt){
+          evt.stopPropagation();
+          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
+          el.classList.add('is-selected');
+          const name = el.getAttribute('data-component') || el.id;
+          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
+          svg.dispatchEvent(new CustomEvent('configurator:select', {
+            bubbles: true,
+            detail: { id: el.id, component: name }
+          }));
+        });
+      });
+      svg.addEventListener('click', function(evt){
+        if(evt.target === svg){
+          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
+          if(info) info.textContent = 'Clicca un componente per selezionarlo';
+        }
+      });
+    })();
+  ]]></script>
+  <script
+     id="script53"><![CDATA[
+    (function(){
+      const svg = document.documentElement;
+      const info = svg.getElementById('info_text');
+      svg.querySelectorAll('.component').forEach(function(el){
+        el.addEventListener('click', function(evt){
+          evt.stopPropagation();
+          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
+          el.classList.add('is-selected');
+          const name = el.getAttribute('data-component') || el.id;
+          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
+          svg.dispatchEvent(new CustomEvent('configurator:select', {
+            bubbles: true,
+            detail: { id: el.id, component: name }
+          }));
+        });
+      });
+      svg.addEventListener('click', function(evt){
+        if(evt.target === svg){
+          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
+          if(info) info.textContent = 'Clicca un componente per selezionarlo';
+        }
+      });
+    })();
+  ]]></script>
+  <metadata
+     id="metadata57">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Impianto piscina configurabile</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
 </svg>
