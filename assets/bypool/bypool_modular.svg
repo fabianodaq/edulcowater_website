@@ -225,15 +225,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.3535534"
-     inkscape:cx="281.42849"
-     inkscape:cy="869.74132"
+     inkscape:zoom="1"
+     inkscape:cx="374.49999"
+     inkscape:cy="373.49999"
      inkscape:window-width="1920"
      inkscape:window-height="1129"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="dosing_orp" /><title
+     inkscape:current-layer="svg51" /><title
      id="title">Impianto piscina configurabile</title><desc
      id="desc">Schema SVG modulare con centralina pH/ORP/temperatura, dosaggio, vasca, sonde, pompa, filtro e riscaldatore.</desc><style
      id="style1">
@@ -248,31 +248,7 @@
     .device{fill:white;stroke:#526778;stroke-width:2}
     .soft{fill:#f5f7f9;stroke:#9aabb7;stroke-width:2}
     .hidden-option{display:none}
-  </style><!-- BACKGROUND / TITLE --><g
-     id="background"
-     transform="scale(1,1.25)"
-     style="fill:#1c1e2d;fill-opacity:0;stroke-width:1.53662591;stroke-dasharray:none"><rect
-       width="1200"
-       height="720"
-       fill="#ffffff"
-       id="rect1"
-       x="0"
-       y="0"
-       inkscape:label="background"
-       style="fill:#1c1e2d;fill-opacity:0;stroke-width:1.53662591;stroke-dasharray:none" /><text
-       x="763.53217"
-       y="37.234032"
-       text-anchor="middle"
-       class="label"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:16px;line-height:normal;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;display:inline;fill:#1c1e2d;fill-opacity:1;stroke-width:2.68029;stroke-dasharray:none"
-       id="text1"
-       inkscape:label="title"
-       transform="scale(0.61192376,1.6341905)"><tspan
-         sodipodi:role="line"
-         id="tspan13"
-         x="763.53217"
-         y="37.234032"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:37.4428px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#1c1e2d;fill-opacity:1;stroke-width:2.68029;stroke-dasharray:none">Wall Mounted/Portable Exandable Application</tspan></text></g><!-- CENTRALINA --><!-- LINEE SEGNALE --><g
+  </style><!-- BACKGROUND / TITLE --><!-- CENTRALINA --><!-- LINEE SEGNALE --><g
      id="pool"
      class="component"
      data-component="Vasca piscina"
@@ -1974,7 +1950,7 @@
            id="tspan2"
            x="-116.85138"
            y="-130.81915"
-           style="stroke-width:1.99936"></tspan></text><text
+           style="stroke-width:1.99936" /></text><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.0474px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:none;fill-opacity:0.765531;stroke:#000000;stroke-width:0.34245;stroke-dasharray:none;stroke-opacity:1"
          x="465.8833"

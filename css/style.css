@@ -231,14 +231,15 @@ button, a { font: inherit; }
   color: #526979;
   margin: 0 0 40px;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .bypool-title {
-  font-size: 24px;
-  font-weight: 600;
+  width: 100%;
+  font-size: 36px;
+  font-weight: 700;
   color: #12263a;
-  margin: 0 0 24px;
+  margin: 0;
   letter-spacing: -0.5px;
   text-align: center;
 }
@@ -247,7 +248,8 @@ button, a { font: inherit; }
   width: 100%;
   margin-bottom: 30px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bypool-svg-full object {
