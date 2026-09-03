@@ -1971,8 +1971,7 @@
          id="path16-8-82"
          inkscape:label="plug" /></g></g><g
      id="dosing_orp-8"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+    style="cursor:default"
      transform="translate(-158.97852,59.578906)"
      inkscape:label="dosingtank"><g
        id="g5-2"
@@ -2805,8 +2804,7 @@
     .hidden-option{display:none}
   </style><g
      id="dosing_orp-3"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+    style="cursor:default"
      transform="translate(31.155428,59.085718)"
      inkscape:label="dosingpumptank"><g
        id="g5-4"
