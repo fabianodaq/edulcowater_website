@@ -2665,8 +2665,7 @@
          id="path30"
          transform="matrix(0.99935921,0,0,1,-192.62659,-231.05221)" /></g></g><!-- DOSAGGIO pH --><!-- DOSAGGIO REDOX --><!-- TUBAZIONE PRINCIPALE --><g
      id="heater"
-     class="component"
-     data-component="Riscaldatore"
+    style="cursor:default"
      data-optional="true"
      transform="translate(783.9462,226.77166)"
      inkscape:label="solar"><rect
@@ -2696,8 +2695,7 @@
          inkscape:label="forward"
          style="fill:#000000;fill-opacity:1;stroke:#ff4c1d;stroke-width:9.56235;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" /></g><g
        id="circulation_pump"
-       class="component"
-       data-component="Pompa di ricircolo"
+      style="cursor:default"
        transform="translate(-560.62641,-22.527891)"
        inkscape:label="solarpump"><circle
          cx="675"

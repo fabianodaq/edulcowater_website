@@ -11296,8 +11296,6 @@
     .hidden-option{display:none}
   </style><!-- BACKGROUND / TITLE --><!-- CENTRALINA --><!-- LINEE SEGNALE --><g
      id="g46"
-     class="component"
-     data-component="Vasca piscina"
      transform="translate(-339.3239,287.55795)"
      inkscape:label="hydroponics"><path
        d="M 443.18791,350.7554 H 1362.3483 V 489.32177 H 443.18791 Z"
@@ -11498,8 +11496,7 @@
          id="path16-8-15-4"
          inkscape:label="plug" /></g></g><g
      id="dosing_orp-3-1"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+    style="cursor:default"
      transform="translate(51.537696,59.603152)"
      inkscape:label="dosingpump"><g
        id="g7-3-9-4"
@@ -11841,8 +11838,7 @@
              y="157.79359"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.758117">⚡EC/💎TDS/🧂SAL</tspan></text></g></g></g><!-- DOSAGGIO pH --><!-- DOSAGGIO REDOX --><!-- TUBAZIONE PRINCIPALE --><!-- VASCA --><!-- SONDE --><g
      id="dosing_orp"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+    style="cursor:default"
      transform="translate(-153.26216,57.214308)"
      inkscape:label="dosingpump"><g
        id="g5"
@@ -11927,8 +11923,7 @@
        inkscape:original-d="M 446.5,176.875 C 430.5,175.91667 414,174.45833 398,173 c -16,-1.45833 -53.16667,-14.33333 -80,-21.5 -26.83333,-7.16667 -69.16667,-2.83333 -103.5,-4.5 -34.33333,-1.66667 -46.83333,23.5 -70.5,35.5 -23.66667,12 -41.33333,111.16667 -62,166.5 -20.666667,55.33333 -6.666667,62.83333 -10,94.5 -3.333333,31.66667 0.333333,51 0.5,76.5"
        transform="translate(153.26216,-57.214308)" /></g><g
      id="dosing_orp-3"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+    style="cursor:default"
      transform="translate(-48.262156,57.214308)"
      inkscape:label="dosingpump"><g
        id="g5-4"

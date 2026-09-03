@@ -3174,8 +3174,7 @@
          d="m 1738.69,473.22664 -141.9962,-5.6064"
          id="path24-1" /></g></g><g
      id="heater"
-     class="component"
-     data-component="Riscaldatore"
+    style="cursor:default"
      data-optional="true"
      transform="translate(798.31582,240.06509)"
      inkscape:label="solar"><rect
@@ -3205,8 +3204,7 @@
          inkscape:label="forward"
          style="fill:#000000;fill-opacity:1;stroke:#ff4c1d;stroke-width:13.9693;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" /></g><g
        id="circulation_pump"
-       class="component"
-       data-component="Pompa di ricircolo"
+      style="cursor:default"
        transform="translate(-555.62641,-23.027891)"
        inkscape:label="solarpump"><circle
          cx="675"

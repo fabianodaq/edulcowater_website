@@ -3714,8 +3714,6 @@
     .hidden-option{display:none}
   </style><!-- BACKGROUND / TITLE --><!-- CENTRALINA --><!-- LINEE SEGNALE --><g
      id="g46"
-     class="component"
-     data-component="Vasca piscina"
      transform="translate(-332.76006,300.93931)"
      inkscape:label="hydroponics"><path
        d="M 443.18791,350.7554 H 1362.3483 V 489.32177 H 443.18791 Z"
@@ -3930,8 +3928,7 @@
        id="path37"
        inkscape:label="plug" /></g><!-- DOSAGGIO pH --><!-- DOSAGGIO REDOX --><!-- TUBAZIONE PRINCIPALE --><!-- VASCA --><!-- SONDE --><g
      id="dosing_orp"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+    style="cursor:default"
      transform="translate(-153.26216,57.214308)"
      inkscape:label="dosingpump"><g
        id="g7"
@@ -4077,8 +4074,7 @@
        inkscape:original-d="m -63.709252,482.94777 c 4.580393,-24.5 9.410626,-49.75 14.240869,-74.75 4.830233,-25 0.832796,-27.66666 1.249199,-41.5 0.416393,-13.83333 0.166553,-28.41666 0.24984,-42.74999 0.08325,-14.33334 -4.164,-17.91667 -6.245995,-26.75 -2.082005,-8.83334 -10.659835,-8.91667 -15.989748,-13.25 -5.329922,-4.33334 -5.829602,-12.16667 -8.744393,-18.5"
        transform="matrix(1.0006412,0,0,1,346.01226,173.8379)" /></g><g
      id="dosing_orp-3"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+    style="cursor:default"
      transform="translate(-48.969263,57.214308)"
      inkscape:label="dosingpump"><g
        id="g7-3"
@@ -4224,8 +4220,7 @@
        inkscape:original-d="m 31.735949,484.53983 c 4.711019,-11.78511 9.422048,-23.92377 14.133067,-35.70889 4.71103,-11.78511 7.302088,-35.11963 10.953137,-52.67945 3.651039,-17.55982 -4.239921,-62.2254 -6.006558,-93.33809 -1.766638,-31.1127 -8.479843,-10.72446 -13.073098,-16.26346 -4.593245,-5.539 -6.359882,-15.08494 -9.539823,-22.62742"
        transform="matrix(1.0006412,0,0,1,241.71935,173.8379)" /></g><g
      id="dosing_orp-3-1"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+    style="cursor:default"
      transform="translate(58.181495,56.421413)"
      inkscape:label="dosingpump"><g
        id="g7-3-9"

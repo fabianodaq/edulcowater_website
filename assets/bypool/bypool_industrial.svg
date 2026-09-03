@@ -646,8 +646,6 @@
     .hidden-option{display:none}
   </style><!-- BACKGROUND / TITLE --><!-- CENTRALINA --><!-- LINEE SEGNALE --><g
      id="pool"
-     class="component"
-     data-component="Vasca piscina"
      transform="translate(80.45195,268.31189)"><path
        d="M 379.23838,307.44548 H 771.45803 V 527.63169 H 379.23838 Z"
        fill="#fbfdff"
@@ -887,8 +885,6 @@
        inkscape:label="forward"
        style="fill:none;stroke:#59798f;stroke-width:21.6219;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" /></g><g
      id="heater"
-     class="component"
-     data-component="Riscaldatore"
      data-optional="true"
      transform="translate(783.9462,226.77166)"
      inkscape:label="solar"><rect
@@ -918,8 +914,6 @@
          inkscape:label="forward"
          style="fill:#000000;fill-opacity:1;stroke:#ff4c1d;stroke-width:9.58987405;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" /></g><g
        id="circulation_pump"
-       class="component"
-       data-component="Pompa di ricircolo"
        transform="translate(-541.53453,-143.44315)"
        inkscape:label="solarpump"><circle
          cx="675"
@@ -995,10 +989,9 @@
            d="m 40.401611,138.24653 c 6,-10 14,-10 20,0 6,10 14,10 20,0 6,-10 14,-10 19.999999,0"
            id="path10-3" /></g></g></g><!-- VASCA --><!-- SONDE --><g
      id="dosing_orp"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
      transform="translate(-153.26216,57.214308)"
-     inkscape:label="dosingpump"><g
+    inkscape:label="dosingpump"
+    style="cursor:default"><g
        id="g7"
        inkscape:label="pump"><rect
          x="230.04597"
@@ -1165,10 +1158,9 @@
          id="tspan18"
          style="stroke-width:0.34245">🔌</tspan></text></g><g
      id="dosing_orp-3"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
      transform="translate(-48.969263,57.214308)"
-     inkscape:label="dosingpump"><g
+    inkscape:label="dosingpump"
+    style="cursor:default"><g
        id="g7-3"
        inkscape:label="pump"><rect
          x="230.04597"
