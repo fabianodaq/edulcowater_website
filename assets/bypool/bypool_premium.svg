@@ -1480,8 +1480,6 @@
     .hidden-option{display:none}
   </style><!-- BACKGROUND / TITLE --><!-- CENTRALINA --><!-- LINEE SEGNALE --><g
      id="pool"
-     class="component"
-     data-component="Vasca piscina"
      transform="translate(80.45195,268.31189)"><path
        d="M 379.23838,307.44548 H 771.45803 V 527.63169 H 379.23838 Z"
        fill="#fbfdff"
@@ -1596,8 +1594,6 @@
        inkscape:label="forward"
        style="fill:none;stroke:#59798f;stroke-width:21.6219;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" /></g><g
      id="heater"
-     class="component"
-     data-component="Riscaldatore"
      data-optional="true"
      transform="translate(783.9462,226.77166)"
      inkscape:label="solar"><rect
@@ -1627,8 +1623,6 @@
          inkscape:label="forward"
          style="fill:#000000;fill-opacity:1;stroke:#ff4c1d;stroke-width:9.58987405;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" /></g><g
        id="circulation_pump"
-       class="component"
-       data-component="Pompa di ricircolo"
        transform="translate(-561.33352,-143.44315)"
        inkscape:label="solarpump"><circle
          cx="675"
@@ -1704,10 +1698,9 @@
            d="m 40.401611,138.24653 c 6,-10 14,-10 20,0 6,10 14,10 20,0 6,-10 14,-10 19.999999,0"
            id="path10-3" /></g></g></g><!-- VASCA --><!-- SONDE --><g
      id="dosing_orp"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
      transform="translate(-153.26216,57.214308)"
-     inkscape:label="dosingpump"><g
+    inkscape:label="dosingpump"
+    style="cursor:default"><g
        id="g5"
        inkscape:label="solutiontank"><g
          id="g6"
@@ -1813,10 +1806,9 @@
        inkscape:path-effect="#path-effect40"
        inkscape:original-d="m 300.34037,567.16096 c -0.23571,-22.39171 -1.17851,-45.49053 -2.12132,-68.58935 -0.94281,-23.09883 -8.72099,-43.36922 -13.43503,-65.05383 -4.71405,-21.6846 22.86312,-42.89781 34.64823,-64.34671 11.78511,-21.44891 30.87699,-71.65349 45.96194,-106.77312 15.08494,-35.11964 32.52691,-70.71068 48.79037,-106.77312 16.26345,-36.06245 32.52691,-17.91338 48.79036,-27.57717 16.26346,-9.66379 52.0902,5.65686 78.48885,9.19239 26.39866,3.53553 35.35534,4.24264 53.03301,6.36396" /></g><g
      id="dosing_orp-3"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
      transform="translate(-48.262156,57.214308)"
-     inkscape:label="dosingpump"><g
+    inkscape:label="dosingpump"
+    style="cursor:default"><g
        id="g5-4"
        inkscape:label="solutiontank"><g
          id="g6-2"

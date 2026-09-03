@@ -3258,15 +3258,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.5"
-     inkscape:cx="231"
-     inkscape:cy="839"
+     inkscape:zoom="2"
+     inkscape:cx="855"
+     inkscape:cy="660.75"
      inkscape:window-width="1920"
      inkscape:window-height="1129"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg51" /><title
+     inkscape:current-layer="dosing_orp-3-6" /><title
      id="title">Impianto piscina configurabile</title><desc
      id="desc">Schema SVG modulare con centralina pH/ORP/temperatura, dosaggio, vasca, sonde, pompa, filtro e riscaldatore.</desc><style
      id="style1">
@@ -3283,8 +3283,6 @@
     .hidden-option{display:none}
   </style><!-- BACKGROUND / TITLE --><!-- CENTRALINA --><!-- LINEE SEGNALE --><g
      id="pool-2"
-     class="component"
-     data-component="Vasca piscina"
      transform="translate(71.81277,263.64166)"
      inkscape:label="aquarium"><path
        d="M 17.552338,372.85193 H 882.93234 V 527.27906 H 17.552338 Z"
@@ -3391,8 +3389,7 @@
          id="path30"
          transform="matrix(0.99935921,0,0,1,-192.62659,-231.05221)" /></g></g><!-- DOSAGGIO pH --><!-- DOSAGGIO REDOX --><!-- TUBAZIONE PRINCIPALE --><!-- VASCA --><!-- SONDE --><g
      id="dosing_orp"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+     style="cursor:default"
      transform="translate(-153.26216,57.214308)"
      inkscape:label="dosingpump"><g
        id="g5"
@@ -3476,8 +3473,7 @@
        inkscape:original-d="m 300.34037,567.16096 c -0.23571,-22.39171 -1.17851,-45.49053 -2.12132,-68.58935 -0.94281,-23.09883 -8.72099,-43.36922 -13.43503,-65.05383 -4.71405,-21.6846 22.86312,-42.89781 34.64823,-64.34671 11.78511,-21.44891 30.87699,-71.65349 45.96194,-106.77312 15.08494,-35.11964 32.52691,-70.71068 48.79037,-106.77312 16.26345,-36.06245 32.52691,-17.91338 48.79036,-27.57717 16.26346,-9.66379 52.0902,5.65686 78.48885,9.19239 26.39866,3.53553 35.35534,4.24264 53.03301,6.36396"
        transform="matrix(0.97398904,0,0,1.1519165,15.418305,-19.139884)" /></g><g
      id="dosing_orp-3"
-     class="component"
-     data-component="Dosaggio Redox / Cloro"
+     style="cursor:default"
      transform="translate(-48.262156,57.214308)"
      inkscape:label="dosingpump"><g
        id="g5-4"
@@ -3569,8 +3565,8 @@
      inkscape:transform-center-x="1185.1109"
      inkscape:transform-center-y="-311.12698"><rect
        class="hit"
-       x="209.70432"
-       y="250.10751"
+       x="199.20432"
+       y="248.60751"
        width="94.098419"
        height="124.67428"
        rx="2.6885264"
@@ -3578,7 +3574,7 @@
        inkscape:label="pumphighlight" /><g
        id="g7-3-67"
        inkscape:label="pump"
-       transform="translate(-1.625,-83)"><rect
+       transform="translate(-13.125,-82.5)"><rect
          x="347.37585"
          y="-294.40329"
          width="94.616295"
@@ -3664,7 +3660,7 @@
          id="path21-0-7" /></g><g
        id="g16-8-9"
        inkscape:label="plususpply"
-       transform="matrix(-2.1994996e-8,1.0006412,-1,-1.8611947e-8,136.56494,291.56506)"><path
+       transform="matrix(-2.1994996e-8,1.0006412,-1,-1.8611947e-8,125.06494,291.06506)"><path
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.86696;stroke-dasharray:none"
          d="m -35.637579,-144.05623 c -7.273429,2e-5 -14.968651,4e-5 -23.074876,5e-5"
          id="path30-4-4-6-5-2-9-5-1-23"
