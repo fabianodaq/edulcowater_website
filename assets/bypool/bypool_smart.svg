@@ -2619,56 +2619,6 @@
         }
       });
     })();
-  ]]></script><script
-     id="script52"><![CDATA[
-    (function(){
-      const svg = document.documentElement;
-      const info = svg.getElementById('info_text');
-      svg.querySelectorAll('.component').forEach(function(el){
-        el.addEventListener('click', function(evt){
-          evt.stopPropagation();
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          el.classList.add('is-selected');
-          const name = el.getAttribute('data-component') || el.id;
-          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
-          svg.dispatchEvent(new CustomEvent('configurator:select', {
-            bubbles: true,
-            detail: { id: el.id, component: name }
-          }));
-        });
-      });
-      svg.addEventListener('click', function(evt){
-        if(evt.target === svg){
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          if(info) info.textContent = 'Clicca un componente per selezionarlo';
-        }
-      });
-    })();
-  ]]></script><script
-     id="script53"><![CDATA[
-    (function(){
-      const svg = document.documentElement;
-      const info = svg.getElementById('info_text');
-      svg.querySelectorAll('.component').forEach(function(el){
-        el.addEventListener('click', function(evt){
-          evt.stopPropagation();
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          el.classList.add('is-selected');
-          const name = el.getAttribute('data-component') || el.id;
-          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
-          svg.dispatchEvent(new CustomEvent('configurator:select', {
-            bubbles: true,
-            detail: { id: el.id, component: name }
-          }));
-        });
-      });
-      svg.addEventListener('click', function(evt){
-        if(evt.target === svg){
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          if(info) info.textContent = 'Clicca un componente per selezionarlo';
-        }
-      });
-    })();
   ]]></script><metadata
      id="metadata57"><rdf:RDF><cc:Work
          rdf:about=""><dc:title>Impianto piscina configurabile</dc:title></cc:Work></rdf:RDF></metadata><g

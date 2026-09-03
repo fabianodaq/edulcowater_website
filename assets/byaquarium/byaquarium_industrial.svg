@@ -1644,58 +1644,9 @@
        id="text18-4-4-5-8-4"
        x="491.28552"
        y="205.37668"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Industrial</text></g><!-- PANNELLO INFO INTERNO --><script
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Industrial</text></g><!-- PANNELLO INFO INTERNO -->
+  <script
      id="script51"><![CDATA[
-    (function(){
-      const svg = document.documentElement;
-      const info = svg.getElementById('info_text');
-      svg.querySelectorAll('.component').forEach(function(el){
-        el.addEventListener('click', function(evt){
-          evt.stopPropagation();
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          el.classList.add('is-selected');
-          const name = el.getAttribute('data-component') || el.id;
-          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
-          svg.dispatchEvent(new CustomEvent('configurator:select', {
-            bubbles: true,
-            detail: { id: el.id, component: name }
-          }));
-        });
-      });
-      svg.addEventListener('click', function(evt){
-        if(evt.target === svg){
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          if(info) info.textContent = 'Clicca un componente per selezionarlo';
-        }
-      });
-    })();
-  ]]></script><script
-     id="script52"><![CDATA[
-    (function(){
-      const svg = document.documentElement;
-      const info = svg.getElementById('info_text');
-      svg.querySelectorAll('.component').forEach(function(el){
-        el.addEventListener('click', function(evt){
-          evt.stopPropagation();
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          el.classList.add('is-selected');
-          const name = el.getAttribute('data-component') || el.id;
-          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
-          svg.dispatchEvent(new CustomEvent('configurator:select', {
-            bubbles: true,
-            detail: { id: el.id, component: name }
-          }));
-        });
-      });
-      svg.addEventListener('click', function(evt){
-        if(evt.target === svg){
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          if(info) info.textContent = 'Clicca un componente per selezionarlo';
-        }
-      });
-    })();
-  ]]></script><script
-     id="script53"><![CDATA[
     (function(){
       const svg = document.documentElement;
       const info = svg.getElementById('info_text');
