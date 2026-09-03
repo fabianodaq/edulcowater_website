@@ -1306,15 +1306,15 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="2.56"
-   inkscape:cx="850.78125"
-   inkscape:cy="718.55469"
+   inkscape:zoom="0.64"
+   inkscape:cx="479.6875"
+   inkscape:cy="867.96875"
    inkscape:window-width="1920"
    inkscape:window-height="1129"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="heater" /><title
+   inkscape:current-layer="svg51" /><title
    id="title">Impianto piscina configurabile</title><desc
    id="desc">Schema SVG modulare con centralina pH/ORP/temperatura, dosaggio, vasca, sonde, pompa, filtro e riscaldatore.</desc><style
    id="style1">
@@ -1672,12 +1672,6 @@
        d="m 624.81734,415.89272 7e-5,164.02079"
        id="path30-4-4-6-5-2-9-5-01"
        inkscape:label="linepump" /></g><path
-     style="fill:none;stroke:#479279;stroke-width:1.99936;stroke-linejoin:round;stroke-dasharray:5.99808, 1.99936;stroke-dashoffset:0"
-     d="m 907.63322,188.26211 -0.70664,57.27565 43.10586,41.01219 -0.70665,121.62237 -12.71984,41.01219 -0.70665,63.63961"
-     id="path10" /><path
-     style="fill:none;stroke:#479279;stroke-width:1.99936;stroke-linejoin:round;stroke-dasharray:5.99808, 1.99936;stroke-dashoffset:0"
-     d="m 780.43552,364.3317 -0.70666,-52.3259 52.99899,-62.2254 0.70665,-68.58936"
-     id="path11" /><path
      style="fill:none;stroke:#479279;stroke-width:4.15273;stroke-linejoin:round;stroke-dasharray:12.4581, 4.15273;stroke-dashoffset:0"
      d="m 677.93094,270.86074 h -82.42241 l -23.89057,52.33348 3.58357,164.21883"
      id="path12" /></g><!-- DOSAGGIO pH --><!-- DOSAGGIO REDOX --><!-- TUBAZIONE PRINCIPALE --><g
@@ -3916,4 +3910,10 @@
     .device{fill:white;stroke:#526778;stroke-width:2}
     .soft{fill:#f5f7f9;stroke:#9aabb7;stroke-width:2}
     .hidden-option{display:none}
-  </style></svg>
+  </style><path
+   style="opacity:0.78;fill:none;stroke:#007549;stroke-width:3;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0.6;stroke-dasharray:12, 12;stroke-dashoffset:0;stroke-opacity:1"
+   d="m 1137.5,782.03125 -3.9063,-176.5625 -66.4062,-57.03125 -42.1875,-43.75 0.7812,-26.5625"
+   id="path7" /><path
+   style="opacity:0.78;fill:none;stroke:#007549;stroke-width:3;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0.6;stroke-dasharray:12, 12;stroke-dashoffset:0;stroke-opacity:1"
+   d="M 966.40625,658.59375 975,626.5625 l 13.28125,-16.40625 49.21875,-26.5625 64.8437,-56.25 2.3438,-46.875"
+   id="path10" /></svg>
