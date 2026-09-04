@@ -628,15 +628,15 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="1.4142136"
-   inkscape:cx="710.28874"
-   inkscape:cy="216.02112"
+   inkscape:zoom="2.8284272"
+   inkscape:cx="302.46492"
+   inkscape:cy="596.97488"
    inkscape:window-width="1920"
    inkscape:window-height="1129"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="control_unit" /><title
+   inkscape:current-layer="svg51" /><title
    id="title">Impianto piscina configurabile</title><desc
    id="desc">Schema SVG modulare con centralina pH/ORP/temperatura, dosaggio, vasca, sonde, pompa, filtro e riscaldatore.</desc>
   <style
@@ -650,8 +650,11 @@
     .small{font:13px Arial,sans-serif;fill:#6c7b88}
     .tiny{font:11px Arial,sans-serif;fill:#6c7b88}
     .component{cursor:pointer}
-    .component:hover .hit,.component.is-selected .hit{stroke:#157bb8;stroke-width:4}
+   @keyframes component-hover-pulse{0%,100%{opacity:.25;stroke-width:2}50%{opacity:1;stroke-width:4}}
+   .component .hit{stroke:#697780 !important;animation:component-hover-pulse 1.8s ease-in-out infinite}
+   .component:hover .hit,.component.is-selected .hit{opacity:1;stroke-width:4 !important}
     .hit{fill:transparent;stroke:transparent;stroke-width:8}
+   @media (prefers-reduced-motion:reduce){.component .hit{animation:none;opacity:.55;stroke-width:2 !important}}
     .pipe{fill:none;stroke:#59798f;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
     .signal{fill:none;stroke:#9aa7b2;stroke-width:2;stroke-dasharray:6 5}
     .device{fill:white;stroke:#526778;stroke-width:2}
@@ -1540,11 +1543,11 @@
    inkscape:label="probephorp"><rect
    class="hit"
    x="1229.9524"
-   y="132.73663"
-   width="88.292404"
-   height="151.84576"
+   y="142.63612"
+   width="79.100014"
+   height="141.94627"
    id="rect31-4"
-   style="stroke-width:8.91336" /><g
+   style="stroke-width:8.15697" /><g
    id="g23-4"
    inkscape:label="probeinjection"><g
      id="g24-6"
