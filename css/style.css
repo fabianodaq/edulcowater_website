@@ -239,6 +239,10 @@ button, a { font: inherit; }
   max-width: 800px;
 }
 
+.bypool-subtitle span {
+  display: block;
+}
+
 .bypool-title {
   width: 100%;
   font-size: 36px;

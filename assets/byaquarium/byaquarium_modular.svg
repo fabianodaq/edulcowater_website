@@ -4249,8 +4249,12 @@
     .small{font:13px Arial,sans-serif;fill:#6c7b88}
     .tiny{font:11px Arial,sans-serif;fill:#6c7b88}
     .component{cursor:pointer}
-    .component:hover .hit,.component.is-selected .hit{stroke:#157bb8;stroke-width:4}
+    @keyframes component-hover-pulse{0%,100%{opacity:.25;stroke-width:2}50%{opacity:1;stroke-width:4}}
+     .component .hit,.component.is-available .hit{stroke:#697780 !important;animation:component-hover-pulse 1.8s ease-in-out infinite}
+     .component:hover .hit,.component:focus .hit,.component.is-focused .hit{animation:none;opacity:1;stroke-width:4 !important}
+     .component.is-selected .hit{stroke:#157bb8 !important;animation:none;opacity:1;stroke-width:4 !important}
     .hit{fill:transparent;stroke:transparent;stroke-width:8}
+    @media (prefers-reduced-motion:reduce){.component .hit{animation:none;opacity:.55;stroke-width:2 !important}}
     .pipe{fill:none;stroke:#59798f;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
     .signal{fill:none;stroke:#9aa7b2;stroke-width:2;stroke-dasharray:6 5}
     .device{fill:white;stroke:#526778;stroke-width:2}
@@ -4402,9 +4406,8 @@
          d="m 390.35753,303.65011 13.35596,1e-5 1e-5,8.53627 -1e-5,8.53627 -13.35597,-1e-5 h -13.35595 l 10e-6,-8.53626 -10e-6,-8.53628 z m -12.77394,8.72154 c 0.0887,0.0374 0.11181,0.82817 0.1118,3.81759 l -10e-6,3.77039 h 12.66214 l 12.66216,2e-5 -10e-6,-3.80489 c 10e-6,-3.29415 0.0174,-3.81227 0.13009,-3.8598 0.14277,-0.0603 0.18088,-0.34699 0.0461,-0.34702 -0.0462,9e-5 -0.0613,0.0646 -0.034,0.1431 0.0273,0.0787 0.007,0.14306 -0.0462,0.14303 -0.0687,-5e-5 -0.096,-1.11512 -0.096,-3.91047 v -3.91048 h -12.66214 l -12.66215,1e-5 -1e-5,3.72271 c 1e-5,3.14223 -0.0194,3.73088 -0.12416,3.7751 -0.15131,0.0639 -0.14248,0.39537 0.0124,0.46071 z m 0.81567,-3.47428 c 0.0344,-0.18283 0.1659,-0.42956 0.29154,-0.5484 0.21092,-0.19956 0.31128,-0.21611 1.30771,-0.21608 l 1.07925,-10e-6 6e-5,0.28613 -2e-5,0.28614 h -0.99118 c -1.09793,-1e-5 -1.26372,0.0751 -1.26372,0.57225 0,0.49718 0.16585,0.57226 1.26373,0.57227 h 0.99117 l 4e-5,0.28613 -10e-6,0.28613 h -1.07926 c -0.99828,0 -1.09649,-0.0163 -1.30904,-0.21736 -0.26333,-0.24908 -0.38608,-0.80194 -0.2902,-1.30716 z m -0.004,2.88426 c 0.0706,-0.3728 0.20564,-0.56409 0.52562,-0.74607 0.32035,-0.18255 0.33585,-0.17703 0.33584,0.11459 0,0.14561 -0.0912,0.34433 -0.21686,0.47233 -0.36312,0.37012 -0.26461,1.08848 0.14927,1.08848 0.16577,-10e-6 0.24498,-0.16203 0.41069,-0.84002 0.13684,-0.55986 0.35739,-0.7814 0.77797,-0.7814 0.26816,4e-5 0.38064,0.0558 0.52876,0.26229 0.15797,0.22032 0.18273,0.35653 0.15428,0.85094 -0.0277,0.48275 -0.0721,0.62371 -0.24692,0.78367 -0.11725,0.10727 -0.28145,0.19648 -0.36493,0.19819 -0.21993,0.005 -0.20325,-0.48784 0.0217,-0.64233 0.22149,-0.15209 0.24762,-0.82882 0.0355,-0.91833 -0.20675,-0.0873 -0.27899,6.9e-4 -0.41558,0.50657 -0.16686,0.61806 -0.36408,1.02152 -0.53446,1.09342 -0.72544,0.30615 -1.34675,-0.4657 -1.16112,-1.44239 z m 1.34685,2.07385 h 1.35263 l -0.03,0.89859 c -0.0266,0.79492 -0.0543,0.92694 -0.24031,1.14452 -0.24868,0.29094 -0.51837,0.31371 -0.79524,0.0671 -0.1981,-0.17637 -0.20301,-0.17571 -0.3628,0.0477 -0.11287,0.15779 -0.25004,0.22652 -0.45217,0.22655 -0.66276,0 -0.82473,-0.29864 -0.82467,-1.52131 v -0.86315 z m -0.80242,1.66495 c 0.084,0.1264 0.17817,0.15845 0.33734,0.11444 0.17666,-0.0488 0.22822,-0.13154 0.25829,-0.41482 0.0693,-0.65277 0.003,-0.7923 -0.37544,-0.79228 h -0.33679 v 0.45866 c -4e-5,0.25225 0.0524,0.53757 0.11671,0.63399 z m 1.23495,-0.0369 c 0.23972,0.21875 0.42294,-0.01 0.4526,-0.56488 l 0.0261,-0.4909 -0.30808,-4e-5 -0.30806,4e-5 -10e-6,0.4652 c 10e-6,0.30812 0.0464,0.50756 0.13737,0.59059 z m 2.5841,-3.92808 c 0.27064,-0.83297 0.9906,-1.41676 1.74964,-1.41876 0.76645,-0.002 1.59565,0.71539 1.7392,1.50481 0.0308,0.17078 0.0904,0.33351 0.13201,0.36172 0.14639,0.0995 0.0732,0.20693 -0.14132,0.20696 -0.21388,4e-5 -0.31868,-0.16421 -0.10838,-0.16984 0.0633,-0.001 0.0483,-0.0414 -0.0364,-0.096 -0.0799,-0.0508 -0.16968,-0.21067 -0.19935,-0.35481 -0.18451,-0.88734 -1.33134,-1.3622 -2.117,-0.87659 -1.22302,0.75598 -0.90856,2.77685 0.48112,3.09178 0.63582,0.1441 1.49962,-0.4452 1.66186,-1.13375 0.0381,-0.16155 0.13505,-0.30764 0.21547,-0.32472 0.24239,-0.0513 0.17618,0.38915 -0.13554,0.90217 -0.83273,1.37035 -2.73052,1.11644 -3.22722,-0.43177 -0.16,-0.49874 -0.16331,-0.80127 -0.0138,-1.26137 z m 4.56361,0.39248 c 0.44225,-10e-6 0.78053,-0.0398 0.78053,-0.0918 10e-6,-0.31062 0.41404,-1.20955 0.74163,-1.6103 0.75021,-0.91766 1.65644,-1.37536 3.09048,-1.56101 0.7953,-0.10293 0.84296,-0.1218 0.89513,-0.35421 0.18994,-0.84583 1.27069,-1.2072 1.97079,-0.659 0.96297,0.7541 0.44052,2.55785 -0.74127,2.55912 -0.5441,5.5e-4 -1.13164,-0.46017 -1.23281,-0.96682 -0.0495,-0.24891 -0.0873,-0.27275 -0.43021,-0.27274 -0.61369,0 -1.64643,0.25604 -2.18554,0.54188 -0.71256,0.37779 -1.43314,1.18686 -1.62613,1.82583 -0.084,0.27828 -0.13911,0.52009 -0.12227,0.53737 0.0374,0.0377 5.80885,0.0824 8.42135,0.0645 l 1.8863,-0.0129 v -0.77244 -0.77245 l 0.32522,0.21302 c 0.17889,0.11715 0.76425,0.49022 1.3008,0.82912 0.53658,0.33882 0.99391,0.64864 1.01629,0.68847 0.0319,0.0563 -2.23792,1.56379 -2.56842,1.70598 -0.0404,0.0178 -0.0739,-0.3107 -0.0739,-0.72925 v -0.76107 l -2.10312,-0.0337 c -1.15674,-0.0186 -2.97551,-0.0183 -4.04174,5.6e-4 l -1.9386,0.0344 0.0526,0.29004 c 0.26478,1.4561 1.7015,2.53002 3.62005,2.70599 l 0.68143,0.0625 v -0.63368 l -10e-6,-0.63366 1.30092,10e-6 h 1.3009 l -10e-6,1.43065 10e-6,1.43066 h -1.3009 -1.30091 v -0.6065 l -10e-6,-0.60645 -0.86308,-0.10791 c -2.08816,-0.26113 -3.43699,-1.36607 -3.77243,-3.09033 l -0.0512,-0.26228 -1.90636,1e-5 c -1.84851,0 -1.90633,-0.005 -1.90634,-0.19076 4e-5,-0.17664 0.0578,-0.19076 0.78055,-0.19075 z m 5.84492,-2.72766 c 0.16131,0.42504 0.44849,0.62938 0.88402,0.62936 0.45381,-10e-6 0.77872,-0.2691 0.91096,-0.7544 0.32676,-1.19939 -1.25358,-1.88948 -1.764,-0.7703 -0.1832,0.40178 -0.18617,0.48688 -0.031,0.89536 z m 3.17469,7.40114 h 0.954 v -1.04915 -1.04915 l -0.954,1e-5 -0.954,-1e-5 v 1.04915 1.04915 z m 2.77871,-3.43357 c 0.17522,-10e-6 1.58054,-0.88627 1.62194,-1.0229 0.0152,-0.0506 -0.21729,-0.23394 -0.51689,-0.40761 -0.29962,-0.17365 -0.64836,-0.39493 -0.77499,-0.49174 -0.39576,-0.30268 -0.42023,-0.25184 -0.42023,0.87311 -1e-5,0.66263 0.0332,1.04914 0.0902,1.04916 z m 9.10289,-6.10418 3.72927,10e-6 -1e-5,5.10223 v 5.10223 l -3.72926,-0.005 -3.72926,-0.005 5e-5,-0.37576 -10e-6,-0.37575 3.38236,-10e-6 3.38235,10e-6 10e-6,-2.05297 -2e-5,-2.05297 0.21683,-0.0906 c 0.20668,-0.0864 0.30939,-0.38153 0.13301,-0.38144 -0.0462,8e-5 -0.0614,0.0646 -0.0342,0.14302 0.0736,0.21008 -0.12067,0.17456 -0.22582,-0.0412 -0.0537,-0.11043 -0.0898,-0.99109 -0.0897,-2.19368 l -2e-5,-2.00918 h -3.38237 l -3.38234,-10e-6 -5e-5,-0.38151 -5e-5,-0.3815 z m 0.56374,2.38446 h 0.83016 l -0.0248,0.92992 -0.0248,0.92994 -0.78054,-2e-5 -0.78056,10e-6 -0.0248,-0.92993 -0.0248,-0.92992 z m -1e-5,3.52896 h 0.82392 l -2e-5,0.95378 v 0.95377 l -0.8239,-2e-5 -0.8239,2e-5 v -0.95378 l -1e-5,-0.95377 z"
          id="path30-6-5"
          transform="matrix(0.99935921,0,0,1,-192.62659,-231.05221)" /></g></g><!-- DOSAGGIO pH --><!-- DOSAGGIO REDOX --><!-- TUBAZIONE PRINCIPALE --><g
-     id="dosing_orp-3-6"
+     id="modular_plug"
      class="component"
-     data-component="Dosaggio Redox / Cloro"
      transform="translate(751.4201,285.24328)"
      inkscape:label="plugusb"><rect
        class="hit"
@@ -4685,9 +4688,8 @@
        inkscape:path-effect="#path-effect3"
        inkscape:original-d="m 111,496.5 c 0.66667,7.66667 2.33333,16.33333 3.5,25 1.16667,8.66667 7.5,7 11.5,10 4,3 5.66667,18.83333 8.5,28.5 2.83333,9.66667 -7.33333,101.5 -11,152.5"
        transform="translate(159.20157,-59.203897)" /></g><g
-     id="dosing_orp-9"
+     id="modular_pump_1"
      class="component"
-     data-component="Dosaggio Redox / Cloro"
      transform="translate(-158.54374,58.390112)"
      inkscape:label="dosingpumpusb"><rect
        class="hit"
@@ -4837,9 +4839,8 @@
            x="-33.87603"
            y="-130.63884"
            style="stroke-width:1.99936" /></text></g></g><g
-     id="dosing_orp-9-2"
+     id="modular_pump_2"
      class="component"
-     data-component="Dosaggio Redox / Cloro"
      transform="translate(-50.64311,60.483714)"
      inkscape:label="dosingpumpusb"><rect
        class="hit"
@@ -4989,9 +4990,8 @@
            x="-33.87603"
            y="-130.63884"
            style="stroke-width:1.99936" /></text></g></g><!-- VASCA --><!-- SONDE --><g
-     id="probe_temp-8-7"
+     id="probe_temp_analog"
      class="component"
-     data-component="Sonda temperatura"
      transform="translate(-108.20408,272.63298)"
      inkscape:label="probetemp1"><rect
        class="hit"
@@ -5035,9 +5035,8 @@
          id="tspan48-8"
          x="1035.6678"
          y="320.49854">🌡️Temp</tspan></text></g><g
-     id="probe_temp-8"
+     id="probe_temp_digital"
      class="component"
-     data-component="Sonda temperatura"
      transform="translate(-405.02746,286.7807)"
      inkscape:label="probetemp2"><rect
        class="hit"
@@ -5081,9 +5080,8 @@
          id="tspan48"
          x="1035.1088"
          y="319.6041">🌡️Temp</tspan></text></g><g
-     id="probe_orp"
+    id="probe_ph_orp_1"
      class="component"
-     data-component="Sonda ORP / Redox"
      transform="translate(-958.4242,444.21746)"
      inkscape:label="probephorp"><rect
        class="hit"
@@ -5130,9 +5128,8 @@
              y="436.80643"
              id="tspan19-0"
              style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.11803">💧pH/⚗️Orp</tspan></text></g></g></g><g
-     id="probe_orp-3"
+    id="probe_ph_orp_2"
      class="component"
-     data-component="Sonda ORP / Redox"
      transform="translate(-875.09701,444.3042)"
      inkscape:label="probephorp"><rect
        class="hit"
@@ -5181,13 +5178,11 @@
              id="tspan19-0-1"
              style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.11803">💧pH/⚗️Orp</tspan></text></g></g></g><!-- POMPA --><!-- FILTRO --><!-- RISCALDATORE OPTIONAL --><!-- PUNTI DI INIEZIONE --><!-- CONNETTIVITÀ OPTIONAL: gruppo indipendente, facilmente spostabile/nascondibile in Inkscape --><g
      id="connectivity"
-     data-component="Connettività"
      transform="matrix(1,0,0,1.0777194,-1645.0968,-527.48412)">
     
     <!-- collegamento diretto locale --><g
-   id="connectivity_direct"
+   id="connectivity_station"
    class="component"
-   data-component="Connessione diretta"
    transform="translate(1711.1389,574.27297)"
    inkscape:label="conn_sta"><rect
      class="hit"
@@ -5236,7 +5231,6 @@
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
    id="connectivity_router"
    class="component"
-   data-component="Router / Internet"
    transform="translate(1573.9138,471.22144)"
    inkscape:label="conn_router"><rect
      class="hit"
@@ -5282,9 +5276,8 @@
 <ellipse cx="-382.20282" cy="-833.63959" fill="#526778" id="circle43-2-1" sodipodi:insensitive="true"
        transform="matrix(-0.25048885,-0.96811948,-0.97607462,0.21743581,0,0)" style="stroke-width:1.00029" rx="3.5153663" ry="3.4867158" />
 </g><g
-   id="connectivity_router-8"
+   id="connectivity_sps"
    class="component"
-   data-component="Router / Internet"
    transform="translate(1394.4916,371.33095)"
    inkscape:label="conn_sps"><rect
      class="hit"
@@ -5327,9 +5320,8 @@
 <ellipse cx="761.0824" cy="746.43451" fill="#526778" id="circle43-2-1-4" sodipodi:insensitive="true"
        transform="matrix(0.84766801,-0.53052705,0.58799084,0.80886759,0,0)" style="stroke-width:1.00122" rx="3.6891143" ry="3.3285806" />
 </g><!-- telefono vicino --><!-- telefono remoto --><g
-   id="phone_remote-1"
+  id="connctivit_access_point"
    class="component"
-   data-component="Telefono remoto"
    transform="translate(1367.9862,595.87111)"
    inkscape:label="conn_ap"><rect
      class="hit"
@@ -5373,9 +5365,8 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-   id="phone_remote-1-6"
+  id="connection_remote"
    class="component"
-   data-component="Telefono remoto"
    transform="translate(1418.7355,322.09637)"
    inkscape:label="conn_remote"><rect
      class="hit"
@@ -5442,7 +5433,6 @@
        transform="matrix(-0.58072121,-0.81410249,-0.85212609,0.52333654,0,0)" style="stroke-width:1.0012" rx="3.5850525" ry="3.4250805" />
 <g
      id="world"
-     data-component="World"
      transform="matrix(-0.74241774,0.66993724,-0.6948877,-0.71911827,0,0)">
 <circle cx="-732.9613" cy="-996.06934" r="21" fill="#eef7ff" stroke="#526778" stroke-width="3" id="circle1" />
 <path
@@ -5452,9 +5442,8 @@
        stroke-width="2"
        stroke-linecap="round"
        id="path2" /></g></g><!-- linee logiche di connettività; volutamente separate dall'impianto idraulico --></g><g
-     id="control_unit"
+    id="control_unit_modular"
      class="component"
-     data-component="Centralina di controllo"
      transform="translate(40.568786,129.15833)"><rect
        class="hit"
        x="371.25989"
@@ -5820,25 +5809,22 @@
      id="script51"><![CDATA[
     (function(){
       const svg = document.documentElement;
-      const info = svg.getElementById('info_text');
-      svg.querySelectorAll('.component').forEach(function(el){
-        el.addEventListener('click', function(evt){
-          evt.stopPropagation();
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          el.classList.add('is-selected');
-          const name = el.getAttribute('data-component') || el.id;
-          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
-          svg.dispatchEvent(new CustomEvent('configurator:select', {
-            bubbles: true,
-            detail: { id: el.id, component: name }
-          }));
-        });
-      });
       svg.addEventListener('click', function(evt){
-        if(evt.target === svg){
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          if(info) info.textContent = 'Clicca un componente per selezionarlo';
-        }
+        const el = evt.target.closest('.component');
+        if (!el) return;
+        const source = svg.getAttribute('sodipodi:docname');
+        console.log('EVENTO configurator:select', { source: source, id: el.id });
+        svg.dispatchEvent(new CustomEvent('configurator:select', {
+          bubbles: true,
+          detail: { source: source, id: el.id }
+        }));
       });
     })();
+    window.addEventListener('message', function(evt) {
+      const data = evt.data;
+      if (!data || data.type !== 'configurator:set-state') return;
+      const el = document.getElementById(data.id);
+      if (!el) return;
+      el.classList.toggle('is-selected', Boolean(data.selected));
+    });
   ]]></script></svg>
