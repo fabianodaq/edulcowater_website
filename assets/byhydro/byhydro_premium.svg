@@ -12654,6 +12654,7 @@
           bubbles: true,
           detail: { source: source, id: el.id }
         }));
+        window.parent.postMessage({ type: 'configurator:select', detail: { source: source, id: el.id } }, '*');
       });
     })();
     window.addEventListener('message', function(evt) {

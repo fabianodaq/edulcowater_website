@@ -86,6 +86,68 @@ const renderSharedMenuFromConstant = () => {
 
 renderSharedMenuFromConstant();
 
+const initConfiguratorInfoPopup = () => {
+    const diagrams = document.querySelectorAll('object.bypool-svg');
+    if (!diagrams.length) return;
+
+    const popup = document.createElement('div');
+    popup.className = 'configurator-popup';
+    popup.hidden = true;
+    popup.innerHTML = `
+        <div class="configurator-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="configurator-popup-title">
+            <button class="configurator-popup-close" type="button" aria-label="Close">x</button>
+            <p class="configurator-popup-category">CONFIGURATION COMPONENT</p>
+            <h2 id="configurator-popup-title">Component information</h2>
+            <dl class="configurator-popup-details">
+                <div><dt>Image</dt><dd data-configurator-source></dd></div>
+                <div><dt>Identifier</dt><dd data-configurator-id></dd></div>
+            </dl>
+        </div>`;
+    document.body.append(popup);
+
+    const closeButton = popup.querySelector('.configurator-popup-close');
+    const sourceOutput = popup.querySelector('[data-configurator-source]');
+    const idOutput = popup.querySelector('[data-configurator-id]');
+    const closePopup = () => {
+        popup.hidden = true;
+        document.removeEventListener('keydown', handleKeydown);
+    };
+    const handleKeydown = (event) => {
+        if (event.key === 'Escape') closePopup();
+    };
+    const showPopup = ({ source, id }) => {
+        sourceOutput.textContent = source || 'Unknown SVG';
+        idOutput.textContent = id || 'Unknown component';
+        popup.hidden = false;
+        closeButton.focus();
+        document.addEventListener('keydown', handleKeydown);
+    };
+
+    closeButton.addEventListener('click', closePopup);
+    popup.addEventListener('click', (event) => {
+        if (event.target === popup) closePopup();
+    });
+
+    diagrams.forEach((diagram) => {
+        const listenToSvg = () => {
+            const svg = diagram.contentDocument?.documentElement;
+            if (!svg || svg.dataset.configuratorListenerAttached) return;
+            svg.dataset.configuratorListenerAttached = 'true';
+            svg.addEventListener('configurator:select', (event) => showPopup(event.detail || {}));
+        };
+
+        diagram.addEventListener('load', listenToSvg);
+        listenToSvg();
+    });
+
+    window.addEventListener('message', (event) => {
+        if (event.data?.type !== 'configurator:select') return;
+        showPopup(event.data.detail || {});
+    });
+};
+
+initConfiguratorInfoPopup();
+
 
 
 

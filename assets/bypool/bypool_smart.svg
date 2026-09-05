@@ -3296,6 +3296,7 @@
                   }
               })
           );
+              window.parent.postMessage({ type: 'configurator:select', detail: { source: source, id: el.id } }, '*');
       });
   })();
 
