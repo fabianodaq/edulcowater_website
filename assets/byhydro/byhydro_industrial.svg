@@ -3693,8 +3693,12 @@
     .small{font:13px Arial,sans-serif;fill:#6c7b88}
     .tiny{font:11px Arial,sans-serif;fill:#6c7b88}
     .component{cursor:pointer}
-    .component:hover .hit,.component.is-selected .hit{stroke:#157bb8;stroke-width:4}
+    @keyframes component-hover-pulse{0%,100%{opacity:.25;stroke-width:2}50%{opacity:1;stroke-width:4}}
+     .component .hit,.component.is-available .hit{stroke:#697780 !important;animation:component-hover-pulse 1.8s ease-in-out infinite}
+     .component:hover .hit,.component:focus .hit,.component.is-focused .hit{animation:none;opacity:1;stroke-width:4 !important}
+     .component.is-selected .hit{stroke:#157bb8 !important;animation:none;opacity:1;stroke-width:4 !important}
     .hit{fill:transparent;stroke:transparent;stroke-width:8}
+    @media (prefers-reduced-motion:reduce){.component .hit{animation:none;opacity:.55;stroke-width:2 !important}}
     .pipe{fill:none;stroke:#59798f;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
     .signal{fill:none;stroke:#9aa7b2;stroke-width:2;stroke-dasharray:6 5}
     .device{fill:white;stroke:#526778;stroke-width:2}
@@ -4293,9 +4297,8 @@
        inkscape:path-effect="#path-effect58"
        inkscape:original-d="m 145.50719,478.17587 c 4.12215,-23.68807 8.24429,-46.66904 12.36643,-70.35712 4.12215,-23.68808 1.76664,-69.65002 2.82662,-103.94469 1.05998,-34.29468 -6.00656,-10.72446 -9.1865,-16.26346 -3.17994,-5.539 -8.83317,-8.36743 -13.07309,-12.37437 -4.23992,-4.00694 -2.00219,-7.42462 -3.17994,-11.31371"
        transform="matrix(1.0006412,0,0,1,134.5686,174.6308)" /></g><g
-     id="g49"
+    id="probe_temp_digital"
      class="component"
-     data-component="Sonda temperatura"
      transform="translate(-76.729157,277.81013)"
      inkscape:label="probetemp2"><rect
        class="hit"
@@ -4339,9 +4342,8 @@
          id="tspan49"
          x="1035.1088"
          y="319.6041">🌡️Temp</tspan></text></g><g
-     id="probe_orp"
+    id="probe_ph_orp_1"
      class="component"
-     data-component="Sonda ORP / Redox"
      transform="translate(-858.92925,449.41594)"
      inkscape:label="probephorp"><rect
        class="hit"
@@ -4388,9 +4390,8 @@
              y="436.80643"
              id="tspan19-0"
              style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.11803">💧pH/⚗️Orp</tspan></text></g></g></g><g
-     id="probe_orp-3"
+    id="probe_ph_orp_2"
      class="component"
-     data-component="Sonda ORP / Redox"
      transform="translate(-767.11678,450.91689)"
      inkscape:label="probephorp"><rect
        class="hit"
@@ -4438,9 +4439,8 @@
              y="436.80643"
              id="tspan19-0-1"
              style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.11803">💧pH/⚗️Orp</tspan></text></g></g></g><g
-     id="g55"
+    id="probe_ec"
      class="component"
-     data-component="Sonda ORP / Redox"
      transform="translate(-321.76261,429.34662)"
      inkscape:label="probeec"><rect
        class="hit"
@@ -4490,13 +4490,11 @@
              y="157.79359"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.758117">⚡EC/💎TDS/🧂SAL</tspan></text></g></g></g><!-- POMPA --><!-- FILTRO --><!-- RISCALDATORE OPTIONAL --><!-- PUNTI DI INIEZIONE --><!-- CONNETTIVITÀ OPTIONAL: gruppo indipendente, facilmente spostabile/nascondibile in Inkscape --><g
      id="connectivity"
-     data-component="Connettività"
      transform="matrix(1,0,0,1.0777194,-1645.0968,-527.48412)">
     
     <!-- collegamento diretto locale --><g
-   id="connectivity_direct"
+   id="connectivity_station"
    class="component"
-   data-component="Connessione diretta"
    transform="translate(1718.1389,623.13815)"
    inkscape:label="conn_sta"><rect
      class="hit"
@@ -4545,7 +4543,6 @@
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
    id="connectivity_router"
    class="component"
-   data-component="Router / Internet"
    transform="translate(1583.4138,489.77915)"
    inkscape:label="conn_router"><rect
      class="hit"
@@ -4591,9 +4588,8 @@
 <ellipse cx="-382.20282" cy="-833.63959" fill="#526778" id="circle43-2-1" sodipodi:insensitive="true"
        transform="matrix(-0.25048885,-0.96811948,-0.97607462,0.21743581,0,0)" style="stroke-width:1.00029" rx="3.5153663" ry="3.4867158" />
 </g><g
-   id="connectivity_router-8"
+   id="connectivity_sps"
    class="component"
-   data-component="Router / Internet"
    transform="translate(1415.8911,391.18723)"
    inkscape:label="conn_sps"><rect
      class="hit"
@@ -4636,9 +4632,8 @@
 <ellipse cx="446.15912" cy="980.30518" fill="#526778" id="circle43-2-1-4" sodipodi:insensitive="true"
        transform="matrix(0.61650369,-0.78735201,0.82917607,0.55898752,0,0)" style="stroke-width:1.00128" rx="3.5963066" ry="3.414907" />
 </g><!-- telefono vicino --><!-- telefono remoto --><g
-   id="phone_remote-1"
+  id="connectivity_access_point'"
    class="component"
-   data-component="Telefono remoto"
    transform="translate(893.48621,580.09706)"
    inkscape:label="conn_ap"><rect
      class="hit"
@@ -4682,9 +4677,8 @@
 <ellipse cx="160.71704" cy="1197.9266" fill="#526778" id="circle43-2" sodipodi:insensitive="true" transform="matrix(0,1,1,0,0,0)" rx="3.4757426"
        ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-   id="phone_remote-1-6"
+  id="connection_remote"
    class="component"
-   data-component="Telefono remoto"
    transform="translate(1448.2563,338.71871)"
    inkscape:label="conn_remote"><rect
      class="hit"
@@ -4751,7 +4745,6 @@
        transform="matrix(-0.58072121,-0.81410249,-0.85212609,0.52333654,0,0)" style="stroke-width:1.0012" rx="3.5850525" ry="3.4250805" />
 <g
      id="world"
-     data-component="World"
      transform="matrix(-0.74241774,0.66993724,-0.6948877,-0.71911827,0,0)">
 <circle cx="-732.9613" cy="-996.06934" r="21" fill="#eef7ff" stroke="#526778" stroke-width="3" id="circle1" />
 <path
@@ -4761,9 +4754,8 @@
        stroke-width="2"
        stroke-linecap="round"
        id="path2" /></g></g><!-- linee logiche di connettività; volutamente separate dall'impianto idraulico --></g><g
-     id="control_unit"
+    id="control_unit_industrial"
      class="component"
-     data-component="Centralina di controllo"
      transform="translate(40.568786,129.15833)"><rect
        class="hit"
        x="425"
@@ -5141,25 +5133,22 @@
      id="script51"><![CDATA[
     (function(){
       const svg = document.documentElement;
-      const info = svg.getElementById('info_text');
-      svg.querySelectorAll('.component').forEach(function(el){
-        el.addEventListener('click', function(evt){
-          evt.stopPropagation();
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          el.classList.add('is-selected');
-          const name = el.getAttribute('data-component') || el.id;
-          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
-          svg.dispatchEvent(new CustomEvent('configurator:select', {
-            bubbles: true,
-            detail: { id: el.id, component: name }
-          }));
-        });
-      });
       svg.addEventListener('click', function(evt){
-        if(evt.target === svg){
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          if(info) info.textContent = 'Clicca un componente per selezionarlo';
-        }
+        const el = evt.target.closest('.component');
+        if (!el) return;
+        const source = svg.getAttribute('sodipodi:docname');
+        console.log('EVENTO configurator:select', { source: source, id: el.id });
+        svg.dispatchEvent(new CustomEvent('configurator:select', {
+          bubbles: true,
+          detail: { source: source, id: el.id }
+        }));
       });
     })();
+    window.addEventListener('message', function(evt) {
+      const data = evt.data;
+      if (!data || data.type !== 'configurator:set-state') return;
+      const el = document.getElementById(data.id);
+      if (!el) return;
+      el.classList.toggle('is-selected', Boolean(data.selected));
+    });
   ]]></script></svg>

@@ -1296,8 +1296,12 @@
     .small{font:13px Arial,sans-serif;fill:#6c7b88}
     .tiny{font:11px Arial,sans-serif;fill:#6c7b88}
     .component{cursor:pointer}
-    .component:hover .hit,.component.is-selected .hit{stroke:#157bb8;stroke-width:4}
+    @keyframes component-hover-pulse{0%,100%{opacity:.25;stroke-width:2}50%{opacity:1;stroke-width:4}}
+     .component .hit,.component.is-available .hit{stroke:#697780 !important;animation:component-hover-pulse 1.8s ease-in-out infinite}
+     .component:hover .hit,.component:focus .hit,.component.is-focused .hit{animation:none;opacity:1;stroke-width:4 !important}
+     .component.is-selected .hit{stroke:#157bb8 !important;animation:none;opacity:1;stroke-width:4 !important}
     .hit{fill:transparent;stroke:transparent;stroke-width:8}
+    @media (prefers-reduced-motion:reduce){.component .hit{animation:none;opacity:.55;stroke-width:2 !important}}
     .pipe{fill:none;stroke:#59798f;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
     .signal{fill:none;stroke:#9aa7b2;stroke-width:2;stroke-dasharray:6 5}
     .device{fill:white;stroke:#526778;stroke-width:2}
@@ -1825,7 +1829,6 @@
      id="path29" /></g><g
    id="dosing_orp-3-9"
    class="component"
-   data-component="Dosaggio Redox / Cloro"
    transform="translate(637.6267,263.89025)"
    inkscape:label="smartplugtemp"><rect
      class="hit"
@@ -1952,7 +1955,6 @@
        inkscape:label="plug" /></g></g><g
    id="dosing_orp-3-9-9"
    class="component"
-   data-component="Dosaggio Redox / Cloro"
    transform="translate(314.89455,118.37769)"
    inkscape:label="smartplugtemp"><path
      style="fill:none;stroke:#479279;stroke-width:3.1031;stroke-linejoin:round;stroke-dasharray:9.30927, 3.1031;stroke-dashoffset:0"
@@ -2083,7 +2085,6 @@
        inkscape:label="plug" /></g></g><g
    id="dosing_orp-3-9-9-0"
    class="component"
-   data-component="Dosaggio Redox / Cloro"
    transform="translate(199.10225,-108.0522)"
    inkscape:label="smartplugtemp"><rect
      class="hit"
@@ -2211,9 +2212,8 @@
    id="g4-0"
    inkscape:label="smartsensectemp"
    transform="translate(470.4532,-223.02899)"><g
-     id="control_unit"
+     id="smart_sens_ec_temp_2"
      class="component"
-     data-component="Centralina di controllo"
      transform="translate(-61.315104,490.2399)"><rect
        class="hit"
        x="578"
@@ -2375,9 +2375,8 @@
    id="g4-0-7"
    inkscape:label="smartsensectemp"
    transform="translate(-423.77724,-457.6088)"><g
-     id="control_unit-8"
+     id="smart_sens_ec_temp_1"
      class="component"
-     data-component="Centralina di controllo"
      transform="translate(-61.315104,490.2399)"><rect
        class="hit"
        x="578"
@@ -2542,9 +2541,8 @@
      d="m 294.94456,162.18866 -0.0826,49.36625 -20.71773,23.40715 -28.87343,0.8672"
      id="path22"
      transform="translate(423.77724,457.6088)" /></g><!-- VASCA --><!-- SONDE --><g
-   id="probe_temp-8-7"
+   id="probe_temp_analog_5"
    class="component"
-   data-component="Sonda temperatura"
    transform="translate(37.05756,303.62628)"
    inkscape:label="probetemp1"><rect
      class="hit"
@@ -2588,9 +2586,8 @@
        id="tspan48-8"
        x="1035.6678"
        y="320.49854">🌡️Temp</tspan></text></g><g
-   id="probe_temp-8"
+  id="probe_temp_analog_4"
    class="component"
-   data-component="Sonda temperatura"
    transform="translate(-158.70332,416.5865)"
    inkscape:label="probetemp2"><rect
      class="hit"
@@ -2634,9 +2631,8 @@
        id="tspan48"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-   id="probe_temp-8-1"
+  id="probe_temp_analog_3"
    class="component"
-   data-component="Sonda temperatura"
    transform="translate(-483.56646,48.100369)"
    inkscape:label="probetemp2"><rect
      class="hit"
@@ -2680,9 +2676,8 @@
        id="tspan48-1"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-   id="probe_temp-8-1-7"
+  id="probe_temp_analog_1"
    class="component"
-   data-component="Sonda temperatura"
    transform="translate(-763.67855,-25.154471)"
    inkscape:label="probetemp2"><rect
      class="hit"
@@ -2726,9 +2721,8 @@
        id="tspan48-1-9"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-   id="probe_temp-8-1-7-5"
+   id="probe_temp_digital_1"
    class="component"
-   data-component="Sonda temperatura"
    transform="translate(-636.67028,-242.01665)"
    inkscape:label="probetemp2"><rect
      class="hit"
@@ -2772,9 +2766,8 @@
        id="tspan48-1-9-6"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-   id="probe_temp-8-1-3"
+  id="probe_temp_analog_2"
    class="component"
-   data-component="Sonda temperatura"
    transform="translate(-350.5258,-264.49527)"
    inkscape:label="probetemp2"><rect
      class="hit"
@@ -2818,9 +2811,8 @@
        id="tspan48-1-5"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-   id="probe_temp-8-76"
+  id="probe_temp_digital_2"
    class="component"
-   data-component="Sonda temperatura"
    transform="translate(204.27577,445.15358)"
    inkscape:label="probetemp3"><rect
      class="hit"
@@ -2867,36 +2859,31 @@
    id="script51"><![CDATA[
     (function(){
       const svg = document.documentElement;
-      const info = svg.getElementById('info_text');
-      svg.querySelectorAll('.component').forEach(function(el){
-        el.addEventListener('click', function(evt){
-          evt.stopPropagation();
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          el.classList.add('is-selected');
-          const name = el.getAttribute('data-component') || el.id;
-          if(info) info.textContent = 'Selezionato: ' + name + '  |  id="' + el.id + '"';
-          svg.dispatchEvent(new CustomEvent('configurator:select', {
-            bubbles: true,
-            detail: { id: el.id, component: name }
-          }));
-        });
-      });
       svg.addEventListener('click', function(evt){
-        if(evt.target === svg){
-          svg.querySelectorAll('.component').forEach(function(x){ x.classList.remove('is-selected'); });
-          if(info) info.textContent = 'Clicca un componente per selezionarlo';
-        }
+        const el = evt.target.closest('.component');
+        if (!el) return;
+        const source = svg.getAttribute('sodipodi:docname');
+        console.log('EVENTO configurator:select', { source: source, id: el.id });
+        svg.dispatchEvent(new CustomEvent('configurator:select', {
+          bubbles: true,
+          detail: { source: source, id: el.id }
+        }));
       });
     })();
+    window.addEventListener('message', function(evt) {
+      const data = evt.data;
+      if (!data || data.type !== 'configurator:set-state') return;
+      const el = document.getElementById(data.id);
+      if (!el) return;
+      el.classList.toggle('is-selected', Boolean(data.selected));
+    });
   ]]></script><g
    id="connectivity"
-   data-component="Connettività"
    transform="matrix(1,0,0,1.0777194,-1830.9093,-1836.6091)">
     
     <!-- collegamento diretto locale --><g
-   id="connectivity_direct"
+   id="connectivity_station"
    class="component"
-   data-component="Connessione diretta"
    transform="translate(1911.4401,1772.7711)"
    inkscape:label="conn_sta"><rect
      class="hit"
@@ -2945,7 +2932,6 @@
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
    id="connectivity_router"
    class="component"
-   data-component="Router / Internet"
    transform="translate(1725.8352,1687.1322)"
    inkscape:label="conn_router"><rect
      class="hit"
@@ -3051,9 +3037,8 @@
 <ellipse cx="-663.10168" cy="690.0307" fill="#526778" id="circle43-2-1-2" sodipodi:insensitive="true"
        transform="matrix(-0.89973989,0.43642654,0.67026527,0.7421216,0,0)" style="stroke-width:0.63134" rx="2.4336619" ry="2.0063548" />
 </g><g
-   id="connectivity_router-8"
+   id="connectivity_sps"
    class="component"
-   data-component="Router / Internet"
    transform="translate(1528.5577,1605.1603)"
    inkscape:label="conn_sps"><rect
      class="hit"
@@ -3096,9 +3081,8 @@
 <ellipse cx="446.15912" cy="980.30518" fill="#526778" id="circle43-2-1-4" sodipodi:insensitive="true"
        transform="matrix(0.61650369,-0.78735201,0.82917607,0.55898752,0,0)" style="stroke-width:1.00128" rx="3.5963066" ry="3.414907" />
 </g><!-- telefono vicino --><!-- telefono remoto --><g
-   id="phone_remote-1"
+  id="connectivity_access_point"
    class="component"
-   data-component="Telefono remoto"
    transform="matrix(0.60252765,0,0,0.65971584,2113.8325,2090.0796)"
    inkscape:label="conn_ap"><rect
      class="hit"
@@ -3142,9 +3126,8 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-   id="phone_remote-1-8"
+  id="connectivity_access_point"
    class="component"
-   data-component="Telefono remoto"
    transform="matrix(0.60252765,0,0,0.65971584,2159.031,1945.2603)"
    inkscape:label="conn_ap"><rect
      class="hit"
@@ -3188,9 +3171,8 @@
 <ellipse cx="-1122.1793" cy="188.97682" fill="#526778" id="circle43-2-6" sodipodi:insensitive="true" transform="scale(-1,1)" rx="4.1014099"
        ry="3.0570393" style="stroke-width:1.01169" />
 </g><g
-   id="phone_remote-1-8-9"
+  id="connectivity_access_point"
    class="component"
-   data-component="Telefono remoto"
    transform="matrix(0.60252765,0,0,0.65971584,1190.8238,1720.9844)"
    inkscape:label="conn_ap"><rect
      class="hit"
@@ -3234,9 +3216,8 @@
 <ellipse cx="-548.58978" cy="991.31708" fill="#526778" id="circle43-2-6-0" sodipodi:insensitive="true"
        transform="matrix(-0.70359694,0.71059929,0.81496135,0.57951531,0,0)" rx="3.7469394" ry="3.3908117" style="stroke-width:1.01841" />
 </g><g
-   id="phone_remote-1-8-9-3"
+  id="connectivity_access_point"
    class="component"
-   data-component="Telefono remoto"
    transform="matrix(0.60252765,0,0,0.65971584,1767.094,1893.057)"
    inkscape:label="conn_ap"><rect
      class="hit"
@@ -3280,9 +3261,8 @@
 <ellipse cx="-1122.1793" cy="188.97682" fill="#526778" id="circle43-2-6-0-5" sodipodi:insensitive="true" transform="scale(-1,1)" rx="4.1014099"
        ry="3.0570393" style="stroke-width:1.01169" />
 </g><g
-   id="phone_remote-1-8-9-33"
+  id="connectivity_access_point"
    class="component"
-   data-component="Telefono remoto"
    transform="matrix(0.60252765,0,0,0.65971584,1638.1814,1690.3186)"
    inkscape:label="conn_ap"><rect
      class="hit"
@@ -3326,9 +3306,8 @@
 <ellipse cx="-1122.1793" cy="188.97682" fill="#526778" id="circle43-2-6-0-8" sodipodi:insensitive="true" transform="scale(-1,1)" rx="4.1014099"
        ry="3.0570393" style="stroke-width:1.01169" />
 </g><g
-   id="phone_remote-1-6"
+  id="connection_remote"
    class="component"
-   data-component="Telefono remoto"
    transform="translate(1622.5011,1544.0497)"
    inkscape:label="conn_remote"><rect
      class="hit"
@@ -3395,7 +3374,6 @@
        transform="matrix(-0.58072121,-0.81410249,-0.85212609,0.52333654,0,0)" style="stroke-width:1.0012" rx="3.5850525" ry="3.4250805" />
 <g
      id="world"
-     data-component="World"
      transform="matrix(-0.74241774,0.66993724,-0.6948877,-0.71911827,0,0)">
 <circle cx="-732.9613" cy="-996.06934" r="21" fill="#eef7ff" stroke="#526778" stroke-width="3" id="circle1" />
 <path
