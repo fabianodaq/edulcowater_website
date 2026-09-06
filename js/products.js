@@ -429,7 +429,26 @@ const products = {
 
 };
 
+const configuratorComponents = {
+    default: {
+        title: 'Configuration component',
+        description: 'Choose the product option for this component.',
+        options: ['Industrial', 'Premium']
+    },
+    industrial: {
+        title: 'Industrial controller',
+        description: 'Choose the Industrial controller for this configuration.',
+        options: ['Industrial']
+    },
+    probes: {
+        title: 'Water quality probes',
+        description: 'Choose the probe required for this configuration.',
+        options: ['pH Probe', 'ORP Probe', 'EC Probe DCJack']
+    }
+};
+
 window.productCatalog = products;
+window.configuratorComponents = configuratorComponents;
 
 // Loads product data into the product cards after prices are available.
 const loadProductCards = () => {

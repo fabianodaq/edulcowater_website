@@ -811,7 +811,7 @@
          y="419.32446"
          id="tspan18-2"
          style="stroke-width:0.34245">🔌</tspan></text></g><g
-     id="probe_temp_analog"
+     id="probe_temp_analog_1"
      class="component"
      transform="translate(-139.91119,251.47003)"
      inkscape:label="probetemp1"><rect
@@ -856,7 +856,7 @@
          id="tspan48-8"
          x="1035.6678"
          y="320.49854">🌡️Temp</tspan></text></g><g
-     id="probe_temp_digital"
+     id="probe_temp_digital_1"
      class="component"
      transform="translate(-405.73456,257.61775)"
      inkscape:label="probetemp2"><rect
@@ -1002,7 +1002,7 @@
      transform="matrix(1,0,0,1.0777194,-1645.0968,-527.48412)">
     
     <!-- collegamento diretto locale --><g
-   id="connectivity_station"
+   id="connectivity_station_1"
    class="component"
    transform="translate(1718.1389,623.13815)"
    inkscape:label="conn_sta"><rect
@@ -1050,7 +1050,7 @@
        id="tspan56"
        x="950.54333"
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
-   id="connectivity_router"
+   id="connectivity_router_1"
    class="component"
    transform="translate(1583.4138,489.77915)"
    inkscape:label="conn_router"><rect
@@ -1097,7 +1097,7 @@
 <ellipse cx="-382.20282" cy="-833.63959" fill="#526778" id="circle43-2-1" sodipodi:insensitive="true"
        transform="matrix(-0.25048885,-0.96811948,-0.97607462,0.21743581,0,0)" style="stroke-width:1.00029" rx="3.5153663" ry="3.4867158" />
 </g><g
-   id="connectivity_sps"
+   id="connectivity_sps_1"
    class="component"
    transform="translate(1415.8911,391.18723)"
    inkscape:label="conn_sps"><rect
@@ -1141,7 +1141,7 @@
 <ellipse cx="446.15912" cy="980.30518" fill="#526778" id="circle43-2-1-4" sodipodi:insensitive="true"
        transform="matrix(0.61650369,-0.78735201,0.82917607,0.55898752,0,0)" style="stroke-width:1.00128" rx="3.5963066" ry="3.414907" />
 </g><!-- telefono vicino --><!-- telefono remoto --><g
-  id="connctivit_access_point"
+  id="connectivity_access_point_1"
    class="component"
    transform="translate(893.48621,580.09706)"
    inkscape:label="conn_ap"><rect
@@ -1186,7 +1186,7 @@
 <ellipse cx="160.71704" cy="1197.9266" fill="#526778" id="circle43-2" sodipodi:insensitive="true" transform="matrix(0,1,1,0,0,0)" rx="3.4757426"
        ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connection_remote"
+  id="connectivity_remote_1"
    class="component"
    transform="translate(1448.2563,338.71871)"
    inkscape:label="conn_remote"><rect
@@ -1263,7 +1263,7 @@
        stroke-width="2"
        stroke-linecap="round"
        id="path2" /></g></g><!-- linee logiche di connettività; volutamente separate dall'impianto idraulico --></g><g
-    id="control_unit_industrial"
+    id="control_unit_industrial_1"
      class="component"
      transform="translate(40.568786,129.15833)"><rect
        class="hit"
