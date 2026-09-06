@@ -97,17 +97,29 @@ const initConfiguratorInfoPopup = () => {
         <div class="configurator-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="configurator-popup-title">
             <button class="configurator-popup-close" type="button" aria-label="Close">x</button>
             <p class="configurator-popup-category">CONFIGURATION COMPONENT</p>
-            <h2 id="configurator-popup-title">Component information</h2>
+            <h2 id="configurator-popup-title" data-configurator-title>Component information</h2>
+            <p class="configurator-popup-description" data-configurator-description></p>
+            <div class="configurator-popup-gallery">
+                <img data-configurator-image="0" alt="" hidden>
+                <img data-configurator-image="1" alt="" hidden>
+            </div>
             <dl class="configurator-popup-details">
-                <div><dt>Image</dt><dd data-configurator-source></dd></div>
-                <div><dt>Identifier</dt><dd data-configurator-id></dd></div>
+                <div><dt>Price</dt><dd data-configurator-price></dd></div>
             </dl>
+            <div class="configurator-popup-actions">
+                <button class="add-to-cart configurator-popup-add" type="button" data-product="Industrial">Add</button>
+                <button class="configurator-popup-details-link" data-configurator-details type="button">Details ↗</button>
+            </div>
         </div>`;
     document.body.append(popup);
 
     const closeButton = popup.querySelector('.configurator-popup-close');
-    const sourceOutput = popup.querySelector('[data-configurator-source]');
-    const idOutput = popup.querySelector('[data-configurator-id]');
+    const titleOutput = popup.querySelector('[data-configurator-title]');
+    const descriptionOutput = popup.querySelector('[data-configurator-description]');
+    const galleryImages = popup.querySelectorAll('[data-configurator-image]');
+    const priceOutput = popup.querySelector('[data-configurator-price]');
+    const addButton = popup.querySelector('.configurator-popup-add');
+    const detailsButton = popup.querySelector('[data-configurator-details]');
     const closePopup = () => {
         popup.hidden = true;
         document.removeEventListener('keydown', handleKeydown);
@@ -115,15 +127,32 @@ const initConfiguratorInfoPopup = () => {
     const handleKeydown = (event) => {
         if (event.key === 'Escape') closePopup();
     };
-    const showPopup = ({ source, id }) => {
-        sourceOutput.textContent = source || 'Unknown SVG';
-        idOutput.textContent = id || 'Unknown component';
+    const showPopup = () => {
+        const product = window.productCatalog?.Industrial;
+        if (!product) return;
+
+        titleOutput.textContent = 'Industrial';
+        descriptionOutput.textContent = product.description || 'Product details coming soon.';
+        galleryImages.forEach((image, index) => {
+            const imageSource = product.detailImages?.[index];
+            image.src = imageSource || '';
+            image.alt = imageSource ? `Industrial detail ${index + 1}` : '';
+            image.hidden = !imageSource;
+        });
+        priceOutput.textContent = product.price === undefined
+            ? 'Price unavailable'
+            : `€ ${Number(product.price).toFixed(2).replace('.', ',')}`;
+        addButton.dataset.price = String(product.price || 0);
+        addButton.dataset.image = product.cardImage ? `../assets/products/${product.cardImage}` : '';
         popup.hidden = false;
         closeButton.focus();
         document.addEventListener('keydown', handleKeydown);
     };
 
     closeButton.addEventListener('click', closePopup);
+    detailsButton.addEventListener('click', () => {
+        window.openProductDetails?.('Industrial');
+    });
     popup.addEventListener('click', (event) => {
         if (event.target === popup) closePopup();
     });
