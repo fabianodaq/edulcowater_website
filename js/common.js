@@ -96,7 +96,6 @@ const initConfiguratorInfoPopup = () => {
     popup.innerHTML = `
         <div class="configurator-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="configurator-popup-title">
             <button class="configurator-popup-close" type="button" aria-label="Close">x</button>
-            <p class="configurator-popup-category">CONFIGURATION COMPONENT</p>
             <h2 id="configurator-popup-title" data-configurator-title>Component information</h2>
             <p class="configurator-popup-description" data-configurator-description></p>
             <div class="configurator-popup-options" data-configurator-options></div>
@@ -108,6 +107,8 @@ const initConfiguratorInfoPopup = () => {
     const descriptionOutput = popup.querySelector('[data-configurator-description]');
     const optionsOutput = popup.querySelector('[data-configurator-options]');
     const configuratorData = window.configuratorComponents || {};
+    let activeSelection = null;
+    let activeConfiguration = null;
     const defaultConfiguration = configuratorData.default || {
         title: 'Configuration component',
         description: 'Choose a product option for this component.',
@@ -138,7 +139,37 @@ const initConfiguratorInfoPopup = () => {
             </article>`;
     };
     optionsOutput.innerHTML = availableOptionNames.map(renderOption).join('');
+    const makeProductId = (name) => String(name || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+    const readCartItems = () => {
+        try {
+            const raw = localStorage.getItem('edulco_cart_v1');
+            const items = raw ? JSON.parse(raw) : [];
+            return Array.isArray(items) ? items : [];
+        } catch (error) {
+            return [];
+        }
+    };
+    const sendSelectionStateToSvg = () => {
+        if (!activeSelection || !activeConfiguration) return;
+
+        const cartItems = readCartItems();
+        const selected = activeConfiguration.options.some((productName) => {
+            const productId = makeProductId(productName);
+            const cartItem = cartItems.find((item) => item && item.id === productId);
+            return Number(cartItem?.qty) > 0;
+        });
+
+        activeSelection.diagram.contentWindow?.postMessage({
+            type: 'configurator:set-state',
+            id: activeSelection.id,
+            selected
+        }, '*');
+    };
     const closePopup = () => {
+        sendSelectionStateToSvg();
         popup.hidden = true;
         document.removeEventListener('keydown', handleKeydown);
     };
@@ -157,8 +188,16 @@ const initConfiguratorInfoPopup = () => {
         return canonicalIds[normalizedId] || normalizedId;
     };
     const getConfiguration = (details) => {
+        const normalizedId = normalizeConfiguratorId(details.id);
+        const baseId = normalizedId.replace(/_\d+$/, '');
         if (details.component && configuratorData[details.component]) {
             return configuratorData[details.component];
+        }
+        if (configuratorData[normalizedId]) {
+            return configuratorData[normalizedId];
+        }
+        if (configuratorData[baseId]) {
+            return configuratorData[baseId];
         }
 
         const sourceHint = `${details.source || ''} ${details.id || ''}`.toLowerCase();
@@ -166,12 +205,14 @@ const initConfiguratorInfoPopup = () => {
         if (sourceHint.includes('industrial')) return configuratorData.industrial || defaultConfiguration;
         return defaultConfiguration;
     };
-    const showPopup = (details = {}) => {
+    const showPopup = (details = {}, diagram = null) => {
         const normalizedDetails = {
             ...details,
             id: normalizeConfiguratorId(details.id)
         };
         const configuration = getConfiguration(normalizedDetails);
+        activeSelection = diagram ? { diagram, id: details.id } : activeSelection;
+        activeConfiguration = configuration;
         titleOutput.textContent = normalizedDetails.title || configuration.title;
         descriptionOutput.textContent = normalizedDetails.description || configuration.description;
         popup.querySelectorAll('[data-configurator-option]').forEach((option) => {
@@ -197,7 +238,7 @@ const initConfiguratorInfoPopup = () => {
             const svg = diagram.contentDocument?.documentElement;
             if (!svg || svg.dataset.configuratorListenerAttached) return;
             svg.dataset.configuratorListenerAttached = 'true';
-            svg.addEventListener('configurator:select', (event) => showPopup(event.detail || {}));
+            svg.addEventListener('configurator:select', (event) => showPopup(event.detail || {}, diagram));
         };
 
         diagram.addEventListener('load', listenToSvg);
@@ -206,7 +247,8 @@ const initConfiguratorInfoPopup = () => {
 
     window.addEventListener('message', (event) => {
         if (event.data?.type !== 'configurator:select') return;
-        showPopup(event.data.detail || {});
+        const sourceDiagram = Array.from(diagrams).find((diagram) => diagram.contentWindow === event.source);
+        showPopup(event.data.detail || {}, sourceDiagram || null);
     });
 };
 

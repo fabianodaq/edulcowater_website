@@ -11623,7 +11623,7 @@
        inkscape:path-effect="#path-effect58-6-8"
        inkscape:original-d="m 145.50719,478.17587 c 4.12215,-23.68807 8.24429,-46.66904 12.36643,-70.35712 4.12215,-23.68808 1.76664,-69.65002 2.82662,-103.94469 1.05998,-34.29468 -6.00656,-10.72446 -9.1865,-16.26346 -3.17994,-5.539 -8.83317,-8.36743 -13.07309,-12.37437 -4.23992,-4.00694 -2.00219,-7.42462 -3.17994,-11.31371"
        transform="matrix(1.0006412,0,0,1,134.5686,174.6308)" /></g><g
-    id="probe_temp_digital_1"
+    id="probe_temp_digital_tb_1"
      class="component"
      transform="translate(-83.293002,264.42877)"
      inkscape:label="probetemp2"><rect
@@ -11765,7 +11765,7 @@
              y="436.80643"
              id="tspan19-0-1-1"
              style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.11803">💧pH/⚗️Orp</tspan></text></g></g></g><g
-    id="probe_ec_1"
+    id="probe_ec_tb_1"
      class="component"
      transform="translate(-328.3264,415.96526)"
      inkscape:label="probeec"><rect
@@ -12037,7 +12037,7 @@
        id="tspan56"
        x="950.54333"
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
-   id="connectivity_router_1"
+  id="connectivity_station_2"
    class="component"
    transform="translate(1586.2422,474.03241)"
    inkscape:label="conn_router"><rect

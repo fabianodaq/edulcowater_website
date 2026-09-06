@@ -1925,7 +1925,7 @@
        y="419.32446"
        id="tspan18-2"
        style="stroke-width:0.34245">🔌</tspan></text></g><g
-  id="probe_temp_analog_1"
+  id="probe_temp_analog_tb_1"
    class="component"
    transform="translate(44.08881,243.47003)"
    inkscape:label="probetemp1"><rect
@@ -1972,7 +1972,7 @@
      y="320.49854">🌡️Temp</tspan></text>
 
 </g><g
-  id="probe_temp_digital_1"
+  id="probe_temp_digital_tb_1"
    class="component"
    transform="translate(-162.73457,258.61775)"
    inkscape:label="probetemp2"><rect
@@ -2236,7 +2236,7 @@
      id="tspan56"
      x="957.61438"
      y="128.40494">Station</tspan></text></g><!-- router / internet --><g
-   id="connectivity_router_1"
+  id="connectivity_station_2"
    class="component"
    transform="translate(1583.4138,489.77915)"
    inkscape:label="conn_router"><rect

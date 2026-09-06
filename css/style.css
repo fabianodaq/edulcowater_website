@@ -407,15 +407,15 @@ button, a { font: inherit; }
 .configurator-popup-description { color: #45616f; line-height: 1.6; margin: 0 0 24px; max-width: 720px; }
 .configurator-popup-options { display: grid; gap: 24px; grid-template-columns: 1fr; }
 .configurator-option { border-top: 1px solid #e8eef2; padding-top: 20px; }
-.configurator-option h3 { color: #12263a; font-size: 20px; margin: 0 0 10px; }
+.configurator-option h3 { color: #0878b9; font-size: 20px; margin: 0 0 10px; }
 .configurator-option p { color: #526979; font-size: 13px; line-height: 1.5; margin: 0 0 16px; }
 .configurator-option > img { background: #f7fafb; display: block; height: 190px; object-fit: contain; width: 100%; }
 .configurator-popup-actions { align-items: center; border-top: 1px solid #e8eef2; display: flex; gap: 12px; justify-content: flex-start; margin-top: 16px; padding-top: 16px; }
-.configurator-popup-details-link { background: transparent; border: 0; color: #0878b9; cursor: pointer; font-size: 12px; font-weight: 700; padding: 0; }
+.configurator-popup-details-link { background: transparent; border: 0; color: #0878b9; cursor: pointer; font-size: 12px; font-weight: 700; margin-left: auto; padding: 0; }
 .configurator-popup-details-link:hover { color: #0b2d45; text-decoration: underline; }
 .configurator-popup-add { align-self: end; }
 .configurator-popup-details { margin: 18px 0 0; }
-.configurator-popup-details div { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; padding: 0; }
+.configurator-popup-details div { display: grid; gap: 8px; grid-template-columns: max-content 1fr; padding: 0; }
 .configurator-popup-details dt { color: #69818e; font-size: 11px; }
 .configurator-popup-details dd { color: #0b2d45; font-size: 12px; font-weight: 700; margin: 0; overflow-wrap: anywhere; }
 

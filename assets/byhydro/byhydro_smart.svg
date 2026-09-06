@@ -16338,7 +16338,7 @@
            x="-33.87603"
            y="-130.63884"
            style="stroke-width:1.99936" /></text></g></g><!-- VASCA --><!-- SONDE --><g
-     id="probe_ec_2"
+    id="probe_ec_tb_1"
      class="component"
      transform="translate(-158.11618,449.48504)"
      inkscape:label="probeec"><rect
@@ -16388,7 +16388,7 @@
              x="1365.3822"
              y="157.79359"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.758117">⚡EC/💎TDS/🧂SAL</tspan></text></g></g></g><g
-     id="probe_ec_1"
+    id="probe_ec_jack_1"
      class="component"
      transform="translate(-349.45238,443.87123)"
      inkscape:label="probeec"><rect
@@ -16438,7 +16438,7 @@
              x="1365.3822"
              y="157.79359"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.758117">⚡EC/💎TDS/🧂SAL</tspan></text></g></g></g><g
-     id="probe_temp_digital_1"
+    id="probe_temp_digital_tb_1"
      class="component"
      transform="translate(91.432573,302.61364)"
      inkscape:label="probetemp1"><rect
@@ -16753,7 +16753,7 @@
        id="tspan56"
        x="950.54333"
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
-   id="connectivity_router_1"
+  id="connectivity_station_2"
    class="component"
    transform="translate(1834.4011,882.18428)"
    inkscape:label="conn_router"><rect
@@ -16906,7 +16906,7 @@
 </g><!-- telefono vicino --><!-- telefono remoto --><g
   id="connectivity_access_point_1"
    class="component"
-   transform="matrix(0.60252765,0,0,0.65971584,2161.6093,1201.6926)"
+   transform="matrix(0.60252765,0,0.65971584,1669.6708,1169.2111)"
    inkscape:label="conn_ap"><rect
      class="hit"
      x="1095.0066"
@@ -16949,9 +16949,9 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point_1"
+  id="connectivity_access_point_2"
    class="component"
-   transform="matrix(0.60252765,0,0,0.65971584,1859.4748,1094.8418)"
+   transform="matrix(0.60252765,0,0.65971584,2509.5379,1093.7796)"
    inkscape:label="conn_ap"><rect
      class="hit"
      x="1095.0066"
@@ -16994,9 +16994,9 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2-3" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point_2"
+  id="connectivity_access_point_3"
    class="component"
-   transform="matrix(0.60252765,0,0,0.65971584,1669.6708,1169.2111)"
+   transform="matrix(0.60252765,0,0.65971584,1859.4748,1094.8418)"
    inkscape:label="conn_ap"><rect
      class="hit"
      x="1095.0066"
@@ -17039,7 +17039,7 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2-4" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point_3"
+  id="connectivity_access_point_4"
    class="component"
    transform="matrix(0.60252765,0,0,0.65971584,2509.5379,1093.7796)"
    inkscape:label="conn_ap"><rect

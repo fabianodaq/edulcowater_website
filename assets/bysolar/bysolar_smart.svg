@@ -2541,7 +2541,7 @@
      d="m 294.94456,162.18866 -0.0826,49.36625 -20.71773,23.40715 -28.87343,0.8672"
      id="path22"
      transform="translate(423.77724,457.6088)" /></g><!-- VASCA --><!-- SONDE --><g
-   id="probe_temp_analog_4"
+  id="probe_temp_analog_tb_2"
    class="component"
    transform="translate(37.05756,303.62628)"
    inkscape:label="probetemp1"><rect
@@ -2586,7 +2586,7 @@
        id="tspan48-8"
        x="1035.6678"
        y="320.49854">🌡️Temp</tspan></text></g><g
-  id="probe_temp_analog_5"
+  id="probe_temp_analog_jack_1"
    class="component"
    transform="translate(-158.70332,416.5865)"
    inkscape:label="probetemp2"><rect
@@ -2631,7 +2631,7 @@
        id="tspan48"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-  id="probe_temp_analog_3"
+  id="probe_temp_analog_jack_3"
    class="component"
    transform="translate(-483.56646,48.100369)"
    inkscape:label="probetemp2"><rect
@@ -2676,7 +2676,7 @@
        id="tspan48-1"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-  id="probe_temp_analog_1"
+  id="probe_temp_digital_tb_1"
    class="component"
    transform="translate(-763.67855,-25.154471)"
    inkscape:label="probetemp2"><rect
@@ -2721,7 +2721,7 @@
        id="tspan48-1-9"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-   id="probe_temp_digital_1"
+  id="probe_temp_analog_tb_1"
    class="component"
    transform="translate(-636.67028,-242.01665)"
    inkscape:label="probetemp2"><rect
@@ -2766,7 +2766,7 @@
        id="tspan48-1-9-6"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-  id="probe_temp_analog_2"
+  id="probe_temp_analog_jack_2"
    class="component"
    transform="translate(-350.5258,-264.49527)"
    inkscape:label="probetemp2"><rect
@@ -2811,7 +2811,7 @@
        id="tspan48-1-5"
        x="1035.1088"
        y="319.6041">🌡️Temp</tspan></text></g><g
-  id="probe_temp_digital_2"
+  id="probe_temp_digital_tb_2"
    class="component"
    transform="translate(204.27577,445.15358)"
    inkscape:label="probetemp3"><rect
@@ -2931,7 +2931,7 @@
        id="tspan56"
        x="950.54333"
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
-   id="connectivity_router_1"
+  id="connectivity_station_2"
    class="component"
    transform="translate(1725.8352,1687.1322)"
    inkscape:label="conn_router"><rect

@@ -1500,7 +1500,7 @@
      id="g4-0"
      inkscape:label="smartsensectemp"
      transform="translate(475.1407,-285.52899)"><g
-       id="control_unit_ec_temp_1"
+      id="smart_sens_ec_temp_1"
        class="component"
        transform="translate(-61.315104,490.2399)"><rect
          class="hit"
@@ -2215,7 +2215,7 @@
            x="-33.87603"
            y="-130.63884"
            style="stroke-width:1.99936" /></text></g></g><g
-     id="probe_temp_digital_1"
+    id="probe_temp_digital_tb_1"
      class="component"
      transform="translate(44.08881,243.47003)"
      inkscape:label="probetemp1"><rect
@@ -2260,7 +2260,7 @@
          id="tspan48-8"
          x="1035.6678"
          y="320.49854">🌡️Temp</tspan></text></g><g
-    id="probe_temp_analog_1"
+    id="probe_temp_analog_jack_1"
      class="component"
      transform="translate(-115.73457,223.61775)"
      inkscape:label="probetemp2"><rect
@@ -2305,7 +2305,7 @@
          id="tspan48"
          x="1035.1088"
          y="319.6041">🌡️Temp</tspan></text></g><g
-    id="probe_temp_analog_2"
+    id="probe_temp_analog_tb_1"
      class="component"
      transform="translate(208.96327,382.65358)"
      inkscape:label="probetemp3"><rect
@@ -2819,7 +2819,7 @@
        id="tspan56"
        x="950.54333"
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
-   id="connectivity_router_1"
+  id="connectivity_station_2"
    class="component"
    transform="translate(1840.058,926.14392)"
    inkscape:label="conn_router"><rect
@@ -2972,7 +2972,7 @@
 </g><!-- telefono vicino --><!-- telefono remoto --><g
   id="connectivity_access_point_1"
    class="component"
-   transform="matrix(0.60252765,0,0,0.65971584,2161.6093,1201.6926)"
+   transform="matrix(0.60252765,0,0.65971584,1669.6708,1169.2111)"
    inkscape:label="conn_ap"><rect
      class="hit"
      x="1095.0066"
@@ -3015,9 +3015,9 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point_1"
+  id="connectivity_access_point_2"
    class="component"
-   transform="matrix(0.60252765,0,0,0.65971584,1859.4748,1094.8418)"
+   transform="matrix(0.60252765,0,0.65971584,2509.5379,1093.7796)"
    inkscape:label="conn_ap"><rect
      class="hit"
      x="1095.0066"
@@ -3060,9 +3060,9 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2-3" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point_2"
+  id="connectivity_access_point_3"
    class="component"
-   transform="matrix(0.60252765,0,0,0.65971584,1669.6708,1169.2111)"
+   transform="matrix(0.60252765,0,0.65971584,1859.4748,1094.8418)"
    inkscape:label="conn_ap"><rect
      class="hit"
      x="1095.0066"
@@ -3105,7 +3105,7 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2-4" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point_3"
+  id="connectivity_access_point_4"
    class="component"
    transform="matrix(0.60252765,0,0,0.65971584,2509.5379,1093.7796)"
    inkscape:label="conn_ap"><rect
@@ -3150,7 +3150,7 @@
 <ellipse cx="-1122.1793" cy="188.97682" fill="#526778" id="circle43-2-6" sodipodi:insensitive="true" transform="scale(-1,1)" rx="4.1014099"
        ry="3.0570393" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point_4"
+  id="connectivity_access_point_5"
    class="component"
    transform="matrix(0.60252765,0,0,0.65971584,2423.8413,1187.8918)"
    inkscape:label="conn_ap"><rect
