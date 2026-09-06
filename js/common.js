@@ -99,27 +99,45 @@ const initConfiguratorInfoPopup = () => {
             <p class="configurator-popup-category">CONFIGURATION COMPONENT</p>
             <h2 id="configurator-popup-title" data-configurator-title>Component information</h2>
             <p class="configurator-popup-description" data-configurator-description></p>
-            <div class="configurator-popup-gallery">
-                <img data-configurator-image="0" alt="" hidden>
-                <img data-configurator-image="1" alt="" hidden>
-            </div>
-            <dl class="configurator-popup-details">
-                <div><dt>Price</dt><dd data-configurator-price></dd></div>
-            </dl>
-            <div class="configurator-popup-actions">
-                <button class="add-to-cart configurator-popup-add" type="button" data-product="Industrial">Add</button>
-                <button class="configurator-popup-details-link" data-configurator-details type="button">Details ↗</button>
-            </div>
+            <div class="configurator-popup-options" data-configurator-options></div>
         </div>`;
     document.body.append(popup);
 
     const closeButton = popup.querySelector('.configurator-popup-close');
     const titleOutput = popup.querySelector('[data-configurator-title]');
     const descriptionOutput = popup.querySelector('[data-configurator-description]');
-    const galleryImages = popup.querySelectorAll('[data-configurator-image]');
-    const priceOutput = popup.querySelector('[data-configurator-price]');
-    const addButton = popup.querySelector('.configurator-popup-add');
-    const detailsButton = popup.querySelector('[data-configurator-details]');
+    const optionsOutput = popup.querySelector('[data-configurator-options]');
+    const configuratorData = window.configuratorComponents || {};
+    const defaultConfiguration = configuratorData.default || {
+        title: 'Configuration component',
+        description: 'Choose a product option for this component.',
+        options: ['Industrial', 'Premium']
+    };
+    const optionNames = [...new Set(Object.values(configuratorData)
+        .flatMap((configuration) => configuration.options || []))];
+    const availableOptionNames = optionNames.length ? optionNames : defaultConfiguration.options;
+    const renderOption = (productName) => {
+        const product = window.productCatalog?.[productName];
+        if (!product) return '';
+        const imageSource = product.detailImages?.[0] || '';
+        const price = product.price === undefined
+            ? 'Price unavailable'
+            : `€ ${Number(product.price).toFixed(2).replace('.', ',')}`;
+        return `
+            <article class="configurator-option" data-configurator-option="${productName}">
+                <h3>${productName}</h3>
+                <p>${product.description || 'Product details coming soon.'}</p>
+                <img src="${imageSource}" alt="${productName}" ${imageSource ? '' : 'hidden'}>
+                <dl class="configurator-popup-details">
+                    <div><dt>Price</dt><dd>${price}</dd></div>
+                </dl>
+                <div class="configurator-popup-actions">
+                    <button class="add-to-cart configurator-popup-add" type="button" data-product="${productName}" data-price="${product.price || 0}" data-image="${product.cardImage ? `../assets/products/${product.cardImage}` : ''}">Add</button>
+                    <button class="configurator-popup-details-link" type="button" data-configurator-details="${productName}">Details ↗</button>
+                </div>
+            </article>`;
+    };
+    optionsOutput.innerHTML = availableOptionNames.map(renderOption).join('');
     const closePopup = () => {
         popup.hidden = true;
         document.removeEventListener('keydown', handleKeydown);
@@ -127,33 +145,50 @@ const initConfiguratorInfoPopup = () => {
     const handleKeydown = (event) => {
         if (event.key === 'Escape') closePopup();
     };
-    const showPopup = () => {
-        const product = window.productCatalog?.Industrial;
-        if (!product) return;
+    const normalizeConfiguratorId = (id) => {
+        const normalizedId = String(id || '')
+            .replace(/'-\d+$/, '')
+            .replace(/'$/, '');
+        const canonicalIds = {
+            connctivit_access_point: 'connectivity_access_point',
+            connectivity_access_point: 'connectivity_access_point',
+            probe_temp_temp_analog_2: 'probe_temp_analog_2'
+        };
+        return canonicalIds[normalizedId] || normalizedId;
+    };
+    const getConfiguration = (details) => {
+        if (details.component && configuratorData[details.component]) {
+            return configuratorData[details.component];
+        }
 
-        titleOutput.textContent = 'Industrial';
-        descriptionOutput.textContent = product.description || 'Product details coming soon.';
-        galleryImages.forEach((image, index) => {
-            const imageSource = product.detailImages?.[index];
-            image.src = imageSource || '';
-            image.alt = imageSource ? `Industrial detail ${index + 1}` : '';
-            image.hidden = !imageSource;
+        const sourceHint = `${details.source || ''} ${details.id || ''}`.toLowerCase();
+        if (sourceHint.includes('probe') || sourceHint.includes('sond')) return configuratorData.probes || defaultConfiguration;
+        if (sourceHint.includes('industrial')) return configuratorData.industrial || defaultConfiguration;
+        return defaultConfiguration;
+    };
+    const showPopup = (details = {}) => {
+        const normalizedDetails = {
+            ...details,
+            id: normalizeConfiguratorId(details.id)
+        };
+        const configuration = getConfiguration(normalizedDetails);
+        titleOutput.textContent = normalizedDetails.title || configuration.title;
+        descriptionOutput.textContent = normalizedDetails.description || configuration.description;
+        popup.querySelectorAll('[data-configurator-option]').forEach((option) => {
+            option.hidden = !configuration.options.includes(option.dataset.configuratorOption);
         });
-        priceOutput.textContent = product.price === undefined
-            ? 'Price unavailable'
-            : `€ ${Number(product.price).toFixed(2).replace('.', ',')}`;
-        addButton.dataset.price = String(product.price || 0);
-        addButton.dataset.image = product.cardImage ? `../assets/products/${product.cardImage}` : '';
         popup.hidden = false;
         closeButton.focus();
         document.addEventListener('keydown', handleKeydown);
     };
 
     closeButton.addEventListener('click', closePopup);
-    detailsButton.addEventListener('click', () => {
-        window.openProductDetails?.('Industrial');
-    });
     popup.addEventListener('click', (event) => {
+        const detailsButton = event.target.closest('[data-configurator-details]');
+        if (detailsButton) {
+            window.openProductDetails?.(detailsButton.dataset.configuratorDetails);
+            return;
+        }
         if (event.target === popup) closePopup();
     });
 

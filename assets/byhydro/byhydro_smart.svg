@@ -15295,7 +15295,7 @@
      id="g4-0"
      inkscape:label="smartsensectemp"
      transform="translate(475.1407,-285.52899)"><g
-       id="smart_sens_ec_temp"
+       id="smart_sens_ec_temp_1"
        class="component"
        transform="translate(-61.315104,490.2399)"><rect
          class="hit"
@@ -15456,7 +15456,7 @@
      id="g4-0-9"
      inkscape:label="smartsensecphorp"
      transform="translate(-56.6849,-231.91326)"><g
-       id="smart_sens_ph_orp"
+       id="smart_sens_ph_orp_1"
        class="component"
        transform="translate(-61.315104,490.2399)"><rect
          class="hit"
@@ -15703,7 +15703,7 @@
        inkscape:path-effect="#path-effect5"
        inkscape:original-d="m 298,498 c 5.5,14.16667 12,29.33333 18,44 6,14.66667 -3.83333,50.5 -5.5,76 -1.66667,25.5 -4,26 -6,39 -2,13 -4,36 -6,54"
        transform="translate(-31.155428,-59.085718)" /></g><g
-    id="smart_plug_ph_orp"
+    id="smart_plug_ph_orp_1"
      class="component"
      transform="translate(25.060338,53.934951)"
      inkscape:label="dosingplugsmart"><rect
@@ -15966,7 +15966,7 @@
        inkscape:path-effect="#path-effect58-6"
        inkscape:original-d="m 145.50719,478.17587 c 4.12215,-23.68807 8.24429,-46.66904 12.36643,-70.35712 4.12215,-23.68808 1.76664,-69.65002 2.82662,-103.94469 1.05998,-34.29468 -6.00656,-10.72446 -9.1865,-16.26346 -3.17994,-5.539 -8.83317,-8.36743 -13.07309,-12.37437 -4.23992,-4.00694 -2.00219,-7.42462 -3.17994,-11.31371"
        transform="matrix(1.0006412,0,0,1,134.5686,174.6308)" /></g><g
-    id="smart_plug_ec_temp"
+    id="smart_plug_ec_temp_1"
     class="component"
      transform="translate(552.13573,87.644948)"
      inkscape:label="dosingecpump"><rect
@@ -16177,7 +16177,7 @@
        id="path7"
        inkscape:label="pipetopump"
        transform="translate(123.33113,346.1904)" /></g><g
-    id="smart_pump_ph_orp"
+    id="smart_pump_ph_orp_1"
      class="component"
      transform="translate(-159.75955,53.359545)"
      inkscape:label="dosingpumpsmart"><rect
@@ -16438,7 +16438,7 @@
              x="1365.3822"
              y="157.79359"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.758117">⚡EC/💎TDS/🧂SAL</tspan></text></g></g></g><g
-     id="probe_temp_digital"
+     id="probe_temp_digital_1"
      class="component"
      transform="translate(91.432573,302.61364)"
      inkscape:label="probetemp1"><rect
@@ -16705,7 +16705,7 @@
      transform="matrix(1,0,0,1.0777194,-2173.0968,-983.48412)">
     
     <!-- collegamento diretto locale --><g
-   id="connectivity_station"
+   id="connectivity_station_1"
    class="component"
    transform="translate(2023.5416,986.85047)"
    inkscape:label="conn_sta"><rect
@@ -16753,7 +16753,7 @@
        id="tspan56"
        x="950.54333"
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
-   id="connectivity_router"
+   id="connectivity_router_1"
    class="component"
    transform="translate(1834.4011,882.18428)"
    inkscape:label="conn_router"><rect
@@ -16860,7 +16860,7 @@
 <ellipse cx="-663.10168" cy="690.0307" fill="#526778" id="circle43-2-1-2" sodipodi:insensitive="true"
        transform="matrix(-0.89973989,0.43642654,0.67026527,0.7421216,0,0)" style="stroke-width:0.63134" rx="2.4336619" ry="2.0063548" />
 </g><g
-   id="connectivity_sps"
+   id="connectivity_sps_1"
    class="component"
    transform="translate(1615.2033,817.92744)"
    inkscape:label="conn_sps"><rect
@@ -16904,7 +16904,7 @@
 <ellipse cx="446.15912" cy="980.30518" fill="#526778" id="circle43-2-1-4" sodipodi:insensitive="true"
        transform="matrix(0.61650369,-0.78735201,0.82917607,0.55898752,0,0)" style="stroke-width:1.00128" rx="3.5963066" ry="3.414907" />
 </g><!-- telefono vicino --><!-- telefono remoto --><g
-  id="connectivity_access_point'"
+  id="connectivity_access_point_1"
    class="component"
    transform="matrix(0.60252765,0,0,0.65971584,2161.6093,1201.6926)"
    inkscape:label="conn_ap"><rect
@@ -16949,7 +16949,7 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point'-2"
+  id="connectivity_access_point_1"
    class="component"
    transform="matrix(0.60252765,0,0,0.65971584,1859.4748,1094.8418)"
    inkscape:label="conn_ap"><rect
@@ -16994,7 +16994,7 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2-3" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point'-3"
+  id="connectivity_access_point_2"
    class="component"
    transform="matrix(0.60252765,0,0,0.65971584,1669.6708,1169.2111)"
    inkscape:label="conn_ap"><rect
@@ -17039,7 +17039,7 @@
 <ellipse cx="-158.33507" cy="-1118.4075" fill="#526778" id="circle43-2-4" sodipodi:insensitive="true" transform="matrix(0,-1,-1,0,0,0)"
        rx="3.4757426" ry="3.6073365" style="stroke-width:1.01169" />
 </g><g
-  id="connectivity_access_point'-4"
+  id="connectivity_access_point_3"
    class="component"
    transform="matrix(0.60252765,0,0,0.65971584,2509.5379,1093.7796)"
    inkscape:label="conn_ap"><rect
@@ -17084,7 +17084,7 @@
 <ellipse cx="-1122.1793" cy="188.97682" fill="#526778" id="circle43-2-6" sodipodi:insensitive="true" transform="scale(-1,1)" rx="4.1014099"
        ry="3.0570393" style="stroke-width:1.01169" />
 </g><g
-  id="connection_remote"
+  id="connectivity_remote_1"
    class="component"
    transform="translate(1736.7239,763.37801)"
    inkscape:label="conn_remote"><rect
