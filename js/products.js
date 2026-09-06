@@ -432,18 +432,152 @@ const products = {
 const configuratorComponents = {
     default: {
         title: 'Configuration component',
-        description: 'Choose the product option for this component.',
-        options: ['Industrial', 'Premium']
-    },
-    industrial: {
-        title: 'Industrial controller',
-        description: 'Choose the Industrial controller for this configuration.',
+        description: 'Choose the product option for this component example.',
         options: ['Industrial']
     },
-    probes: {
-        title: 'Water quality probes',
-        description: 'Choose the probe required for this configuration.',
-        options: ['pH Probe', 'ORP Probe', 'EC Probe DCJack']
+    connectivity_access_point: {
+        title: 'Direct connection (Access point)',
+    description: 'Device is accessible directly via its own Wi-Fi network. ' +
+        'No Internet needed, simple access with your Phone or Laptop. ' +
+        'Wi-Fi credentials, access IP address can be modified by the user.',
+    options: []
+    },
+    connectivity_remote: {
+        title: 'Remote connection (All over the World)',
+        description: 'By configuring Port Forwarding on your router, you can access and control the device remotely from anywhere in the world. ' +
+        'No dedicated app required — simply connect through a standard web browser by using your global static IP address.',
+        options: []
+    },
+    connectivity_station: {
+        title: 'Network connection (Domestic Router)',
+        description: 'Device connects to your existing Wi-Fi network. ' +
+        'Access and control it from any Phone or Laptop on the same network. ' +
+        'Network credentials and connection settings can be configured by the user.' +
+        ' System supports also http protocol therefore is easily interfacable with Home Automation systems like Home Assistant.',
+        options: []
+    },
+    connectivity_sps: {
+        title: 'SPS Connectivity (PROFIBUS)',
+        description: 'Device supports PROFIBUS communication for integration with SPS/PLC systems. ' +
+        'Management registers can be accessed directly to read and write values, enabling external monitoring and control of the system.',
+        options: []
+    },
+    control_unit_ec_temp: {
+        title: 'EC and temperature control unit',
+        description: 'Choose the smart EC and temperature control option.',
+        options: ['Smart Plug EC/Temp']
+    },
+    control_unit_industrial: {
+        title: 'DIN Rail Industrial Controller',
+        description: 'DIN rail controller designed for electrical panel installation, featuring an integrated display and 3 relay outputs assignable to 4 independent internal control channels. ' +
+        'Each channel supports configurable hysteresis logic and timer-based operation for precise control of load activation over time. ' +
+        'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with integrated AI features such as Copilot and additional advanced functions. See product details for more information.',
+        options: ['Industrial']
+    },
+    control_unit_modular: {
+        title: 'Modular Controller',
+        description: 'Expandable controller designed for wall-mounted or portable use. Powered via USB, it can also operate from a standard power bank, making it suitable for flexible and mobile installations. ' +
+        'It can be used as a standalone monitoring unit or expanded into a complete control system by connecting Modular Pumps and Modular Plugs. ' +
+        'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions. See product details for more information.',
+        options: ['Modular']
+    },
+    control_unit_premium: {
+        title: 'Compact Premium Controller',
+        description: 'Compact all-in-one controller designed as an elegant wall-mounted solution, featuring two integrated 60 ml/min dosing pumps for a clean and practical installation. ' +
+        'It can operate as a complete monitoring and control system and includes a USB expansion port for additional Modular Pumps or Modular Plugs. ' +
+        'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions. See product details for more information.',
+        options: ['Premium']
+    },
+    smart_plug_ec_temp: {
+        title: 'Smart EC and Temperature Plug',
+        description: 'Compact display-free controller designed for EC or analog temperature monitoring and control, with an extremely simple plug-and-play installation directly into a standard electrical outlet. ' +
+        'It provides a controlled power outlet for connecting and automatically managing the desired electrical load according to the measured value. ' +
+        'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions.',
+        options: ['Smart Plug EC/Temp']
+    },
+    smart_plug_ph_orp: {
+        title: 'Smart pH and ORP Plug',
+        description: 'Compact display-free controller designed for pH or ORP monitoring and control, with an extremely simple plug-and-play installation directly into a standard electrical outlet. ' +
+        'It provides a controlled power outlet for connecting and automatically managing the desired electrical load according to the measured value. ' +
+        'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions.',
+        options: ['Smart Plug pH/ORP']
+    },
+    smart_pump_ph_orp: {
+        title: 'Smart pH and ORP Pump',
+        description: 'Compact dosing pump designed for precise pH or ORP control, with an extremely simple plug-and-play installation directly into a standard electrical outlet. ' +
+        'It provides a controlled power outlet for connecting and automatically managing the desired electrical load according to the measured value. ' +
+        'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions.',
+        options: ['Smart Pump 60', 'Smart Pump 180', 'Smart Pump 500']
+    },
+    smart_sens_ec_temp: {
+        title: 'Smart EC and Temperature Sensor',
+        description: 'Compact display-free sensor designed for EC and temperature monitoring, ideal for distributed installations and Smart Home systems. ' +
+        'Its compact and modular design allows multiple sensing points to be easily distributed throughout the installation for flexible and scalable monitoring. ' +
+        'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with easy integration into Home Automation systems and additional advanced functions.',
+        options: ['Smart Sens EC/Temp']
+    },
+    smart_sens_ph_orp: {
+        title: 'Smart pH and ORP Sensor',
+        description: 'Compact display-free sensor designed for pH and ORP monitoring, ideal for distributed installations and Smart Home systems. ' +
+        'Its compact and modular design allows multiple sensing points to be easily distributed throughout the installation for flexible and scalable monitoring. ' +
+        'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with easy integration into Home Automation systems and additional advanced functions.',
+        options: ['Smart Sens pH/ORP']
+    },
+    modular_plug: {
+        title: 'Modular plug',
+        description: 'The Modular Plug is designed to be controlled via USB-A, allowing EDULCOWATER systems to be easily expanded with an additional controlled electrical outlet. ' +
+        'It allows you to connect and control a general-purpose electrical load according to your application requirements. ' +
+        'The connected load can be managed directly by the EDULCOWATER system.',
+        options: ['Modular Plug']
+    },
+    modular_pump: {
+        title: 'Modular pump',
+        description: 'The Modular Pump is designed to be controlled via USB-A, allowing EDULCOWATER systems to be easily expanded with additional dosing channels. ' +
+        'Different pump versions are available in this category to meet different flow-rate requirements. ' +
+        'Each Modular Pump uses an external power supply, while control and communication are managed directly by the EDULCOWATER system.',
+        options: ['Modular Pump 60', 'Modular Pump 180', 'Modular Pump 500']
+    },
+    probe_ec_jack: {
+        title: 'EC Jack probe',
+        description: 'EC probe designed for conductivity measurements from 0 to 2,000 µS with 1 µS resolution, and from 2,000 to 20,000 µS with 10 µS resolution. ' +
+        'The probe includes an integrated NTC sensor for simultaneous temperature measurement and temperature compensation. ' +
+        'Supplied with a DC Jack connector for quick and convenient connection.',
+        options: ['EC Probe DCJack']
+    },
+    probe_ec_tb: {
+        title: 'EC probe with Terminal Block',
+        description: 'EC probe designed for conductivity measurements from 0 to 2,000 µS with 1 µS resolution, and from 2,000 to 20,000 µS with 10 µS resolution. ' +
+        'The probe includes an integrated NTC sensor for simultaneous temperature measurement and temperature compensation. ' +
+        'Supplied with a Terminal Block connection for simple and reliable installation.',
+        options: ['EC Probe TB']
+    },
+    probe_ph_orp: {
+        title: 'pH and ORP probes',
+        description: 'Professional pH and ORP probes equipped with a standard BNC connector for quick and reliable connection. ' +
+        'The pH probe provides a measurement range from 0 to 14 pH, while the ORP (Redox) probe measures from -200 to +200 mV. ' +
+        'Designed for reliable and continuous water quality monitoring.',
+        options: ['pH Probe', 'ORP Probe']
+    },
+    probe_temp_analog_jack: {
+        title: 'Analog temperature probes with Jack connector',
+        description: 'Immersion analog temperature probe designed for reliable measurements over a wide temperature range. ' +
+        'The standard version measures temperatures up to 60°C, while the High Temperature version supports measurements up to 150°C. ' +
+        'Both versions feature a Jack connector for quick and convenient connection.',
+        options: ['NTC DCJack', 'NTC HT DCJack']
+    },
+    probe_temp_analog_tb: {
+        title: 'Analog temperature probe with terminal block',
+        description: 'Immersion analog temperature probe designed for reliable measurements over a wide temperature range. ' +
+        'The standard version measures temperatures up to 60°C, while the High Temperature version supports measurements up to 150°C. ' +
+        'Both versions are designed for immersion applications and are supplied with a terminal block for easy connection.',
+        options: ['NTC TB', 'NTC HT TB']
+    },
+    probe_temp_digital_tb: {
+        title: 'Digital temperature probe DS18 with terminal block',
+        description: 'Immersion digital temperature probe designed for precise and reliable temperature measurements. ' +
+        'Suitable for continuous monitoring in applications with temperatures up to 60°C. ' +
+        'Supplied with terminal block for simple and secure connection.',
+        options: ['Temp DS18 TB']
     }
 };
 

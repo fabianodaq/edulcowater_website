@@ -4990,7 +4990,7 @@
            x="-33.87603"
            y="-130.63884"
            style="stroke-width:1.99936" /></text></g></g><!-- VASCA --><!-- SONDE --><g
-     id="probe_temp_analog_1"
+    id="probe_temp_analog_tb_1"
      class="component"
      transform="translate(-108.20408,272.63298)"
      inkscape:label="probetemp1"><rect
@@ -5035,7 +5035,7 @@
          id="tspan48-8"
          x="1035.6678"
          y="320.49854">🌡️Temp</tspan></text></g><g
-     id="probe_temp_digital_1"
+    id="probe_temp_digital_tb_1"
      class="component"
      transform="translate(-405.02746,286.7807)"
      inkscape:label="probetemp2"><rect
@@ -5229,7 +5229,7 @@
        id="tspan56"
        x="950.54333"
        y="123.81214">Station</tspan></text></g><!-- router / internet --><g
-   id="connectivity_router_1"
+  id="connectivity_station_2"
    class="component"
    transform="translate(1573.9138,471.22144)"
    inkscape:label="conn_router"><rect
