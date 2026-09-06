@@ -149,14 +149,14 @@ const getProductMetaFromButton = (addButton) => {
     const name = addButton.dataset.product || '';
     const priceNode = card ? card.querySelector('.product-price') : null;
     const imageNode = card ? card.querySelector('.product-visual img') : null;
-    const priceText = priceNode ? priceNode.textContent : '0';
+    const priceText = priceNode ? priceNode.textContent : (addButton.dataset.price || '0');
     const normalized = priceText.replace(/[^\d.,]/g, '').replace('.', '').replace(',', '.');
     const price = Number.parseFloat(normalized) || 0;
     return {
         id: makeProductId(name),
         name,
         price,
-        image: imageNode ? imageNode.src : ''
+        image: imageNode ? imageNode.src : (addButton.dataset.image || '')
     };
 };
 
