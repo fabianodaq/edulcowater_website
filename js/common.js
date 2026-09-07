@@ -140,17 +140,20 @@ const initConfiguratorInfoPopup = () => {
     const optionNames = [...new Set(Object.values(configuratorData)
         .flatMap((configuration) => configuration.options || []))];
     const availableOptionNames = optionNames.length ? optionNames : defaultConfiguration.options;
+    const getConfiguratorLanguage = () => (localStorage.getItem('edulco_language') || 'EN').toLowerCase();
+    const getLocalizedConfiguratorText = (item, field, fallback) => item[`${field}_${getConfiguratorLanguage()}`] || item[`${field}_en`] || item[field] || fallback;
     const renderOption = (productName) => {
         const product = window.productCatalog?.[productName];
         if (!product) return '';
         const imageSource = product.detailImages?.[0] || '';
+        const productDescription = getLocalizedConfiguratorText(product, 'description', 'Product details coming soon.');
         const price = product.price === undefined
             ? 'Price unavailable'
             : `€ ${Number(product.price).toFixed(2).replace('.', ',')}`;
         return `
             <article class="configurator-option" data-configurator-option="${productName}">
                 <h3>${productName}</h3>
-                <p>${product.description || 'Product details coming soon.'}</p>
+                <p>${productDescription}</p>
                 <img src="${imageSource}" alt="${productName}" ${imageSource ? '' : 'hidden'}>
                 <dl class="configurator-popup-details">
                     <div><dt>Price</dt><dd>${price}</dd></div>
@@ -236,8 +239,8 @@ const initConfiguratorInfoPopup = () => {
         const configuration = getConfiguration(normalizedDetails);
         activeSelection = diagram ? { diagram, id: details.id } : activeSelection;
         activeConfiguration = configuration;
-        titleOutput.textContent = normalizedDetails.title || configuration.title;
-        descriptionOutput.textContent = normalizedDetails.description || configuration.description;
+        titleOutput.textContent = getLocalizedConfiguratorText(configuration, 'title', normalizedDetails.title || 'Component information');
+        descriptionOutput.textContent = getLocalizedConfiguratorText(configuration, 'description', normalizedDetails.description || '');
         popup.querySelectorAll('[data-configurator-option]').forEach((option) => {
             option.hidden = !configuration.options.includes(option.dataset.configuratorOption);
         });
