@@ -1,3 +1,26 @@
+// Google Analytics 4: load the Google tag once on every page using common.js.
+const GOOGLE_ANALYTICS_MEASUREMENT_ID = 'G-XK6NW0LHGH';
+
+const initializeGoogleAnalytics = () => {
+    if (window.__edulcoGoogleAnalyticsInitialized) return;
+
+    window.__edulcoGoogleAnalyticsInitialized = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+    };
+
+    window.gtag('js', new Date());
+    window.gtag('config', GOOGLE_ANALYTICS_MEASUREMENT_ID);
+
+    const googleTagScript = document.createElement('script');
+    googleTagScript.async = true;
+    googleTagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_MEASUREMENT_ID}`;
+    document.head.append(googleTagScript);
+};
+
+initializeGoogleAnalytics();
+
 // MANU HANDLING 
 // 
 // Template used to generate the navigation menu
