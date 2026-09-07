@@ -11,40 +11,40 @@
     <header class="main-header">
         <div class="container"><nav class="main-nav">
             <div class="brand" aria-label="Edulco Water"><img src="../assets/logoedulcowater.svg" alt=""><span>EdulcoWater</span></div>
-            <div class="header-actions"><a class="icon-button cart-button" href="../cart/index.html" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2 11h10l2-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span class="cart-count">0</span></a></div>
+            <div class="header-actions"><div class="language-switcher"><button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu" aria-label="Select language">English <span aria-hidden="true">⌄</span></button><div class="language-menu" id="language-menu"><button class="language-option" type="button" data-language="IT">Italiano</button><button class="language-option active" type="button" data-language="EN">English</button><button class="language-option" type="button" data-language="ESP">Español</button><button class="language-option" type="button" data-language="DE">Deutsch</button><button class="language-option" type="button" data-language="FR">Français</button></div></div><a class="icon-button cart-button" href="../cart/index.html" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2 11h10l2-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span class="cart-count">0</span></a></div>
         </nav></div>
         <nav class="menu-panel" id="site-menu" aria-label="Main navigation"><div class="container" data-menu-panel></div></nav>
     </header>
     <main class="default-page container">
-        <p class="section-label">BUILD YOUR HYDROPONICS</p>
-        <p class="bypool-subtitle"><span>1. Select control type</span>
-                        <span>2. Click on blinking elements</span>
-                        <span>3. Review your selection and checkout</span></p>
+        <p class="section-label" data-i18n="sectionLabel">BUILD YOUR HYDROPONICS</p>
+        <p class="bypool-subtitle"><span data-i18n="stepOne">1. Select control type</span>
+                <span data-i18n="stepTwo">2. Click on blinking elements</span>
+                <span data-i18n="stepThree">3. Review your selection and checkout</span></p>
 
-        <section class="bypool-section" aria-label="Industrial Hydroponics System">
+        <section class="bypool-section" aria-label="Industrial Hydroponics System" data-i18n-aria-label="industrialAria">
             <div class="bypool-svg-full">
-            <h2 class="bypool-title">Din Rail</h2>
+            <h2 class="bypool-title" data-i18n="dinRail">Din Rail</h2>
             <object data="../assets/byhydro/byhydro_industrial.svg?v=configurator-popup-2" type="image/svg+xml" class="bypool-svg"></object>
             </div>
         </section>
 
-        <section class="bypool-section" aria-label="Premium Hydroponics System">
+        <section class="bypool-section" aria-label="Premium Hydroponics System" data-i18n-aria-label="premiumAria">
             <div class="bypool-svg-full">
-                <h2 class="bypool-title">Compact</h2>
+                <h2 class="bypool-title" data-i18n="compact">Compact</h2>
                 <object data="../assets/byhydro/byhydro_premium.svg?v=configurator-popup-2" type="image/svg+xml" class="bypool-svg"></object>
             </div>
         </section>
 
-        <section class="bypool-section" aria-label="Modular Hydroponics System">
+        <section class="bypool-section" aria-label="Modular Hydroponics System" data-i18n-aria-label="modularAria">
             <div class="bypool-svg-full">
-                <h2 class="bypool-title">Expandable</h2>
+                <h2 class="bypool-title" data-i18n="expandable">Expandable</h2>
                 <object data="../assets/byhydro/byhydro_modular.svg?v=configurator-popup-2" type="image/svg+xml" class="bypool-svg"></object>
             </div>
         </section>
 
-        <section class="bypool-section" aria-label="Smart Hydroponics System">
+        <section class="bypool-section" aria-label="Smart Hydroponics System" data-i18n-aria-label="smartAria">
             <div class="bypool-svg-full">
-                <h2 class="bypool-title">Smart</h2>
+                <h2 class="bypool-title" data-i18n="smart">Smart</h2>
                 <object data="../assets/byhydro/byhydro_smart.svg?v=configurator-popup-2" type="image/svg+xml" class="bypool-svg"></object>
             </div>
         </section>
@@ -52,6 +52,7 @@
     <script src="../js/products.js?v=configurator-popup-2"></script>
     <script src="../js/common.js?v=configurator-popup-2"></script>
     <script src="../js/cart.js"></script>
+    <script src="../js/byapplication-page.js?v=20260907"></script>
     <script>
         document.querySelectorAll('.add-button-full').forEach((addButton) => {
             addButton.addEventListener('click', function() {
@@ -76,7 +77,7 @@
                 const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
                 cartCount.textContent = totalItems;
                 
-                alert(`Added to cart! Price: EUR ${cartItem.price.toLocaleString('it-IT')}`);
+                alert(`${window.BYAPPLICATION_PAGE_TEXT.addedToCart} ${window.BYAPPLICATION_PAGE_TEXT.price}: EUR ${cartItem.price.toLocaleString('it-IT')}`);
             });
         });
     </script>

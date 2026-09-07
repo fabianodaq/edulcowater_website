@@ -11,7 +11,7 @@
     <header class="main-header">
         <div class="container"><nav class="main-nav">
             <div class="brand" aria-label="Edulco Water"><img src="../assets/logoedulcowater.svg" alt=""><span>EdulcoWater</span></div>
-            <div class="header-actions"><a class="icon-button cart-button" href="index.html" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2 11h10l2-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span class="cart-count">0</span></a></div>
+            <div class="header-actions"><div class="language-switcher"><button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu" aria-label="Select language">English <span aria-hidden="true">⌄</span></button><div class="language-menu" id="language-menu"><button class="language-option" type="button" data-language="IT">Italiano</button><button class="language-option active" type="button" data-language="EN">English</button><button class="language-option" type="button" data-language="ESP">Español</button><button class="language-option" type="button" data-language="DE">Deutsch</button><button class="language-option" type="button" data-language="FR">Français</button></div></div><a class="icon-button cart-button" href="index.html" aria-label="Cart" title="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2 11h10l2-8H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg><span class="cart-count">0</span></a></div>
         </nav></div>
         <nav class="menu-panel" id="site-menu" aria-label="Main navigation"><div class="container" data-menu-panel></div></nav>
     </header>
@@ -20,48 +20,49 @@
         <div class="cart-layout">
             <section class="cart-main">
                 <header class="cart-main-header">
-                    <h1>Cart</h1>
-                    <p><span data-cart-items-count>0</span> items selected</p>
+                    <h1 data-i18n="cartTitle">Cart</h1>
+                    <p><span data-cart-items-count>0</span> <span data-i18n="itemsSelected">items selected</span></p>
                 </header>
 
                 <label class="cart-select-all">
                     <input type="checkbox" data-cart-select-all>
-                    <span>Select all items</span>
+                    <span data-i18n="selectAll">Select all items</span>
                 </label>
 
                 <section class="cart-customer" aria-labelledby="shipping-address-title">
-                    <h2 id="shipping-address-title">Shipping address</h2>
+                    <h2 id="shipping-address-title" data-i18n="shippingAddress">Shipping address</h2>
                     <div class="cart-customer-grid">
-                        <label><span>First name</span><input type="text" name="firstName" autocomplete="given-name" required></label>
-                        <label><span>Last name</span><input type="text" name="lastName" autocomplete="family-name" required></label>
-                        <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
-                        <label><span>Phone (optional)</span><input type="tel" name="phone" autocomplete="tel"></label>
-                        <label><span>Street</span><input type="text" name="address" autocomplete="street-address" placeholder="e.g. Grasserstrasse" required></label>
-                        <label><span>House number</span><input type="text" name="houseNumber" autocomplete="address-line1" placeholder="e.g. 14" required></label>
-                        <label><span>City</span><input type="text" name="city" autocomplete="address-level2" required></label>
-                        <label><span>Postal code</span><input type="text" name="postalCode" autocomplete="postal-code" required></label>
-                        <label><span>Country</span><select name="country" data-shipping-country autocomplete="country" required>
+                        <label><span data-i18n="firstName">First name</span><input type="text" name="firstName" autocomplete="given-name" required></label>
+                        <label><span data-i18n="lastName">Last name</span><input type="text" name="lastName" autocomplete="family-name" required></label>
+                        <label><span data-i18n="email">Email</span><input type="email" name="email" autocomplete="email" required></label>
+                        <label><span data-i18n="phone">Phone (optional)</span><input type="tel" name="phone" autocomplete="tel"></label>
+                        <label><span data-i18n="street">Street</span><input type="text" name="address" autocomplete="street-address" placeholder="e.g. Grasserstrasse" required></label>
+                        <label><span data-i18n="houseNumber">House number</span><input type="text" name="houseNumber" autocomplete="address-line1" placeholder="e.g. 14" required></label>
+                        <label><span data-i18n="city">City</span><input type="text" name="city" autocomplete="address-level2" required></label>
+                        <label><span data-i18n="postalCode">Postal code</span><input type="text" name="postalCode" autocomplete="postal-code" required></label>
+                        <label><span data-i18n="country">Country</span><select name="country" data-shipping-country autocomplete="country" required>
                             <option value="DE">Germany</option><option value="AT">Austria</option><option value="BE">Belgium</option><option value="BG">Bulgaria</option><option value="HR">Croatia</option><option value="CY">Cyprus</option><option value="CZ">Czechia</option><option value="DK">Denmark</option><option value="EE">Estonia</option><option value="FR">France</option><option value="FI">Finland</option><option value="GR">Greece</option><option value="HU">Hungary</option><option value="IE">Ireland</option><option value="IT">Italy</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="LV">Latvia</option><option value="MT">Malta</option><option value="NL">Netherlands</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="RO">Romania</option><option value="ES">Spain</option><option value="SE">Sweden</option><option value="SI">Slovenia</option><option value="SK">Slovakia</option>
                         </select></label>
                     </div>
                 </section>
 
                 <div class="cart-items" data-cart-items></div>
-                <p class="cart-empty" data-cart-empty hidden>Your cart is empty. Add products from the catalog.</p>
+                <p class="cart-empty" data-cart-empty hidden data-i18n="emptyCart">Your cart is empty. Add products from the catalog.</p>
             </section>
 
             <aside class="cart-summary">
-                <h2>Summary</h2>
-                <p class="cart-summary-row"><span>Subtotal</span><strong data-cart-subtotal>EUR 0.00</strong></p>
-                <p class="cart-summary-row"><span>Shipping</span><strong data-cart-shipping>EUR 0.00</strong></p>
-                <p class="cart-summary-row cart-summary-total"><span>Total</span><strong data-cart-total>EUR 0.00</strong></p>
-                <button type="button" class="cart-checkout-button">Checkout (<span data-cart-checkout-count>0</span>)</button>
+                <h2 data-i18n="summary">Summary</h2>
+                <p class="cart-summary-row"><span data-i18n="subtotal">Subtotal</span><strong data-cart-subtotal>EUR 0.00</strong></p>
+                <p class="cart-summary-row"><span data-i18n="shipping">Shipping</span><strong data-cart-shipping>EUR 0.00</strong></p>
+                <p class="cart-summary-row cart-summary-total"><span data-i18n="total">Total</span><strong data-cart-total>EUR 0.00</strong></p>
+                <button type="button" class="cart-checkout-button"><span data-i18n="checkout">Checkout</span> (<span data-cart-checkout-count>0</span>)</button>
             </aside>
         </div>
     </main>
 
     <script>window.EDULCO_CHECKOUT_API_BASE = 'https://edulco-checkout.onrender.com';</script>
     <script src="../js/common.js"></script>
+    <script src="../js/cart-page.js?v=20260907"></script>
     <script src="../js/cart.js"></script>
 </body>
 </html>
