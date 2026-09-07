@@ -25,22 +25,39 @@ initializeGoogleAnalytics();
 // 
 // Template used to generate the navigation menu
 const MENU_TEMPLATE = `
-<a href="{HOME_HREF}" class="{HOME_ACTIVE}" {HOME_CURRENT}><span class="nav-icon" aria-hidden="true">🏠</span>Home</a>
-<a href="{PRODUCTS_HREF}" class="{PRODUCTS_ACTIVE}" {PRODUCTS_CURRENT}><span class="nav-icon" aria-hidden="true">📦</span>Products</a>
-<a href="{BYPOOL_HREF}" class="{BYPOOL_ACTIVE}" {BYPOOL_CURRENT}><span class="nav-icon" aria-hidden="true">🏊</span>BYPool</a>
-<a href="{AQUARIUM_HREF}" class="{AQUARIUM_ACTIVE}" {AQUARIUM_CURRENT}><span class="nav-icon" aria-hidden="true">🐠</span>BYAquarium</a>
-<a href="{HYDRO_HREF}" class="{HYDRO_ACTIVE}" {HYDRO_CURRENT}><span class="nav-icon" aria-hidden="true">🌱</span>BYHydro</a>
-<a href="{SOLAR_HREF}" class="{SOLAR_ACTIVE}" {SOLAR_CURRENT}><span class="nav-icon" aria-hidden="true">☀️</span>BYSolar</a>
-<a href="{ABOUT_HREF}" class="{ABOUT_ACTIVE}" {ABOUT_CURRENT}><span class="nav-icon" aria-hidden="true">ℹ️</span>About</a>
+<a href="{HOME_HREF}" class="{HOME_ACTIVE}" {HOME_CURRENT}><span class="nav-icon" aria-hidden="true">🏠</span>{HOME_LABEL}</a>
+<a href="{PRODUCTS_HREF}" class="{PRODUCTS_ACTIVE}" {PRODUCTS_CURRENT}><span class="nav-icon" aria-hidden="true">📦</span>{PRODUCTS_LABEL}</a>
+<a href="{BYPOOL_HREF}" class="{BYPOOL_ACTIVE}" {BYPOOL_CURRENT}><span class="nav-icon" aria-hidden="true">🏊</span>{BYPOOL_LABEL}</a>
+<a href="{AQUARIUM_HREF}" class="{AQUARIUM_ACTIVE}" {AQUARIUM_CURRENT}><span class="nav-icon" aria-hidden="true">🐠</span>{AQUARIUM_LABEL}</a>
+<a href="{HYDRO_HREF}" class="{HYDRO_ACTIVE}" {HYDRO_CURRENT}><span class="nav-icon" aria-hidden="true">🌱</span>{HYDRO_LABEL}</a>
+<a href="{SOLAR_HREF}" class="{SOLAR_ACTIVE}" {SOLAR_CURRENT}><span class="nav-icon" aria-hidden="true">☀️</span>{SOLAR_LABEL}</a>
+<a href="{ABOUT_HREF}" class="{ABOUT_ACTIVE}" {ABOUT_CURRENT}><span class="nav-icon" aria-hidden="true">ℹ️</span>{ABOUT_LABEL}</a>
 `;
+
+const MENU_TRANSLATIONS = {
+    EN: { home: 'Home', products: 'Products', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'About' },
+    IT: { home: 'Home', products: 'Prodotti', pool: 'Piscina', aquarium: 'Acquario', hydro: 'Idroponica', solar: 'Solare', about: 'Chi siamo' },
+    ESP: { home: 'Inicio', products: 'Productos', pool: 'Piscina', aquarium: 'Acuario', hydro: 'Hidroponía', solar: 'Solar', about: 'Quiénes somos' },
+    DE: { home: 'Startseite', products: 'Produkte', pool: 'Pool', aquarium: 'Aquarium', hydro: 'Hydroponik', solar: 'Solar', about: 'Über uns' },
+    FR: { home: 'Accueil', products: 'Produits', pool: 'Piscine', aquarium: 'Aquarium', hydro: 'Hydroponie', solar: 'Solaire', about: 'À propos' }
+};
 
 // Generates the navigation menu according to the current page and folder level
 const generateMenuPanel = (activePage, basePath) => {
     const isRootPage = basePath === '.'; // Checks whether the current page is in the website root folder
     const href = (rootHref, childHref) => (isRootPage ? rootHref : childHref);
     const isActive = (page) => activePage === page;
+    const language = localStorage.getItem('edulco_language') || 'EN';
+    const labels = MENU_TRANSLATIONS[language] || MENU_TRANSLATIONS.EN;
 
     let menuHtml = MENU_TEMPLATE; // Sets the correct URL for each menu item
+    menuHtml = menuHtml.replace('{HOME_LABEL}', labels.home);
+    menuHtml = menuHtml.replace('{PRODUCTS_LABEL}', labels.products);
+    menuHtml = menuHtml.replace('{BYPOOL_LABEL}', labels.pool);
+    menuHtml = menuHtml.replace('{AQUARIUM_LABEL}', labels.aquarium);
+    menuHtml = menuHtml.replace('{HYDRO_LABEL}', labels.hydro);
+    menuHtml = menuHtml.replace('{SOLAR_LABEL}', labels.solar);
+    menuHtml = menuHtml.replace('{ABOUT_LABEL}', labels.about);
     menuHtml = menuHtml.replace('{HOME_HREF}', href('index.html', '../index.html'));
     menuHtml = menuHtml.replace('{PRODUCTS_HREF}', href('products/index.html', '../products/index.html'));
     menuHtml = menuHtml.replace('{BYPOOL_HREF}', href('bypool/index.html', '../bypool/index.html'));
