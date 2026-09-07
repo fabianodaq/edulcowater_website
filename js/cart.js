@@ -1,4 +1,13 @@
 const CART_STORAGE_KEY = 'edulco_cart_v1';
+const CART_PAGE_TEXT = window.CART_PAGE_TEXT || {
+    remove: 'Remove',
+    decreaseQuantity: 'Decrease quantity',
+    increaseQuantity: 'Increase quantity',
+    addressRequired: 'Please complete the shipping address before continuing.',
+    initializingPayment: 'Payment system initializing...',
+    openingCheckout: 'Opening checkout...',
+    paymentDelayed: 'Payment system is taking longer than expected. Please try again.'
+};
 const CHECKOUT_API_BASE = window.EDULCO_CHECKOUT_API_BASE || 'https://edulco-checkout.onrender.com';
 let healthRequested = false;
 let healthPromise = null;
@@ -256,11 +265,11 @@ const renderCartPage = () => {
                 <p>${formatCurrency(item.price)}</p>
             </div>
             <div class="cart-item-controls">
-                <button type="button" data-cart-action="decrease" aria-label="Decrease quantity">-</button>
+                <button type="button" data-cart-action="decrease" aria-label="${CART_PAGE_TEXT.decreaseQuantity}">-</button>
                 <span>${item.qty}</span>
-                <button type="button" data-cart-action="increase" aria-label="Increase quantity">+</button>
+                <button type="button" data-cart-action="increase" aria-label="${CART_PAGE_TEXT.increaseQuantity}">+</button>
             </div>
-            <button type="button" class="cart-item-remove" data-cart-action="remove">Remove</button>
+            <button type="button" class="cart-item-remove" data-cart-action="remove">${CART_PAGE_TEXT.remove}</button>
         </article>
     `).join('');
 
@@ -373,17 +382,17 @@ const bindCheckoutButton = () => {
         }));
         const hasMissingField = customerFields.some((fieldName) => !customer[fieldName]);
         if (hasMissingField || customer.country !== shippingCountryNode.value) {
-            alert('Please complete the shipping address before continuing.');
+            alert(CART_PAGE_TEXT.addressRequired);
             return;
         }
 
         checkoutButton.disabled = true;
         const originalText = checkoutButton.textContent;
-        checkoutButton.textContent = 'Payment system initializing...';
+        checkoutButton.textContent = CART_PAGE_TEXT.initializingPayment;
 
         try {
             await ensureCheckoutServerReady();
-            checkoutButton.textContent = 'Opening checkout...';
+            checkoutButton.textContent = CART_PAGE_TEXT.openingCheckout;
             const response = await fetch(`${CHECKOUT_API_BASE}/api/create-checkout-session`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -401,7 +410,7 @@ const bindCheckoutButton = () => {
 
             window.location.href = payload.url;
         } catch (error) {
-            alert('Payment system is taking longer than expected. Please try again.');
+            alert(CART_PAGE_TEXT.paymentDelayed);
             checkoutButton.disabled = false;
             checkoutButton.textContent = originalText;
         }
