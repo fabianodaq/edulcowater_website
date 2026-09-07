@@ -274,7 +274,7 @@ document.querySelectorAll('.language-option').forEach((languageOption) => {
     languageOption.addEventListener('click', () => {
         const languageButton = languageOption.closest('.language-switcher').querySelector('.language-button');
         const languageMenu = languageOption.closest('.language-menu');
-        languageButton.childNodes[0].textContent = `${languageOption.dataset.language} `;
+        languageButton.childNodes[0].textContent = `${languageOption.textContent.trim()} `;
         languageMenu.querySelectorAll('.language-option').forEach((option) => option.classList.remove('active'));
         languageOption.classList.add('active');
         languageMenu.classList.remove('open');
