@@ -36,10 +36,10 @@ const MENU_TEMPLATE = `
 
 const MENU_TRANSLATIONS = {
     EN: { home: 'Home', products: 'Products', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'About' },
-    IT: { home: 'Home', products: 'Prodotti', pool: 'Piscina', aquarium: 'Acquario', hydro: 'Idroponica', solar: 'Solare', about: 'Chi siamo' },
-    ESP: { home: 'Inicio', products: 'Productos', pool: 'Piscina', aquarium: 'Acuario', hydro: 'Hidroponía', solar: 'Solar', about: 'Quiénes somos' },
-    DE: { home: 'Startseite', products: 'Produkte', pool: 'Pool', aquarium: 'Aquarium', hydro: 'Hydroponik', solar: 'Solar', about: 'Über uns' },
-    FR: { home: 'Accueil', products: 'Produits', pool: 'Piscine', aquarium: 'Aquarium', hydro: 'Hydroponie', solar: 'Solaire', about: 'À propos' }
+    IT: { home: 'Home', products: 'Prodotti', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Chi siamo' },
+    ESP: { home: 'Home', products: 'Productos', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Quiénes somos' },
+    DE: { home: 'Home', products: 'Produkte', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Über uns' },
+    FR: { home: 'Home', products: 'Produits', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'À propos' }
 };
 
 // Generates the navigation menu according to the current page and folder level
