@@ -295,6 +295,14 @@ document.querySelectorAll('.language-button').forEach((languageButton) => {
 
 document.querySelectorAll('.language-option').forEach((languageOption) => {
     languageOption.addEventListener('click', () => {
+        if (document.body.dataset.page === 'home') {
+            const selectedLanguage = languageOption.dataset.language || 'EN';
+            const currentLanguage = localStorage.getItem('edulco_language') || 'EN';
+            localStorage.setItem('edulco_language', selectedLanguage);
+            if (selectedLanguage !== currentLanguage) window.location.reload();
+            return;
+        }
+
         const languageButton = languageOption.closest('.language-switcher').querySelector('.language-button');
         const languageMenu = languageOption.closest('.language-menu');
         languageButton.childNodes[0].textContent = `${languageOption.textContent.trim()} `;
