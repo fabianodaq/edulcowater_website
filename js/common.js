@@ -295,7 +295,7 @@ document.querySelectorAll('.language-button').forEach((languageButton) => {
 
 document.querySelectorAll('.language-option').forEach((languageOption) => {
     languageOption.addEventListener('click', () => {
-        if (document.body.dataset.page === 'home') {
+        if (['home', 'about'].includes(document.body.dataset.page)) {
             const selectedLanguage = languageOption.dataset.language || 'EN';
             const currentLanguage = localStorage.getItem('edulco_language') || 'EN';
             localStorage.setItem('edulco_language', selectedLanguage);
