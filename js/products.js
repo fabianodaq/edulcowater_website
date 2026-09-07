@@ -457,7 +457,7 @@ const configuratorComponents = {
         options: []
     },
     connectivity_sps: {
-        title: 'SPS Connectivity (PROFIBUS)',
+        title: 'PLC Connectivity (e-PROFIBUS)',
         description: 'Device supports PROFIBUS communication for integration with SPS/PLC systems. ' +
         'Management registers can be accessed directly to read and write values, enabling external monitoring and control of the system.',
         options: []
