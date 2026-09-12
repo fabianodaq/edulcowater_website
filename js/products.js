@@ -632,9 +632,24 @@ const configuratorComponents = {
     connectivity_sps: {
         title: 'PLC Connectivity (e-PROFIBUS)',
         title_en: 'PLC Connectivity (e-PROFIBUS)', title_it: 'Connettività PLC (e-PROFIBUS)', title_esp: 'Conectividad PLC (e-PROFIBUS)', title_de: 'SPS-Konnektivität (e-PROFIBUS)', title_fr: 'Connectivité API (e-PROFIBUS)',
-        description_en: 'Integrate the device with PLC systems using PROFIBUS communication.', description_it: 'Integra il dispositivo con sistemi PLC tramite comunicazione PROFIBUS.', description_esp: 'Integra el dispositivo con sistemas PLC mediante comunicación PROFIBUS.', description_de: 'Integriere das Gerät über PROFIBUS-Kommunikation in SPS-Systeme.', description_fr: 'Intégrez l’appareil aux systèmes API grâce à la communication PROFIBUS.',
-        description: 'Device supports PROFIBUS communication for integration with SPS/PLC systems. ' +
-        'Management registers can be accessed directly to read and write values, enabling external monitoring and control of the system.',
+        description_en: 'Integrate EdulcoWater with PLC and industrial automation systems through PROFIBUS communication. ' +
+            'Monitor process values, exchange operating data and integrate water control directly into your automation system. ' +
+            'For configuration and integration details, refer to the PLC Functions section of the Instruction Manual.',
+        description_it: 'Integra EdulcoWater con sistemi PLC e sistemi di automazione industriale tramite comunicazione PROFIBUS. ' +
+            'Monitora i valori di processo, scambia i dati operativi e integra il controllo dell’acqua direttamente nel tuo sistema di automazione. ' +
+            'Per i dettagli sulla configurazione e sull’integrazione, consulta la sezione Funzioni PLC del manuale di istruzioni.',
+        description_esp: 'Integra EdulcoWater con sistemas PLC y sistemas de automatización industrial mediante comunicación PROFIBUS. ' +
+            'Monitoriza los valores del proceso, intercambia datos operativos e integra el control del agua directamente en tu sistema de automatización. ' +
+            'Para obtener información sobre la configuración y la integración, consulta la sección Funciones PLC del manual de instrucciones.',
+        description_de: 'Integriere EdulcoWater über PROFIBUS-Kommunikation in SPS- und industrielle Automatisierungssysteme. ' +
+            'Überwache Prozesswerte, tausche Betriebsdaten aus und integriere die Wassersteuerung direkt in dein Automatisierungssystem. ' +
+            'Einzelheiten zur Konfiguration und Integration findest du im Abschnitt SPS-Funktionen der Bedienungsanleitung.',
+        description_fr: 'Intégrez EdulcoWater aux systèmes API et aux systèmes d’automatisation industrielle via la communication PROFIBUS. ' +
+            'Surveillez les valeurs de processus, échangez les données de fonctionnement et intégrez directement le contrôle de l’eau à votre système d’automatisation. ' +
+            'Pour les détails de configuration et d’intégration, consultez la section Fonctions API du manuel d’instructions.',
+        description: 'Integrate EdulcoWater with PLC and industrial automation systems through PROFIBUS communication. ' +
+            'Monitor process values, exchange operating data and integrate water control directly into your automation system. ' +
+            'For configuration and integration details, refer to the PLC Functions section of the Instruction Manual.',
         options: []
     },
     control_unit_ec_temp: {
