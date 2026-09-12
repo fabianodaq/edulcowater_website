@@ -4252,7 +4252,7 @@
     @keyframes component-hover-pulse{0%,100%{opacity:.25;stroke-width:2}50%{opacity:1;stroke-width:4}}
      .component .hit,.component.is-available .hit{stroke:#697780 !important;animation:component-hover-pulse 1.8s ease-in-out infinite}
      .component:hover .hit,.component:focus .hit,.component.is-focused .hit{animation:none;opacity:1;stroke-width:4 !important}
-     .component.is-selected .hit{stroke:#157bb8 !important;animation:none;opacity:1;stroke-width:4 !important}
+    .component.is-selected .hit{stroke:#157bb8 !important;animation:none;opacity:1;stroke-width:8 !important}
     .hit{fill:transparent;stroke:transparent;stroke-width:8}
     @media (prefers-reduced-motion:reduce){.component .hit{animation:none;opacity:.55;stroke-width:2 !important}}
     .pipe{fill:none;stroke:#59798f;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
