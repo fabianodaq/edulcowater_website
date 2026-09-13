@@ -93,9 +93,9 @@ const products = {
         description_esp: 'El controlador central para construir un sistema flexible según tus necesidades de calidad del agua y dosificación.',
         description_de: 'Der zentrale Controller für ein flexibles System zur Wasserqualitätsüberwachung und Dosierung.',
         description_fr: 'Le contrôleur central pour construire un système flexible adapté à vos besoins de qualité de l’eau et de dosage.',
-        cardImage: 'modular-controller.png',
+        cardImage: 'modular-controller.jpg',
         price: 78,
-        detailImages: [ '../assets/products/modular-controller-detail-1.png', '../assets/products/modular-controller-detail-2.png'],
+        detailImages: [ '../assets/products/modular-controller-detail-1.jpg', '../assets/products/modular-controller-detail-2.png'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_MODULAR.pdf',
         specs: {
             'Power supply': ['Power supply ⚡', '12V DC (power adapter included)'],
