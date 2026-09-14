@@ -13,7 +13,7 @@ const products = {
         description_esp: 'Controlador multifunción Wi-Fi para montaje en carril DIN, diseñado para tratamiento de agua, hidroponía, acuarios, piscinas, sistemas solares térmicos, aplicaciones HVAC y automatización de procesos.',
         description_de: 'Multifunktionaler Wi-Fi-Controller für die DIN-Schienenmontage zur Wasseraufbereitung, Hydroponik, Aquarien, Schwimmbäder, solarthermische Anlagen, HVAC-Anwendungen und Prozessautomatisierung.',
         description_fr: 'Contrôleur multifonction Wi-Fi sur rail DIN conçu pour le traitement de l’eau, l’hydroponie, les aquariums, les piscines, les systèmes solaires thermiques, les applications HVAC et l’automatisation des procédés.',
-        cardImage: 'industrial.png',
+        cardImage: 'industrial.jpg',
         price: 85,
         detailImages: [ '../assets/products/industrial-detail-1.png', '../assets/products/industrial-detail-2.png'],
         manual: 'https://github.com/fabianodaq/EdulcoWaterDocs/blob/main/Manuals/EDULCOWATER_INDUSTRIAL.pdf',
