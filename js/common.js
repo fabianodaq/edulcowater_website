@@ -162,7 +162,7 @@ const initConfiguratorInfoPopup = () => {
     const renderOption = (productName) => {
         const product = window.productCatalog?.[productName];
         if (!product) return '';
-        const imageSource = product.detailImages?.[0] || '';
+        const imageSource = product.cardImage ? `../assets/products/${product.cardImage}` : '';
         const productDescription = getLocalizedConfiguratorText(product, 'description', 'Product details coming soon.');
         const price = product.price === undefined
             ? 'Price unavailable'
