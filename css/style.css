@@ -171,7 +171,7 @@ button, a { font: inherit; }
 
 .intro-video { background: #12263a; color: white; margin: 0 0 55px; position: relative;}
 
-.intro-video-media {display: block; height: 360px; object-fit: cover; width: 100%; }
+.intro-video-media { display: block; height: auto; width: 100%; }
 
 .intro-video::after { border: 1px solid rgba(255, 255, 255, .24); border-radius: 50%; content: ''; height: 320px;
   position: absolute; right: 13%; top: -75px; width: 320px; }
@@ -687,7 +687,6 @@ button, a { font: inherit; }
   .solutions-section { padding: 15px 0 65px; }
   .solutions-title { letter-spacing: -2px; margin-bottom: 35px; }
   .intro-video { margin-bottom: 35px; }
-  .intro-video-media { height: 300px; }
   .intro-video-overlay { padding: 22px; }
   .intro-video::after { right: -80px; top: 55px; }
   .solutions-grid { grid-template-columns: repeat(2, 1fr); }

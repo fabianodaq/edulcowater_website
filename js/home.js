@@ -23,7 +23,7 @@ const HOME_TRANSLATIONS = {
         homeTagline: '"...perché ogni equilibrio ha bisogno di una soluzione"',
         introVideoLabel: 'Introduzione Edulco Water',
         introLabel: 'EDULCO WATER · INTRODUZIONE',
-        waterBecoming: 'L’acqua diventa',
+        waterBecoming: 'L’acqua che si prende',
         care: 'cura.',
         audioOn: 'Attiva audio',
         audioOff: 'Audio disattivato',
