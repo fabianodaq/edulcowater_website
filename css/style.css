@@ -386,7 +386,14 @@ button, a { font: inherit; }
 .product-modal-spec-table dd a { color: #0878b9; text-decoration: none; }
 .product-modal-spec-table dd a:hover { color: #0b2d45; text-decoration: underline; }
 .product-modal-gallery { display: grid; gap: 10px; grid-template-rows: repeat(2, 1fr); }
-.product-modal-gallery img { background: #ffffff; display: block; height: 180px; object-fit: contain; width: 100%; }
+.product-modal-gallery img { background: #ffffff; cursor: zoom-in; display: block; height: 180px; object-fit: contain; width: 100%; }
+.product-visual img.is-zoomable { cursor: zoom-in; }
+
+.image-lightbox { align-items: center; background: rgba(11, 45, 69, .85); display: none; inset: 0; justify-content: center; padding: 40px; position: fixed; z-index: 50; }
+.image-lightbox.is-open { display: flex; }
+.image-lightbox img { max-height: 100%; max-width: 100%; object-fit: contain; }
+.image-lightbox-close { background: transparent; border: 0; color: #ffffff; cursor: pointer; font-size: 32px; line-height: 1; padding: 4px 10px; position: absolute; right: 16px; top: 10px; }
+.image-lightbox-close:hover { color: #6fc3ff; }
 
 .configurator-popup { align-items: center; background: rgba(11, 45, 69, .58); display: flex; inset: 0; justify-content: center; padding: 20px; position: fixed; z-index: 30; }
 .configurator-popup[hidden] { display: none; }

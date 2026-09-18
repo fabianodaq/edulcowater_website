@@ -866,6 +866,8 @@ const loadProductCards = () => {
         const image = document.createElement('img');
         image.src = `../assets/products/${product.cardImage}`;
         image.alt = productName;
+        image.classList.add('is-zoomable');
+        image.addEventListener('click', () => openImageLightbox(image.src, image.alt));
 
         productCard.querySelector('.product-visual').replaceChildren(image);
     });
@@ -891,6 +893,31 @@ productModal.innerHTML = `
     </div>
 `;
 document.body.append(productModal);
+
+// Create and add the fullscreen image lightbox to the page.
+const imageLightbox = document.createElement('div');
+imageLightbox.className = 'image-lightbox';
+imageLightbox.innerHTML = `
+    <button class="image-lightbox-close" type="button" aria-label="Close image">×</button>
+    <img src="" alt="">
+`;
+document.body.append(imageLightbox);
+
+const openImageLightbox = (src, alt) => {
+    if (!src) return;
+    imageLightbox.querySelector('img').src = src;
+    imageLightbox.querySelector('img').alt = alt || '';
+    imageLightbox.classList.add('is-open');
+};
+
+const closeImageLightbox = () => {
+    imageLightbox.classList.remove('is-open');
+};
+
+imageLightbox.querySelector('.image-lightbox-close').addEventListener('click', closeImageLightbox);
+imageLightbox.addEventListener('click', (event) => {
+    if (event.target === imageLightbox) closeImageLightbox();
+});
 
 // Populate the product specification table from products[productName].specs
 const renderProductSpecs = (product) => {
@@ -939,6 +966,7 @@ const openProductDetails = (productName) => {
         galleryImage.src = detailImage || '';
         galleryImage.alt = detailImage ? `${productName} detail ${index + 1}` : '';
         galleryImage.hidden = !detailImage;
+        galleryImage.onclick = () => openImageLightbox(galleryImage.src, galleryImage.alt);
     });
 
     productModal.classList.add('is-open');
@@ -965,7 +993,10 @@ productModal.addEventListener('click', (event) => {
     if (event.target === productModal) closeProductModal();
 });
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeProductModal();
+    if (event.key === 'Escape') {
+        closeImageLightbox();
+        closeProductModal();
+    }
 });
 
 // Render cards from the product data.
