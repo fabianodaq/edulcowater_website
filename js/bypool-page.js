@@ -78,6 +78,22 @@ const BYPOOL_TRANSLATIONS = {
         smartAria: 'Système de piscine Smart',
         addedToCart: 'Ajouté au panier.',
         price: 'Prix'
+    },
+    PT: {
+        sectionLabel: 'CONSTRUA A SUA PISCINA',
+        stepOne: '1. Selecione o tipo de controlo',
+        stepTwo: '2. Clique nos elementos intermitentes',
+        stepThree: '3. Reveja a seleção e conclua a encomenda',
+        dinRail: 'Calha DIN',
+        allInOne: 'Tudo em um',
+        expandable: 'Expansível',
+        smart: 'Smart',
+        industrialAria: 'Sistema industrial para piscina',
+        premiumAria: 'Sistema Premium para piscina',
+        modularAria: 'Sistema modular para piscina',
+        smartAria: 'Sistema Smart para piscina',
+        addedToCart: 'Adicionado ao carrinho!',
+        price: 'Preço'
     }
 };
 

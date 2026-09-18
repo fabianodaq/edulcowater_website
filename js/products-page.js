@@ -28,6 +28,12 @@ const PRODUCTS_PAGE_TRANSLATIONS = {
         add: 'Ajouter',
         details: 'Détails',
         price: 'Prix'
+    },
+    PT: {
+        familyTitles: ['CONTROLADORES-MONITORES', 'ACESSÓRIOS MODULARES', 'SMART PLUGS', 'SMART BOMBAS', 'SMART SENSORES', 'SONDAS DE PH/ORP/EC', 'SONDAS ANALÓGICAS DE TEMPERATURA', 'SONDAS DIGITAIS DE TEMPERATURA'],
+        add: 'Adicionar',
+        details: 'Detalhes',
+        price: 'Preço'
     }
 };
 
@@ -51,7 +57,7 @@ const applyProductsLanguage = () => {
     });
 
     document.querySelectorAll('.product-price').forEach((priceNode) => {
-        priceNode.textContent = priceNode.textContent.replace(/^(Price|Prezzo|Precio|Preis|Prix):\s*/, `${translation.price}: `);
+        priceNode.textContent = priceNode.textContent.replace(/^(Price|Prezzo|Precio|Preis|Prix|Preço):\s*/, `${translation.price}: `);
     });
 
     const languageOption = document.querySelector(`.language-option[data-language="${language}"]`);

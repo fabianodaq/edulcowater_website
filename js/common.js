@@ -39,7 +39,8 @@ const MENU_TRANSLATIONS = {
     IT: { home: 'Home', products: 'Prodotti', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Chi siamo' },
     ESP: { home: 'Home', products: 'Productos', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Quiénes somos' },
     DE: { home: 'Home', products: 'Produkte', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Über uns' },
-    FR: { home: 'Home', products: 'Produits', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'À propos' }
+    FR: { home: 'Home', products: 'Produits', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'À propos' },
+    PT: { home: 'Home', products: 'Produtos', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Sobre nós' }
 };
 
 // Generates the navigation menu according to the current page and folder level
@@ -159,6 +160,12 @@ const initConfiguratorInfoPopup = () => {
     const availableOptionNames = optionNames.length ? optionNames : defaultConfiguration.options;
     const getConfiguratorLanguage = () => (localStorage.getItem('edulco_language') || 'EN').toLowerCase();
     const getLocalizedConfiguratorText = (item, field, fallback) => item[`${field}_${getConfiguratorLanguage()}`] || item[`${field}_en`] || item[field] || fallback;
+    const configuratorLabels = {
+        price: { pt: 'Preço' },
+        add: { pt: 'Adicionar' },
+        details: { pt: 'Detalhes' }
+    };
+    const getConfiguratorLabel = (label) => configuratorLabels[label]?.[getConfiguratorLanguage()] || label[0].toUpperCase() + label.slice(1);
     const renderOption = (productName) => {
         const product = window.productCatalog?.[productName];
         if (!product) return '';
@@ -169,15 +176,15 @@ const initConfiguratorInfoPopup = () => {
             : `€ ${Number(product.price).toFixed(2).replace('.', ',')}`;
         return `
             <article class="configurator-option" data-configurator-option="${productName}">
-                <h3>${productName}</h3>
+                <h3>${getLocalizedConfiguratorText(product, 'title', productName)}</h3>
                 <p>${productDescription}</p>
                 <img src="${imageSource}" alt="${productName}" class="is-zoomable" ${imageSource ? '' : 'hidden'}>
                 <dl class="configurator-popup-details">
-                    <div><dt>Price</dt><dd>${price}</dd></div>
+                    <div><dt>${getConfiguratorLabel('price')}</dt><dd>${price}</dd></div>
                 </dl>
                 <div class="configurator-popup-actions">
-                    <button class="add-to-cart configurator-popup-add" type="button" data-product="${productName}" data-price="${product.price || 0}" data-image="${product.cardImage ? `../assets/products/${product.cardImage}` : ''}">Add</button>
-                    <button class="configurator-popup-details-link" type="button" data-configurator-details="${productName}">Details ↗</button>
+                    <button class="add-to-cart configurator-popup-add" type="button" data-product="${productName}" data-price="${product.price || 0}" data-image="${product.cardImage ? `../assets/products/${product.cardImage}` : ''}">${getConfiguratorLabel('add')}</button>
+                    <button class="configurator-popup-details-link" type="button" data-configurator-details="${productName}">${getConfiguratorLabel('details')} ↗</button>
                 </div>
             </article>`;
     };

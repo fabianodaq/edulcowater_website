@@ -48,6 +48,16 @@ const ABOUT_TRANSLATIONS = {
         missionParagraph: 'Des capteurs compacts et prises intelligentes aux contrôleurs complets, chaque système est développé avec le même objectif : des informations claires, un contrôle fiable et une technologie utile dans la durée. La satisfaction de nos clients et la diversité des installations réalisées sont la meilleure preuve de cette approche.',
         socialLabel: 'Réseaux sociaux EdulcoWater',
         legalNameLabel: 'Nom commercial', legalAddressLabel: 'Adresse', legalEmailLabel: 'E-mail', legalVatLabel: 'Numéro de TVA'
+    },
+    PT: {
+        sectionLabel: 'EDULCOWATER · SOBRE NÓS',
+        title: 'A água, sob controlo.',
+        nameExplanation: 'EDULCOWATER — “edulco”, do latim “adoçar”, e “water”: tecnologia criada para respeitar a água.',
+        storyTitle: 'Construída com experiência',
+        storyParagraph: 'A EdulcoWater é produzida por um estúdio especializado com mais de dez anos de experiência na conceção e construção de soluções de controlo fiáveis. Ao longo dos anos, os nossos sistemas foram utilizados em numerosas aplicações reais, ajudando os clientes a monitorizar a qualidade da água, gerir a temperatura, controlar a dosagem, automatizar bombas e operar instalações conectadas com confiança.',
+        missionParagraph: 'Desde sensores compactos e tomadas inteligentes até controladores completos, cada sistema é desenvolvido com o mesmo objetivo: informação clara, controlo fiável e tecnologia útil durante muito tempo. A satisfação dos nossos clientes e a variedade de instalações realizadas são a melhor prova desta abordagem.',
+        socialLabel: 'Canais sociais da EdulcoWater',
+        legalNameLabel: 'Nome comercial', legalAddressLabel: 'Morada', legalEmailLabel: 'E-mail', legalVatLabel: 'Número de identificação fiscal'
     }
 };
 

@@ -28,6 +28,12 @@ const CART_TRANSLATIONS = {
         emptyCart: 'Votre panier est vide. Ajoutez des produits du catalogue.', summary: 'Résumé', subtotal: 'Sous-total', shipping: 'Livraison', total: 'Total', checkout: 'Paiement',
         remove: 'Supprimer', decreaseQuantity: 'Diminuer la quantité', increaseQuantity: 'Augmenter la quantité', addressRequired: 'Veuillez compléter l’adresse de livraison avant de continuer.',
         initializingPayment: 'Initialisation du paiement...', openingCheckout: 'Ouverture du paiement...', paymentDelayed: 'Le système de paiement prend plus de temps que prévu. Veuillez réessayer.'
+    },
+    PT: {
+        cartTitle: 'Carrinho', itemsSelected: 'artigos selecionados', selectAll: 'Selecionar todos os artigos', shippingAddress: 'Morada de entrega', firstName: 'Nome', lastName: 'Apelido', email: 'E-mail', phone: 'Telefone (opcional)', street: 'Rua', houseNumber: 'Número da porta', city: 'Cidade', postalCode: 'Código postal', country: 'País',
+        emptyCart: 'O seu carrinho está vazio. Adicione produtos do catálogo.', summary: 'Resumo', subtotal: 'Subtotal', shipping: 'Envio', total: 'Total', checkout: 'Pagamento',
+        remove: 'Remover', decreaseQuantity: 'Diminuir quantidade', increaseQuantity: 'Aumentar quantidade', addressRequired: 'Preencha a morada de entrega antes de continuar.',
+        initializingPayment: 'A iniciar o sistema de pagamento...', openingCheckout: 'A abrir o pagamento...', paymentDelayed: 'O sistema de pagamento está a demorar mais do que o esperado. Tente novamente.'
     }
 };
 

@@ -58,6 +58,18 @@ const BYAPPLICATION_TRANSLATIONS = {
         smart: 'Smart',
         addedToCart: 'Ajouté au panier.',
         price: 'Prix'
+    },
+    PT: {
+        application: { byaquarium: 'AQUÁRIO', byhydro: 'HIDROPONIA', bysolar: 'SOLAR' },
+        stepOne: '1. Selecione o tipo de controlo',
+        stepTwo: '2. Clique nos elementos intermitentes',
+        stepThree: '3. Reveja a seleção e conclua a encomenda',
+        dinRail: 'Calha DIN',
+        compact: 'Compacto',
+        expandable: 'Expansível',
+        smart: 'Smart',
+        addedToCart: 'Adicionado ao carrinho!',
+        price: 'Preço'
     }
 };
 
@@ -77,7 +89,9 @@ const applyByApplicationLanguage = () => {
                 ? `CONSTRUYE TU ${applicationName}`
                 : language === 'DE'
                     ? `STELLE DEIN ${applicationName}SYSTEM ZUSAMMEN`
-                    : `CONSTRUISEZ VOTRE ${applicationName}`;
+                    : language === 'FR'
+                        ? `CONSTRUISEZ VOTRE ${applicationName}`
+                        : `CONSTRUA O SEU ${applicationName}`;
 
     document.querySelectorAll('[data-i18n]').forEach((element) => {
         const text = translation[element.dataset.i18n];

@@ -93,6 +93,25 @@ const HOME_TRANSLATIONS = {
         aquariums: 'Aquariums ↗',
         solarAria: 'Construisez votre système solaire',
         solar: 'Solaire ↗'
+    },
+    PT: {
+        homeTitle: 'Sistema de qualidade da água',
+        homeTagline: '"...porque cada equilíbrio precisa de uma solução"',
+        introVideoLabel: 'Introdução da Edulco Water',
+        introLabel: 'EDULCO WATER · INTRODUÇÃO',
+        waterBecoming: 'A água transforma-se em',
+        care: 'cuidado.',
+        audioOn: 'Ativar áudio',
+        audioOff: 'Áudio desligado',
+        buildSystem: 'Construa o seu sistema',
+        poolAria: 'Construa o seu sistema para piscina',
+        pools: 'Piscinas ↗',
+        hydroponicsAria: 'Construa o seu sistema de hidroponia',
+        hydroponics: 'Hidroponia ↗',
+        aquariumAria: 'Construa o seu sistema para aquário',
+        aquariums: 'Aquários ↗',
+        solarAria: 'Construa o seu sistema solar',
+        solar: 'Solar ↗'
     }
 };
 
