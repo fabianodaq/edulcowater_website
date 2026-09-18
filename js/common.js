@@ -171,7 +171,7 @@ const initConfiguratorInfoPopup = () => {
             <article class="configurator-option" data-configurator-option="${productName}">
                 <h3>${productName}</h3>
                 <p>${productDescription}</p>
-                <img src="${imageSource}" alt="${productName}" ${imageSource ? '' : 'hidden'}>
+                <img src="${imageSource}" alt="${productName}" class="is-zoomable" ${imageSource ? '' : 'hidden'}>
                 <dl class="configurator-popup-details">
                     <div><dt>Price</dt><dd>${price}</dd></div>
                 </dl>
@@ -182,6 +182,10 @@ const initConfiguratorInfoPopup = () => {
             </article>`;
     };
     optionsOutput.innerHTML = availableOptionNames.map(renderOption).join('');
+    optionsOutput.addEventListener('click', (event) => {
+        const zoomableImage = event.target.closest('img.is-zoomable');
+        if (zoomableImage && window.openImageLightbox) window.openImageLightbox(zoomableImage.src, zoomableImage.alt);
+    });
     const makeProductId = (name) => String(name || '')
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')

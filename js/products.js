@@ -918,6 +918,7 @@ imageLightbox.querySelector('.image-lightbox-close').addEventListener('click', c
 imageLightbox.addEventListener('click', (event) => {
     if (event.target === imageLightbox) closeImageLightbox();
 });
+window.openImageLightbox = openImageLightbox;
 
 // Populate the product specification table from products[productName].specs
 const renderProductSpecs = (product) => {
