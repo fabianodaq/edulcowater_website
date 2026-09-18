@@ -34,6 +34,12 @@ const PRODUCTS_PAGE_TRANSLATIONS = {
         add: 'Adicionar',
         details: 'Detalhes',
         price: 'Preço'
+    },
+    ZH: {
+        familyTitles: ['控制器-监测器', '模块化扩展配件', '智能插座', '智能泵', '智能传感器', 'PH/ORP/EC 探头', '模拟温度探头', '数字温度探头'],
+        add: '添加',
+        details: '详情',
+        price: '价格'
     }
 };
 

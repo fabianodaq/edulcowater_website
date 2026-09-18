@@ -40,7 +40,8 @@ const MENU_TRANSLATIONS = {
     ESP: { home: 'Home', products: 'Productos', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Quiénes somos' },
     DE: { home: 'Home', products: 'Produkte', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Über uns' },
     FR: { home: 'Home', products: 'Produits', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'À propos' },
-    PT: { home: 'Home', products: 'Produtos', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Sobre nós' }
+    PT: { home: 'Home', products: 'Produtos', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: 'Sobre nós' },
+    ZH: { home: '首页', products: '产品', pool: 'BYPool', aquarium: 'BYAquarium', hydro: 'BYHydro', solar: 'BYSolar', about: '关于我们' }
 };
 
 // Generates the navigation menu according to the current page and folder level

@@ -94,6 +94,22 @@ const BYPOOL_TRANSLATIONS = {
         smartAria: 'Sistema Smart para piscina',
         addedToCart: 'Adicionado ao carrinho!',
         price: 'Preço'
+    },
+    ZH: {
+        sectionLabel: '构建您的泳池系统',
+        stepOne: '1. 选择控制类型',
+        stepTwo: '2. 点击闪烁的元素',
+        stepThree: '3. 查看选择并完成结算',
+        dinRail: 'DIN 导轨',
+        allInOne: '一体化',
+        expandable: '可扩展',
+        smart: '智能型',
+        industrialAria: '工业泳池系统',
+        premiumAria: 'Premium 泳池系统',
+        modularAria: '模块化泳池系统',
+        smartAria: '智能泳池系统',
+        addedToCart: '已加入购物车！',
+        price: '价格'
     }
 };
 

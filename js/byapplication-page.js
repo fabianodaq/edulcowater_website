@@ -70,6 +70,18 @@ const BYAPPLICATION_TRANSLATIONS = {
         smart: 'Smart',
         addedToCart: 'Adicionado ao carrinho!',
         price: 'Preço'
+    },
+    ZH: {
+        application: { byaquarium: '水族箱', byhydro: '水培', bysolar: '太阳能' },
+        stepOne: '1. 选择控制类型',
+        stepTwo: '2. 点击闪烁的元素',
+        stepThree: '3. 查看选择并完成结算',
+        dinRail: 'DIN 导轨',
+        compact: '紧凑型',
+        expandable: '可扩展',
+        smart: '智能型',
+        addedToCart: '已加入购物车！',
+        price: '价格'
     }
 };
 
@@ -91,7 +103,9 @@ const applyByApplicationLanguage = () => {
                     ? `STELLE DEIN ${applicationName}SYSTEM ZUSAMMEN`
                     : language === 'FR'
                         ? `CONSTRUISEZ VOTRE ${applicationName}`
-                        : `CONSTRUA O SEU ${applicationName}`;
+                        : language === 'PT'
+                            ? `CONSTRUA O SEU ${applicationName}`
+                            : `构建您的${applicationName}系统`;
 
     document.querySelectorAll('[data-i18n]').forEach((element) => {
         const text = translation[element.dataset.i18n];

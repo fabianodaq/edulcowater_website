@@ -58,6 +58,16 @@ const ABOUT_TRANSLATIONS = {
         missionParagraph: 'Desde sensores compactos e tomadas inteligentes até controladores completos, cada sistema é desenvolvido com o mesmo objetivo: informação clara, controlo fiável e tecnologia útil durante muito tempo. A satisfação dos nossos clientes e a variedade de instalações realizadas são a melhor prova desta abordagem.',
         socialLabel: 'Canais sociais da EdulcoWater',
         legalNameLabel: 'Nome comercial', legalAddressLabel: 'Morada', legalEmailLabel: 'E-mail', legalVatLabel: 'Número de identificação fiscal'
+    },
+    ZH: {
+        sectionLabel: 'EDULCOWATER · 关于我们',
+        title: '让水尽在掌控。',
+        nameExplanation: 'EDULCOWATER——“edulco”源自拉丁语“使变甜”，加上“water”：尊重水资源的科技。',
+        storyTitle: '源于经验',
+        storyParagraph: 'EdulcoWater 由一家专业工作室研发制造，拥有十多年设计和构建可靠控制解决方案的经验。多年来，我们的系统已应用于众多实际场景，帮助客户监测水质、管理温度、控制投加、自动化水泵，并放心运行互联设备。',
+        missionParagraph: '从紧凑型传感器和智能插座到完整控制器，每个系统都围绕同一个目标开发：清晰的信息、可靠的控制，以及经久实用的技术。客户的满意度和大量成功案例是这一理念的最好证明。',
+        socialLabel: 'EdulcoWater 社交媒体频道',
+        legalNameLabel: '商业名称', legalAddressLabel: '地址', legalEmailLabel: '电子邮箱', legalVatLabel: '增值税识别号'
     }
 };
 

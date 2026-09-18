@@ -34,6 +34,12 @@ const CART_TRANSLATIONS = {
         emptyCart: 'O seu carrinho está vazio. Adicione produtos do catálogo.', summary: 'Resumo', subtotal: 'Subtotal', shipping: 'Envio', total: 'Total', checkout: 'Pagamento',
         remove: 'Remover', decreaseQuantity: 'Diminuir quantidade', increaseQuantity: 'Aumentar quantidade', addressRequired: 'Preencha a morada de entrega antes de continuar.',
         initializingPayment: 'A iniciar o sistema de pagamento...', openingCheckout: 'A abrir o pagamento...', paymentDelayed: 'O sistema de pagamento está a demorar mais do que o esperado. Tente novamente.'
+    },
+    ZH: {
+        cartTitle: '购物车', itemsSelected: '件商品已选择', selectAll: '选择所有商品', shippingAddress: '配送地址', firstName: '名', lastName: '姓', email: '电子邮箱', phone: '电话（可选）', street: '街道', houseNumber: '门牌号', city: '城市', postalCode: '邮政编码', country: '国家',
+        emptyCart: '购物车为空。请从产品目录添加商品。', summary: '摘要', subtotal: '小计', shipping: '运费', total: '总计', checkout: '结账',
+        remove: '移除', decreaseQuantity: '减少数量', increaseQuantity: '增加数量', addressRequired: '请填写配送地址后再继续。',
+        initializingPayment: '正在初始化支付系统……', openingCheckout: '正在打开结账页面……', paymentDelayed: '支付系统响应时间较长，请重试。'
     }
 };
 

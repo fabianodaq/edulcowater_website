@@ -8,6 +8,7 @@ const products = {
         shortDescription_de: 'pH · ORP · EC · 2× Temperatur · 3× Relaisausgänge · Wi-Fi',
         shortDescription_fr: 'pH · ORP · EC · 2× Température · 3× Sorties relais · Wi-Fi',
         shortDescription_pt: 'pH · ORP · EC · 2× Temperatura · 3× Saídas de relé · Wi-Fi',
+        shortDescription_zh: 'pH · ORP · EC · 2× 温度 · 3× 继电器输出 · Wi-Fi',
         description: 'DIN Rail mounted multifunction Wi-Fi controller designed for 💧 water treatment, 🌱 hydroponics, 🐠 aquariums, 🏊 swimming pools, ☀️ solar thermal systems, 🌡️ HVAC applications and ⚙️ general process automation.',
         description_en: 'DIN Rail mounted multifunction Wi-Fi controller designed for water treatment, hydroponics, aquariums, swimming pools, solar thermal systems, HVAC applications and general process automation.',
         description_it: 'Controller multifunzione Wi-Fi su guida DIN progettato per il trattamento dell’acqua, l’idroponica, gli acquari, le piscine, gli impianti solari termici, le applicazioni HVAC e l’automazione dei processi.',
@@ -15,6 +16,7 @@ const products = {
         description_de: 'Multifunktionaler Wi-Fi-Controller für die DIN-Schienenmontage zur Wasseraufbereitung, Hydroponik, Aquarien, Schwimmbäder, solarthermische Anlagen, HVAC-Anwendungen und Prozessautomatisierung.',
         description_fr: 'Contrôleur multifonction Wi-Fi sur rail DIN conçu pour le traitement de l’eau, l’hydroponie, les aquariums, les piscines, les systèmes solaires thermiques, les applications HVAC et l’automatisation des procédés.',
         description_pt: 'Controlador multifunções Wi-Fi para calha DIN, concebido para tratamento de água, hidroponia, aquários, piscinas, sistemas solares térmicos, aplicações HVAC e automação de processos.',
+        description_zh: '适用于 DIN 导轨安装的多功能 Wi-Fi 控制器，可用于水处理、水培、鱼缸、泳池、太阳能热系统、HVAC 应用和过程自动化。',
         cardImage: 'industrial.jpg',
         price: 85,
         detailImages: [ '../assets/products/industrial-detail-1.png', '../assets/products/industrial-detail-2.png'],
@@ -48,6 +50,7 @@ const products = {
         shortDescription_de: 'pH · ORP · EC · 2× Temperatur · 2× Dosierpumpen · 1× USB-A-Ausgang · Wi-Fi',
         shortDescription_fr: 'pH · ORP · EC · 2× Température · 2× Pompes doseuses · 1× Sortie USB-A · Wi-Fi',
         shortDescription_pt: 'pH · ORP · EC · 2× Temperatura · 2× Bombas doseadoras · 1× Saída USB-A · Wi-Fi',
+        shortDescription_zh: 'pH · ORP · EC · 2× 温度 · 2× 加药泵 · 1× USB-A 输出 · Wi-Fi',
         description: 'Wall Mounting multifunction Wi-Fi controller designed for water treatment, hydroponics, aquariums, ' +
                      'swimming pools, solar thermal systems, HVAC applications, and general process automation, ' +
                      'provided with 2 built in dosing pumps and a USB-A output for additional dosing or control.',
@@ -57,6 +60,7 @@ const products = {
         description_de: 'Multifunktionaler Wi-Fi-Wandcontroller für Wasseraufbereitung, Hydroponik, Aquarien, Schwimmbäder, solarthermische Anlagen, HVAC-Anwendungen und Automatisierung, mit zwei integrierten Dosierpumpen und einem USB-A-Ausgang.',
         description_fr: 'Contrôleur multifonction Wi-Fi mural pour le traitement de l’eau, l’hydroponie, les aquariums, les piscines, les systèmes solaires thermiques, les applications HVAC et l’automatisation, avec deux pompes doseuses intégrées et une sortie USB-A.',
         description_pt: 'Controlador multifunções Wi-Fi de parede para tratamento de água, hidroponia, aquários, piscinas, sistemas solares térmicos, aplicações HVAC e automação, com duas bombas doseadoras integradas e uma saída USB-A.',
+        description_zh: '壁挂式多功能 Wi-Fi 控制器，适用于水处理、水培、鱼缸、泳池、太阳能热系统、HVAC 应用和过程自动化，配备两台内置加药泵和一个 USB-A 输出。',
         cardImage: 'premium.jpg',
         price: 109,
         detailImages: [ '../assets/products/premium-detail-1.jpg', '../assets/products/premium-detail-2.jpg'],
@@ -91,6 +95,7 @@ const products = {
         shortDescription_de: 'pH · ORP · EC · 2× Temperatur · 3× USB-A-Ausgänge · Wi-Fi',
         shortDescription_fr: 'pH · ORP · EC · 2× Température · 3× Sorties USB-A · Wi-Fi',
         shortDescription_pt: 'pH · ORP · EC · 2× Temperatura · 3× Saídas USB-A · Wi-Fi',
+        shortDescription_zh: 'pH · ORP · EC · 2× 温度 · 3× USB-A 输出 · Wi-Fi',
         description: 'The central controller for building a flexible system around your water quality and dosing needs.',
         description_en: 'The central controller for building a flexible system around your water quality and dosing needs.',
         description_it: 'Il controller centrale per costruire un sistema flessibile in base alle esigenze di qualità dell’acqua e dosaggio.',
@@ -98,6 +103,7 @@ const products = {
         description_de: 'Der zentrale Controller für ein flexibles System zur Wasserqualitätsüberwachung und Dosierung.',
         description_fr: 'Le contrôleur central pour construire un système flexible adapté à vos besoins de qualité de l’eau et de dosage.',
         description_pt: 'Controlador central para construir um sistema flexível de acordo com as necessidades de qualidade da água e dosagem.',
+        description_zh: '用于根据水质和加药需求构建灵活系统的中央控制器。',
         cardImage: 'modular-controller.jpg',
         price: 78,
         detailImages: [ '../assets/products/modular-controller-detail-1.jpg', '../assets/products/modular-controller-detail-2.png'],
@@ -132,6 +138,7 @@ const products = {
         shortDescription_de: 'Schuko-Steckdose · USB-A-Steuerung · Modulare Systemerweiterung',
         shortDescription_fr: 'Extension avec prise Schuko · Contrôlée par USB-A · Extension du système modulaire',
         shortDescription_pt: 'Extensão com tomada Schuko · Controlada por USB-A · Expansão do sistema modular',
+        shortDescription_zh: 'Schuko 插座扩展 · USB-A 控制 · 模块化系统扩展',
         description: 'A modular expansion module with a USB-A control input, designed to add and control an additional switched electrical outlet within a modular system.',
         description_en: 'A modular expansion module with a USB-A control input, designed to add and control an additional switched electrical outlet within a modular system.',
         description_it: 'Un modulo di espansione compatto che aggiunge funzioni di controllo e dosaggio a un sistema modulare.',
@@ -139,6 +146,7 @@ const products = {
         description_de: 'Ein kompaktes Erweiterungsmodul für zusätzliche Steuerungs- und Dosierfunktionen in einem modularen System.',
         description_fr: 'Un module d’extension compact qui ajoute des fonctions de contrôle et de dosage à un système modulaire.',
         description_pt: 'Módulo de expansão com entrada de controlo USB-A, concebido para adicionar e controlar uma tomada elétrica comutada num sistema modular.',
+        description_zh: '带 USB-A 控制输入的扩展模块，可在模块化系统中增加和控制一个开关电源插座。',
         cardImage: 'modular-plug.png',
         price: 45,
         detailImages: [ '../assets/products/modular-plug-detail-1.jpg', '../assets/products/modular-plug-detail-2.jpg'],
@@ -161,6 +169,7 @@ const products = {
         shortDescription_de: '60-ml/min-Dosierpumpe · USB-A-Steuerung · Modulare Systemerweiterung',
         shortDescription_fr: 'Pompe doseuse 60 ml/min · Contrôlée par USB-A · Extension du système modulaire',
         shortDescription_pt: 'Bomba doseadora de 60 ml/min · Controlada por USB-A · Expansão do sistema modular',
+        shortDescription_zh: '60 ml/min 加药泵 · USB-A 控制 · 模块化系统扩展',
         description: 'A modular expansion module with a USB-A control input and an integrated 60 ml/min peristaltic dosing pump for precise control in modular systems.',
         description_en: 'A modular expansion module with a USB-A control input and an integrated 60 ml/min peristaltic dosing pump for precise control in modular systems.',
         description_it: 'Una pompa dosatrice compatta da 60 ml/min per un controllo preciso ed efficiente nei sistemi modulari più piccoli.',
@@ -168,6 +177,7 @@ const products = {
         description_de: 'Eine kompakte 60-ml/min-Dosierpumpe für präzise und effiziente Steuerung in kleineren modularen Systemen.',
         description_fr: 'Une pompe doseuse compacte de 60 ml/min pour un contrôle précis et efficace dans les petits systèmes modulaires.',
         description_pt: 'Módulo de expansão com entrada USB-A e bomba doseadora peristáltica integrada de 60 ml/min para um controlo preciso em sistemas modulares.',
+        description_zh: '带 USB-A 控制输入和 60 ml/min 蠕动加药泵的扩展模块，可在模块化系统中实现精准控制。',
         cardImage: 'modular-pump60.png',
         price: 55,
         detailImages: [ '../assets/products/modular-pump60-detail-1.jpg', '../assets/products/modular-pump60-detail-2.jpg'],
@@ -190,6 +200,7 @@ const products = {
         shortDescription_de: '180-ml/min-Dosierpumpe · USB-A-Steuerung · Modulare Systemerweiterung',
         shortDescription_fr: 'Pompe doseuse 180 ml/min · Contrôlée par USB-A · Extension du système modulaire',
         shortDescription_pt: 'Bomba doseadora de 180 ml/min · Controlada por USB-A · Expansão do sistema modular',
+        shortDescription_zh: '180 ml/min 加药泵 · USB-A 控制 · 模块化系统扩展',
         description: 'A modular expansion module with a USB-A control input and an integrated 180 ml/min peristaltic dosing pump for reliable dosing in modular systems.',
         description_en: 'A modular expansion module with a USB-A control input and an integrated 180 ml/min peristaltic dosing pump for reliable dosing in modular systems.',
         description_it: 'Una pompa dosatrice da 180 ml/min equilibrata per le applicazioni quotidiane di trattamento dell’acqua.',
@@ -197,6 +208,7 @@ const products = {
         description_de: 'Eine ausgewogene 180-ml/min-Dosierpumpe für alltägliche Anwendungen der Wasseraufbereitung.',
         description_fr: 'Une pompe doseuse équilibrée de 180 ml/min pour les applications courantes de traitement de l’eau.',
         description_pt: 'Módulo de expansão com entrada USB-A e bomba doseadora peristáltica integrada de 180 ml/min para uma dosagem fiável em sistemas modulares.',
+        description_zh: '带 USB-A 控制输入和 180 ml/min 蠕动加药泵的扩展模块，可在模块化系统中实现可靠加药。',
         cardImage: 'modular-pump180.jpg',
         price: 60,
         detailImages: [ '../assets/products/modular-pump180-detail-1.jpg', '../assets/products/modular-pump180-detail-2.jpg'],
@@ -219,6 +231,7 @@ const products = {
         shortDescription_de: '500-ml/min-Dosierpumpe · USB-A-Steuerung · Modulare Systemerweiterung',
         shortDescription_fr: 'Pompe doseuse 500 ml/min · Contrôlée par USB-A · Extension du système modulaire',
         shortDescription_pt: 'Bomba doseadora de 500 ml/min · Controlada por USB-A · Expansão do sistema modular',
+        shortDescription_zh: '500 ml/min 加药泵 · USB-A 控制 · 模块化系统扩展',
         description: 'A modular expansion module with a USB-A control input and an integrated 500 ml/min peristaltic dosing pump for higher-capacity modular water systems.',
         description_en: 'A modular expansion module with a USB-A control input and an integrated 500 ml/min peristaltic dosing pump for higher-capacity modular water systems.',
         description_it: 'Una pompa dosatrice ad alta capacità da 500 ml/min per sistemi modulari di trattamento dell’acqua più grandi.',
@@ -226,6 +239,7 @@ const products = {
         description_de: 'Eine leistungsstarke 500-ml/min-Dosierpumpe für größere modulare Wassersysteme.',
         description_fr: 'Une pompe doseuse haute capacité de 500 ml/min pour les systèmes modulaires de traitement de l’eau plus importants.',
         description_pt: 'Módulo de expansão com entrada USB-A e bomba doseadora peristáltica integrada de 500 ml/min para sistemas modulares de maior capacidade.',
+        description_zh: '带 USB-A 控制输入和 500 ml/min 蠕动加药泵的扩展模块，适用于大容量模块化水系统。',
         cardImage: 'modular-pump500.jpg',
         price: 70,
         detailImages: [ '../assets/products/modular-pump500-detail-1.jpg', '../assets/products/modular-pump500-detail-2.jpg'],
@@ -248,6 +262,7 @@ const products = {
         shortDescription_de: 'pH / ORP · Relaisausgang · Wi-Fi',
         shortDescription_fr: 'pH / ORP · Sortie relais · Wi-Fi',
         shortDescription_pt: 'pH / ORP · Saída de relé · Wi-Fi',
+        shortDescription_zh: 'pH / ORP · 继电器输出 · Wi-Fi',
         description: 'An independent Wi-Fi device for measuring pH and ORP values. It can be controlled through its integrated web server, connected to a PLC, or integrated into Smart Home systems for water quality monitoring and control.',
         description_en: 'An independent Wi-Fi device for measuring pH and ORP values. It can be controlled through its integrated web server, connected to a PLC, or integrated into Smart Home systems for water quality monitoring and control.',
         description_it: 'Una presa connessa per monitorare i valori di pH e ORP e mantenere sotto controllo la chimica dell’acqua.',
@@ -255,6 +270,7 @@ const products = {
         description_de: 'Ein vernetzter Stecker zur Überwachung von pH- und ORP-Werten und zur Kontrolle der Wasserchemie.',
         description_fr: 'Une prise connectée pour surveiller les valeurs de pH et d’ORP et contrôler la chimie de l’eau.',
         description_pt: 'Dispositivo Wi-Fi independente para medir valores de pH e ORP, com controlo através do servidor web integrado, PLC ou sistemas Smart Home.',
+        description_zh: '独立式 Wi-Fi 设备，可测量 pH 和 ORP 数值，并通过内置 Web 服务器、PLC 或智能家居系统进行控制。',
         cardImage: 'smart-plug-ph-orp.jpg',
         price: 55,
         detailImages: [ '../assets/products/smart-plug-ph-orp-detail-1.jpg', '../assets/products/smart-plug-ph-orp-detail-2.jpg'],
@@ -282,6 +298,7 @@ const products = {
         shortDescription_de: 'EC · TDS · Salzgehalt · Temperatur · Wi-Fi',
         shortDescription_fr: 'EC · TDS · Salinité · Température · Wi-Fi',
         shortDescription_pt: 'EC · TDS · Salinidade · Temperatura · Wi-Fi',
+        shortDescription_zh: 'EC · TDS · 盐度 · 温度 · Wi-Fi',
         description: 'An independent Wi-Fi device for measuring electrical conductivity (EC) or temperature through an NTC probe, depending on the connected sensor. It can be controlled through its integrated web server, connected to a PLC, or integrated into Smart Home systems for water quality monitoring and control.',
         description_en: 'An independent Wi-Fi device for measuring electrical conductivity (EC) or temperature through an NTC probe, depending on the connected sensor. It can be controlled through its integrated web server, connected to a PLC, or integrated into Smart Home systems for water quality monitoring and control.',
         description_it: 'Una presa connessa per misurare conducibilità e temperatura in una soluzione compatta di monitoraggio.',
@@ -289,6 +306,7 @@ const products = {
         description_de: 'Ein vernetzter Stecker zur Messung von Leitfähigkeit und Temperatur in einer kompakten Überwachungslösung.',
         description_fr: 'Une prise connectée pour mesurer la conductivité et la température dans une solution compacte de surveillance.',
         description_pt: 'Dispositivo Wi-Fi independente para medir a condutividade elétrica ou a temperatura através de uma sonda NTC, conforme o sensor ligado.',
+        description_zh: '独立式 Wi-Fi 设备，可根据连接的传感器，通过 NTC 探头测量电导率或温度。',
         cardImage: 'smart-plug-ec-temp.jpg',
         price: 55,
         detailImages: [ '../assets/products/smart-plug-ec-temp-detail-1.jpg', '../assets/products/smart-plug-ec-temp-detail-2.jpg'],
@@ -318,8 +336,10 @@ const products = {
         shortDescription_de: 'pH / ORP · 60-ml/min-Dosierpumpe · Wi-Fi',
         shortDescription_fr: 'pH / ORP · Pompe doseuse 60 ml/min · Wi-Fi',
         shortDescription_pt: 'pH / ORP · Bomba doseadora de 60 ml/min · Wi-Fi',
+        shortDescription_zh: 'pH / ORP · 60 ml/min 加药泵 · Wi-Fi',
         description: 'An independent Wi-Fi device for measuring pH and ORP values and dosing treatment products through its integrated 60 ml/min peristaltic pump. It can be controlled through its integrated web server, connected to a PLC, or integrated into Smart Home systems for water quality monitoring and control.',
         description_pt: 'Dispositivo Wi-Fi independente para medir pH e ORP e dosear produtos de tratamento através da sua bomba peristáltica integrada de 60 ml/min.',
+        description_zh: '独立式 Wi-Fi 设备，可测量 pH 和 ORP，并通过内置的 60 ml/min 蠕动泵投加处理药剂。',
         cardImage: 'smart-pump-60.jpg',
         price: 60,
         detailImages: [ '../assets/products/smart-pump-60-detail-1.jpg', '../assets/products/smart-pump-60-detail-2.jpg'],
@@ -347,8 +367,10 @@ const products = {
         shortDescription_de: 'pH / ORP · 180-ml/min-Dosierpumpe · Wi-Fi',
         shortDescription_fr: 'pH / ORP · Pompe doseuse 180 ml/min · Wi-Fi',
         shortDescription_pt: 'pH / ORP · Bomba doseadora de 180 ml/min · Wi-Fi',
+        shortDescription_zh: 'pH / ORP · 180 ml/min 加药泵 · Wi-Fi',
         description: 'An independent Wi-Fi device for measuring pH and ORP values and dosing treatment products through its integrated 180 ml/min peristaltic pump. It can be controlled through its integrated web server, connected to a PLC, or integrated into Smart Home systems for water quality monitoring and control.',
         description_pt: 'Dispositivo Wi-Fi independente para medir pH e ORP e dosear produtos de tratamento através da sua bomba peristáltica integrada de 180 ml/min.',
+        description_zh: '独立式 Wi-Fi 设备，可测量 pH 和 ORP，并通过内置的 180 ml/min 蠕动泵投加处理药剂。',
         cardImage: 'smart-pump-180.jpg',
         price: 65,
         detailImages: [ '../assets/products/smart-pump-180-detail-1.jpg', '../assets/products/smart-pump-180-detail-2.jpg'],
@@ -376,8 +398,10 @@ const products = {
         shortDescription_de: 'pH / ORP · 500-ml/min-Dosierpumpe · Wi-Fi',
         shortDescription_fr: 'pH / ORP · Pompe doseuse 500 ml/min · Wi-Fi',
         shortDescription_pt: 'pH / ORP · Bomba doseadora de 500 ml/min · Wi-Fi',
+        shortDescription_zh: 'pH / ORP · 500 ml/min 加药泵 · Wi-Fi',
         description: 'An independent Wi-Fi device for measuring pH and ORP values and dosing treatment products through its integrated 500 ml/min peristaltic pump. It can be controlled through its integrated web server, connected to a PLC, or integrated into Smart Home systems for water quality monitoring and control.',
         description_pt: 'Dispositivo Wi-Fi independente para medir pH e ORP e dosear produtos de tratamento através da sua bomba peristáltica integrada de 500 ml/min.',
+        description_zh: '独立式 Wi-Fi 设备，可测量 pH 和 ORP，并通过内置的 500 ml/min 蠕动泵投加处理药剂。',
         cardImage: 'smart-pump-500.jpg',
         price: 75,
         detailImages: [ '../assets/products/smart-pump-500-detail-1.jpg', '../assets/products/smart-pump-500-detail-2.jpg'],
@@ -405,8 +429,10 @@ const products = {
         shortDescription_de: 'pH / ORP · Arduino-Zugriff · Wi-Fi',
         shortDescription_fr: 'pH / ORP · Accès Arduino · Wi-Fi',
         shortDescription_pt: 'pH / ORP · Acesso Arduino · Wi-Fi',
+        shortDescription_zh: 'pH / ORP · Arduino 接口 · Wi-Fi',
         description: 'A smart sensor module without relays or electrical contacts, designed for distributed pH and ORP measurement systems. It provides live water quality data through Wi-Fi for monitoring and integration into Smart Home or automation systems.',
         description_pt: 'Módulo sensor inteligente sem relés nem contactos elétricos, concebido para sistemas distribuídos de medição de pH e ORP.',
+        description_zh: '无继电器和电气触点的智能传感器模块，适用于分布式 pH 和 ORP 测量系统。',
         cardImage: 'smart-sens-ph-orp.jpg',
         price: 45,
         detailImages: [ '../assets/products/smart-sens-ph-orp-detail-1.jpg', '../assets/products/smart-sens-ph-orp-detail-2.jpg'],
@@ -433,8 +459,10 @@ const products = {
         shortDescription_de: 'EC / TDS / Salzgehalt · 2× Temperatur · Arduino-Zugriff · Wi-Fi',
         shortDescription_fr: 'EC / TDS / Salinité · 2× Température · Accès Arduino · Wi-Fi',
         shortDescription_pt: 'EC / TDS / Salinidade · 2× Temperatura · Acesso Arduino · Wi-Fi',
+        shortDescription_zh: 'EC / TDS / 盐度 · 2× 温度 · Arduino 接口 · Wi-Fi',
         description: 'A smart sensor module without relays or electrical contacts, designed for distributed electrical conductivity and temperature measurement systems. It provides live water quality data through Wi-Fi for monitoring and integration into Smart Home or automation systems.',
         description_pt: 'Módulo sensor inteligente sem relés nem contactos elétricos, concebido para sistemas distribuídos de medição de condutividade elétrica e temperatura.',
+        description_zh: '无继电器和电气触点的智能传感器模块，适用于分布式电导率和温度测量系统。',
         cardImage: 'smart-sens-ec-temp.jpg',
         price: 45,
         detailImages: [ '../assets/products/smart-sens-ec-temp-detail-1.jpg', '../assets/products/smart-sens-ec-temp-detail-2.jpg'],
@@ -464,8 +492,10 @@ const products = {
         shortDescription_de: 'pH-Elektrode mit BNC-Anschluss.',
         shortDescription_fr: 'Électrode pH avec connecteur BNC.',
         shortDescription_pt: 'Elétrodo de pH com conector BNC.',
+        shortDescription_zh: '带 BNC 接头的 pH 电极。',
         description: 'pH Electrode Probe BNC Connector for Laboratory Aquarium Hydroponic Water Analyzer',
         description_pt: 'Elétrodo de pH com conector BNC para análise de água em laboratório, aquários e hidroponia.',
+        description_zh: '带 BNC 接头的 pH 电极，适用于实验室、鱼缸和水培水质分析。',
         cardImage: 'probe-ph.png',
         price: 15,
         detailImages: [ '../assets/products/probe-ph-detail-1.png', '../assets/products/probe-ph-detail-2.png'],
@@ -486,8 +516,10 @@ const products = {
         shortDescription_de: 'ORP-Elektrode mit BNC-Anschluss.',
         shortDescription_fr: 'Électrode ORP avec connecteur BNC.',
         shortDescription_pt: 'Elétrodo ORP com conector BNC.',
+        shortDescription_zh: '带 BNC 接头的 ORP 电极。',
         description: 'ORP Electrode Probe BNC Connector for Laboratory Aquarium Hydroponic Water Analyzer',
         description_pt: 'Elétrodo ORP com conector BNC para análise de água em laboratório, aquários e hidroponia.',
+        description_zh: '带 BNC 接头的 ORP 电极，适用于实验室、鱼缸和水培水质分析。',
         cardImage: 'probe-orp.png',
         price: 25,
         detailImages: [ '../assets/products/probe-orp-detail-1.png', '../assets/products/probe-orp-detail-2.png'],
@@ -508,8 +540,10 @@ const products = {
         shortDescription_de: 'EC-Sonde mit DC-Jack',
         shortDescription_fr: 'Sonde EC avec DC Jack',
         shortDescription_pt: 'Sonda EC com DC Jack',
+        shortDescription_zh: '带 DC Jack 的 EC 探头',
         description: 'EC TDS Salinity probe with DC Jack', 
         description_pt: 'Sonda de EC, TDS e salinidade com conector DC Jack.',
+        description_zh: '带 DC Jack 接头的 EC、TDS 和盐度探头。',
         cardImage: 'probe-ec-DC.png',
         price: 20,
         detailImages: [ '../assets/products/probe-ec-DC-detail-1.png', '../assets/products/probe-ec-DC-detail-2.png'],
@@ -530,8 +564,10 @@ const products = {
         shortDescription_de: 'EC-Sonde mit Klemmenanschluss',
         shortDescription_fr: 'Sonde EC avec bornier',
         shortDescription_pt: 'Sonda EC com bloco de terminais',
+        shortDescription_zh: '带端子排的 EC 探头',
         description: 'EC TDS Salinity probe with Terminal Block',
         description_pt: 'Sonda de EC, TDS e salinidade com bloco de terminais.',
+        description_zh: '带端子排的 EC、TDS 和盐度探头。',
         cardImage: 'probe-ec-TB.png',
         price: 20,
         detailImages: [ '../assets/products/probe-ec-TB-detail-1.png', '../assets/products/probe-ec-TB-detail-2.png'],
@@ -552,8 +588,10 @@ const products = {
         shortDescription_de: 'Analoge Temperatursonde mit DC-Jack-Anschluss',
         shortDescription_fr: 'Sonde de température analogique avec connecteur DC Jack',
         shortDescription_pt: 'Sonda analógica de temperatura com conector DC Jack',
+        shortDescription_zh: '带 DC Jack 接头的模拟温度探头',
         description: '🌡️ Analog Temperature, waterproof probe with DC Jack connector',
         description_pt: 'Sonda analógica de temperatura à prova de água com conector DC Jack.',
+        description_zh: '带 DC Jack 接头的防水模拟温度探头。',
         cardImage: 'probe-ntc-DC.png',
         price: 10,
         detailImages: [ '../assets/products/probe-ntc-DC-detail-1.png', '../assets/products/probe-ntc-DC-detail-2.png'],
@@ -574,8 +612,10 @@ const products = {
         shortDescription_de: 'Analoge Temperatursonde mit Klemmenanschluss',
         shortDescription_fr: 'Sonde de température analogique avec bornier',
         shortDescription_pt: 'Sonda analógica de temperatura com bloco de terminais',
+        shortDescription_zh: '带端子排的模拟温度探头',
         description: '🌡️ Analog Temperature, waterproof probe with Terminal Block connector',
         description_pt: 'Sonda analógica de temperatura à prova de água com bloco de terminais.',
+        description_zh: '带端子排的防水模拟温度探头。',
         cardImage: 'probe-ntc-TB.png',
         price: 10,
         detailImages: [ '../assets/products/probe-ntc-TB-detail-1.png', '../assets/products/probe-ntc-TB-detail-2.png'],
@@ -596,8 +636,10 @@ const products = {
         shortDescription_de: 'Analoge Hochtemperatursonde mit Klemmenanschluss',
         shortDescription_fr: 'Sonde de température analogique haute température avec bornier',
         shortDescription_pt: 'Sonda analógica de alta temperatura com bloco de terminais',
+        shortDescription_zh: '带端子排的高温模拟温度探头',
         description: '🌡️ Analog Temperature, waterproof probe with Terminal Block connector for extended measurement range',
         description_pt: 'Sonda analógica de temperatura à prova de água com bloco de terminais para uma gama de medição alargada.',
+        description_zh: '带端子排的防水高温模拟温度探头，适用于更宽的测量范围。',
         cardImage: 'probe-ntc-ht-TB.png',
         price: 10,
         detailImages: [ '../assets/products/probe-ntc-ht-TB-detail-1.png', '../assets/products/probe-ntc-ht-TB-detail-2.png'],
@@ -618,8 +660,10 @@ const products = {
         shortDescription_de: 'Analoge Hochtemperatursonde mit DC-Jack-Anschluss',
         shortDescription_fr: 'Sonde de température analogique haute température avec connecteur DC Jack',
         shortDescription_pt: 'Sonda analógica de alta temperatura com conector DC Jack',
+        shortDescription_zh: '带 DC Jack 接头的高温模拟温度探头',
         description: '🌡️ Analog Temperature, waterproof probe with DC Jack connector for extended measurement range',
         description_pt: 'Sonda analógica de temperatura à prova de água com conector DC Jack para uma gama de medição alargada.',
+        description_zh: '带 DC Jack 接头的防水高温模拟温度探头，适用于更宽的测量范围。',
         cardImage: 'probe-ntc-ht-DC.png',
         price: 10,
         detailImages: [ '../assets/products/probe-ntc-ht-DC-detail-1.png', '../assets/products/probe-ntc-ht-DC-detail-2.png'],
@@ -640,8 +684,10 @@ const products = {
         shortDescription_de: 'Digitale Temperatursonde mit DC-Jack-Anschluss',
         shortDescription_fr: 'Sonde de température numérique avec connecteur DC Jack',
         shortDescription_pt: 'Sonda digital de temperatura com conector DC Jack',
+        shortDescription_zh: '带 DC Jack 接头的数字温度探头',
         description: 'Digital Temperature, waterproof probe with DC Jack connector',
         description_pt: 'Sonda digital de temperatura à prova de água com conector DC Jack.',
+        description_zh: '带 DC Jack 接头的防水数字温度探头。',
         cardImage: 'probe-ds18-DC.png',
         price: 10,
         detailImages: [ '../assets/products/probe-ds18-DC-detail-1.png', '../assets/products/probe-ds18-DC-detail-2.png'],
@@ -662,8 +708,10 @@ const products = {
         shortDescription_de: 'Digitale Temperatursonde mit Klemmenanschluss',
         shortDescription_fr: 'Sonde de température numérique avec bornier',
         shortDescription_pt: 'Sonda digital de temperatura com bloco de terminais',
+        shortDescription_zh: '带端子排的数字温度探头',
         description: 'Digital Temperature, waterproof probe with Terminal Block connector',
         description_pt: 'Sonda digital de temperatura à prova de água com bloco de terminais.',
+        description_zh: '带端子排的防水数字温度探头。',
         cardImage: 'probe-ds18-TB.png',
         price: 10,
         detailImages: [ '../assets/products/probe-ds18-TB-detail-1.png', '../assets/products/probe-ds18-TB-detail-2.png'],
@@ -682,15 +730,15 @@ const products = {
 const configuratorComponents = {
     default: {
         title: 'Configuration component',
-        title_en: 'Configuration component', title_it: 'Componente di configurazione', title_esp: 'Componente de configuración', title_de: 'Konfigurationskomponente', title_fr: 'Composant de configuration',
+        title_en: 'Configuration component', title_it: 'Componente di configurazione', title_esp: 'Componente de configuración', title_de: 'Konfigurationskomponente', title_fr: 'Composant de configuration', title_zh: '配置组件',
         description: 'Choose the product option for this component example.',
-        description_en: 'Choose the product option for this component example.', description_it: 'Scegli l’opzione prodotto per questo componente.', description_esp: 'Elige la opción de producto para este componente.', description_de: 'Wähle die Produktoption für diese Komponente.', description_fr: 'Choisissez l’option produit pour ce composant.',
+        description_en: 'Choose the product option for this component example.', description_it: 'Scegli l’opzione prodotto per questo componente.', description_esp: 'Elige la opción de producto para este componente.', description_de: 'Wähle die Produktoption für diese Komponente.', description_fr: 'Choisissez l’option produit pour ce composant.', description_zh: '请选择此组件的产品选项。',
         options: ['Industrial']
     },
     connectivity_access_point: {
         title: 'Direct connection (Access point)',
-        title_en: 'Direct connection (Access point)', title_it: 'Connessione diretta (Access point)', title_esp: 'Conexión directa (punto de acceso)', title_de: 'Direktverbindung (Access Point)', title_fr: 'Connexion directe (point d’accès)',
-        description_en: 'Device is accessible directly via its own Wi-Fi network.', description_it: 'Il dispositivo è accessibile direttamente tramite la propria rete Wi-Fi.', description_esp: 'El dispositivo es accesible directamente mediante su propia red Wi-Fi.', description_de: 'Das Gerät ist direkt über sein eigenes Wi-Fi-Netzwerk erreichbar.', description_fr: 'L’appareil est accessible directement via son propre réseau Wi-Fi.',
+        title_en: 'Direct connection (Access point)', title_it: 'Connessione diretta (Access point)', title_esp: 'Conexión directa (punto de acceso)', title_de: 'Direktverbindung (Access Point)', title_fr: 'Connexion directe (point d’accès)', title_zh: '直接连接（接入点）',
+        description_en: 'Device is accessible directly via its own Wi-Fi network.', description_it: 'Il dispositivo è accessibile direttamente tramite la propria rete Wi-Fi.', description_esp: 'El dispositivo es accesible directamente mediante su propia red Wi-Fi.', description_de: 'Das Gerät ist direkt über sein eigenes Wi-Fi-Netzwerk erreichbar.', description_fr: 'L’appareil est accessible directement via son propre réseau Wi-Fi.', description_zh: '设备可通过自己的 Wi-Fi 网络直接访问。',
     description: 'Device is accessible directly via its own Wi-Fi network. ' +
         'No Internet needed, simple access with your Phone or Laptop. ' +
         'Wi-Fi credentials, access IP address can be modified by the user.',
@@ -698,16 +746,16 @@ const configuratorComponents = {
     },
     connectivity_remote: {
         title: 'Remote connection (All over the World)',
-        title_en: 'Remote connection (All over the World)', title_it: 'Connessione remota (da tutto il mondo)', title_esp: 'Conexión remota (desde cualquier lugar)', title_de: 'Fernverbindung (weltweit)', title_fr: 'Connexion à distance (partout dans le monde)',
-        description_en: 'Access and control the device remotely from anywhere in the world.', description_it: 'Accedi e controlla il dispositivo da remoto ovunque nel mondo.', description_esp: 'Accede y controla el dispositivo a distancia desde cualquier lugar del mundo.', description_de: 'Greife weltweit auf das Gerät zu und steuere es aus der Ferne.', description_fr: 'Accédez et contrôlez l’appareil à distance depuis n’importe où dans le monde.',
+        title_en: 'Remote connection (All over the World)', title_it: 'Connessione remota (da tutto il mondo)', title_esp: 'Conexión remota (desde cualquier lugar)', title_de: 'Fernverbindung (weltweit)', title_fr: 'Connexion à distance (partout dans le monde)', title_zh: '远程连接（全球）',
+        description_en: 'Access and control the device remotely from anywhere in the world.', description_it: 'Accedi e controlla il dispositivo da remoto ovunque nel mondo.', description_esp: 'Accede y controla el dispositivo a distancia desde cualquier lugar del mundo.', description_de: 'Greife weltweit auf das Gerät zu und steuere es aus der Ferne.', description_fr: 'Accédez et contrôlez l’appareil à distance depuis n’importe où dans le monde.', description_zh: '可从世界任何地方远程访问和控制设备。',
         description: 'By configuring Port Forwarding on your router, you can access and control the device remotely from anywhere in the world. ' +
         'No dedicated app required — simply connect through a standard web browser by using your global static IP address.',
         options: []
     },
     connectivity_station: {
         title: 'Network connection (Domestic Router)',
-        title_en: 'Network connection (Domestic Router)', title_it: 'Connessione di rete (router domestico)', title_esp: 'Conexión de red (router doméstico)', title_de: 'Netzwerkverbindung (Heimrouter)', title_fr: 'Connexion réseau (routeur domestique)',
-        description_en: 'Device connects to your existing Wi-Fi network for local access and home automation.', description_it: 'Il dispositivo si collega alla rete Wi-Fi esistente per l’accesso locale e la domotica.', description_esp: 'El dispositivo se conecta a tu red Wi-Fi para acceso local y domótica.', description_de: 'Das Gerät verbindet sich mit deinem Wi-Fi-Netzwerk für lokalen Zugriff und Hausautomation.', description_fr: 'L’appareil se connecte à votre réseau Wi-Fi pour l’accès local et la domotique.',
+        title_en: 'Network connection (Domestic Router)', title_it: 'Connessione di rete (router domestico)', title_esp: 'Conexión de red (router doméstico)', title_de: 'Netzwerkverbindung (Heimrouter)', title_fr: 'Connexion réseau (routeur domestique)', title_zh: '网络连接（家用路由器）',
+        description_en: 'Device connects to your existing Wi-Fi network for local access and home automation.', description_it: 'Il dispositivo si collega alla rete Wi-Fi esistente per l’accesso locale e la domotica.', description_esp: 'El dispositivo se conecta a tu red Wi-Fi para acceso local y domótica.', description_de: 'Das Gerät verbindet sich mit deinem Wi-Fi-Netzwerk für lokalen Zugriff und Hausautomation.', description_fr: 'L’appareil se connecte à votre réseau Wi-Fi pour l’accès local et la domotique.', description_zh: '设备连接到现有 Wi-Fi 网络，用于本地访问和家庭自动化。',
         description: 'Device connects to your existing Wi-Fi network. ' +
         'Access and control it from any Phone or Laptop on the same network. ' +
         'Network credentials and connection settings can be configured by the user.' +
@@ -716,7 +764,7 @@ const configuratorComponents = {
     },
     connectivity_sps: {
         title: 'PLC Connectivity (e-PROFIBUS)',
-        title_en: 'PLC Connectivity (e-PROFIBUS)', title_it: 'Connettività PLC (e-PROFIBUS)', title_esp: 'Conectividad PLC (e-PROFIBUS)', title_de: 'SPS-Konnektivität (e-PROFIBUS)', title_fr: 'Connectivité API (e-PROFIBUS)',
+        title_en: 'PLC Connectivity (e-PROFIBUS)', title_it: 'Connettività PLC (e-PROFIBUS)', title_esp: 'Conectividad PLC (e-PROFIBUS)', title_de: 'SPS-Konnektivität (e-PROFIBUS)', title_fr: 'Connectivité API (e-PROFIBUS)', title_zh: 'PLC 连接（e-PROFIBUS）',
         description_en: 'Integrate EdulcoWater with PLC and industrial automation systems through PROFIBUS communication. ' +
             'Monitor process values, exchange operating data and integrate water control directly into your automation system. ' +
             'For configuration and integration details, refer to the PLC Functions section of the Instruction Manual.',
@@ -732,6 +780,7 @@ const configuratorComponents = {
         description_fr: 'Intégrez EdulcoWater aux systèmes API et aux systèmes d’automatisation industrielle via la communication PROFIBUS. ' +
             'Surveillez les valeurs de processus, échangez les données de fonctionnement et intégrez directement le contrôle de l’eau à votre système d’automatisation. ' +
             'Pour les détails de configuration et d’intégration, consultez la section Fonctions API du manuel d’instructions.',
+        description_zh: '通过 PROFIBUS 通信将 EdulcoWater 集成到 PLC 和工业自动化系统中，监控过程数据并直接集成水处理控制。',
         description: 'Integrate EdulcoWater with PLC and industrial automation systems through PROFIBUS communication. ' +
             'Monitor process values, exchange operating data and integrate water control directly into your automation system. ' +
             'For configuration and integration details, refer to the PLC Functions section of the Instruction Manual.',
@@ -739,15 +788,15 @@ const configuratorComponents = {
     },
     control_unit_ec_temp: {
         title: 'EC and temperature control unit',
-        title_en: 'EC and temperature control unit', title_it: 'Unità di controllo EC e temperatura', title_esp: 'Unidad de control de EC y temperatura', title_de: 'EC- und Temperatur-Steuereinheit', title_fr: 'Unité de contrôle EC et température',
-        description_en: 'Choose the smart EC and temperature control option.', description_it: 'Scegli l’opzione smart per il controllo di EC e temperatura.', description_esp: 'Elige la opción smart de control de EC y temperatura.', description_de: 'Wähle die Smart-Option zur EC- und Temperaturregelung.', description_fr: 'Choisissez l’option smart de contrôle EC et température.',
+        title_en: 'EC and temperature control unit', title_it: 'Unità di controllo EC e temperatura', title_esp: 'Unidad de control de EC y temperatura', title_de: 'EC- und Temperatur-Steuereinheit', title_fr: 'Unité de contrôle EC et température', title_zh: 'EC 和温度控制单元',
+        description_en: 'Choose the smart EC and temperature control option.', description_it: 'Scegli l’opzione smart per il controllo di EC e temperatura.', description_esp: 'Elige la opción smart de control de EC y temperatura.', description_de: 'Wähle die Smart-Option zur EC- und Temperaturregelung.', description_fr: 'Choisissez l’option smart de contrôle EC et température.', description_zh: '选择智能 EC 和温度控制选项。',
         description: 'Choose the smart EC and temperature control option.',
         options: ['Smart Plug EC/Temp']
     },
     control_unit_industrial: {
         title: 'DIN Rail Industrial Controller',
-        title_en: 'DIN Rail Industrial Controller', title_it: 'Controller industriale su guida DIN', title_esp: 'Controlador industrial para carril DIN', title_de: 'Industriecontroller für DIN-Schiene', title_fr: 'Contrôleur industriel sur rail DIN',
-        description_en: 'DIN rail controller with display, relay outputs, configurable hysteresis, timers, Wi-Fi and advanced functions.', description_it: 'Controller su guida DIN con display, uscite relè, isteresi configurabile, timer, Wi-Fi e funzioni avanzate.', description_esp: 'Controlador para carril DIN con pantalla, relés, histéresis configurable, temporizadores, Wi-Fi y funciones avanzadas.', description_de: 'DIN-Schienen-Controller mit Display, Relaisausgängen, Hysterese, Timern, Wi-Fi und erweiterten Funktionen.', description_fr: 'Contrôleur sur rail DIN avec écran, sorties relais, hystérésis configurable, minuteries, Wi-Fi et fonctions avancées.',
+        title_en: 'DIN Rail Industrial Controller', title_it: 'Controller industriale su guida DIN', title_esp: 'Controlador industrial para carril DIN', title_de: 'Industriecontroller für DIN-Schiene', title_fr: 'Contrôleur industriel sur rail DIN', title_zh: 'DIN 导轨工业控制器',
+        description_en: 'DIN rail controller with display, relay outputs, configurable hysteresis, timers, Wi-Fi and advanced functions.', description_it: 'Controller su guida DIN con display, uscite relè, isteresi configurabile, timer, Wi-Fi e funzioni avanzate.', description_esp: 'Controlador para carril DIN con pantalla, relés, histéresis configurable, temporizadores, Wi-Fi y funciones avanzadas.', description_de: 'DIN-Schienen-Controller mit Display, Relaisausgängen, Hysterese, Timern, Wi-Fi und erweiterten Funktionen.', description_fr: 'Contrôleur sur rail DIN avec écran, sorties relais, hystérésis configurable, minuteries, Wi-Fi et fonctions avancées.', description_zh: 'DIN 导轨控制器，配备显示屏、继电器输出、可配置滞回、定时器、Wi-Fi 和高级功能。',
         description: 'DIN rail controller designed for electrical panel installation, featuring an integrated display and 3 relay outputs assignable to 4 independent internal control channels. ' +
         'Each channel supports configurable hysteresis logic and timer-based operation for precise control of load activation over time. ' +
         'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with integrated AI features such as Copilot and additional advanced functions. See product details for more information.',
@@ -755,8 +804,8 @@ const configuratorComponents = {
     },
     control_unit_modular: {
         title: 'Modular Controller',
-        title_en: 'Modular Controller', title_it: 'Controller modulare', title_esp: 'Controlador modular', title_de: 'Modularer Controller', title_fr: 'Contrôleur modulaire',
-        description_en: 'Expandable controller for flexible, portable or wall-mounted water monitoring and control systems.', description_it: 'Controller espandibile per sistemi flessibili, portatili o a parete di monitoraggio e controllo dell’acqua.', description_esp: 'Controlador ampliable para sistemas flexibles, portátiles o murales de control y monitorización del agua.', description_de: 'Erweiterbarer Controller für flexible, mobile oder wandmontierte Wasserüberwachungs- und Steuerungssysteme.', description_fr: 'Contrôleur extensible pour systèmes flexibles, portables ou muraux de surveillance et contrôle de l’eau.',
+        title_en: 'Modular Controller', title_it: 'Controller modulare', title_esp: 'Controlador modular', title_de: 'Modularer Controller', title_fr: 'Contrôleur modulaire', title_zh: '模块化控制器',
+        description_en: 'Expandable controller for flexible, portable or wall-mounted water monitoring and control systems.', description_it: 'Controller espandibile per sistemi flessibili, portatili o a parete di monitoraggio e controllo dell’acqua.', description_esp: 'Controlador ampliable para sistemas flexibles, portátiles o murales de control y monitorización del agua.', description_de: 'Erweiterbarer Controller für flexible, mobile oder wandmontierte Wasserüberwachungs- und Steuerungssysteme.', description_fr: 'Contrôleur extensible pour systèmes flexibles, portables ou muraux de surveillance et contrôle de l’eau.', description_zh: '可扩展控制器，适用于灵活、便携式或壁挂式水质监测和控制系统。',
         description: 'Expandable controller designed for wall-mounted or portable use. Powered via USB, it can also operate from a standard power bank, making it suitable for flexible and mobile installations. ' +
         'It can be used as a standalone monitoring unit or expanded into a complete control system by connecting Modular Pumps and Modular Plugs. ' +
         'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions. See product details for more information.',
@@ -764,8 +813,8 @@ const configuratorComponents = {
     },
     control_unit_premium: {
         title: 'Compact Premium Controller',
-        title_en: 'Compact Premium Controller', title_it: 'Controller Premium compatto', title_esp: 'Controlador Premium compacto', title_de: 'Kompakter Premium-Controller', title_fr: 'Contrôleur Premium compact',
-        description_en: 'Elegant wall-mounted controller with two integrated 60 ml/min dosing pumps and USB expansion.', description_it: 'Elegante controller da parete con due pompe dosatrici integrate da 60 ml/min ed espansione USB.', description_esp: 'Elegante controlador mural con dos bombas dosificadoras integradas de 60 ml/min y expansión USB.', description_de: 'Eleganter Wandcontroller mit zwei integrierten 60-ml/min-Dosierpumpen und USB-Erweiterung.', description_fr: 'Élégant contrôleur mural avec deux pompes doseuses intégrées de 60 ml/min et extension USB.',
+        title_en: 'Compact Premium Controller', title_it: 'Controller Premium compatto', title_esp: 'Controlador Premium compacto', title_de: 'Kompakter Premium-Controller', title_fr: 'Contrôleur Premium compact', title_zh: '紧凑型 Premium 控制器',
+        description_en: 'Elegant wall-mounted controller with two integrated 60 ml/min dosing pumps and USB expansion.', description_it: 'Elegante controller da parete con due pompe dosatrici integrate da 60 ml/min ed espansione USB.', description_esp: 'Elegante controlador mural con dos bombas dosificadoras integradas de 60 ml/min y expansión USB.', description_de: 'Eleganter Wandcontroller mit zwei integrierten 60-ml/min-Dosierpumpen und USB-Erweiterung.', description_fr: 'Élégant contrôleur mural avec deux pompes doseuses intégrées de 60 ml/min et extension USB.', description_zh: '优雅的壁挂式控制器，配备两台内置 60 ml/min 加药泵和 USB 扩展接口。',
         description: 'Compact all-in-one controller designed as an elegant wall-mounted solution, featuring two integrated 60 ml/min dosing pumps for a clean and practical installation. ' +
         'It can operate as a complete monitoring and control system and includes a USB expansion port for additional Modular Pumps or Modular Plugs. ' +
         'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions. See product details for more information.',
@@ -773,8 +822,8 @@ const configuratorComponents = {
     },
     smart_plug_ec_temp: {
         title: 'Smart EC and Temperature Plug',
-        title_en: 'Smart EC and Temperature Plug', title_it: 'Smart Plug EC e temperatura', title_esp: 'Smart Plug de EC y temperatura', title_de: 'Smart-Stecker für EC und Temperatur', title_fr: 'Smart Plug EC et température',
-        description_en: 'Compact Wi-Fi plug for EC or analog temperature monitoring and control.', description_it: 'Presa Wi-Fi compatta per il monitoraggio e controllo di EC o temperatura analogica.', description_esp: 'Enchufe Wi-Fi compacto para monitorizar y controlar EC o temperatura analógica.', description_de: 'Kompakter Wi-Fi-Stecker zur Überwachung und Steuerung von EC oder analoger Temperatur.', description_fr: 'Prise Wi-Fi compacte pour surveiller et contrôler l’EC ou la température analogique.',
+        title_en: 'Smart EC and Temperature Plug', title_it: 'Smart Plug EC e temperatura', title_esp: 'Smart Plug de EC y temperatura', title_de: 'Smart-Stecker für EC und Temperatur', title_fr: 'Smart Plug EC et température', title_zh: '智能 EC 和温度插座',
+        description_en: 'Compact Wi-Fi plug for EC or analog temperature monitoring and control.', description_it: 'Presa Wi-Fi compatta per il monitoraggio e controllo di EC o temperatura analogica.', description_esp: 'Enchufe Wi-Fi compacto para monitorizar y controlar EC o temperatura analógica.', description_de: 'Kompakter Wi-Fi-Stecker zur Überwachung und Steuerung von EC oder analoger Temperatur.', description_fr: 'Prise Wi-Fi compacte pour surveiller et contrôler l’EC ou la température analogique.', description_zh: '紧凑型 Wi-Fi 插座，用于监测和控制 EC 或模拟温度。',
         description: 'Compact display-free controller designed for EC or analog temperature monitoring and control, with an extremely simple plug-and-play installation directly into a standard electrical outlet. ' +
         'It provides a controlled power outlet for connecting and automatically managing the desired electrical load according to the measured value. ' +
         'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions.',
@@ -782,8 +831,8 @@ const configuratorComponents = {
     },
     smart_plug_ph_orp: {
         title: 'Smart pH and ORP Plug',
-        title_en: 'Smart pH and ORP Plug', title_it: 'Smart Plug pH e ORP', title_esp: 'Smart Plug de pH y ORP', title_de: 'Smart-Stecker für pH und ORP', title_fr: 'Smart Plug pH et ORP',
-        description_en: 'Compact Wi-Fi plug for pH or ORP monitoring and control.', description_it: 'Presa Wi-Fi compatta per il monitoraggio e controllo di pH o ORP.', description_esp: 'Enchufe Wi-Fi compacto para monitorizar y controlar pH u ORP.', description_de: 'Kompakter Wi-Fi-Stecker zur Überwachung und Steuerung von pH oder ORP.', description_fr: 'Prise Wi-Fi compacte pour surveiller et contrôler le pH ou l’ORP.',
+        title_en: 'Smart pH and ORP Plug', title_it: 'Smart Plug pH e ORP', title_esp: 'Smart Plug de pH y ORP', title_de: 'Smart-Stecker für pH und ORP', title_fr: 'Smart Plug pH et ORP', title_zh: '智能 pH 和 ORP 插座',
+        description_en: 'Compact Wi-Fi plug for pH or ORP monitoring and control.', description_it: 'Presa Wi-Fi compatta per il monitoraggio e controllo di pH o ORP.', description_esp: 'Enchufe Wi-Fi compacto para monitorizar y controlar pH u ORP.', description_de: 'Kompakter Wi-Fi-Stecker zur Überwachung und Steuerung von pH oder ORP.', description_fr: 'Prise Wi-Fi compacte pour surveiller et contrôler le pH ou l’ORP.', description_zh: '紧凑型 Wi-Fi 插座，用于监测和控制 pH 或 ORP。',
         description: 'Compact display-free controller designed for pH or ORP monitoring and control, with an extremely simple plug-and-play installation directly into a standard electrical outlet. ' +
         'It provides a controlled power outlet for connecting and automatically managing the desired electrical load according to the measured value. ' +
         'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions.',
@@ -791,8 +840,8 @@ const configuratorComponents = {
     },
     smart_pump_ph_orp: {
         title: 'Smart pH and ORP Pump',
-        title_en: 'Smart pH and ORP Pump', title_it: 'Smart Pompa pH e ORP', title_esp: 'Smart Bomba de pH y ORP', title_de: 'Smart-Pumpe für pH und ORP', title_fr: 'Smart Pompe pH et ORP',
-        description_en: 'Compact dosing pump for precise pH or ORP control.', description_it: 'Pompa dosatrice compatta per il controllo preciso di pH o ORP.', description_esp: 'Bomba dosificadora compacta para un control preciso de pH u ORP.', description_de: 'Kompakte Dosierpumpe zur präzisen pH- oder ORP-Regelung.', description_fr: 'Pompe doseuse compacte pour un contrôle précis du pH ou de l’ORP.',
+        title_en: 'Smart pH and ORP Pump', title_it: 'Smart Pompa pH e ORP', title_esp: 'Smart Bomba de pH y ORP', title_de: 'Smart-Pumpe für pH und ORP', title_fr: 'Smart Pompe pH et ORP', title_zh: '智能 pH 和 ORP 泵',
+        description_en: 'Compact dosing pump for precise pH or ORP control.', description_it: 'Pompa dosatrice compatta per il controllo preciso di pH o ORP.', description_esp: 'Bomba dosificadora compacta para un control preciso de pH u ORP.', description_de: 'Kompakte Dosierpumpe zur präzisen pH- oder ORP-Regelung.', description_fr: 'Pompe doseuse compacte pour un contrôle précis du pH ou de l’ORP.', description_zh: '用于精确控制 pH 或 ORP 的紧凑型加药泵。',
         description: 'Compact dosing pump designed for precise pH or ORP control, with an extremely simple plug-and-play installation directly into a standard electrical outlet. ' +
         'It provides a controlled power outlet for connecting and automatically managing the desired electrical load according to the measured value. ' +
         'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with configurable control logic, timers, integrated AI features such as Copilot, and additional advanced functions.',
@@ -800,8 +849,8 @@ const configuratorComponents = {
     },
     smart_sens_ec_temp: {
         title: 'Smart EC and Temperature Sensor',
-        title_en: 'Smart EC and Temperature Sensor', title_it: 'Smart Sensore EC e temperatura', title_esp: 'Smart Sensor de EC y temperatura', title_de: 'Smart-Sensor für EC und Temperatur', title_fr: 'Smart Capteur EC et température',
-        description_en: 'Compact Wi-Fi sensor for distributed EC and temperature monitoring.', description_it: 'Sensore Wi-Fi compatto per il monitoraggio distribuito di EC e temperatura.', description_esp: 'Sensor Wi-Fi compacto para monitorizar EC y temperatura de forma distribuida.', description_de: 'Kompakter Wi-Fi-Sensor zur verteilten Überwachung von EC und Temperatur.', description_fr: 'Capteur Wi-Fi compact pour la surveillance distribuée de l’EC et de la température.',
+        title_en: 'Smart EC and Temperature Sensor', title_it: 'Smart Sensore EC e temperatura', title_esp: 'Smart Sensor de EC y temperatura', title_de: 'Smart-Sensor für EC und Temperatur', title_fr: 'Smart Capteur EC et température', title_zh: '智能 EC 和温度传感器',
+        description_en: 'Compact Wi-Fi sensor for distributed EC and temperature monitoring.', description_it: 'Sensore Wi-Fi compatto per il monitoraggio distribuito di EC e temperatura.', description_esp: 'Sensor Wi-Fi compacto para monitorizar EC y temperatura de forma distribuida.', description_de: 'Kompakter Wi-Fi-Sensor zur verteilten Überwachung von EC und Temperatur.', description_fr: 'Capteur Wi-Fi compact pour la surveillance distribuée de l’EC et de la température.', description_zh: '用于分布式 EC 和温度监测的紧凑型 Wi-Fi 传感器。',
         description: 'Compact display-free sensor designed for EC and temperature monitoring, ideal for distributed installations and Smart Home systems. ' +
         'Its compact and modular design allows multiple sensing points to be easily distributed throughout the installation for flexible and scalable monitoring. ' +
         'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with easy integration into Home Automation systems and additional advanced functions.',
@@ -809,8 +858,8 @@ const configuratorComponents = {
     },
     smart_sens_ph_orp: {
         title: 'Smart pH and ORP Sensor',
-        title_en: 'Smart pH and ORP Sensor', title_it: 'Smart Sensore pH e ORP', title_esp: 'Smart Sensor de pH y ORP', title_de: 'Smart-Sensor für pH und ORP', title_fr: 'Smart Capteur pH et ORP',
-        description_en: 'Compact Wi-Fi sensor for distributed pH and ORP monitoring.', description_it: 'Sensore Wi-Fi compatto per il monitoraggio distribuito di pH e ORP.', description_esp: 'Sensor Wi-Fi compacto para monitorizar pH y ORP de forma distribuida.', description_de: 'Kompakter Wi-Fi-Sensor zur verteilten Überwachung von pH und ORP.', description_fr: 'Capteur Wi-Fi compact pour la surveillance distribuée du pH et de l’ORP.',
+        title_en: 'Smart pH and ORP Sensor', title_it: 'Smart Sensore pH e ORP', title_esp: 'Smart Sensor de pH y ORP', title_de: 'Smart-Sensor für pH und ORP', title_fr: 'Smart Capteur pH et ORP', title_zh: '智能 pH 和 ORP 传感器',
+        description_en: 'Compact Wi-Fi sensor for distributed pH and ORP monitoring.', description_it: 'Sensore Wi-Fi compatto per il monitoraggio distribuito di pH e ORP.', description_esp: 'Sensor Wi-Fi compacto para monitorizar pH y ORP de forma distribuida.', description_de: 'Kompakter Wi-Fi-Sensor zur verteilten Überwachung von pH und ORP.', description_fr: 'Capteur Wi-Fi compact pour la surveillance distribuée du pH et de l’ORP.', description_zh: '用于分布式 pH 和 ORP 监测的紧凑型 Wi-Fi 传感器。',
         description: 'Compact display-free sensor designed for pH and ORP monitoring, ideal for distributed installations and Smart Home systems. ' +
         'Its compact and modular design allows multiple sensing points to be easily distributed throughout the installation for flexible and scalable monitoring. ' +
         'Built-in Wi-Fi and web server provide direct, local network or remote access via router Port Forwarding, with easy integration into Home Automation systems and additional advanced functions.',
@@ -818,8 +867,8 @@ const configuratorComponents = {
     },
     modular_plug: {
         title: 'Modular plug',
-        title_en: 'Modular plug', title_it: 'Presa modulare', title_esp: 'Enchufe modular', title_de: 'Modularer Stecker', title_fr: 'Prise modulaire',
-        description_en: 'USB-A controlled expansion plug for an additional switched electrical outlet.', description_it: 'Presa di espansione controllata via USB-A per un’uscita elettrica aggiuntiva.', description_esp: 'Enchufe de expansión controlado por USB-A para una salida eléctrica adicional.', description_de: 'USB-A-gesteuerter Erweiterungsstecker für einen zusätzlichen geschalteten Ausgang.', description_fr: 'Prise d’extension contrôlée par USB-A pour une sortie électrique supplémentaire.',
+        title_en: 'Modular plug', title_it: 'Presa modulare', title_esp: 'Enchufe modular', title_de: 'Modularer Stecker', title_fr: 'Prise modulaire', title_zh: '模块化插座',
+        description_en: 'USB-A controlled expansion plug for an additional switched electrical outlet.', description_it: 'Presa di espansione controllata via USB-A per un’uscita elettrica aggiuntiva.', description_esp: 'Enchufe de expansión controlado por USB-A para una salida eléctrica adicional.', description_de: 'USB-A-gesteuerter Erweiterungsstecker für einen zusätzlichen geschalteten Ausgang.', description_fr: 'Prise d’extension contrôlée par USB-A pour une sortie électrique supplémentaire.', description_zh: '通过 USB-A 控制的扩展插座，用于增加一个开关电源输出。',
         description: 'The Modular Plug is designed to be controlled via USB-A, allowing EDULCOWATER systems to be easily expanded with an additional controlled electrical outlet. ' +
         'It allows you to connect and control a general-purpose electrical load according to your application requirements. ' +
         'The connected load can be managed directly by the EDULCOWATER system.',
@@ -827,8 +876,8 @@ const configuratorComponents = {
     },
     modular_pump: {
         title: 'Modular pump',
-        title_en: 'Modular pump', title_it: 'Pompa modulare', title_esp: 'Bomba modular', title_de: 'Modulare Pumpe', title_fr: 'Pompe modulaire',
-        description_en: 'USB-A controlled expansion pump available in different flow-rate versions.', description_it: 'Pompa di espansione controllata via USB-A disponibile con diverse portate.', description_esp: 'Bomba de expansión controlada por USB-A disponible con diferentes caudales.', description_de: 'USB-A-gesteuerte Erweiterungspumpe mit verschiedenen Förderleistungen.', description_fr: 'Pompe d’extension contrôlée par USB-A disponible avec plusieurs débits.',
+        title_en: 'Modular pump', title_it: 'Pompa modulare', title_esp: 'Bomba modular', title_de: 'Modulare Pumpe', title_fr: 'Pompe modulaire', title_zh: '模块化泵',
+        description_en: 'USB-A controlled expansion pump available in different flow-rate versions.', description_it: 'Pompa di espansione controllata via USB-A disponibile con diverse portate.', description_esp: 'Bomba de expansión controlada por USB-A disponible con diferentes caudales.', description_de: 'USB-A-gesteuerte Erweiterungspumpe mit verschiedenen Förderleistungen.', description_fr: 'Pompe d’extension contrôlée par USB-A disponible avec plusieurs débits.', description_zh: '通过 USB-A 控制的扩展泵，提供多种流量版本。',
         description: 'The Modular Pump is designed to be controlled via USB-A, allowing EDULCOWATER systems to be easily expanded with additional dosing channels. ' +
         'Different pump versions are available in this category to meet different flow-rate requirements. ' +
         'Each Modular Pump uses an external power supply, while control and communication are managed directly by the EDULCOWATER system.',
@@ -836,8 +885,8 @@ const configuratorComponents = {
     },
     probe_ec_jack: {
         title: 'EC Jack probe',
-        title_en: 'EC Jack probe', title_it: 'Sonda EC Jack', title_esp: 'Sonda EC Jack', title_de: 'EC-Jack-Sonde', title_fr: 'Sonde EC Jack',
-        description_en: 'EC probe with integrated temperature compensation and DC Jack connector.', description_it: 'Sonda EC con compensazione integrata della temperatura e connettore DC Jack.', description_esp: 'Sonda EC con compensación de temperatura integrada y conector DC Jack.', description_de: 'EC-Sonde mit integrierter Temperaturkompensation und DC-Jack-Anschluss.', description_fr: 'Sonde EC avec compensation de température intégrée et connecteur DC Jack.',
+        title_en: 'EC Jack probe', title_it: 'Sonda EC Jack', title_esp: 'Sonda EC Jack', title_de: 'EC-Jack-Sonde', title_fr: 'Sonde EC Jack', title_zh: 'EC Jack 探头',
+        description_en: 'EC probe with integrated temperature compensation and DC Jack connector.', description_it: 'Sonda EC con compensazione integrata della temperatura e connettore DC Jack.', description_esp: 'Sonda EC con compensación de temperatura integrada y conector DC Jack.', description_de: 'EC-Sonde mit integrierter Temperaturkompensation und DC-Jack-Anschluss.', description_fr: 'Sonde EC avec compensation de température intégrée et connecteur DC Jack.', description_zh: '带集成温度补偿和 DC Jack 接头的 EC 探头。',
         description: 'EC probe designed for conductivity measurements from 0 to 2,000 µS with 1 µS resolution, and from 2,000 to 20,000 µS with 10 µS resolution. ' +
         'The probe includes an integrated NTC sensor for simultaneous temperature measurement and temperature compensation. ' +
         'Supplied with a DC Jack connector for quick and convenient connection.',
@@ -845,8 +894,8 @@ const configuratorComponents = {
     },
     probe_ec_tb: {
         title: 'EC probe with Terminal Block',
-        title_en: 'EC probe with Terminal Block', title_it: 'Sonda EC con morsettiera', title_esp: 'Sonda EC con terminales', title_de: 'EC-Sonde mit Klemmenanschluss', title_fr: 'Sonde EC avec bornier',
-        description_en: 'EC probe with integrated temperature compensation and Terminal Block connection.', description_it: 'Sonda EC con compensazione integrata della temperatura e collegamento a morsettiera.', description_esp: 'Sonda EC con compensación de temperatura integrada y conexión de terminales.', description_de: 'EC-Sonde mit integrierter Temperaturkompensation und Klemmenanschluss.', description_fr: 'Sonde EC avec compensation de température intégrée et connexion par bornier.',
+        title_en: 'EC probe with Terminal Block', title_it: 'Sonda EC con morsettiera', title_esp: 'Sonda EC con terminales', title_de: 'EC-Sonde mit Klemmenanschluss', title_fr: 'Sonde EC avec bornier', title_zh: '带端子排的 EC 探头',
+        description_en: 'EC probe with integrated temperature compensation and Terminal Block connection.', description_it: 'Sonda EC con compensazione integrata della temperatura e collegamento a morsettiera.', description_esp: 'Sonda EC con compensación de temperatura integrada y conexión de terminales.', description_de: 'EC-Sonde mit integrierter Temperaturkompensation und Klemmenanschluss.', description_fr: 'Sonde EC avec compensation de température intégrée et connexion par bornier.', description_zh: '带集成温度补偿和端子排连接的 EC 探头。',
         description: 'EC probe designed for conductivity measurements from 0 to 2,000 µS with 1 µS resolution, and from 2,000 to 20,000 µS with 10 µS resolution. ' +
         'The probe includes an integrated NTC sensor for simultaneous temperature measurement and temperature compensation. ' +
         'Supplied with a Terminal Block connection for simple and reliable installation.',
@@ -854,8 +903,8 @@ const configuratorComponents = {
     },
     probe_ph_orp: {
         title: 'pH and ORP probes',
-        title_en: 'pH and ORP probes', title_it: 'Sonde pH e ORP', title_esp: 'Sondas de pH y ORP', title_de: 'pH- und ORP-Sonden', title_fr: 'Sondes pH et ORP',
-        description_en: 'Professional BNC probes for reliable pH and ORP water quality monitoring.', description_it: 'Sonde professionali BNC per un monitoraggio affidabile di pH e ORP.', description_esp: 'Sondas BNC profesionales para una monitorización fiable de pH y ORP.', description_de: 'Professionelle BNC-Sonden zur zuverlässigen Überwachung von pH und ORP.', description_fr: 'Sondes BNC professionnelles pour une surveillance fiable du pH et de l’ORP.',
+        title_en: 'pH and ORP probes', title_it: 'Sonde pH e ORP', title_esp: 'Sondas de pH y ORP', title_de: 'pH- und ORP-Sonden', title_fr: 'Sondes pH et ORP', title_zh: 'pH 和 ORP 探头',
+        description_en: 'Professional BNC probes for reliable pH and ORP water quality monitoring.', description_it: 'Sonde professionali BNC per un monitoraggio affidabile di pH e ORP.', description_esp: 'Sondas BNC profesionales para una monitorización fiable de pH y ORP.', description_de: 'Professionelle BNC-Sonden zur zuverlässigen Überwachung von pH und ORP.', description_fr: 'Sondes BNC professionnelles pour une surveillance fiable du pH et de l’ORP.', description_zh: '配备标准 BNC 接头的专业探头，用于可靠监测 pH 和 ORP 水质。',
         description: 'Professional pH and ORP probes equipped with a standard BNC connector for quick and reliable connection. ' +
         'The pH probe provides a measurement range from 0 to 14 pH, while the ORP (Redox) probe measures from -200 to +200 mV. ' +
         'Designed for reliable and continuous water quality monitoring.',
@@ -863,8 +912,8 @@ const configuratorComponents = {
     },
     probe_temp_analog_jack: {
         title: 'Analog temperature probes with Jack connector',
-        title_en: 'Analog temperature probes with Jack connector', title_it: 'Sonde analogiche di temperatura con connettore Jack', title_esp: 'Sondas analógicas de temperatura con conector Jack', title_de: 'Analoge Temperatursonden mit Jack-Anschluss', title_fr: 'Sondes de température analogiques avec connecteur Jack',
-        description_en: 'Immersion analog temperature probes with standard and high-temperature versions.', description_it: 'Sonde analogiche a immersione con versioni standard e alta temperatura.', description_esp: 'Sondas analógicas de inmersión en versiones estándar y de alta temperatura.', description_de: 'Analoge Tauch-Temperatursonden in Standard- und Hochtemperaturausführung.', description_fr: 'Sondes de température analogiques à immersion en versions standard et haute température.',
+        title_en: 'Analog temperature probes with Jack connector', title_it: 'Sonde analogiche di temperatura con connettore Jack', title_esp: 'Sondas analógicas de temperatura con conector Jack', title_de: 'Analoge Temperatursonden mit Jack-Anschluss', title_fr: 'Sondes de température analogiques avec connecteur Jack', title_zh: '带 Jack 接头的模拟温度探头',
+        description_en: 'Immersion analog temperature probes with standard and high-temperature versions.', description_it: 'Sonde analogiche a immersione con versioni standard e alta temperatura.', description_esp: 'Sondas analógicas de inmersión en versiones estándar y de alta temperatura.', description_de: 'Analoge Tauch-Temperatursonden in Standard- und Hochtemperaturausführung.', description_fr: 'Sondes de température analogiques à immersion en versions standard et haute température.', description_zh: '用于浸入式测量的模拟温度探头，提供标准和高温版本。',
         description: 'Immersion analog temperature probe designed for reliable measurements over a wide temperature range. ' +
         'The standard version measures temperatures up to 60°C, while the High Temperature version supports measurements up to 150°C. ' +
         'Both versions feature a Jack connector for quick and convenient connection.',
@@ -872,8 +921,8 @@ const configuratorComponents = {
     },
     probe_temp_analog_tb: {
         title: 'Analog temperature probe with terminal block',
-        title_en: 'Analog temperature probe with terminal block', title_it: 'Sonda analogica di temperatura con morsettiera', title_esp: 'Sonda analógica de temperatura con terminales', title_de: 'Analoge Temperatursonde mit Klemmenanschluss', title_fr: 'Sonde de température analogique avec bornier',
-        description_en: 'Immersion analog temperature probes with Terminal Block connection.', description_it: 'Sonde analogiche a immersione con collegamento a morsettiera.', description_esp: 'Sondas analógicas de inmersión con conexión de terminales.', description_de: 'Analoge Tauch-Temperatursonden mit Klemmenanschluss.', description_fr: 'Sondes de température analogiques à immersion avec connexion par bornier.',
+        title_en: 'Analog temperature probe with terminal block', title_it: 'Sonda analogica di temperatura con morsettiera', title_esp: 'Sonda analógica de temperatura con terminales', title_de: 'Analoge Temperatursonde mit Klemmenanschluss', title_fr: 'Sonde de température analogique avec bornier', title_zh: '带端子排的模拟温度探头',
+        description_en: 'Immersion analog temperature probes with Terminal Block connection.', description_it: 'Sonde analogiche a immersione con collegamento a morsettiera.', description_esp: 'Sondas analógicas de inmersión con conexión de terminales.', description_de: 'Analoge Tauch-Temperatursonden mit Klemmenanschluss.', description_fr: 'Sondes de température analogiques à immersion avec connexion par bornier.', description_zh: '带端子排连接的浸入式模拟温度探头。',
         description: 'Immersion analog temperature probe designed for reliable measurements over a wide temperature range. ' +
         'The standard version measures temperatures up to 60°C, while the High Temperature version supports measurements up to 150°C. ' +
         'Both versions are designed for immersion applications and are supplied with a terminal block for easy connection.',
@@ -881,8 +930,8 @@ const configuratorComponents = {
     },
     probe_temp_digital_tb: {
         title: 'Digital temperature probe DS18 with terminal block',
-        title_en: 'Digital temperature probe DS18 with terminal block', title_it: 'Sonda digitale di temperatura DS18 con morsettiera', title_esp: 'Sonda digital de temperatura DS18 con terminales', title_de: 'Digitale DS18-Temperatursonde mit Klemmenanschluss', title_fr: 'Sonde de température numérique DS18 avec bornier',
-        description_en: 'Immersion DS18 digital temperature probe with secure Terminal Block connection.', description_it: 'Sonda digitale DS18 a immersione con collegamento sicuro a morsettiera.', description_esp: 'Sonda digital DS18 de inmersión con conexión segura de terminales.', description_de: 'Digitale DS18-Tauch-Temperatursonde mit sicherem Klemmenanschluss.', description_fr: 'Sonde de température numérique DS18 à immersion avec connexion sécurisée par bornier.',
+        title_en: 'Digital temperature probe DS18 with terminal block', title_it: 'Sonda digitale di temperatura DS18 con morsettiera', title_esp: 'Sonda digital de temperatura DS18 con terminales', title_de: 'Digitale DS18-Temperatursonde mit Klemmenanschluss', title_fr: 'Sonde de température numérique DS18 avec bornier', title_zh: '带端子排的 DS18 数字温度探头',
+        description_en: 'Immersion DS18 digital temperature probe with secure Terminal Block connection.', description_it: 'Sonda digitale DS18 a immersione con collegamento sicuro a morsettiera.', description_esp: 'Sonda digital DS18 de inmersión con conexión segura de terminales.', description_de: 'Digitale DS18-Tauch-Temperatursonde mit sicherem Klemmenanschluss.', description_fr: 'Sonde de température numérique DS18 à immersion avec connexion sécurisée par bornier.', description_zh: '带安全端子排连接的 DS18 浸入式数字温度探头。',
         description: 'Immersion digital temperature probe designed for precise and reliable temperature measurements. ' +
         'Suitable for continuous monitoring in applications with temperatures up to 60°C. ' +
         'Supplied with terminal block for simple and secure connection.',

@@ -112,6 +112,25 @@ const HOME_TRANSLATIONS = {
         aquariums: 'Aquários ↗',
         solarAria: 'Construa o seu sistema solar',
         solar: 'Solar ↗'
+    },
+    ZH: {
+        homeTitle: '水质系统',
+        homeTagline: '“……因为每一种平衡都需要一个解决方案”',
+        introVideoLabel: 'Edulco Water 介绍',
+        introLabel: 'EDULCO WATER · 介绍',
+        waterBecoming: '让水成为',
+        care: '关怀。',
+        audioOn: '打开声音',
+        audioOff: '声音已关闭',
+        buildSystem: '构建您的系统',
+        poolAria: '构建您的泳池水处理系统',
+        pools: '游泳池 ↗',
+        hydroponicsAria: '构建您的水培系统',
+        hydroponics: '水培 ↗',
+        aquariumAria: '构建您的水族箱系统',
+        aquariums: '水族箱 ↗',
+        solarAria: '构建您的太阳能系统',
+        solar: '太阳能 ↗'
     }
 };
 
