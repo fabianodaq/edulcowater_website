@@ -35,7 +35,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Din Rail'],
             'Dimensions': ['Dimensions 📐', '105 × 90 × 60 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)' ],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands' ],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands' ],
             'Advanced Functions': [ 'Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -77,7 +77,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Wall Mounting'],
             'Dimensions': ['Dimensions 📐', '105 × 90 × 60 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -118,7 +118,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Wall Mounting'],
             'Dimensions': ['Dimensions 📐', '105 × 90 × 60 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -268,7 +268,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Power Plug'],
             'Dimensions': ['Dimensions 📐', '66 × 93 × 93 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -304,7 +304,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Power Plug'],
             'Dimensions': ['Dimensions 📐', '66 × 93 × 93 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -333,7 +333,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Wall mounting'],
             'Dimensions': ['Dimensions 📐', '66 × 9 × 116 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -362,7 +362,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Wall mounting'],
             'Dimensions': ['Dimensions 📐', '85 × 90 × 100 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -391,7 +391,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Wall mounting'],
             'Dimensions': ['Dimensions 📐', '10 × 120 × 125 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -419,7 +419,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Power Plug'],
             'Dimensions': ['Dimensions 📐', '90 × 65 × 40 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
@@ -450,7 +450,7 @@ const products = {
             'Mounting': ['Mounting 🛠️', 'Power Plug'],
             'Dimensions': ['Dimensions 📐', '90 × 65 × 40 mm'],
             'Connectivity': ['Connectivity 📡', 'WiFi in 🔗Access Point (No Router) and in 🌐 Station (with router)'],
-            'Smart functions': ['Smart Functions 🌐', 'Home Assistant, PLC / SCADA via PROFIBUS, HTTP Commands'],
+            'Smart functions': ['Smart Functions 🌐', '🏠 Home Assistant, 🏭 PLC / SCADA, HTTP Commands'],
             'Advanced Functions': ['Advanced Functions ⚙️', '🛡️ Sentinel, 📊 Reporter, 📧 Email Notification, 🤖 Copilot'],
             'Manual': ['Manual 📖', 'View Manual']
         }
