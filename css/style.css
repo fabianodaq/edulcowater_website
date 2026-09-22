@@ -79,6 +79,7 @@ button, a { font: inherit; }
   height: 58px;
   left: 64px;
   position: absolute;
+  text-decoration: none;
 }
 
 .brand img {
@@ -106,7 +107,7 @@ button, a { font: inherit; }
 
 .section-label {
   color: #0878b9;
-  font-size: 12px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 3px;
   margin: 0;
@@ -223,7 +224,7 @@ button, a { font: inherit; }
 }
 
 .bypool-subtitle {
-  font-size: 16px;
+  font-size: 28px;
   color: #526979;
   margin: 0 0 40px;
   line-height: 1.6;
